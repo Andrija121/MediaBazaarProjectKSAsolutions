@@ -8,11 +8,7 @@
         <Name>User</Name>
         <Access>Public</Access>
         <Location left="403" top="589" />
-<<<<<<< HEAD
-        <Size width="162" height="264" />
-=======
         <Size width="162" height="247" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Collapsed>False</Collapsed>
         <Member type="Field">int id</Member>
         <Member type="Field">string firstName</Member>
@@ -24,10 +20,6 @@
         <Member type="Field">int BSN</Member>
         <Member type="Field">string zipCode</Member>
         <Member type="Field">string adres</Member>
-<<<<<<< HEAD
-        <Member type="Method">public void NewMethod()</Member>
-=======
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -73,13 +65,8 @@
       <Entity type="Class">
         <Name>Stock</Name>
         <Access>Public</Access>
-<<<<<<< HEAD
-        <Location left="603" top="567" />
-        <Size width="162" height="243" />
-=======
         <Location left="973" top="567" />
         <Size width="162" height="145" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Collapsed>False</Collapsed>
         <Member type="Field">int id</Member>
         <Member type="Field">string productName</Member>
@@ -98,24 +85,15 @@
       <Entity type="Class">
         <Name>StockManager</Name>
         <Access>Public</Access>
-<<<<<<< HEAD
-        <Location left="603" top="390" />
-        <Size width="162" height="94" />
-=======
         <Location left="973" top="390" />
         <Size width="162" height="77" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>DepartmentManager</Name>
         <Access>Public</Access>
-<<<<<<< HEAD
-        <Location left="850" top="390" />
-=======
         <Location left="1220" top="390" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Size width="162" height="77" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -123,13 +101,8 @@
       <Entity type="Class">
         <Name>Department</Name>
         <Access>Public</Access>
-<<<<<<< HEAD
-        <Location left="850" top="567" />
-        <Size width="162" height="216" />
-=======
         <Location left="1220" top="567" />
         <Size width="162" height="128" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Collapsed>False</Collapsed>
         <Member type="Field">int id</Member>
         <Member type="Field">string name</Member>
@@ -140,11 +113,7 @@
         <Name>Form</Name>
         <Access>Public</Access>
         <Location left="809" top="186" />
-<<<<<<< HEAD
-        <Size width="162" height="145" />
-=======
         <Size width="162" height="77" />
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
       </Entity>
@@ -171,11 +140,6 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Association" first="0" second="7">
-<<<<<<< HEAD
-        <Label>
-        </Label>
-=======
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -183,11 +147,6 @@
         <EndRole>- users</EndRole>
       </Relationship>
       <Relationship type="Association" first="6" second="8">
-<<<<<<< HEAD
-        <Label>
-        </Label>
-=======
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -195,11 +154,6 @@
         <EndRole>- stocks</EndRole>
       </Relationship>
       <Relationship type="Association" first="10" second="9">
-<<<<<<< HEAD
-        <Label>
-        </Label>
-=======
->>>>>>> fb1d1fda1eeafa2d33909fc7b35b2dfd0ef15218
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
