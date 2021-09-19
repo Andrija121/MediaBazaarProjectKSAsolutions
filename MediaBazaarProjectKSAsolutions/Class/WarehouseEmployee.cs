@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Class
 {
-    class WarehouseEmployee
+    class WarehouseEmployee :User
     {
         public WarehouseEmployee()
         {
