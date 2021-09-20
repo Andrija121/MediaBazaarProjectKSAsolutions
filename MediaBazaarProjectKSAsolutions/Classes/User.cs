@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class User
     {
@@ -11,12 +11,11 @@ namespace MediaBazaarProjectKSAsolutions.Class
         private string lastName;
         private string email;
         private string password;
-        private string gender; //**************** Maybe Gender enum instead of string
         private string birthday;
         private int bSN;
         private string zipCode;
         private string address;
-
+        private Gender gender;
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string Email { get; set; }

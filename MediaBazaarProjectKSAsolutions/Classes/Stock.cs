@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class Stock
     {
@@ -12,7 +12,10 @@ namespace MediaBazaarProjectKSAsolutions.Class
         private int serialNumber;
 
         public int Id { get; set; }
-        // properties
+        public string ProductName { get; set; }
+        public double Price { get; set; }
+        public int SerialNumber { get; set; }
+        
 
         public Stock(int id,string productName,double price,int serialNumber)
         {
