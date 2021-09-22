@@ -29,244 +29,343 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpHome = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tpEmployees = new System.Windows.Forms.TabPage();
-            this.tpStocks = new System.Windows.Forms.TabPage();
-            this.tpDepartments = new System.Windows.Forms.TabPage();
-            this.tpSchedule = new System.Windows.Forms.TabPage();
-            this.tpStatistics = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tpHome.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tpEmployees.SuspendLayout();
-            this.tpStocks.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnSchedule = new System.Windows.Forms.Button();
+            this.btnDepartments = new System.Windows.Forms.Button();
+            this.Stocks = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlDepartments = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlEmployees = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlStocks = new System.Windows.Forms.Panel();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlSchedule = new System.Windows.Forms.Panel();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlStatistics = new System.Windows.Forms.Panel();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.pnlDepartments.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.pnlEmployees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.pnlStocks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.pnlSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.pnlStatistics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // pictureBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.tabControl1);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1122, 699);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 200);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // tabControl1
+            // panel1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tpHome);
-            this.tabControl1.Controls.Add(this.tpEmployees);
-            this.tabControl1.Controls.Add(this.tpStocks);
-            this.tabControl1.Controls.Add(this.tpDepartments);
-            this.tabControl1.Controls.Add(this.tpSchedule);
-            this.tabControl1.Controls.Add(this.tpStatistics);
-            this.tabControl1.Location = new System.Drawing.Point(6, 200);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1110, 493);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnStatistics);
+            this.panel1.Controls.Add(this.btnSchedule);
+            this.panel1.Controls.Add(this.btnDepartments);
+            this.panel1.Controls.Add(this.Stocks);
+            this.panel1.Controls.Add(this.btnEmployees);
+            this.panel1.Location = new System.Drawing.Point(12, 218);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(240, 500);
+            this.panel1.TabIndex = 3;
             // 
-            // tpHome
+            // btnLogout
             // 
-            this.tpHome.Controls.Add(this.tabControl2);
-            this.tpHome.Location = new System.Drawing.Point(4, 27);
-            this.tpHome.Name = "tpHome";
-            this.tpHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHome.Size = new System.Drawing.Size(1102, 462);
-            this.tpHome.TabIndex = 0;
-            this.tpHome.Text = "Home";
-            this.tpHome.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(10, 467);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // tabControl2
+            // btnStatistics
             // 
-            this.tabControl2.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl2.Controls.Add(this.tabPage1);
-            this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(6, 6);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1090, 456);
-            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl2.TabIndex = 0;
+            this.btnStatistics.Location = new System.Drawing.Point(10, 132);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(220, 23);
+            this.btnStatistics.TabIndex = 5;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // tabPage1
+            // btnSchedule
             // 
-            this.tabPage1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1082, 425);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Personal Details";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.btnSchedule.Location = new System.Drawing.Point(10, 102);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(220, 23);
+            this.btnSchedule.TabIndex = 4;
+            this.btnSchedule.Text = "Schedule";
+            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
-            // tabPage2
+            // btnDepartments
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1082, 425);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Notifications";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btnDepartments.Location = new System.Drawing.Point(10, 72);
+            this.btnDepartments.Name = "btnDepartments";
+            this.btnDepartments.Size = new System.Drawing.Size(220, 23);
+            this.btnDepartments.TabIndex = 3;
+            this.btnDepartments.Text = "Departments";
+            this.btnDepartments.UseVisualStyleBackColor = true;
+            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click);
             // 
-            // tabPage3
+            // Stocks
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1082, 425);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Sick days";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Stocks.Location = new System.Drawing.Point(10, 42);
+            this.Stocks.Name = "Stocks";
+            this.Stocks.Size = new System.Drawing.Size(220, 23);
+            this.Stocks.TabIndex = 2;
+            this.Stocks.Text = "Stocks";
+            this.Stocks.UseVisualStyleBackColor = true;
+            this.Stocks.Click += new System.EventHandler(this.Stocks_Click);
             // 
-            // tabPage4
+            // btnEmployees
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1082, 425);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Schedule";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.btnEmployees.Location = new System.Drawing.Point(10, 12);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(220, 23);
+            this.btnEmployees.TabIndex = 1;
+            this.btnEmployees.Text = "Employees";
+            this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
-            // tpEmployees
+            // panel2
             // 
-            this.tpEmployees.Controls.Add(this.label1);
-            this.tpEmployees.Location = new System.Drawing.Point(4, 27);
-            this.tpEmployees.Name = "tpEmployees";
-            this.tpEmployees.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEmployees.Size = new System.Drawing.Size(1102, 462);
-            this.tpEmployees.TabIndex = 1;
-            this.tpEmployees.Text = "Employees";
-            this.tpEmployees.UseVisualStyleBackColor = true;
+            this.panel2.Location = new System.Drawing.Point(0, -83);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(787, 706);
+            this.panel2.TabIndex = 5;
             // 
-            // tpStocks
+            // pnlDepartments
             // 
-            this.tpStocks.Controls.Add(this.label2);
-            this.tpStocks.Location = new System.Drawing.Point(4, 27);
-            this.tpStocks.Name = "tpStocks";
-            this.tpStocks.Size = new System.Drawing.Size(1102, 462);
-            this.tpStocks.TabIndex = 2;
-            this.tpStocks.Text = "Stocks";
-            this.tpStocks.UseVisualStyleBackColor = true;
+            this.pnlDepartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDepartments.Controls.Add(this.dataGridView2);
+            this.pnlDepartments.Controls.Add(this.label2);
+            this.pnlDepartments.Location = new System.Drawing.Point(258, 12);
+            this.pnlDepartments.Name = "pnlDepartments";
+            this.pnlDepartments.Size = new System.Drawing.Size(787, 706);
+            this.pnlDepartments.TabIndex = 7;
+            this.pnlDepartments.Visible = false;
             // 
-            // tpDepartments
+            // dataGridView2
             // 
-            this.tpDepartments.Location = new System.Drawing.Point(4, 27);
-            this.tpDepartments.Name = "tpDepartments";
-            this.tpDepartments.Size = new System.Drawing.Size(1102, 462);
-            this.tpDepartments.TabIndex = 3;
-            this.tpDepartments.Text = "Departments";
-            this.tpDepartments.UseVisualStyleBackColor = true;
-            // 
-            // tpSchedule
-            // 
-            this.tpSchedule.Location = new System.Drawing.Point(4, 27);
-            this.tpSchedule.Name = "tpSchedule";
-            this.tpSchedule.Size = new System.Drawing.Size(1102, 462);
-            this.tpSchedule.TabIndex = 4;
-            this.tpSchedule.Text = "Schedule";
-            this.tpSchedule.UseVisualStyleBackColor = true;
-            // 
-            // tpStatistics
-            // 
-            this.tpStatistics.Location = new System.Drawing.Point(4, 27);
-            this.tpStatistics.Name = "tpStatistics";
-            this.tpStatistics.Size = new System.Drawing.Size(1102, 462);
-            this.tpStatistics.TabIndex = 5;
-            this.tpStatistics.Text = "Statistics";
-            this.tpStatistics.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(257, 23);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(859, 170);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(179, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "A table of sorts needs to go here";
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView2.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(151, 101);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(308, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 15);
+            this.label2.Size = new System.Drawing.Size(170, 37);
             this.label2.TabIndex = 0;
-            this.label2.Text = "A table of some sorts has to go here";
+            this.label2.Text = "Departments";
             // 
-            // pictureBox1
+            // pnlEmployees
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 170);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Controls.Add(this.dataGridView3);
+            this.pnlEmployees.Controls.Add(this.label3);
+            this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
+            this.pnlEmployees.Name = "pnlEmployees";
+            this.pnlEmployees.Size = new System.Drawing.Size(787, 706);
+            this.pnlEmployees.TabIndex = 8;
+            this.pnlEmployees.Visible = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView3.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(308, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Employees";
+            // 
+            // pnlStocks
+            // 
+            this.pnlStocks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStocks.Controls.Add(this.dataGridView4);
+            this.pnlStocks.Controls.Add(this.label4);
+            this.pnlStocks.Location = new System.Drawing.Point(258, 12);
+            this.pnlStocks.Name = "pnlStocks";
+            this.pnlStocks.Size = new System.Drawing.Size(787, 706);
+            this.pnlStocks.TabIndex = 8;
+            this.pnlStocks.Visible = false;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowTemplate.Height = 25;
+            this.dataGridView4.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView4.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(308, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Stocks";
+            // 
+            // pnlSchedule
+            // 
+            this.pnlSchedule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSchedule.Controls.Add(this.dataGridView5);
+            this.pnlSchedule.Controls.Add(this.label5);
+            this.pnlSchedule.Location = new System.Drawing.Point(258, 12);
+            this.pnlSchedule.Name = "pnlSchedule";
+            this.pnlSchedule.Size = new System.Drawing.Size(787, 706);
+            this.pnlSchedule.TabIndex = 11;
+            this.pnlSchedule.Visible = false;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowTemplate.Height = 25;
+            this.dataGridView5.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(308, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Schedule";
+            // 
+            // pnlStatistics
+            // 
+            this.pnlStatistics.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStatistics.Controls.Add(this.dataGridView6);
+            this.pnlStatistics.Controls.Add(this.label6);
+            this.pnlStatistics.Location = new System.Drawing.Point(258, 12);
+            this.pnlStatistics.Name = "pnlStatistics";
+            this.pnlStatistics.Size = new System.Drawing.Size(787, 706);
+            this.pnlStatistics.TabIndex = 12;
+            this.pnlStatistics.Visible = false;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowTemplate.Height = 25;
+            this.dataGridView6.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView6.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(308, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 37);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Statistics";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 726);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1060, 730);
+            this.Controls.Add(this.pnlStocks);
+            this.Controls.Add(this.pnlDepartments);
+            this.Controls.Add(this.pnlSchedule);
+            this.Controls.Add(this.pnlEmployees);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnlStatistics);
             this.Name = "Main";
             this.Text = "Main";
-            this.groupBox1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tpHome.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tpEmployees.ResumeLayout(false);
-            this.tpEmployees.PerformLayout();
-            this.tpStocks.ResumeLayout(false);
-            this.tpStocks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.pnlDepartments.ResumeLayout(false);
+            this.pnlDepartments.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.pnlEmployees.ResumeLayout(false);
+            this.pnlEmployees.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.pnlStocks.ResumeLayout(false);
+            this.pnlStocks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.pnlSchedule.ResumeLayout(false);
+            this.pnlSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.pnlStatistics.ResumeLayout(false);
+            this.pnlStatistics.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpHome;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tpEmployees;
-        private System.Windows.Forms.TabPage tpStocks;
-        private System.Windows.Forms.TabPage tpDepartments;
-        private System.Windows.Forms.TabPage tpSchedule;
-        private System.Windows.Forms.TabPage tpStatistics;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnStatistics;
+        private System.Windows.Forms.Button btnSchedule;
+        private System.Windows.Forms.Button btnDepartments;
+        private System.Windows.Forms.Button Stocks;
+        private System.Windows.Forms.Button btnEmployees;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlDepartments;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlEmployees;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlStocks;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlSchedule;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnlStatistics;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Label label6;
     }
 }
