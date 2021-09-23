@@ -37,41 +37,44 @@ namespace MediaBazaarProjectKSAsolutions
             {
                 if(u.FirstName==userName && u.Password==password)
                 {
-                    
-                    if((GeneralManager)user==u)
-                    { 
-                    Main main = new Main(user);
-                    main.Show();
+                    user = u;
+                    Main main1 = new Main(user);
+                    main1.Show();
                     this.Hide();
-                    }
-                    else if((HRManager)user == u)
-                    {
-                        Main main = new Main(user);
-                        main.Show();
-                        this.Hide();
-                    }
-                   else if ((DepartmentManager)user == u)
-                    {
-                        Main main = new Main(user);
-                        main.Show();
-                        this.Hide();
-                    }
-                    else if((StoreEmployee)user == u)
-                    {
-                        Main main = new Main(user);
-                        main.Show();
-                        this.Hide();
-                    }
-                    else if ((WarehouseEmployee)user == u)
-                    {
-                        Main main = new Main(user);
-                        main.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Test");
-                    }
+                   // if ((GeneralManager)user==u)
+                   // { 
+                   // Main main = new Main(user);
+                   // main.Show();
+                   // this.Hide();
+                   // }
+                   // else if((HRManager)user == u)
+                   // {
+                   //     Main main = new Main(user);
+                   //     main.Show();
+                   //     this.Hide();
+                   // }
+                   //else if ((DepartmentManager)user == u)
+                   // {
+                   //     Main main = new Main(user);
+                   //     main.Show();
+                   //     this.Hide();
+                   // }
+                   // else if((StoreEmployee)user == u)
+                   // {
+                   //     Main main = new Main(user);
+                   //     main.Show();
+                   //     this.Hide();
+                   // }
+                   // else if ((WarehouseEmployee)user == u)
+                   // {
+                   //     Main main = new Main(user);
+                   //     main.Show();
+                   //     this.Hide();
+                   // }
+                   // else
+                   // {
+                   //     MessageBox.Show("Test");
+                   // }
                 }
                 else
                     MessageBox.Show("Wrong credentials");
