@@ -53,6 +53,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStatistics = new System.Windows.Forms.Panel();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblHi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlDepartments.SuspendLayout();
@@ -69,9 +70,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 110);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(343, 243);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -84,16 +86,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panel1.Controls.Add(this.btnDepartments);
             this.panel1.Controls.Add(this.Stocks);
             this.panel1.Controls.Add(this.btnEmployees);
-            this.panel1.Location = new System.Drawing.Point(12, 218);
+            this.panel1.Location = new System.Drawing.Point(17, 363);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 500);
+            this.panel1.Size = new System.Drawing.Size(342, 832);
             this.panel1.TabIndex = 3;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(10, 467);
+            this.btnLogout.Location = new System.Drawing.Point(14, 778);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(220, 23);
+            this.btnLogout.Size = new System.Drawing.Size(314, 38);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -101,9 +105,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnStatistics
             // 
-            this.btnStatistics.Location = new System.Drawing.Point(10, 132);
+            this.btnStatistics.Location = new System.Drawing.Point(14, 220);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(220, 23);
+            this.btnStatistics.Size = new System.Drawing.Size(314, 38);
             this.btnStatistics.TabIndex = 5;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
@@ -111,9 +116,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnSchedule
             // 
-            this.btnSchedule.Location = new System.Drawing.Point(10, 102);
+            this.btnSchedule.Location = new System.Drawing.Point(14, 170);
+            this.btnSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(220, 23);
+            this.btnSchedule.Size = new System.Drawing.Size(314, 38);
             this.btnSchedule.TabIndex = 4;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = true;
@@ -121,9 +127,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnDepartments
             // 
-            this.btnDepartments.Location = new System.Drawing.Point(10, 72);
+            this.btnDepartments.Location = new System.Drawing.Point(14, 120);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(220, 23);
+            this.btnDepartments.Size = new System.Drawing.Size(314, 38);
             this.btnDepartments.TabIndex = 3;
             this.btnDepartments.Text = "Departments";
             this.btnDepartments.UseVisualStyleBackColor = true;
@@ -131,9 +138,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // Stocks
             // 
-            this.Stocks.Location = new System.Drawing.Point(10, 42);
+            this.Stocks.Location = new System.Drawing.Point(14, 70);
+            this.Stocks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Stocks.Name = "Stocks";
-            this.Stocks.Size = new System.Drawing.Size(220, 23);
+            this.Stocks.Size = new System.Drawing.Size(314, 38);
             this.Stocks.TabIndex = 2;
             this.Stocks.Text = "Stocks";
             this.Stocks.UseVisualStyleBackColor = true;
@@ -141,9 +149,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnEmployees
             // 
-            this.btnEmployees.Location = new System.Drawing.Point(10, 12);
+            this.btnEmployees.Location = new System.Drawing.Point(14, 20);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(220, 23);
+            this.btnEmployees.Size = new System.Drawing.Size(314, 38);
             this.btnEmployees.TabIndex = 1;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = true;
@@ -161,28 +170,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlDepartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlDepartments.Controls.Add(this.dataGridView2);
             this.pnlDepartments.Controls.Add(this.label2);
-            this.pnlDepartments.Location = new System.Drawing.Point(258, 12);
+            this.pnlDepartments.Location = new System.Drawing.Point(369, 20);
+            this.pnlDepartments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlDepartments.Name = "pnlDepartments";
-            this.pnlDepartments.Size = new System.Drawing.Size(787, 706);
+            this.pnlDepartments.Size = new System.Drawing.Size(1123, 1175);
             this.pnlDepartments.TabIndex = 7;
             this.pnlDepartments.Visible = false;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView2.Location = new System.Drawing.Point(14, 148);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView2.Size = new System.Drawing.Size(1096, 1012);
             this.dataGridView2.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(308, 10);
+            this.label2.Location = new System.Drawing.Point(440, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 37);
+            this.label2.Size = new System.Drawing.Size(253, 54);
             this.label2.TabIndex = 0;
             this.label2.Text = "Departments";
             // 
@@ -191,28 +204,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEmployees.Controls.Add(this.dataGridView3);
             this.pnlEmployees.Controls.Add(this.label3);
-            this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
+            this.pnlEmployees.Location = new System.Drawing.Point(369, 20);
+            this.pnlEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(787, 706);
+            this.pnlEmployees.Size = new System.Drawing.Size(1123, 1175);
             this.pnlEmployees.TabIndex = 8;
             this.pnlEmployees.Visible = false;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView3.Location = new System.Drawing.Point(14, 148);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView3.Size = new System.Drawing.Size(1096, 1012);
             this.dataGridView3.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(308, 10);
+            this.label3.Location = new System.Drawing.Point(440, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 37);
+            this.label3.Size = new System.Drawing.Size(212, 54);
             this.label3.TabIndex = 0;
             this.label3.Text = "Employees";
             // 
@@ -221,28 +238,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStocks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlStocks.Controls.Add(this.dataGridView4);
             this.pnlStocks.Controls.Add(this.label4);
-            this.pnlStocks.Location = new System.Drawing.Point(258, 12);
+            this.pnlStocks.Location = new System.Drawing.Point(369, 20);
+            this.pnlStocks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlStocks.Name = "pnlStocks";
-            this.pnlStocks.Size = new System.Drawing.Size(787, 706);
+            this.pnlStocks.Size = new System.Drawing.Size(1123, 1175);
             this.pnlStocks.TabIndex = 8;
             this.pnlStocks.Visible = false;
             // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView4.Location = new System.Drawing.Point(14, 148);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 62;
             this.dataGridView4.RowTemplate.Height = 25;
-            this.dataGridView4.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView4.Size = new System.Drawing.Size(1096, 1012);
             this.dataGridView4.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(308, 10);
+            this.label4.Location = new System.Drawing.Point(440, 17);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 37);
+            this.label4.Size = new System.Drawing.Size(135, 54);
             this.label4.TabIndex = 0;
             this.label4.Text = "Stocks";
             // 
@@ -251,28 +272,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlSchedule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSchedule.Controls.Add(this.dataGridView5);
             this.pnlSchedule.Controls.Add(this.label5);
-            this.pnlSchedule.Location = new System.Drawing.Point(258, 12);
+            this.pnlSchedule.Location = new System.Drawing.Point(369, 20);
+            this.pnlSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlSchedule.Name = "pnlSchedule";
-            this.pnlSchedule.Size = new System.Drawing.Size(787, 706);
+            this.pnlSchedule.Size = new System.Drawing.Size(1123, 1175);
             this.pnlSchedule.TabIndex = 11;
             this.pnlSchedule.Visible = false;
             // 
             // dataGridView5
             // 
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView5.Location = new System.Drawing.Point(14, 148);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 62;
             this.dataGridView5.RowTemplate.Height = 25;
-            this.dataGridView5.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView5.Size = new System.Drawing.Size(1096, 1012);
             this.dataGridView5.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(308, 10);
+            this.label5.Location = new System.Drawing.Point(440, 17);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 37);
+            this.label5.Size = new System.Drawing.Size(184, 54);
             this.label5.TabIndex = 0;
             this.label5.Text = "Schedule";
             // 
@@ -281,37 +306,50 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStatistics.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlStatistics.Controls.Add(this.dataGridView6);
             this.pnlStatistics.Controls.Add(this.label6);
-            this.pnlStatistics.Location = new System.Drawing.Point(258, 12);
+            this.pnlStatistics.Location = new System.Drawing.Point(369, 20);
+            this.pnlStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlStatistics.Name = "pnlStatistics";
-            this.pnlStatistics.Size = new System.Drawing.Size(787, 706);
+            this.pnlStatistics.Size = new System.Drawing.Size(1123, 1175);
             this.pnlStatistics.TabIndex = 12;
             this.pnlStatistics.Visible = false;
             // 
             // dataGridView6
             // 
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView6.Location = new System.Drawing.Point(14, 148);
+            this.dataGridView6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersWidth = 62;
             this.dataGridView6.RowTemplate.Height = 25;
-            this.dataGridView6.Size = new System.Drawing.Size(767, 607);
+            this.dataGridView6.Size = new System.Drawing.Size(1096, 1012);
             this.dataGridView6.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(308, 10);
+            this.label6.Location = new System.Drawing.Point(440, 17);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 37);
+            this.label6.Size = new System.Drawing.Size(177, 54);
             this.label6.TabIndex = 0;
             this.label6.Text = "Statistics";
             // 
+            // lblHi
+            // 
+            this.lblHi.AutoSize = true;
+            this.lblHi.Location = new System.Drawing.Point(17, 20);
+            this.lblHi.Name = "lblHi";
+            this.lblHi.Size = new System.Drawing.Size(0, 25);
+            this.lblHi.TabIndex = 13;
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1060, 730);
+            this.ClientSize = new System.Drawing.Size(1514, 1050);
+            this.Controls.Add(this.lblHi);
             this.Controls.Add(this.pnlStocks);
             this.Controls.Add(this.pnlDepartments);
             this.Controls.Add(this.pnlSchedule);
@@ -319,6 +357,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlStatistics);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.Text = "Main";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -339,6 +378,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStatistics.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -367,5 +407,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel pnlStatistics;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblHi;
     }
 }

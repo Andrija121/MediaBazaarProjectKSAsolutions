@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaBazaarProjectKSAsolutions.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class Main : Form
     {
-        public Main()
+        User u;
+        
+        public Main(User user)
         {
             InitializeComponent();
+            u= user;
+            lblHi.Text = "Hi, "+u.FirstName;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
