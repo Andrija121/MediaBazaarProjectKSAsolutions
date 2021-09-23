@@ -24,14 +24,12 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void LL_Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+            
             
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-       
-
             string userName = tbUserName.Text;
             string password = tbPassword.Text;
             User user = null;
@@ -82,20 +80,12 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            
+            userManagement.AddUser(new User(1, "aa", "aa", "aa", "asad", Geneder.MALE, DateTime.Now, 123, "asad", "asad"));
+        }
 
-            MySqlConnection conn = new MySqlConnection("server = studmysql01.fhict.local; database = dbi454447; uid = root; password = root; ");
-            
-            string query = "SELECT firstName,password FROM user where firstName = @firstName and password = @password";
+        private void btnPasswordForget_Click(object sender, EventArgs e)
+        {
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            conn.Open();
-
-            cmd.Parameters.AddWithValue("@firstName", tbUserName.Text);
-            cmd.Parameters.AddWithValue("@password", tbPassword.Text);
-
-            cmd.ExecuteNonQuery();            
-            
         }
     }
 }

@@ -17,11 +17,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         private string zipCode;
         private string address;
 
-        public int Id   { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int Id   { get { return id; } }
+        public string FirstName { get { return firstName; } }
+        public string LastName { get { return lastName; } }
         public string Email { get; set; }
-        public string Password { get; set; }
+        public string Password { get { return password; } }
 
         public User(int id,string firstName,string lastName,string password,string email,Geneder geneder,DateTime birthday,int bsn,string zipCode,string address)
         {
