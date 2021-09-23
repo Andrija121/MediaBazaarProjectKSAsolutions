@@ -28,6 +28,10 @@ namespace MediaBazaarProjectKSAsolutions.Class
             }
             return null;
         }
+        public List<User> GetUsers()
+        {
+            return users;
+        }
         public void RemoveUserAtIndex(int uIndex)
         {
             users.RemoveAt(uIndex);

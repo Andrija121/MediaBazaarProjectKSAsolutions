@@ -12,17 +12,26 @@ namespace MediaBazaarProjectKSAsolutions
 {
     public partial class FormLogin : Form
     {
+        Class.UserManagement userManagement;
         public FormLogin()
         {
             InitializeComponent();
+            userManagement = new Class.UserManagement();
         }
 
         private void LL_Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Forms.Main main = new Forms.Main();
+           
             
-            main.Show();
-            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string userName=tb
+            foreach (var u in userManagement.GetUsers())
+            {
+                if(u.Id==)
+            }
         }
     }
 }
