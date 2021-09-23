@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class UserManagement
     {
@@ -27,6 +27,10 @@ namespace MediaBazaarProjectKSAsolutions.Class
                 }
             }
             return null;
+        }
+        public List<User> GetUsers()
+        {
+            return users;
         }
         public void RemoveUserAtIndex(int uIndex)
         {

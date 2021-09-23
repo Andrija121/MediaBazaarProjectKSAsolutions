@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class Stock
     {
