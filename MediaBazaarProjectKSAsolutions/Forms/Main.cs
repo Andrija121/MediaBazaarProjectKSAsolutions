@@ -12,57 +12,43 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class Main : Form
     {
         User u;
-        
+
         public Main(User user)
         {
             InitializeComponent();
-            u= user;
-            lblHi.Text = "Hi, "+u.FirstName;
+            u = user;
+            //lblHi.Text = "Hi, "+u.FirstName;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = true;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormEmployee FormEmployee = new FormEmployee();
+            FormEmployee.Show();
+            Hide();
         }
 
         private void Stocks_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = true;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormStock FormStock = new FormStock();
+            FormStock.Show();
+            Hide();
         }
 
         private void btnDepartments_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = true;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormDepartment FormDepartment = new FormDepartment();
+            FormDepartment.Show();
+            Hide();
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = true;
-            pnlStatistics.Visible = false;
+            MessageBox.Show("Currently not available.");
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = true;
+            MessageBox.Show("Currently not available.");
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

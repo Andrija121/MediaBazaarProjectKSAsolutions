@@ -1,6 +1,7 @@
 ﻿using MediaBazaarProjectKSAsolutions.Classes;
 using MediaBazaarProjectKSAsolutions.Forms;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
+//using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,8 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+            MySqlConnection conn = new MySqlConnection("Server=studmysql01.fhict.local;Uid=dbi454447;Database=dbi454447;Pwd=root;SslMode=none;"); string query = "select firstName, lastName from User"; MySqlCommand cmd = new MySqlCommand(query, conn); conn.Open(); conn.Close();
+
             userManagement.AddUser(new User(1, "aa", "aa", "aa", "asad", Geneder.MALE, DateTime.Now, 123, "asad", "asad"));
         }
 
