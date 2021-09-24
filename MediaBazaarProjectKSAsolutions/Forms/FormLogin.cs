@@ -56,14 +56,6 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("");
-
-            string query = "select firstName, lastName from User" + "where firstName = @firstName and password =@password";
-
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            conn.Open();
-
-
             userManagement.AddUser(new User(1, "aa", "aa", "aa", "asad", Gender.MALE, DateTime.Now, 123, "asad", "asad"));
         }
 
