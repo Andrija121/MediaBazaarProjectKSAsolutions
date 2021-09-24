@@ -22,6 +22,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
             departments.RemoveAt(dIndex);
         }
+        public Department EditDepartment(Department department)
+        {
+            return department;
+        }
         public Department GetDepartment(int id)
         {
             foreach (var department in departments)

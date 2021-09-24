@@ -28,6 +28,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
             return null;
         }
+        public Stock EditStock(Stock s)
+        {
+            return s;
+        }
         public void RemoveStockAtIndex(int sIndex)
         {
             stocks.RemoveAt(sIndex);
