@@ -1,6 +1,6 @@
 ﻿namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    public enum Geneder
+    public enum Gender
     {
         MALE,
         FEMALE,
