@@ -6,7 +6,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class DepartmentManager : User
     {
-        public DepartmentManager(int id,string firstName,string lastName,string email,string password,Geneder geneder,DateTime birthday,int bSN,string zipCode,string address): base(id,firstName,lastName,password,email,geneder,birthday,bSN,zipCode,address)
+        public DepartmentManager()
         {
 
         }

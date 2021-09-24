@@ -89,6 +89,7 @@
             this.btnPasswordForget.TabIndex = 6;
             this.btnPasswordForget.Text = "Forgot Password?";
             this.btnPasswordForget.UseVisualStyleBackColor = true;
+            this.btnPasswordForget.Click += new System.EventHandler(this.btnPasswordForget_Click);
             // 
             // btnLogin
             // 
@@ -146,6 +147,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
