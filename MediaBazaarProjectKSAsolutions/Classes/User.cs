@@ -11,9 +11,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         private string lastName;
         private string password;
         private string email;
-        private Geneder geneder;
+        private Gender geneder;
         private DateTime birthday;
         private int bSN;
+        private Role role;
         private string zipCode;
         private string address;
 
@@ -23,7 +24,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public string Email { get; set; }
         public string Password { get { return password; } }
 
-        public User(int id,string firstName,string lastName,string password,string email,Geneder geneder,DateTime birthday,int bsn,string zipCode,string address)
+        public User(int id,string firstName,string lastName,string password,string email,Gender geneder,DateTime birthday,int bsn,string zipCode,string address)
         {
             this.id = id;
             this.firstName = firstName;
