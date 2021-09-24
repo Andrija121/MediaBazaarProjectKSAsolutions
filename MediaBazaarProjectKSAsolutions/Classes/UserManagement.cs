@@ -28,6 +28,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
             return null;
         }
+        public User EditUser(User u)
+        {
+            return u;
+        }
         public List<User> GetUsers()
         {
             return users;
