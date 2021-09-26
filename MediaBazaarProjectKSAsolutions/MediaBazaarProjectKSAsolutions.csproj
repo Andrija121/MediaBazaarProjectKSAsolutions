@@ -7,12 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySqlConnector" Version="1.3.12" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.26\Assemblies\net5.0\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.26\Assemblies\netstandard2.1\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 

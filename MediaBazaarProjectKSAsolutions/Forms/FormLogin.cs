@@ -37,17 +37,10 @@ namespace MediaBazaarProjectKSAsolutions
             {
                 if(u.FirstName==userName && u.Password==password)
                 {
-                    user = u;
-                    Main main1 = new Main(user);
-                    main1.Show();
-                    this.Hide();
-
-                    if ((GeneralManager)user == u || (HRManager)user == u || (DepartmentManager)user == u || (StoreEmployee)user == u || (WarehouseEmployee) user == u)
-                    {
+                        user = u;
                         Main main = new Main(user);
                         main.Show();
                         this.Hide();
-                    }
                 }
                 else
                     MessageBox.Show("Wrong credentials");
@@ -56,7 +49,7 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            userManagement.AddUser(new User(1, "aa", "aa", "aa", "asad", Gender.MALE, DateTime.Now, 123, "asad", "asad"));
+         
         }
 
         private void btnPasswordForget_Click(object sender, EventArgs e)

@@ -6,42 +6,41 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 {
      public  class User
     {
-        private int id;
-        private string firstName;
-        private string lastName;
-        private string password;
-        private string email;
-        private Gender geneder;
-        private DateTime birthday;
-        private int bSN;
-        private Role role;
-        private string zipCode;
-        private string address;
 
-        public int Id   { get { return id; } }
-        public string FirstName { get { return firstName; } }
-        public string LastName { get { return lastName; } }
+        public int Id   { get; set; }
+        public string UserName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
-        public string Password { get { return password; } }
+        public string Password { get; set; }
+        public DateTime Birtyhday { get; set; }
+        public int BSN { get; set; }
+        public string ZipCode { get; set; }
+        public string Address { get; set; }
+        public Gender Gender { get; set; }
+        public Role Role { get; set; }
+          
 
-        public User(int id,string firstName,string lastName,string password,string email,Gender geneder,DateTime birthday,int bsn,string zipCode,string address)
+
+        public User(int id,string userName,string firstName,string lastName, string email, string password,DateTime birthday,int bsn, string zipCode,string address,Gender gender, Role role)
         {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.password = password;
-            this.email = email;
-            this.geneder = geneder;
-            this.birthday = birthday;
-            this.bSN = bsn;
-            this.zipCode = zipCode;
-            this.address = address;
+            this.Id = id;
+            this.UserName = userName;
+            this.FirstName= firstName;
+            this.LastName= lastName;
+            this.Email = email;
+            this.Password = password;
+            this.Birtyhday= birthday;
+            this.BSN = bsn;
+            this.ZipCode = zipCode;
+            this.Address = address;
+            this.Gender = gender;
+            this.Role = role;
         }
         public User()
         {
 
         }
-
         public override string ToString()
         {
             return base.ToString();
