@@ -30,12 +30,12 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = tbUserName.Text;
+            string userNameOrEmail = tbUserName.Text;
             string password = tbPassword.Text;
             User user;
             foreach (var u in userManagement.GetUsers())
             {
-                if(u.UserName==userName && u.Password==password)
+                if (u.UserName==userNameOrEmail || u.Email==userNameOrEmail  && u.Password == password)
                 {
                         user = u;
                         Main main = new Main(user);
