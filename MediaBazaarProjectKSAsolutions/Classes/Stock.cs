@@ -10,14 +10,16 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public string ProductName { get; set; }
         public double Price { get; set; }
         public int SerialNumber { get; set; }
+        public int Amount { get; set; }
         // properties
 
-        public Stock(int id,string productName,double price,int serialNumber)
+        public Stock(int id,string productName,double price,int serialNumber, int amount)
         {
             this.Id = id;
             this.ProductName = productName;
-            this.Price= price;
-            this.SerialNumber= serialNumber;
+            this.Price = price;
+            this.SerialNumber = serialNumber;
+            this.Amount = amount;
         }
     }
 }

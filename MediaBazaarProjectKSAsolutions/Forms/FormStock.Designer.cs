@@ -30,6 +30,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void InitializeComponent()
         {
             this.pnlEmployees = new System.Windows.Forms.Panel();
+            this.btnDelStocks = new System.Windows.Forms.Button();
+            this.btnEditStocks = new System.Windows.Forms.Button();
+            this.btnCreateStocks = new System.Windows.Forms.Button();
+            this.btnViewStocks = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Stock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,6 +53,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // pnlEmployees
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Controls.Add(this.btnDelStocks);
+            this.pnlEmployees.Controls.Add(this.btnEditStocks);
+            this.pnlEmployees.Controls.Add(this.btnCreateStocks);
+            this.pnlEmployees.Controls.Add(this.btnViewStocks);
             this.pnlEmployees.Controls.Add(this.dataGridView3);
             this.pnlEmployees.Controls.Add(this.Stock);
             this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
@@ -57,14 +65,54 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.TabIndex = 12;
             this.pnlEmployees.Visible = false;
             // 
+            // btnDelStocks
+            // 
+            this.btnDelStocks.Location = new System.Drawing.Point(704, 89);
+            this.btnDelStocks.Name = "btnDelStocks";
+            this.btnDelStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnDelStocks.TabIndex = 5;
+            this.btnDelStocks.Text = "Delete Stock";
+            this.btnDelStocks.UseVisualStyleBackColor = true;
+            this.btnDelStocks.Click += new System.EventHandler(this.btnDelStocks_Click);
+            // 
+            // btnEditStocks
+            // 
+            this.btnEditStocks.Location = new System.Drawing.Point(475, 89);
+            this.btnEditStocks.Name = "btnEditStocks";
+            this.btnEditStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnEditStocks.TabIndex = 4;
+            this.btnEditStocks.Text = "Edit Stock";
+            this.btnEditStocks.UseVisualStyleBackColor = true;
+            this.btnEditStocks.Click += new System.EventHandler(this.btnEditStocks_Click);
+            // 
+            // btnCreateStocks
+            // 
+            this.btnCreateStocks.Location = new System.Drawing.Point(241, 89);
+            this.btnCreateStocks.Name = "btnCreateStocks";
+            this.btnCreateStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnCreateStocks.TabIndex = 3;
+            this.btnCreateStocks.Text = "Create Stock";
+            this.btnCreateStocks.UseVisualStyleBackColor = true;
+            this.btnCreateStocks.Click += new System.EventHandler(this.btnCreateStocks_Click);
+            // 
+            // btnViewStocks
+            // 
+            this.btnViewStocks.Location = new System.Drawing.Point(10, 89);
+            this.btnViewStocks.Name = "btnViewStocks";
+            this.btnViewStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnViewStocks.TabIndex = 2;
+            this.btnViewStocks.Text = "Load Stock";
+            this.btnViewStocks.UseVisualStyleBackColor = true;
+            this.btnViewStocks.Click += new System.EventHandler(this.btnViewStocks_Click);
+            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 89);
+            this.dataGridView3.Location = new System.Drawing.Point(10, 118);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(888, 634);
+            this.dataGridView3.Size = new System.Drawing.Size(888, 605);
             this.dataGridView3.TabIndex = 1;
             // 
             // Stock
@@ -190,5 +238,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnStocks;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDelStocks;
+        private System.Windows.Forms.Button btnEditStocks;
+        private System.Windows.Forms.Button btnCreateStocks;
+        private System.Windows.Forms.Button btnViewStocks;
     }
 }

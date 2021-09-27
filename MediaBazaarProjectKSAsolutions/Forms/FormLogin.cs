@@ -35,7 +35,7 @@ namespace MediaBazaarProjectKSAsolutions
             User user;
             foreach (var u in userManagement.GetUsers())
             {
-                if(u.FirstName==userName && u.Password==password)
+                if(u.UserName==userName && u.Password==password)
                 {
                         user = u;
                         Main main = new Main(user);
