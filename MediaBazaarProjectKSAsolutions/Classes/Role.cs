@@ -6,7 +6,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 {
     public enum Role
     {
-        GENRALMANAGER,
+        GENERALMANAGER,
         HRMANAGER,
         DEPARTMENTMANAGER,
         STOREEMPLOYEE,

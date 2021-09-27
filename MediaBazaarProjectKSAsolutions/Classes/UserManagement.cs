@@ -173,19 +173,19 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                         while (dr.Read())
                         {
                             User user = new User();
-                            user.Id = Convert.ToInt32(dr[0]);
-                            user.UserName = dr[1].ToString();
-                            user.FirstName = dr[2].ToString();
-                            user.LastName = dr[3].ToString();
-                            user.Email = dr[4].ToString();
-                            user.Password = dr[5].ToString();
-                            user.Birtyhday = Convert.ToDateTime(dr[6]);
-                            user.BSN = Convert.ToInt32(dr[7]);
-                            user.ZipCode = dr[8].ToString();
-                            user.Address = dr[9].ToString();
-                            user.Gender = (Gender)int.Parse(dr[10].ToString());
-                            user.Role = (Role)int.Parse(dr[11].ToString());
-                            user.Status = (Status)int.Parse(dr[12].ToString());
+                            user.Id = Convert.ToInt32(dr["id"]);
+                            user.UserName = dr["USERNAME"].ToString();
+                            user.FirstName = dr["FIRSTNAME"].ToString();
+                            user.LastName = dr["LASTNAME"].ToString();
+                            user.Email = dr["EMAIL"].ToString();
+                            user.Password = dr["PASSWORD"].ToString();
+                            user.Birtyhday = Convert.ToDateTime(dr["BIRTHDAY"]);
+                            user.BSN = Convert.ToInt32(dr["BSN"]);
+                            user.ZipCode = dr["ZIPCODE"].ToString();
+                            user.Address = dr["ADDRESS"].ToString();
+                            user.Gender =Enum.Parse<Gender>( dr["GENDER"].ToString());
+                            user.Role = Enum.Parse<Role>(dr["ROLE"].ToString());
+                            user.Status = Enum.Parse<Status>(dr["STATUS"].ToString());
                             users.Add(user);
                         }
                         return users;
