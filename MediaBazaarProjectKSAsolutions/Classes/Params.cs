@@ -9,7 +9,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 {
    public static class Params
     {
-        public static string connectionString = "server=studmysql01.fhict.local;uid=dbi454447;database=dbi454447;Pwd=root;";
+        public static string connectionString = "server=studmysql01.fhict.local;uid=dbi454447;database=dbi454447;Pwd=root;Sslmode=none";
 
 
 
