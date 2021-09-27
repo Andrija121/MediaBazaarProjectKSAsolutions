@@ -121,11 +121,24 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                     {
-                        string sql = "Update user set (id='" + u.Id + "',username='" + u.UserName + "',firstName='" + u.FirstName + "',lastName='" + u.LastName + "',email='" + u.Email + "',password='" + u.Password + "',birthday='" + u.Birtyhday + "',bsn='" + u.BSN + "',zipcode='" + u.ZipCode + "',address='" + u.Address + "',gender='" + u.Gender + "',role='" + u.Role + "',status='" + u.Status + "') ";
-                        MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    conn.Open();
+                    string sql = "Update user set username=@userName, firstName=@firstName,lastName=@lastName,email=@email,password=@password,birthday=@birthday,bsn=@bsn,zipcode=@zipCode,address=@address,gender=@gender,role=@role,status=@status where id =@id";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@userName",u.UserName);
+                    cmd.Parameters.AddWithValue("@firstName", u.FirstName);
+                    cmd.Parameters.AddWithValue("@lastName", u.LastName);
+                    cmd.Parameters.AddWithValue("@email", u.Email);
+                    cmd.Parameters.AddWithValue("@password", u.Password);
+                    cmd.Parameters.AddWithValue("birthday", u.Birtyhday);
+                    cmd.Parameters.AddWithValue("bsn", u.BSN);
+                    cmd.Parameters.AddWithValue("zipcode", u.ZipCode);
+                    cmd.Parameters.AddWithValue("@address", u.Address);
+                    cmd.Parameters.AddWithValue("@gender", u.Gender);
+                    cmd.Parameters.AddWithValue("@role", u.Role);
+                    cmd.Parameters.AddWithValue("@status", u.Status);
+
+                    cmd.ExecuteNonQuery();
 
                     }
                 return u;
@@ -147,10 +160,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                     {
-                        string sql = "select * from user";
+                    conn.Open();
+                    string sql = "select * from user";
                         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                        conn.Open();
+                        
 
                         MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
@@ -169,9 +183,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                             user.BSN = Convert.ToInt32(dr[7]);
                             user.ZipCode = dr[8].ToString();
                             user.Address = dr[9].ToString();
-                            user.Gender = (Gender)dr[10];
-                            user.Role = (Role)dr[11];
-                            user.Status = (Status)dr[12];
+                            user.Gender = (Gender)int.Parse(dr[10].ToString());
+                            user.Role = (Role)int.Parse(dr[11].ToString());
+                            user.Status = (Status)int.Parse(dr[12].ToString());
                             users.Add(user);
                         }
                         return users;
@@ -180,7 +194,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
                 finally
