@@ -13,6 +13,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public int Amount { get; set; }
         // properties
 
+        public Stock()
+        {
+
+        }
         public Stock(int id,string productName,double price,int serialNumber, int amount)
         {
             this.Id = id;
@@ -21,5 +25,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             this.SerialNumber = serialNumber;
             this.Amount = amount;
         }
+
     }
 }
