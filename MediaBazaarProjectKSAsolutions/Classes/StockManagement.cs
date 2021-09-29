@@ -51,7 +51,48 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
             //stocks.Add(stock);
         }
+
         public Stock GetStock(int id)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "select * from stock";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Stock> stocks = new List<Stock>();
+
+                    while (dr.Read())
+                    {
+                        Stock stock = new Stock();
+                        stock.Id = Convert.ToInt32(dr["id"]);
+                        stock.ProductName = dr["productName"].ToString();
+                        stock.Price = Convert.ToInt32(dr["price"]);
+                        stock.SerialNumber = Convert.ToInt32(dr["serialNumber"]);
+                        stock.Amount = Convert.ToInt32(dr["amount"]);
+                        stocks.Add(stock);
+                    }
+                    return null;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public List<Stock> GetAllStock()
         {
             try
             {
@@ -99,14 +140,16 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             //}
             //return null;
         }
-        public Stock EditStock(Stock s)
+        public Stock EditStock(int id)
         {
-            return s;
+            GetStock(id);
+            //do something
+            return null;
         }
         public void RemoveStockAtIndex(int sIndex)
         {
             stocks.RemoveAt(sIndex);
-            
+
         }
     }
 }

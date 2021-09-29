@@ -26,5 +26,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             this.Amount = amount;
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
     }
 }

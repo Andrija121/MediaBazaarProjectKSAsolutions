@@ -24,14 +24,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             FormEmployee FormEmployee = new FormEmployee();
             FormEmployee.Show();
-            Hide();
+            this.Hide();
         }
 
         private void Stocks_Click(object sender, EventArgs e)
         {
             FormStock FormStock = new FormStock();
             FormStock.Show();
-            Hide();
+            this.Hide();
         }
 
         private void btnDepartments_Click(object sender, EventArgs e)

@@ -73,7 +73,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDelStocks.TabIndex = 5;
             this.btnDelStocks.Text = "Delete Stock";
             this.btnDelStocks.UseVisualStyleBackColor = true;
-                        // 
+            // 
             // btnEditStocks
             // 
             this.btnEditStocks.Location = new System.Drawing.Point(475, 89);
@@ -82,7 +82,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditStocks.TabIndex = 4;
             this.btnEditStocks.Text = "Edit Stock";
             this.btnEditStocks.UseVisualStyleBackColor = true;
-            
             // 
             // btnCreateStocks
             // 
@@ -92,7 +91,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnCreateStocks.TabIndex = 3;
             this.btnCreateStocks.Text = "Create Stock";
             this.btnCreateStocks.UseVisualStyleBackColor = true;
-           
+            this.btnCreateStocks.Click += new System.EventHandler(this.btnCreateStocks_Click);
             // 
             // btnViewStocks
             // 
@@ -102,7 +101,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnViewStocks.TabIndex = 2;
             this.btnViewStocks.Text = "Load Stock";
             this.btnViewStocks.UseVisualStyleBackColor = true;
-            
+            this.btnViewStocks.Click += new System.EventHandler(this.btnViewStocks_Click);
             // 
             // dataGridView3
             // 
