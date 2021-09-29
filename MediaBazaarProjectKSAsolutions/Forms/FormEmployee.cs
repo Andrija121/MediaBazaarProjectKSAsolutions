@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaBazaarProjectKSAsolutions.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,29 +11,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormEmployee : Form
     {
-        public FormEmployee()
+        private ButtonClicks button = new ButtonClicks();
+        private User loggedIn;
+        public FormEmployee(User user)
         {
             InitializeComponent();
+            this.loggedIn = user;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee();
-            FormEmployee.Show();
+            button.btnEmployee(loggedIn);
+        }        
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            button.btnStock(loggedIn);
             Hide();
         }
 
-        private void Stocks_Click(object sender, EventArgs e)
+        private void Department_Click(object sender, EventArgs e)
         {
-            FormStock FormStock = new FormStock();
-            FormStock.Show();
-            Hide();
-        }
-
-        private void btnDepartments_Click(object sender, EventArgs e)
-        {
-            FormDepartment FormDepartment = new FormDepartment();
-            FormDepartment.Show();
+            button.btnDepartment(loggedIn);
             Hide();
         }
 
@@ -47,6 +46,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStocks_Click(object sender, EventArgs e)
         {
 
         }

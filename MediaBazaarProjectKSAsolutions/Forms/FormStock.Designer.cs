@@ -34,7 +34,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditStocks = new System.Windows.Forms.Button();
             this.btnCreateStocks = new System.Windows.Forms.Button();
             this.btnViewStocks = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgStock = new System.Windows.Forms.DataGridView();
             this.Stock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEmployees = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStock)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.btnEditStocks);
             this.pnlEmployees.Controls.Add(this.btnCreateStocks);
             this.pnlEmployees.Controls.Add(this.btnViewStocks);
-            this.pnlEmployees.Controls.Add(this.dataGridView3);
+            this.pnlEmployees.Controls.Add(this.dgStock);
             this.pnlEmployees.Controls.Add(this.Stock);
             this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
             this.pnlEmployees.Name = "pnlEmployees";
@@ -103,15 +103,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnViewStocks.UseVisualStyleBackColor = true;
             this.btnViewStocks.Click += new System.EventHandler(this.btnViewStocks_Click);
             // 
-            // dataGridView3
+            // dgStock
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 118);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(888, 605);
-            this.dataGridView3.TabIndex = 1;
+            this.dgStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgStock.Location = new System.Drawing.Point(10, 118);
+            this.dgStock.Name = "dgStock";
+            this.dgStock.RowHeadersWidth = 62;
+            this.dgStock.RowTemplate.Height = 25;
+            this.dgStock.Size = new System.Drawing.Size(888, 605);
+            this.dgStock.TabIndex = 1;
             // 
             // Stock
             // 
@@ -216,7 +216,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Text = "FormStock";
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStock)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -226,7 +226,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         #endregion
 
         private System.Windows.Forms.Panel pnlEmployees;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgStock;
         private System.Windows.Forms.Label Stock;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;

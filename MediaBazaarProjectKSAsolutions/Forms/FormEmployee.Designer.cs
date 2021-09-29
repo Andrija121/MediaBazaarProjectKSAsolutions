@@ -130,7 +130,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDepartments.TabIndex = 3;
             this.btnDepartments.Text = "Departments";
             this.btnDepartments.UseVisualStyleBackColor = true;
-            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click);
             // 
             // btnStocks
             // 
@@ -140,6 +139,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnStocks.TabIndex = 2;
             this.btnStocks.Text = "Stocks";
             this.btnStocks.UseVisualStyleBackColor = true;
+            this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
             // 
             // btnEmployees
             // 
@@ -149,7 +149,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEmployees.TabIndex = 1;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = true;
-            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // pictureBox1
             // 

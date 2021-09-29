@@ -62,11 +62,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     string sql = "select * from stock";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-
-
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
-
-                    List<Stock> stocks = new List<Stock>();
 
                     while (dr.Read())
                     {
@@ -76,7 +72,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                         stock.Price = Convert.ToInt32(dr["price"]);
                         stock.SerialNumber = Convert.ToInt32(dr["serialNumber"]);
                         stock.Amount = Convert.ToInt32(dr["amount"]);
-                        stocks.Add(stock);
                     }
                     return null;
 
@@ -101,8 +96,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     conn.Open();
                     string sql = "select * from stock";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
