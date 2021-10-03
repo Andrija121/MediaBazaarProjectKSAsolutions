@@ -63,7 +63,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Name = "pnlEmployees";
             this.pnlEmployees.Size = new System.Drawing.Size(914, 737);
             this.pnlEmployees.TabIndex = 12;
-            this.pnlEmployees.Visible = false;
+            this.pnlEmployees.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEmployees_Paint);
             // 
             // btnDelStocks
             // 

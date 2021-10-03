@@ -63,5 +63,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
 
         }
+
+        private void pnlEmployees_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
