@@ -7,7 +7,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
      public  class User
     {
 
-        public int Id   { get; set; }
+        public int Id { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return base.ToString();
+            return UserName + " - " + FirstName + " " + LastName; 
         }
     }
 }

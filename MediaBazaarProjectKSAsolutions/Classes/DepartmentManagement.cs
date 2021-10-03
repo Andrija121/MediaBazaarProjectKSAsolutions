@@ -11,7 +11,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public DepartmentManagement()
         {
-
+            
         }
 
         public void AddDepartment(Department department)

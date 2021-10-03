@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaBazaarProjectKSAsolutions.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +11,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormEmployee : Form
     {
-        public FormEmployee()
+        User u;
+        UserManagement userManagement;
+        public FormEmployee(User user)
         {
             InitializeComponent();
+            this.u = user;
+            userManagement = new UserManagement();
+            RefreshListBox();
         }
 
+        public void RefreshListBox()
+        {
+            lbUsers.Items.Clear();
+            foreach (var u in userManagement.GetUsers())
+            {
+                lbUsers.Items.Add(u);
+            }
+        }
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee();
+            FormEmployee FormEmployee = new FormEmployee(u);
             FormEmployee.Show();
             Hide();
         }
@@ -49,6 +63,31 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+
+            AddUserForm addUserForm = new AddUserForm();
+            addUserForm.ShowDialog();
+            RefreshListBox();
+
+        }
+
+        private void btnMakeUserInactive_Click(object sender, EventArgs e)
+        {
+            User user = (User)lbUsers.SelectedItem;
+            userManagement.SetUserStatusToInactive(user);
+            RefreshListBox();
+            MessageBox.Show("User Made Inactive Successfully");
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            User user = (User)lbUsers.SelectedItem;
+            EditUserForm editUserForm = new EditUserForm(user);
+            editUserForm.ShowDialog();
+            
         }
     }
 }

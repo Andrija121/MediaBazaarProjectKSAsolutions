@@ -22,9 +22,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee();
-            FormEmployee.Show();
-            Hide();
+          
         }
 
         private void Stocks_Click(object sender, EventArgs e)
@@ -54,6 +52,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEmployees_Click_1(object sender, EventArgs e)
+        {
+            FormEmployee FormEmployee = new FormEmployee(u);
+            FormEmployee.Show();
+            Hide();
         }
     }
 }
