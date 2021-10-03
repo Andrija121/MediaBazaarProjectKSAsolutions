@@ -59,19 +59,22 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
+                    Stock stock = new Stock();
                     string sql = "select * from stock";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("id", id);
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
                     while (dr.Read())
                     {
-                        Stock stock = new Stock();
                         stock.Id = Convert.ToInt32(dr["id"]);
                         stock.ProductName = dr["productName"].ToString();
                         stock.Price = Convert.ToInt32(dr["price"]);
                         stock.SerialNumber = Convert.ToInt32(dr["serialNumber"]);
                         stock.Amount = Convert.ToInt32(dr["amount"]);
+                        return stock;
                     }
                     return null;
 
@@ -133,16 +136,62 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             //}
             //return null;
         }
-        public Stock EditStock(int id)
+        public Stock EditStock(Stock stock)
         {
-            GetStock(id);
-            //do something
-            return null;
-        }
-        public void RemoveStockAtIndex(int sIndex)
-        {
-            stocks.RemoveAt(sIndex);
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "Update stock set productNumber=@productName, price=@price,serialNumber=@serialNumber,amount=@amount where id =@id";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
+                    cmd.Parameters.AddWithValue("@productName", stock.ProductName);
+                    cmd.Parameters.AddWithValue("@price", stock.Price);
+                    cmd.Parameters.AddWithValue("@serialNumber", stock.SerialNumber);
+                    cmd.Parameters.AddWithValue("@amount", stock.Amount);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return stock;
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void RemoveStockAtIndex(int id)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    string sql = "DELETE FROM stock where id=@id";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
