@@ -67,14 +67,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            AddUserForm addUserForm = new AddUserForm(u);
-            addUserForm.Show();
-            this.Hide();
+
+            AddUserForm addUserForm = new AddUserForm();
+            addUserForm.ShowDialog();
+            RefreshListBox();
+
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnMakeUserInactive_Click(object sender, EventArgs e)
         {
-            lbUsers.Items.RemoveAt(u.Id);
+            User user = (User)lbUsers.SelectedItem;
+            userManagement.SetUserStatusToInactive(user);
+            RefreshListBox();
+            MessageBox.Show("User Made Inactive Successfully");
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            User user = (User)lbUsers.SelectedItem;
+            EditUserForm editUserForm = new EditUserForm(user);
+            editUserForm.ShowDialog();
+            
         }
     }
 }

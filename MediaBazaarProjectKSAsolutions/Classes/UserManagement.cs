@@ -21,16 +21,13 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO user(id,userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@id,@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
+                    string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
 
 
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     conn.Open();
-
-                    
-                    cmd.Parameters.AddWithValue("@id", user.Id);
                     cmd.Parameters.AddWithValue("@userName", user.UserName);
                     cmd.Parameters.AddWithValue("@firstName", user.FirstName);
                     cmd.Parameters.AddWithValue("@lastName", user.LastName);
@@ -40,10 +37,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@bsn", user.BSN);
                     cmd.Parameters.AddWithValue("@zipcode", user.ZipCode);
                     cmd.Parameters.AddWithValue("@address", user.Address);
-                    cmd.Parameters.AddWithValue("@gender", user.Gender);
-                    cmd.Parameters.AddWithValue("@role", user.Role);
-                    cmd.Parameters.AddWithValue("@status", user.Status);
-                   // cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@gender", user.Gender.ToString());
+                    cmd.Parameters.AddWithValue("@role", user.Role.ToString());
+                    cmd.Parameters.AddWithValue("@status", user.Status.ToString());
+                    cmd.ExecuteNonQuery();
                     conn.Close();
 
 
@@ -107,7 +104,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 conn.Close();
             }
-            
+
         }
 
 
@@ -115,17 +112,18 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
 
         public User EditUser(User u)
-            {
+        {
 
-                try
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
-                    {
                     conn.Open();
                     string sql = "Update user set username=@userName, firstName=@firstName,lastName=@lastName,email=@email,password=@password,birthday=@birthday,bsn=@bsn,zipcode=@zipCode,address=@address,gender=@gender,role=@role,status=@status where id =@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@userName",u.UserName);
+                    cmd.Parameters.AddWithValue("@id", u.Id);
+                    cmd.Parameters.AddWithValue("@userName", u.UserName);
                     cmd.Parameters.AddWithValue("@firstName", u.FirstName);
                     cmd.Parameters.AddWithValue("@lastName", u.LastName);
                     cmd.Parameters.AddWithValue("@email", u.Email);
@@ -134,39 +132,42 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("bsn", u.BSN);
                     cmd.Parameters.AddWithValue("zipcode", u.ZipCode);
                     cmd.Parameters.AddWithValue("@address", u.Address);
-                    cmd.Parameters.AddWithValue("@gender", u.Gender);
-                    cmd.Parameters.AddWithValue("@role", u.Role);
-                    cmd.Parameters.AddWithValue("@status", u.Status);
+                    cmd.Parameters.AddWithValue("@gender", u.Gender.ToString());
+                    cmd.Parameters.AddWithValue("@role", u.Role.ToString());
+                    cmd.Parameters.AddWithValue("@status", u.Status.ToString());
 
                     cmd.ExecuteNonQuery();
 
-                    }
+                }
                 return u;
-                }
-
-                catch (Exception)
-                {
-
-                    throw;
-                }
-                finally
-                {
-                    conn.Close();
-                }
             }
-            public List<User> GetUsers()
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public List<User> GetUsers()
             {
                 try
                 {
                     using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                     {
                     conn.Open();
-                    string sql = "select * from user";
+                    string sql = "select * from user where status=@status ";
                         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                        
+                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());
 
-                        MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
                         List<User> users = new List<User>();
 
@@ -201,33 +202,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     conn.Close();
                 }
 
-            }
-            public void DeleteUser(int id)
+         }
+
+        public void SetUserStatusToInactive(User user)
             {
-
-                try
-                {
-                    using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
-                    {
-                        string sql = "DELETE FROM user where id=@id";
-                        MySqlCommand cmd = new MySqlCommand(sql, conn);
-                        cmd.Parameters.AddWithValue("@id", id);
-
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-
-                    }
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-                finally
-                {
-                    conn.Close();
-                }
+            user.Status = Status.INACTIVE;
+            EditUser(user);
             }
+
+
         }
     } 

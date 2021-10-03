@@ -20,6 +20,7 @@ namespace MediaBazaarProjectKSAsolutions
         {
             InitializeComponent();
             userManagement = new Classes.UserManagement();
+            tbPassword.PasswordChar = '*';
         }
 
         private void LL_Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

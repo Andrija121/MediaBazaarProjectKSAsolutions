@@ -11,12 +11,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class AddUserForm : Form
     {
-        User u;
+
         UserManagement um = new UserManagement();
-        public AddUserForm(User user)
+        
+        public AddUserForm()
         {
             InitializeComponent();
-            this.u = user;
+            
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
@@ -24,9 +25,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormEmployee formEmployee = new FormEmployee(u);
-            formEmployee.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAddNewUser_Click(object sender, EventArgs e)
@@ -46,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Gender gender = (Gender)cbGender.SelectedItem;
                 Role role = (Role)cbRole.SelectedItem;
                 Status status = (Status)cbStatus.SelectedItem;
-                User user = new User(u.Id,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
+                User user = new User(0,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
                 um.AddUser(user);
                 MessageBox.Show("User Created Successfully");
 

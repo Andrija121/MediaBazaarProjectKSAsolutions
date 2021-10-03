@@ -7,7 +7,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
      public  class User
     {
 
-        public int Id   { get; set; }
+        public int Id { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -25,7 +25,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public User(int id,string userName,string firstName,string lastName, string email, string password,DateTime birthday,int bsn, string zipCode,string address,Gender gender, Role role,Status status)
         {
-            this.Id=id;
+            this.Id = id;
             this.UserName = userName;
             this.FirstName= firstName;
             this.LastName= lastName;
