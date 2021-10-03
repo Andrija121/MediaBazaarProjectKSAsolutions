@@ -10,7 +10,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
-
         public UserManagement()
         {
 
@@ -30,7 +29,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     conn.Open();
 
-                    cmd.ExecuteNonQuery();
+                    
                     cmd.Parameters.AddWithValue("@id", user.Id);
                     cmd.Parameters.AddWithValue("@userName", user.UserName);
                     cmd.Parameters.AddWithValue("@firstName", user.FirstName);
@@ -39,11 +38,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@password", user.Password);
                     cmd.Parameters.AddWithValue("@birthday", user.Birtyhday);
                     cmd.Parameters.AddWithValue("@bsn", user.BSN);
-                    cmd.Parameters.AddWithValue("@zipCode", user.ZipCode);
+                    cmd.Parameters.AddWithValue("@zipcode", user.ZipCode);
                     cmd.Parameters.AddWithValue("@address", user.Address);
                     cmd.Parameters.AddWithValue("@gender", user.Gender);
                     cmd.Parameters.AddWithValue("@role", user.Role);
                     cmd.Parameters.AddWithValue("@status", user.Status);
+                   // cmd.ExecuteNonQuery();
                     conn.Close();
 
 

@@ -1,0 +1,62 @@
+﻿using MediaBazaarProjectKSAsolutions.Classes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace MediaBazaarProjectKSAsolutions.Forms
+{
+    public partial class AddUserForm : Form
+    {
+        User u;
+        UserManagement um = new UserManagement();
+        public AddUserForm(User user)
+        {
+            InitializeComponent();
+            this.u = user;
+            cbGender.DataSource = Enum.GetValues(typeof(Gender));
+            cbRole.DataSource = Enum.GetValues(typeof(Role));
+            cbStatus.DataSource = Enum.GetValues(typeof(Status));
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FormEmployee formEmployee = new FormEmployee(u);
+            formEmployee.Show();
+            this.Hide();
+        }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                string userName = tbUserName.Text;
+                string firstName = tbFirstName.Text;
+                string lastName = tbLastName.Text;
+                string email = tbEmail.Text;
+                string password = tbPassword.Text;
+                DateTime birthday = DTPBirthday.Value;
+                int bsn = Convert.ToInt32(tbBSN.Text);
+                string zipCode = tbZipCode.Text;
+                string address = tbAddress.Text;
+                Gender gender = (Gender)cbGender.SelectedItem;
+                Role role = (Role)cbRole.SelectedItem;
+                Status status = (Status)cbStatus.SelectedItem;
+                User user = new User(u.Id,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
+                um.AddUser(user);
+                MessageBox.Show("User Created Successfully");
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error" + ex);
+            }
+        }
+    }
+}

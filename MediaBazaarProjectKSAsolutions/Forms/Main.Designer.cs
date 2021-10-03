@@ -125,6 +125,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEmployees.TabIndex = 1;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click_1);
             // 
             // pictureBox1
             // 

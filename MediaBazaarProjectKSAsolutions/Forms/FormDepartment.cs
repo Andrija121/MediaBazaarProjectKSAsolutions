@@ -17,9 +17,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee();
-            FormEmployee.Show();
-            Hide();
+            //FormEmployee FormEmployee = new FormEmployee();
+            //FormEmployee.Show();
+            //Hide();
         }
 
         private void Stocks_Click(object sender, EventArgs e)

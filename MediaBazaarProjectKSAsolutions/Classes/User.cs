@@ -25,7 +25,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public User(int id,string userName,string firstName,string lastName, string email, string password,DateTime birthday,int bsn, string zipCode,string address,Gender gender, Role role,Status status)
         {
-            this.Id = id;
+            this.Id=id;
             this.UserName = userName;
             this.FirstName= firstName;
             this.LastName= lastName;
@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return base.ToString();
+            return UserName + " - " + FirstName + " " + LastName; 
         }
     }
 }
