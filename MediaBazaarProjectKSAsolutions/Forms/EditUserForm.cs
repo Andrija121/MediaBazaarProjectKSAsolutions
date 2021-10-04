@@ -61,6 +61,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             try
             {
+                
                 tbUserName.Text = u.UserName;
                 tbFirstName.Text = u.FirstName;
                 tbLastName.Text = u.LastName;

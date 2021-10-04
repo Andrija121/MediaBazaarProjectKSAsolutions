@@ -31,6 +31,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployee));
             this.pnlEmployees = new System.Windows.Forms.Panel();
+            this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
             this.btnMakeUserInactive = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // pnlEmployees
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Controls.Add(this.btnSeeInactiveUsers);
             this.pnlEmployees.Controls.Add(this.btnMakeUserInactive);
             this.pnlEmployees.Controls.Add(this.btnEdit);
             this.pnlEmployees.Controls.Add(this.btnAddUser);
@@ -66,9 +68,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Size = new System.Drawing.Size(1305, 1227);
             this.pnlEmployees.TabIndex = 15;
             // 
+            // btnSeeInactiveUsers
+            // 
+            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(1059, 160);
+            this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
+            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(211, 66);
+            this.btnSeeInactiveUsers.TabIndex = 6;
+            this.btnSeeInactiveUsers.Text = "See All Inactive Users";
+            this.btnSeeInactiveUsers.UseVisualStyleBackColor = true;
+            this.btnSeeInactiveUsers.Click += new System.EventHandler(this.btnSeeInactiveUsers_Click);
+            // 
             // btnMakeUserInactive
             // 
-            this.btnMakeUserInactive.Location = new System.Drawing.Point(1059, 160);
+            this.btnMakeUserInactive.Location = new System.Drawing.Point(749, 160);
             this.btnMakeUserInactive.Name = "btnMakeUserInactive";
             this.btnMakeUserInactive.Size = new System.Drawing.Size(211, 66);
             this.btnMakeUserInactive.TabIndex = 5;
@@ -78,7 +90,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(536, 160);
+            this.btnEdit.Location = new System.Drawing.Point(374, 160);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(211, 66);
             this.btnEdit.TabIndex = 4;
@@ -254,5 +266,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.ListBox lbUsers;
         private System.Windows.Forms.Button btnMakeUserInactive;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSeeInactiveUsers;
     }
 }
