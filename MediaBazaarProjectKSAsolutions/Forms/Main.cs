@@ -55,5 +55,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
 
         }
+
+        private void btnDepartments_Click_1(object sender, EventArgs e)
+        {
+            FormDepartment FormDepartment = new FormDepartment();
+            FormDepartment.Show();
+            Hide();
+        }
     }
 }
