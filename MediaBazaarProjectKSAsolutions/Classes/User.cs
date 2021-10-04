@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return UserName + " - " + FirstName + " " + LastName; 
+            return UserName + " - " + FirstName + " " + LastName + ", " + Email + " - " + BSN + " - " + Gender + " - " + Role; 
         }
     }
 }

@@ -152,7 +152,49 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        public List<User> GetInactiveUsers()
+        {
+            try
+            {
+                using(MySqlConnection conn=new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "select * from user where status=@status";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
+                    cmd.Parameters.AddWithValue("@status", Status.INACTIVE.ToString());
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<User> inactiveUsers = new List<User>();
+
+                    while (dr.Read())
+                    {
+                        User user = new User();
+                        user.Id = Convert.ToInt32(dr["id"]);
+                        user.UserName = dr["USERNAME"].ToString();
+                        user.FirstName = dr["FIRSTNAME"].ToString();
+                        user.LastName = dr["LASTNAME"].ToString();
+                        user.Email = dr["EMAIL"].ToString();
+                        user.Password = dr["PASSWORD"].ToString();
+                        user.Birtyhday = Convert.ToDateTime(dr["BIRTHDAY"]);
+                        user.BSN = Convert.ToInt32(dr["BSN"]);
+                        user.ZipCode = dr["ZIPCODE"].ToString();
+                        user.Address = dr["ADDRESS"].ToString();
+                        user.Gender = Enum.Parse<Gender>(dr["GENDER"].ToString());
+                        user.Role = Enum.Parse<Role>(dr["ROLE"].ToString());
+                        user.Status = Enum.Parse<Status>(dr["STATUS"].ToString());
+                        inactiveUsers.Add(user);
+                    }
+                    return inactiveUsers;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public List<User> GetUsers()
             {
                 try
