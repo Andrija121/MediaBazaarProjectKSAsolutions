@@ -140,7 +140,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbxNewStockName);
             this.Controls.Add(this.btnAddStockConfirmation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCreateStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateStock";
             this.ResumeLayout(false);
             this.PerformLayout();

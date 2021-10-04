@@ -80,7 +80,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbxUpdateDepartmentName);
             this.Controls.Add(this.btnUpdateDepartmentConfirmation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUpdateDepartment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUpdateDepartment";
             this.ResumeLayout(false);
             this.PerformLayout();
