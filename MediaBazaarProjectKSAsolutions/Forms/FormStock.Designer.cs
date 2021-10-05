@@ -30,10 +30,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void InitializeComponent()
         {
             this.pnlEmployees = new System.Windows.Forms.Panel();
-            this.btnDelStocks = new System.Windows.Forms.Button();
+            this.btnDelStock = new System.Windows.Forms.Button();
             this.btnEditStocks = new System.Windows.Forms.Button();
             this.btnCreateStocks = new System.Windows.Forms.Button();
-            this.btnViewStocks = new System.Windows.Forms.Button();
+            this.btnRefreshStocks = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Stock = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,74 +53,78 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // pnlEmployees
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEmployees.Controls.Add(this.btnDelStocks);
+            this.pnlEmployees.Controls.Add(this.btnDelStock);
             this.pnlEmployees.Controls.Add(this.btnEditStocks);
             this.pnlEmployees.Controls.Add(this.btnCreateStocks);
-            this.pnlEmployees.Controls.Add(this.btnViewStocks);
+            this.pnlEmployees.Controls.Add(this.btnRefreshStocks);
             this.pnlEmployees.Controls.Add(this.dataGridView3);
             this.pnlEmployees.Controls.Add(this.Stock);
-            this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
+            this.pnlEmployees.Location = new System.Drawing.Point(295, 16);
+            this.pnlEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(914, 737);
+            this.pnlEmployees.Size = new System.Drawing.Size(1044, 982);
             this.pnlEmployees.TabIndex = 12;
-            this.pnlEmployees.Visible = false;
             // 
-            // btnDelStocks
+            // btnDelStock
             // 
-            this.btnDelStocks.Location = new System.Drawing.Point(704, 89);
-            this.btnDelStocks.Name = "btnDelStocks";
-            this.btnDelStocks.Size = new System.Drawing.Size(194, 23);
-            this.btnDelStocks.TabIndex = 5;
-            this.btnDelStocks.Text = "Delete Stock";
-            this.btnDelStocks.UseVisualStyleBackColor = true;
-                        // 
+            this.btnDelStock.Location = new System.Drawing.Point(805, 119);
+            this.btnDelStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelStock.Name = "btnDelStock";
+            this.btnDelStock.Size = new System.Drawing.Size(222, 31);
+            this.btnDelStock.TabIndex = 5;
+            this.btnDelStock.Text = "Delete Stock";
+            this.btnDelStock.UseVisualStyleBackColor = true;
+            // 
             // btnEditStocks
             // 
-            this.btnEditStocks.Location = new System.Drawing.Point(475, 89);
+            this.btnEditStocks.Location = new System.Drawing.Point(543, 119);
+            this.btnEditStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditStocks.Name = "btnEditStocks";
-            this.btnEditStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnEditStocks.Size = new System.Drawing.Size(222, 31);
             this.btnEditStocks.TabIndex = 4;
             this.btnEditStocks.Text = "Edit Stock";
             this.btnEditStocks.UseVisualStyleBackColor = true;
-            
+            this.btnEditStocks.Click += new System.EventHandler(this.btnEditStocks_Click);
             // 
             // btnCreateStocks
             // 
-            this.btnCreateStocks.Location = new System.Drawing.Point(241, 89);
+            this.btnCreateStocks.Location = new System.Drawing.Point(275, 119);
+            this.btnCreateStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateStocks.Name = "btnCreateStocks";
-            this.btnCreateStocks.Size = new System.Drawing.Size(194, 23);
+            this.btnCreateStocks.Size = new System.Drawing.Size(222, 31);
             this.btnCreateStocks.TabIndex = 3;
             this.btnCreateStocks.Text = "Create Stock";
             this.btnCreateStocks.UseVisualStyleBackColor = true;
-           
+            this.btnCreateStocks.Click += new System.EventHandler(this.btnCreateStocks_Click);
             // 
-            // btnViewStocks
+            // btnRefreshStocks
             // 
-            this.btnViewStocks.Location = new System.Drawing.Point(10, 89);
-            this.btnViewStocks.Name = "btnViewStocks";
-            this.btnViewStocks.Size = new System.Drawing.Size(194, 23);
-            this.btnViewStocks.TabIndex = 2;
-            this.btnViewStocks.Text = "Load Stock";
-            this.btnViewStocks.UseVisualStyleBackColor = true;
-            
+            this.btnRefreshStocks.Location = new System.Drawing.Point(11, 119);
+            this.btnRefreshStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefreshStocks.Name = "btnRefreshStocks";
+            this.btnRefreshStocks.Size = new System.Drawing.Size(222, 31);
+            this.btnRefreshStocks.TabIndex = 2;
+            this.btnRefreshStocks.Text = "Refresh";
+            this.btnRefreshStocks.UseVisualStyleBackColor = true;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 118);
+            this.dataGridView3.Location = new System.Drawing.Point(11, 157);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(888, 605);
+            this.dataGridView3.Size = new System.Drawing.Size(1015, 807);
             this.dataGridView3.TabIndex = 1;
             // 
             // Stock
             // 
             this.Stock.AutoSize = true;
             this.Stock.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Stock.Location = new System.Drawing.Point(375, 16);
+            this.Stock.Location = new System.Drawing.Point(429, 21);
             this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(91, 37);
+            this.Stock.Size = new System.Drawing.Size(116, 46);
             this.Stock.TabIndex = 0;
             this.Stock.Text = "Stocks";
             // 
@@ -133,25 +137,28 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panel1.Controls.Add(this.btnDepartments);
             this.panel1.Controls.Add(this.btnStocks);
             this.panel1.Controls.Add(this.btnEmployees);
-            this.panel1.Location = new System.Drawing.Point(12, 218);
+            this.panel1.Location = new System.Drawing.Point(14, 291);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 531);
+            this.panel1.Size = new System.Drawing.Size(274, 707);
             this.panel1.TabIndex = 11;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(10, 494);
+            this.btnLogout.Location = new System.Drawing.Point(11, 659);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(220, 23);
+            this.btnLogout.Size = new System.Drawing.Size(251, 31);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // btnStatistics
             // 
-            this.btnStatistics.Location = new System.Drawing.Point(10, 132);
+            this.btnStatistics.Location = new System.Drawing.Point(11, 176);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(220, 23);
+            this.btnStatistics.Size = new System.Drawing.Size(251, 31);
             this.btnStatistics.TabIndex = 5;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
@@ -159,9 +166,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnSchedule
             // 
-            this.btnSchedule.Location = new System.Drawing.Point(10, 102);
+            this.btnSchedule.Location = new System.Drawing.Point(11, 136);
+            this.btnSchedule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(220, 23);
+            this.btnSchedule.Size = new System.Drawing.Size(251, 31);
             this.btnSchedule.TabIndex = 4;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = true;
@@ -169,9 +177,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnDepartments
             // 
-            this.btnDepartments.Location = new System.Drawing.Point(10, 72);
+            this.btnDepartments.Location = new System.Drawing.Point(11, 96);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(220, 23);
+            this.btnDepartments.Size = new System.Drawing.Size(251, 31);
             this.btnDepartments.TabIndex = 3;
             this.btnDepartments.Text = "Departments";
             this.btnDepartments.UseVisualStyleBackColor = true;
@@ -179,9 +188,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnStocks
             // 
-            this.btnStocks.Location = new System.Drawing.Point(10, 42);
+            this.btnStocks.Location = new System.Drawing.Point(11, 56);
+            this.btnStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStocks.Name = "btnStocks";
-            this.btnStocks.Size = new System.Drawing.Size(220, 23);
+            this.btnStocks.Size = new System.Drawing.Size(251, 31);
             this.btnStocks.TabIndex = 2;
             this.btnStocks.Text = "Stocks";
             this.btnStocks.UseVisualStyleBackColor = true;
@@ -189,9 +199,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnEmployees
             // 
-            this.btnEmployees.Location = new System.Drawing.Point(10, 12);
+            this.btnEmployees.Location = new System.Drawing.Point(11, 16);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(220, 23);
+            this.btnEmployees.Size = new System.Drawing.Size(251, 31);
             this.btnEmployees.TabIndex = 1;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = true;
@@ -199,20 +210,22 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(274, 267);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // FormStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ClientSize = new System.Drawing.Size(1353, 1015);
             this.Controls.Add(this.pnlEmployees);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormStock";
             this.Text = "FormStock";
             this.pnlEmployees.ResumeLayout(false);
@@ -237,9 +250,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnStocks;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnDelStocks;
+        private System.Windows.Forms.Button btnDelStock;
         private System.Windows.Forms.Button btnEditStocks;
         private System.Windows.Forms.Button btnCreateStocks;
-        private System.Windows.Forms.Button btnViewStocks;
+        private System.Windows.Forms.Button btnRefreshStocks;
     }
 }

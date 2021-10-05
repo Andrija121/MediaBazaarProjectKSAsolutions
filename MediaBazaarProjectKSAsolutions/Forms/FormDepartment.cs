@@ -45,5 +45,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             MessageBox.Show("Currently not available.");
         }
+
+        private void btnCreateDepartments_Click(object sender, EventArgs e)
+        {
+            FormCreateDepartment formCreateDepartment = new FormCreateDepartment();
+            formCreateDepartment.Show();
+        }
+
+        private void btnEditDepartments_Click(object sender, EventArgs e)
+        {
+            FormUpdateDepartment formUpdateDepartment = new FormUpdateDepartment();
+            formUpdateDepartment.Show();
+        }
     }
 }
