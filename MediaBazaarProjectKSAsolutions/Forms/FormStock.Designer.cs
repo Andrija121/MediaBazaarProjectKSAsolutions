@@ -84,7 +84,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditStocks.TabIndex = 4;
             this.btnEditStocks.Text = "Edit Stock";
             this.btnEditStocks.UseVisualStyleBackColor = true;
-            this.btnEditStocks.Click += new System.EventHandler(this.btnEditStocks_Click);
+            //this.btnEditStocks.Click += new System.EventHandler(this.btnEditStocks_Click);
             // 
             // btnCreateStocks
             // 

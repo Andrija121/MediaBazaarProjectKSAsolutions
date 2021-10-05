@@ -34,9 +34,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnDepartments_Click(object sender, EventArgs e)
         {
-            FormDepartment FormDepartment = new FormDepartment(loggedIn);
-            FormDepartment.Show();
-            Hide();
+            //FormDepartment FormDepartment = new FormDepartment(loggedIn);
+            //FormDepartment.Show();
+            //Hide();
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)

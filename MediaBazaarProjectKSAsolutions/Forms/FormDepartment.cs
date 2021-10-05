@@ -24,9 +24,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void Stocks_Click(object sender, EventArgs e)
         {
-            FormStock FormStock = new FormStock();
-            FormStock.Show();
-            Hide();
+            //FormStock FormStock = new FormStock();
+            //FormStock.Show();
+            //Hide();
         }
 
         private void btnDepartments_Click(object sender, EventArgs e)

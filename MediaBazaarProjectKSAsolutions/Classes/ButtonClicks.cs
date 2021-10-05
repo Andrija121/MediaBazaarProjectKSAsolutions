@@ -20,8 +20,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public void btnDepartment(User loggedIn)
         {
-            FormDepartment formDepartment = new FormDepartment(loggedIn);
-            formDepartment.Show();
+            //FormDepartment formDepartment = new FormDepartment(loggedIn);
+            //formDepartment.Show();
         }
         public void btnSchedule(User loggedIn)
         {

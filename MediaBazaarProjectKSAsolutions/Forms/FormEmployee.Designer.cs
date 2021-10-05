@@ -206,7 +206,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnStocks.TabIndex = 2;
             this.btnStocks.Text = "Stocks";
             this.btnStocks.UseVisualStyleBackColor = true;
-            this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
+            //this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
             // 
             // btnEmployees
             // 
