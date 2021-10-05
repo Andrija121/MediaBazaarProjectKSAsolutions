@@ -1,3 +1,4 @@
+using MediaBazaarProjectKSAsolutions.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,28 +11,30 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormStock : Form
     {
-        public FormStock()
+        private User loggedIn;
+        private ButtonClicks button = new ButtonClicks();
+
+        public FormStock(User user)
         {
             InitializeComponent();
+            this.loggedIn = user;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
-            //FormEmployee FormEmployee = new FormEmployee();
-            //FormEmployee.Show();
-            //Hide();
+            FormEmployee FormEmployee = new FormEmployee(loggedIn);
+            FormEmployee.Show();
+            Hide();
         }
 
         private void Stocks_Click(object sender, EventArgs e)
         {
-            FormStock FormStock = new FormStock();
-            FormStock.Show();
-            Hide();
+            // you are already here silly
         }
 
         private void btnDepartments_Click(object sender, EventArgs e)
         {
-            FormDepartment FormDepartment = new FormDepartment();
+            FormDepartment FormDepartment = new FormDepartment(loggedIn);
             FormDepartment.Show();
             Hide();
         }
@@ -46,16 +49,24 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             MessageBox.Show("Currently not available.");
         }
 
-        private void btnCreateStocks_Click(object sender, EventArgs e)
+        private void btnViewStocks_Click(object sender, EventArgs e)
         {
-            FormCreateStock formCreateStock = new FormCreateStock();
-            formCreateStock.Show();
+            
+            //foreach (var s in Classes.StockManagement.GetAllStock())
+            //{
+            //    dgStock.add
+            //}
+            //Classes.StockManagement.GetAllStock();
         }
 
-        private void btnEditStocks_Click(object sender, EventArgs e)
+        private void btnCreateStocks_Click(object sender, EventArgs e)
         {
-            FormUpdateStock formUpdateStock = new FormUpdateStock();
-            formUpdateStock.Show();
+
+        }
+
+        private void pnlEmployees_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
