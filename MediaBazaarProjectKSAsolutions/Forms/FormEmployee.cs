@@ -29,42 +29,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 lbUsers.Items.Add(u);
             }
         }
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            FormEmployee FormEmployee = new FormEmployee(u);
-            FormEmployee.Show();
-            Hide();
-        }
-
-        private void Stocks_Click(object sender, EventArgs e)
-        {
-            //FormStock FormStock = new FormStock();
-            //FormStock.Show();
-            //Hide();
-        }
-
-        private void btnDepartments_Click(object sender, EventArgs e)
-        {
-            FormDepartment FormDepartment = new FormDepartment();
-            FormDepartment.Show();
-            Hide();
-        }
-
-        private void btnSchedule_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnStatistics_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddUser_Click(object sender, EventArgs e)
         {
 
@@ -104,6 +68,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
             inactiveUsersForm.ShowDialog();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }

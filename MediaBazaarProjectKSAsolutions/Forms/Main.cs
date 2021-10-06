@@ -19,60 +19,48 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             u = user;
             lblHi.Text = "Hi, "+u.FirstName;
         }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void Stocks_Click(object sender, EventArgs e)
-        {
-            //FormStock FormStock = new FormStock();
-            //FormStock.Show();
-            //Hide();
-        }
-
-        private void btnDepartments_Click(object sender, EventArgs e)
-        {
-            FormDepartment FormDepartment = new FormDepartment();
-            FormDepartment.Show();
-            Hide();
-        }
-
-        private void btnSchedule_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnStatistics_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {
             FormEmployee FormEmployee = new FormEmployee(u);
-            FormEmployee.Show();
-            Hide();
+            FormEmployee.ShowDialog();
+          
         }
 
         private void btnDepartments_Click_1(object sender, EventArgs e)
         {
             FormDepartment FormDepartment = new FormDepartment();
-            FormDepartment.Show();
-            Hide();
+            FormDepartment.ShowDialog();
+          
         }
 
         private void btnStocks_Click(object sender, EventArgs e)
         {
             FormStock formStock = new FormStock();
-            formStock.Show();
-            this.Hide();
+            formStock.ShowDialog();
+            
+
+        }
+
+        private void btnSchedule_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Currently not available. ");
+        }
+
+        private void btnStatistics_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Currently not available. ");
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

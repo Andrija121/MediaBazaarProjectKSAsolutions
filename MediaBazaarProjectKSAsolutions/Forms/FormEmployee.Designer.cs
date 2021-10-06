@@ -29,7 +29,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmployee));
             this.pnlEmployees = new System.Windows.Forms.Panel();
             this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
             this.btnMakeUserInactive = new System.Windows.Forms.Button();
@@ -38,18 +37,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbUsers = new System.Windows.Forms.ListBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lblEmployees = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnStatistics = new System.Windows.Forms.Button();
-            this.btnSchedule = new System.Windows.Forms.Button();
-            this.btnDepartments = new System.Windows.Forms.Button();
-            this.btnStocks = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.pnlEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEmployees
@@ -62,10 +52,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.lbUsers);
             this.pnlEmployees.Controls.Add(this.dataGridView3);
             this.pnlEmployees.Controls.Add(this.lblEmployees);
-            this.pnlEmployees.Location = new System.Drawing.Point(369, 20);
+            this.pnlEmployees.Location = new System.Drawing.Point(13, 14);
             this.pnlEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(1305, 1227);
+            this.pnlEmployees.Size = new System.Drawing.Size(1306, 752);
             this.pnlEmployees.TabIndex = 15;
             // 
             // btnSeeInactiveUsers
@@ -125,7 +115,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(1269, 1057);
+            this.dataGridView3.Size = new System.Drawing.Size(1269, 589);
             this.dataGridView3.TabIndex = 1;
             // 
             // lblEmployees
@@ -139,111 +129,30 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEmployees.TabIndex = 0;
             this.lblEmployees.Text = "Employees";
             // 
-            // panel1
+            // btnBack
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnStatistics);
-            this.panel1.Controls.Add(this.btnSchedule);
-            this.panel1.Controls.Add(this.btnDepartments);
-            this.panel1.Controls.Add(this.btnStocks);
-            this.panel1.Controls.Add(this.btnEmployees);
-            this.panel1.Location = new System.Drawing.Point(17, 363);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 884);
-            this.panel1.TabIndex = 14;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(14, 823);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(314, 38);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.Location = new System.Drawing.Point(14, 220);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(314, 38);
-            this.btnStatistics.TabIndex = 5;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.UseVisualStyleBackColor = true;
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // btnSchedule
-            // 
-            this.btnSchedule.Location = new System.Drawing.Point(14, 170);
-            this.btnSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(314, 38);
-            this.btnSchedule.TabIndex = 4;
-            this.btnSchedule.Text = "Schedule";
-            this.btnSchedule.UseVisualStyleBackColor = true;
-            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
-            // 
-            // btnDepartments
-            // 
-            this.btnDepartments.Location = new System.Drawing.Point(14, 120);
-            this.btnDepartments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(314, 38);
-            this.btnDepartments.TabIndex = 3;
-            this.btnDepartments.Text = "Departments";
-            this.btnDepartments.UseVisualStyleBackColor = true;
-            // 
-            // btnStocks
-            // 
-            this.btnStocks.Location = new System.Drawing.Point(14, 70);
-            this.btnStocks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnStocks.Name = "btnStocks";
-            this.btnStocks.Size = new System.Drawing.Size(314, 38);
-            this.btnStocks.TabIndex = 2;
-            this.btnStocks.Text = "Stocks";
-            this.btnStocks.UseVisualStyleBackColor = true;
-            //this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Location = new System.Drawing.Point(14, 20);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(314, 38);
-            this.btnEmployees.TabIndex = 1;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 333);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.btnBack.Location = new System.Drawing.Point(1207, 774);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(112, 34);
+            this.btnBack.TabIndex = 16;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1691, 1050);
+            this.ClientSize = new System.Drawing.Size(1341, 825);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlEmployees);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,18 +162,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel pnlEmployees;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label lblEmployees;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnStatistics;
-        private System.Windows.Forms.Button btnSchedule;
-        private System.Windows.Forms.Button btnDepartments;
-        private System.Windows.Forms.Button btnStocks;
-        private System.Windows.Forms.Button btnEmployees;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.ListBox lbUsers;
         private System.Windows.Forms.Button btnMakeUserInactive;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSeeInactiveUsers;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -12,68 +12,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormStock : Form
     {
         StockManagement sm = new StockManagement();
-        private User loggedIn;
-        private ButtonClicks button = new ButtonClicks();
-
+        User user;
         public FormStock()
         {
             InitializeComponent();
-            //this.loggedIn = user;
-            RefreshListBox();
-        }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
-        {
-            FormEmployee FormEmployee = new FormEmployee(loggedIn);
-            FormEmployee.Show();
-            Hide();
-        }
-
-        private void Stocks_Click(object sender, EventArgs e)
-        {
-            // you are already here silly
-        }
-
-        private void btnDepartments_Click(object sender, EventArgs e)
-        {
-            //FormDepartment FormDepartment = new FormDepartment(loggedIn);
-            //FormDepartment.Show();
-            //Hide();
-        }
-
-        private void btnSchedule_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnStatistics_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Currently not available.");
-        }
-
-        private void btnViewStocks_Click(object sender, EventArgs e)
-        {
-            
-            //foreach (var s in Classes.StockManagement.GetAllStock())
-            //{
-            //    dgStock.add
-            //}
-            //Classes.StockManagement.GetAllStock();
-        }
-
-        private void btnCreateStocks_Click(object sender, EventArgs e)
-        {
-            FormCreateStock formCreateStock = new FormCreateStock();
-            formCreateStock.ShowDialog();
-        }
-
-        private void pnlEmployees_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnRefreshStocks_Click(object sender, EventArgs e)
-        {
             RefreshListBox();
         }
         public void RefreshListBox()
@@ -84,6 +26,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 lbStocks.Items.Add(s);
             }
         }
+        private void btnCreateStocks_Click(object sender, EventArgs e)
+        {
+            FormCreateStock formCreateStock = new FormCreateStock();
+            formCreateStock.ShowDialog();
+        }
+
+        private void btnRefreshStocks_Click(object sender, EventArgs e)
+        {
+            RefreshListBox();
+        }
+       
 
         private void btnEditStocks_Click(object sender, EventArgs e)
         {
@@ -92,9 +45,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             editStockForm.ShowDialog();
         }
 
-        private void FormStock_Load(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+           
         }
     }
 }
