@@ -23,7 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO stock(id, productName, price, serialNumber, amount)";
+                    string sql = "INSERT INTO stock(id, productName, price, serialNumber, amount) values(@id,@prductName,@price,@amount)";
 
 
 
@@ -37,7 +37,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@id", stock.Price);
                     cmd.Parameters.AddWithValue("@id", stock.SerialNumber);
                     cmd.Parameters.AddWithValue("@id", stock.Amount);
-                    conn.Close();
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception)
@@ -49,7 +49,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 conn.Close();
             }
-            //stocks.Add(stock);
         }
 
         public Stock GetStock(int id)
@@ -60,7 +59,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
                     Stock stock = new Stock();
-                    string sql = "select * from stock";
+                    string sql = "select * from stock where id=@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("id", id);

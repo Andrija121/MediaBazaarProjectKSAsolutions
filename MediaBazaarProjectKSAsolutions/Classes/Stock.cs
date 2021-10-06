@@ -11,7 +11,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public double Price { get; set; }
         public int SerialNumber { get; set; }
         public int Amount { get; set; }
-        // properties
+ 
 
         public Stock()
         {

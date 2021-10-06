@@ -12,7 +12,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormStock : Form
     {
         StockManagement sm = new StockManagement();
-        User user;
         public FormStock()
         {
             InitializeComponent();

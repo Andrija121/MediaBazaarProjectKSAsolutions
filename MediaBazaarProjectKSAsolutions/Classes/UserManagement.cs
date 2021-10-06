@@ -41,10 +41,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@role", user.Role.ToString());
                     cmd.Parameters.AddWithValue("@status", user.Status.ToString());
                     cmd.ExecuteNonQuery();
-                    conn.Close();
-
-
-
                 }
             }
             catch (Exception)

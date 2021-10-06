@@ -17,5 +17,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             this.Name = name;
             this.Manager = manager;
         }
+        public override string ToString()
+        {
+            return Name + " - " + Manager;
+        }
     }
 }
