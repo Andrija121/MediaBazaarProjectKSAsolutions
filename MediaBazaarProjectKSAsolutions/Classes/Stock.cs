@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class Stock
+   public class Stock
     { 
         public int Id { get; set; }
         public string ProductName { get; set; }
@@ -28,7 +28,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public override string ToString()
         {
-            return base.ToString();
+            return ProductName + " - " + Price + " - " + SerialNumber + " - " + Amount;
         }
 
     }

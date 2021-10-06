@@ -13,9 +13,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             FormEmployee formEmployee = new FormEmployee(loggedIn);
             formEmployee.Show();
         }
-        public void btnStock(User loggedIn)
+        public void btnStock()
         {
-            FormStock formStock = new FormStock(loggedIn);
+            FormStock formStock = new FormStock();
             formStock.Show();
         }
         public void btnDepartment(User loggedIn)

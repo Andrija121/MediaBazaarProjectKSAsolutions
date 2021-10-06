@@ -67,5 +67,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             FormDepartment.Show();
             Hide();
         }
+
+        private void btnStocks_Click(object sender, EventArgs e)
+        {
+            FormStock formStock = new FormStock();
+            formStock.Show();
+            this.Hide();
+        }
     }
 }
