@@ -11,13 +11,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormStock : Form
     {
+        StockManagement sm = new StockManagement();
         private User loggedIn;
         private ButtonClicks button = new ButtonClicks();
 
-        public FormStock(User user)
+        public FormStock()
         {
             InitializeComponent();
-            this.loggedIn = user;
+            //this.loggedIn = user;
+            RefreshListBox();
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)
@@ -61,10 +63,36 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnCreateStocks_Click(object sender, EventArgs e)
         {
-
+            FormCreateStock formCreateStock = new FormCreateStock();
+            formCreateStock.ShowDialog();
         }
 
         private void pnlEmployees_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRefreshStocks_Click(object sender, EventArgs e)
+        {
+            RefreshListBox();
+        }
+        public void RefreshListBox()
+        {
+            lbStocks.Items.Clear();
+            foreach (var s in sm.GetAllStock())
+            {
+                lbStocks.Items.Add(s);
+            }
+        }
+
+        private void btnEditStocks_Click(object sender, EventArgs e)
+        {
+            Stock stock = (Stock)lbStocks.SelectedItem;
+            EditStockForm editStockForm = new EditStockForm(stock);
+            editStockForm.ShowDialog();
+        }
+
+        private void FormStock_Load(object sender, EventArgs e)
         {
 
         }
