@@ -9,17 +9,21 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public User Manager { get; set; }
+        public int ManagerID { get; set; }
 
-        public Department(int id,string name,User manager)
+        public Department()
+        {
+
+        }
+        public Department(int id,string name,int managerId)
         {
             this.Id = id;
             this.Name = name;
-            this.Manager = manager;
+            this.ManagerID = managerId;
         }
         public override string ToString()
         {
-            return Name + " - " + Manager;
+            return Name + " - " + ManagerID;
         }
     }
 }

@@ -12,9 +12,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormDepartment : Form
     {
         User user;
+        DepartmentManagement dm;
         public FormDepartment()
         {
             InitializeComponent();
+            dm = new DepartmentManagement();
+            RefreshListBox();
+        }
+        public void RefreshListBox()
+        {
+            lbDepartments.Items.Clear();
+            foreach (var d in dm.GetDepartments())
+            {
+                lbDepartments.Items.Add(d);
+            }
         }
         private void btnCreateDepartments_Click(object sender, EventArgs e)
         {

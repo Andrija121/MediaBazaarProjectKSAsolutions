@@ -37,6 +37,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lbDepartments = new System.Windows.Forms.ListBox();
             this.pnlEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // pnlEmployees
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Controls.Add(this.lbDepartments);
             this.pnlEmployees.Controls.Add(this.btnDelDepartment);
             this.pnlEmployees.Controls.Add(this.btnEditDepartments);
             this.pnlEmployees.Controls.Add(this.btnCreateDepartments);
@@ -130,6 +132,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lbDepartments
+            // 
+            this.lbDepartments.FormattingEnabled = true;
+            this.lbDepartments.ItemHeight = 25;
+            this.lbDepartments.Location = new System.Drawing.Point(63, 216);
+            this.lbDepartments.Name = "lbDepartments";
+            this.lbDepartments.Size = new System.Drawing.Size(1172, 279);
+            this.lbDepartments.TabIndex = 10;
+            // 
             // FormDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -158,5 +169,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnCreateDepartments;
         private System.Windows.Forms.Button btnRefreshDepartments;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox lbDepartments;
     }
 }
