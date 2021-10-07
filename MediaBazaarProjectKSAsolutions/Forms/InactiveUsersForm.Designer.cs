@@ -59,7 +59,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbInactiveUsers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InactiveUsersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InactiveUsersForm";
             this.ResumeLayout(false);
 

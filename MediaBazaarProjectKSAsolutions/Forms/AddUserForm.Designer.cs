@@ -303,7 +303,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbUserName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUserForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -17,7 +17,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
             u = user;
-            lblHi.Text = "Hi, "+u.FirstName;
+            lblHi.Text = "Welcome back, "+u.FirstName;
         }
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {

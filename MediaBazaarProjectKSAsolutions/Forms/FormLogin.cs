@@ -25,27 +25,46 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void LL_Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            
+            MessageBox.Show("Feature in progress");
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userNameOrEmail = tbUserName.Text;
-            string password = tbPassword.Text;
-            User user;
-            foreach (var u in userManagement.GetUsers())
+            try 
             {
-                if (u.UserName==userNameOrEmail || u.Email==userNameOrEmail  && u.Password == password)
+
+                string userNameOrEmail = tbUserName.Text;
+                string password = tbPassword.Text;
+                User user = null;
+                if (userNameOrEmail != "" && password != "")
                 {
-                        user = u;
-                        Main main = new Main(user);
-                        main.Show();
-                        this.Hide();
+                    foreach (var u in userManagement.GetUsers())
+                    {
+                        if (u.UserName == userNameOrEmail || u.Email == userNameOrEmail && u.Password == password)
+                        {
+                            user = u;
+                            Main main = new Main(user);
+                            main.Show();
+                            this.Hide();
+                        }
+                    }
+                    if (user == null)
+                    {
+                            MessageBox.Show("Wrong Credentials");   
+                    }
                 }
                 else
-                    MessageBox.Show("Wrong credentials");
+                    MessageBox.Show("Please fill out the values");
             }
+            
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+            
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -55,7 +74,7 @@ namespace MediaBazaarProjectKSAsolutions
 
         private void btnPasswordForget_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Feature in progress");
         }
     }
 }
