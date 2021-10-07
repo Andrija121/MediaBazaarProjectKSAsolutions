@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaBazaarProjectKSAsolutions.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,57 +11,54 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class Main : Form
     {
-        public Main()
+        User u;
+
+        public Main(User user)
         {
             InitializeComponent();
+            u = user;
+            lblHi.Text = "Welcome back, "+u.FirstName;
         }
-
-        private void btnEmployees_Click(object sender, EventArgs e)
+        private void btnEmployees_Click_1(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = true;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormEmployee FormEmployee = new FormEmployee(u);
+            FormEmployee.ShowDialog();
+          
         }
 
-        private void Stocks_Click(object sender, EventArgs e)
+        private void btnDepartments_Click_1(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = true;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormDepartment FormDepartment = new FormDepartment();
+            FormDepartment.ShowDialog();
+          
         }
 
-        private void btnDepartments_Click(object sender, EventArgs e)
+        private void btnStocks_Click(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = true;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = false;
+            FormStock formStock = new FormStock();
+            formStock.ShowDialog();
+            
+
         }
 
-        private void btnSchedule_Click(object sender, EventArgs e)
+        private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = true;
-            pnlStatistics.Visible = false;
+            MessageBox.Show("Currently not available. ");
         }
 
-        private void btnStatistics_Click(object sender, EventArgs e)
+        private void btnStatistics_Click_1(object sender, EventArgs e)
         {
-            pnlEmployees.Visible = false;
-            pnlStocks.Visible = false;
-            pnlDepartments.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStatistics.Visible = true;
+            MessageBox.Show("Currently not available. ");
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
         {
 
         }

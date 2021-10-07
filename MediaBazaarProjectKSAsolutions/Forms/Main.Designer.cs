@@ -29,125 +29,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnStatistics = new System.Windows.Forms.Button();
+            this.panelButtons = new System.Windows.Forms.Panel();
             this.btnSchedule = new System.Windows.Forms.Button();
             this.btnDepartments = new System.Windows.Forms.Button();
-            this.Stocks = new System.Windows.Forms.Button();
+            this.btnStocks = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlDepartments = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnlEmployees = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnlStocks = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pnlSchedule = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pnlStatistics = new System.Windows.Forms.Panel();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.pnlDepartments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.pnlEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.pnlStocks.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.pnlSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.pnlStatistics.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.lblHi = new System.Windows.Forms.Label();
+            this.panelButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 200);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnStatistics);
-            this.panel1.Controls.Add(this.btnSchedule);
-            this.panel1.Controls.Add(this.btnDepartments);
-            this.panel1.Controls.Add(this.Stocks);
-            this.panel1.Controls.Add(this.btnEmployees);
-            this.panel1.Location = new System.Drawing.Point(12, 218);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 500);
-            this.panel1.TabIndex = 3;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(10, 467);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(220, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.Location = new System.Drawing.Point(10, 132);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(220, 23);
-            this.btnStatistics.TabIndex = 5;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.UseVisualStyleBackColor = true;
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // btnSchedule
-            // 
-            this.btnSchedule.Location = new System.Drawing.Point(10, 102);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(220, 23);
-            this.btnSchedule.TabIndex = 4;
-            this.btnSchedule.Text = "Schedule";
-            this.btnSchedule.UseVisualStyleBackColor = true;
-            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
-            // 
-            // btnDepartments
-            // 
-            this.btnDepartments.Location = new System.Drawing.Point(10, 72);
-            this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(220, 23);
-            this.btnDepartments.TabIndex = 3;
-            this.btnDepartments.Text = "Departments";
-            this.btnDepartments.UseVisualStyleBackColor = true;
-            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click);
-            // 
-            // Stocks
-            // 
-            this.Stocks.Location = new System.Drawing.Point(10, 42);
-            this.Stocks.Name = "Stocks";
-            this.Stocks.Size = new System.Drawing.Size(220, 23);
-            this.Stocks.TabIndex = 2;
-            this.Stocks.Text = "Stocks";
-            this.Stocks.UseVisualStyleBackColor = true;
-            this.Stocks.Click += new System.EventHandler(this.Stocks_Click);
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Location = new System.Drawing.Point(10, 12);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(220, 23);
-            this.btnEmployees.TabIndex = 1;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.UseVisualStyleBackColor = true;
-            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // panel2
             // 
@@ -156,216 +51,172 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panel2.Size = new System.Drawing.Size(787, 706);
             this.panel2.TabIndex = 5;
             // 
-            // pnlDepartments
+            // btnStatistics
             // 
-            this.pnlDepartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDepartments.Controls.Add(this.dataGridView2);
-            this.pnlDepartments.Controls.Add(this.label2);
-            this.pnlDepartments.Location = new System.Drawing.Point(258, 12);
-            this.pnlDepartments.Name = "pnlDepartments";
-            this.pnlDepartments.Size = new System.Drawing.Size(787, 706);
-            this.pnlDepartments.TabIndex = 7;
-            this.pnlDepartments.Visible = false;
+            this.btnStatistics.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnStatistics.Location = new System.Drawing.Point(14, 220);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(314, 37);
+            this.btnStatistics.TabIndex = 5;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click_1);
             // 
-            // dataGridView2
+            // panelButtons
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 89);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(767, 607);
-            this.dataGridView2.TabIndex = 1;
+            this.panelButtons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelButtons.Controls.Add(this.btnStatistics);
+            this.panelButtons.Controls.Add(this.btnSchedule);
+            this.panelButtons.Controls.Add(this.btnDepartments);
+            this.panelButtons.Controls.Add(this.btnStocks);
+            this.panelButtons.Controls.Add(this.btnEmployees);
+            this.panelButtons.Location = new System.Drawing.Point(17, 360);
+            this.panelButtons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(352, 274);
+            this.panelButtons.TabIndex = 14;
             // 
-            // label2
+            // btnSchedule
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(308, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Departments";
+            this.btnSchedule.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSchedule.Location = new System.Drawing.Point(14, 170);
+            this.btnSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(314, 37);
+            this.btnSchedule.TabIndex = 4;
+            this.btnSchedule.Text = "Schedule";
+            this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click_1);
             // 
-            // pnlEmployees
+            // btnDepartments
             // 
-            this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEmployees.Controls.Add(this.dataGridView3);
-            this.pnlEmployees.Controls.Add(this.label3);
-            this.pnlEmployees.Location = new System.Drawing.Point(258, 12);
-            this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(787, 706);
-            this.pnlEmployees.TabIndex = 8;
-            this.pnlEmployees.Visible = false;
+            this.btnDepartments.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnDepartments.FlatAppearance.BorderSize = 0;
+            this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDepartments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDepartments.Location = new System.Drawing.Point(14, 120);
+            this.btnDepartments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDepartments.Name = "btnDepartments";
+            this.btnDepartments.Size = new System.Drawing.Size(314, 37);
+            this.btnDepartments.TabIndex = 3;
+            this.btnDepartments.Text = "Departments";
+            this.btnDepartments.UseVisualStyleBackColor = false;
+            this.btnDepartments.Click += new System.EventHandler(this.btnDepartments_Click_1);
             // 
-            // dataGridView3
+            // btnStocks
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 89);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(767, 607);
-            this.dataGridView3.TabIndex = 1;
+            this.btnStocks.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnStocks.FlatAppearance.BorderSize = 0;
+            this.btnStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnStocks.Location = new System.Drawing.Point(14, 70);
+            this.btnStocks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStocks.Name = "btnStocks";
+            this.btnStocks.Size = new System.Drawing.Size(314, 37);
+            this.btnStocks.TabIndex = 2;
+            this.btnStocks.Text = "Stocks";
+            this.btnStocks.UseVisualStyleBackColor = false;
+            this.btnStocks.Click += new System.EventHandler(this.btnStocks_Click);
             // 
-            // label3
+            // btnEmployees
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(308, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Employees";
+            this.btnEmployees.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnEmployees.FlatAppearance.BorderSize = 0;
+            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEmployees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEmployees.Location = new System.Drawing.Point(14, 20);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(314, 37);
+            this.btnEmployees.TabIndex = 1;
+            this.btnEmployees.Text = "Employees";
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click_1);
             // 
-            // pnlStocks
+            // btnLogout
             // 
-            this.pnlStocks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlStocks.Controls.Add(this.dataGridView4);
-            this.pnlStocks.Controls.Add(this.label4);
-            this.pnlStocks.Location = new System.Drawing.Point(258, 12);
-            this.pnlStocks.Name = "pnlStocks";
-            this.pnlStocks.Size = new System.Drawing.Size(787, 706);
-            this.pnlStocks.TabIndex = 8;
-            this.pnlStocks.Visible = false;
+            this.btnLogout.BackColor = System.Drawing.Color.Gold;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.btnLogout.Location = new System.Drawing.Point(32, 654);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(314, 37);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
-            // dataGridView4
+            // pictureBoxLogo
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(10, 89);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Height = 25;
-            this.dataGridView4.Size = new System.Drawing.Size(767, 607);
-            this.dataGridView4.TabIndex = 1;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = global::MediaBazaarProjectKSAsolutions.Properties.Resources.Logo;
+            this.pictureBoxLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.InitialImage")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 50);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(352, 300);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 13;
+            this.pictureBoxLogo.TabStop = false;
             // 
-            // label4
+            // lblHi
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(308, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 37);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Stocks";
-            // 
-            // pnlSchedule
-            // 
-            this.pnlSchedule.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSchedule.Controls.Add(this.dataGridView5);
-            this.pnlSchedule.Controls.Add(this.label5);
-            this.pnlSchedule.Location = new System.Drawing.Point(258, 12);
-            this.pnlSchedule.Name = "pnlSchedule";
-            this.pnlSchedule.Size = new System.Drawing.Size(787, 706);
-            this.pnlSchedule.TabIndex = 11;
-            this.pnlSchedule.Visible = false;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(10, 89);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowTemplate.Height = 25;
-            this.dataGridView5.Size = new System.Drawing.Size(767, 607);
-            this.dataGridView5.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(308, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 37);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Schedule";
-            // 
-            // pnlStatistics
-            // 
-            this.pnlStatistics.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlStatistics.Controls.Add(this.dataGridView6);
-            this.pnlStatistics.Controls.Add(this.label6);
-            this.pnlStatistics.Location = new System.Drawing.Point(258, 12);
-            this.pnlStatistics.Name = "pnlStatistics";
-            this.pnlStatistics.Size = new System.Drawing.Size(787, 706);
-            this.pnlStatistics.TabIndex = 12;
-            this.pnlStatistics.Visible = false;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(10, 89);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowTemplate.Height = 25;
-            this.dataGridView6.Size = new System.Drawing.Size(767, 607);
-            this.dataGridView6.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(308, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 37);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Statistics";
+            this.lblHi.AutoSize = true;
+            this.lblHi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHi.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblHi.Location = new System.Drawing.Point(22, 8);
+            this.lblHi.Name = "lblHi";
+            this.lblHi.Size = new System.Drawing.Size(0, 25);
+            this.lblHi.TabIndex = 15;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1060, 730);
-            this.Controls.Add(this.pnlStocks);
-            this.Controls.Add(this.pnlDepartments);
-            this.Controls.Add(this.pnlSchedule);
-            this.Controls.Add(this.pnlEmployees);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pnlStatistics);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(377, 705);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.lblHi);
+            this.Controls.Add(this.panelButtons);
+            this.Controls.Add(this.pictureBoxLogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.pnlDepartments.ResumeLayout(false);
-            this.pnlDepartments.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.pnlEmployees.ResumeLayout(false);
-            this.pnlEmployees.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.pnlStocks.ResumeLayout(false);
-            this.pnlStocks.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.pnlSchedule.ResumeLayout(false);
-            this.pnlSchedule.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.pnlStatistics.ResumeLayout(false);
-            this.pnlStatistics.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.panelButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStatistics;
+        private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSchedule;
         private System.Windows.Forms.Button btnDepartments;
-        private System.Windows.Forms.Button Stocks;
+        private System.Windows.Forms.Button btnStocks;
         private System.Windows.Forms.Button btnEmployees;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnlDepartments;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel pnlEmployees;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel pnlStocks;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel pnlSchedule;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel pnlStatistics;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label lblHi;
     }
 }

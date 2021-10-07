@@ -1,37 +1,86 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class DepartmentManagement
     {
-        List<Department> departments = new List<Department>();
-        List<User> users = new List<User>();
+        MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
         public DepartmentManagement()
         {
 
         }
-
         public void AddDepartment(Department department)
         {
-            departments.Add(department);
-        }
-        public void RemoveDepartmentAtIndex(int dIndex)
-        {
-            departments.RemoveAt(dIndex);
-        }
-        public Department GetDepartment(int id)
-        {
-            foreach (var department in departments)
+            try
             {
-                if(department.Id==id)
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    return department;
+                    string sql = "INSERT INTO department(Name) values(@name)";
+
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@name", department.Name);
+                    cmd.ExecuteNonQuery();
+
                 }
             }
-            return null;
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public List<Department> GetDepartments()
+        {
+
+            
+                try
+                {
+                    using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                    {
+                        conn.Open();
+
+
+                        string query = "select * from department";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        
+                        
+
+
+
+                        MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+                        List<Department> departments = new List<Department>();
+                        while (dr.Read())
+                        {
+                            Department d = new Department();
+                            d.Id = Convert.ToInt32(dr["id"]);
+                            d.Name = dr["name"].ToString();
+                            departments.Add(d);
+                        }
+                        return departments;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+              
+            
         }
     }
 }

@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Class
+namespace MediaBazaarProjectKSAsolutions.Classes
 {
     class Department
     {
-        private int id;
-        private string name;
-        private string manager;//instead of string, maybe type User
 
         public int Id { get; set; }
         public string Name { get; set; }
+        //public int ManagerID { get; set; }
 
-        public Department(int id,string name,string manager)
+        public Department()
         {
-            this.id = id;
-            this.name = name;
-            this.manager = manager;
+
+        }
+        public Department(int id,string name)
+        {
+            this.Id = id;
+            this.Name = name;
+            //this.ManagerID = managerId;
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }
