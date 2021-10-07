@@ -126,14 +126,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
 
-            //foreach (var stock in stocks)
-            //{
-            //    if(stock.Id==id)
-            //    {
-            //        return stock;
-            //    }
-            //}
-            //return null;
         }
         public Stock EditStock(Stock stock)
         {
