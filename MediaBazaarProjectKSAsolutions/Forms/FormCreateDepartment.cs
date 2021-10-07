@@ -24,7 +24,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 string name = tbxNewDepartmentName.Text;
                 
-                Department department = new Department(0, name, managerId:0);
+                Department department = new Department(0, name);
                 dep.AddDepartment(department);
                 MessageBox.Show("Department has been added");
             }

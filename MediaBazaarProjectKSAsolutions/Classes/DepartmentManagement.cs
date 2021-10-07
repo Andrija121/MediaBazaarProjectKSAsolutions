@@ -19,7 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO department(Name,ManagerId) values(@name,@managerId)";
+                    string sql = "INSERT INTO department(Name) values(@name)";
 
 
 
@@ -27,7 +27,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     conn.Open();
                     cmd.Parameters.AddWithValue("@name", department.Name);
-                    cmd.Parameters.AddWithValue("@mangerId", department.ManagerID);
                     cmd.ExecuteNonQuery();
 
                 }
@@ -66,7 +65,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                             Department d = new Department();
                             d.Id = Convert.ToInt32(dr["id"]);
                             d.Name = dr["name"].ToString();
-                            d.ManagerID = Convert.ToInt32(dr["managerid"]);
                             departments.Add(d);
                         }
                         return departments;
