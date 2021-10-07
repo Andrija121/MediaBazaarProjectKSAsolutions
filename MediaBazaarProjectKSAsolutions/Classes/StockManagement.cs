@@ -10,8 +10,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
-        List<Stock> stocks = new List<Stock>();
-        List<User> users = new List<User>();
+       
+       
 
         public StockManagement()
         {
@@ -23,7 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO stock(id, productName, price, serialNumber, amount) values(@id,@prductName,@price,@amount)";
+                    string sql = "INSERT INTO stock(productName,price,serialNumber,amount) values(@productName,@price,@serialNumber,@amount)";
 
 
 
@@ -31,12 +31,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     conn.Open();
 
-                    cmd.ExecuteNonQuery();
-                    cmd.Parameters.AddWithValue("@id", stock.Id);
-                    cmd.Parameters.AddWithValue("@id", stock.ProductName);
-                    cmd.Parameters.AddWithValue("@id", stock.Price);
-                    cmd.Parameters.AddWithValue("@id", stock.SerialNumber);
-                    cmd.Parameters.AddWithValue("@id", stock.Amount);
+                    //cmd.Parameters.AddWithValue("@id", stock.Id);
+                    cmd.Parameters.AddWithValue("@productName", stock.ProductName);
+                    cmd.Parameters.AddWithValue("@price", stock.Price.ToString());
+                    cmd.Parameters.AddWithValue("@serialNumber", stock.SerialNumber);
+                    cmd.Parameters.AddWithValue("@amount", stock.Amount);
+
                     cmd.ExecuteNonQuery();
                 }
             }

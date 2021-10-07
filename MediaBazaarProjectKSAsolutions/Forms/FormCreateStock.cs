@@ -26,11 +26,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
 
                 string stockName = tbxNewStockName.Text;
-                int stockPrice = Convert.ToInt32(tbxNewStockPrice.Text);
+                double stockPrice = Convert.ToDouble(tbxNewStockPrice.Text);
                 int stockSerialNumber = Convert.ToInt32(tbxNewStockSerialNumber.Text);
                 int stockAmount = Convert.ToInt32(tbxNewStockAmount.Text);
 
-                Stock stock = new Stock(0, stockName, (Double)stockPrice, stockSerialNumber, stockAmount);
+                Stock stock = new Stock(0, stockName,stockPrice, stockSerialNumber, stockAmount);
                 sm.AddStock(stock);
                 MessageBox.Show("Item Created Successfully");
 
@@ -43,7 +43,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             }
 
 
-            this.Close();
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)

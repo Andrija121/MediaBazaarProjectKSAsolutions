@@ -19,7 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO department(Name,ManagerId) values(@nam,@managerId)";
+                    string sql = "INSERT INTO department(Name,ManagerId) values(@name,@managerId)";
 
 
 
