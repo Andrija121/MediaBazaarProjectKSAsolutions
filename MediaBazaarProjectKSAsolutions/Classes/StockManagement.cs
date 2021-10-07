@@ -142,9 +142,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "Update stock set productNumber=@productName, price=@price,serialNumber=@serialNumber,amount=@amount where id =@id";
+                    string sql = "Update stock set productName=@productName, price=@price,serialNumber=@serialNumber,amount=@amount where id =@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
+                    cmd.Parameters.AddWithValue("@id", stock.Id);
                     cmd.Parameters.AddWithValue("@productName", stock.ProductName);
                     cmd.Parameters.AddWithValue("@price", stock.Price);
                     cmd.Parameters.AddWithValue("@serialNumber", stock.SerialNumber);
