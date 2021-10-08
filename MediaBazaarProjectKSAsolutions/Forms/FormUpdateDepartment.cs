@@ -11,14 +11,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormUpdateDepartment : Form
     {
-        Department dep; //Stuffgit
+        Department dep; 
         DepartmentManagement depM;
         public FormUpdateDepartment()
         {
             
             InitializeComponent();
             Department dep = new Department();
-            DepartmentManagement depM = new DepartmentManagement();
+            _ = new DepartmentManagement();
         }
 
         private void btnUpdateDepartmentConfirmation_Click(object sender, EventArgs e)

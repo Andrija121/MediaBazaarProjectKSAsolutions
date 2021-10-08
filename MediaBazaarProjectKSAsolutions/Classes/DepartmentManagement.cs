@@ -82,5 +82,36 @@ namespace MediaBazaarProjectKSAsolutions.Classes
               
             
         }
+        
+        public Department EditDepartment(Department department) //Allow me to edit the Department
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "Update Department set Name= @namet";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@id", department.Id);
+                    cmd.Parameters.AddWithValue("@Department", department.Name);
+                    cmd.ExecuteNonQuery();
+                }
+                return department;
+
+
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+           
+        }
+        
     }
 }
