@@ -29,6 +29,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             FormCreateStock formCreateStock = new FormCreateStock();
             formCreateStock.ShowDialog();
+            RefreshListBox();
         }
 
         private void btnRefreshStocks_Click(object sender, EventArgs e)
@@ -42,12 +43,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             Stock stock = (Stock)lbStocks.SelectedItem;
             EditStockForm editStockForm = new EditStockForm(stock);
             editStockForm.ShowDialog();
+            RefreshListBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
            
+        }
+
+        private void btnDelStock_Click(object sender, EventArgs e)
+        {
+            Stock stock = (Stock)lbStocks.SelectedItem;
+            sm.DeleteStock(stock.Id);
+            MessageBox.Show("Stock Deleted Succesfully");
+            RefreshListBox();
         }
     }
 }

@@ -77,6 +77,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDelStock.TabIndex = 5;
             this.btnDelStock.Text = "Delete Stock";
             this.btnDelStock.UseVisualStyleBackColor = true;
+            this.btnDelStock.Click += new System.EventHandler(this.btnDelStock_Click);
             // 
             // btnEditStocks
             // 
