@@ -13,20 +13,23 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         Department dep; 
         DepartmentManagement depM;
-        public FormUpdateDepartment()
+        public FormUpdateDepartment(Department department)
         {
-            
             InitializeComponent();
-            Department dep = new Department();
-            _ = new DepartmentManagement();
+            this.dep = department;
+            depM = new DepartmentManagement();
+            cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
         private void btnUpdateDepartmentConfirmation_Click(object sender, EventArgs e)
         {
             try
             {
+
                 dep.Name = tbxUpdateDepartmentName.Text;
-                depM.AddDepartment(dep);
+                dep.Status = (Status)cbStatus.SelectedItem;
+
+                depM.EditDepartment(dep);
                 MessageBox.Show("You successfuly updated your department name");
             }
             catch (Exception ex)
@@ -35,6 +38,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             }
             this.Close();
 
+        }
+
+        private void FormUpdateDepartment_Load(object sender, EventArgs e)
+        {
+            tbxUpdateDepartmentName.Text = dep.Name;
+            cbStatus.Text = dep.Status.ToString();
         }
     }
 }

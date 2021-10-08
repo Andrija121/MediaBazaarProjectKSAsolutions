@@ -235,7 +235,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     throw;
                 }
-                finally
+                        finally
                 {
                     conn.Close();
                 }

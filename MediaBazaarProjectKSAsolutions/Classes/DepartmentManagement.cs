@@ -19,7 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO department(Name) values(@name)";
+                    string sql = "INSERT INTO department(name) values(@name)";
 
 
 
@@ -42,63 +42,60 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public List<Department> GetDepartments()
         {
-
-            
-                try
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                    conn.Open();
+                    string sql = "select * from department where status=@status";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Department> departments= new List<Department>();
+
+                    while (dr.Read())
                     {
-                        conn.Open();
-
-
-                        string query = "select * from department";
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        
-                        
-
-
-
-                        MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
-                        List<Department> departments = new List<Department>();
-                        while (dr.Read())
-                        {
-                            Department d = new Department();
-                            d.Id = Convert.ToInt32(dr["id"]);
-                            d.Name = dr["name"].ToString();
-                            departments.Add(d);
-                        }
-                        return departments;
+                        Department department = new Department();
+                        department.Id = Convert.ToInt32(dr["id"]);
+                        department.Name = dr["name"].ToString();
+                        department.Status = Enum.Parse<Status>(dr["status"].ToString());
+                        departments.Add(department);
                     }
-                }
-                catch (Exception)
-                {
+                    return departments;
 
-                    throw;
                 }
-                finally
-                {
-                    conn.Close();
-                }
-              
-            
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
-        
-        public Department EditDepartment(Department department) //Allow me to edit the Department
+
+        public Department EditDepartment(Department department) 
         {
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "Update Department set Name= @namet";
+                    string sql = "Update Department set name=@name, status=@status where id=@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@id", department.Id);
-                    cmd.Parameters.AddWithValue("@Department", department.Name);
+                    cmd.Parameters.AddWithValue("@name", department.Name);
+                    cmd.Parameters.AddWithValue("@status", department.Status.ToString());
+
                     cmd.ExecuteNonQuery();
                 }
                 return department;
-
 
             }
             catch(Exception)
@@ -111,6 +108,35 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
            
+        }
+        public void DeleteDepartment(int id)
+        {
+            {
+                try
+                {
+                    using (MySqlConnection conn=new MySqlConnection(Params.connectionString))
+                    {
+                        string sql = "delete from Department where id=@id";
+
+                        MySqlCommand cmd = new MySqlCommand(sql,conn);
+
+                        cmd.Parameters.AddWithValue("id", id);
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        
+                    }  
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
         
     }

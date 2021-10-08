@@ -31,13 +31,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnCreateDepartments_Click(object sender, EventArgs e)
         {
             FormCreateDepartment formCreateDepartment = new FormCreateDepartment();
-            formCreateDepartment.Show();
+            formCreateDepartment.ShowDialog();
             RefreshListBox();
         }
 
         private void btnEditDepartments_Click(object sender, EventArgs e)
         {
-            FormUpdateDepartment formUpdateDepartment = new FormUpdateDepartment();
+            Department department = (Department)lbDepartments.SelectedItem;
+            FormUpdateDepartment formUpdateDepartment = new FormUpdateDepartment(department);
             formUpdateDepartment.Show();
             RefreshListBox();
         }
@@ -49,6 +50,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
 
         private void btnRefreshDepartments_Click(object sender, EventArgs e)
+        {
+            RefreshListBox();
+        }
+
+        private void btnDelDepartment_Click(object sender, EventArgs e)
+        {
+            Department department = (Department)lbDepartments.SelectedItem;
+            dm.DeleteDepartment(department.Id);
+            MessageBox.Show("Department Delted Successfully");
+            RefreshListBox();
+        }
+
+        private void FormDepartment_Load(object sender, EventArgs e)
         {
             RefreshListBox();
         }
