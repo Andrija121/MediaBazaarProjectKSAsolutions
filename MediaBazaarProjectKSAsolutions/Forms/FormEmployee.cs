@@ -75,5 +75,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Close();
             
         }
+
+        private void FormEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

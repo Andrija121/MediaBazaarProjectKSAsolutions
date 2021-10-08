@@ -30,6 +30,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void InitializeComponent()
         {
             this.pnlEmployees = new System.Windows.Forms.Panel();
+            this.lbDepartments = new System.Windows.Forms.ListBox();
             this.btnDelDepartment = new System.Windows.Forms.Button();
             this.btnEditDepartments = new System.Windows.Forms.Button();
             this.btnCreateDepartments = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lbDepartments = new System.Windows.Forms.ListBox();
             this.pnlEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -52,11 +52,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.btnRefreshDepartments);
             this.pnlEmployees.Controls.Add(this.dataGridView3);
             this.pnlEmployees.Controls.Add(this.label3);
-            this.pnlEmployees.Location = new System.Drawing.Point(13, 14);
+            this.pnlEmployees.Location = new System.Drawing.Point(12, 14);
             this.pnlEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlEmployees.Name = "pnlEmployees";
             this.pnlEmployees.Size = new System.Drawing.Size(1320, 541);
             this.pnlEmployees.TabIndex = 12;
+            // 
+            // lbDepartments
+            // 
+            this.lbDepartments.FormattingEnabled = true;
+            this.lbDepartments.ItemHeight = 25;
+            this.lbDepartments.Location = new System.Drawing.Point(62, 216);
+            this.lbDepartments.Margin = new System.Windows.Forms.Padding(2);
+            this.lbDepartments.Name = "lbDepartments";
+            this.lbDepartments.Size = new System.Drawing.Size(1172, 279);
+            this.lbDepartments.TabIndex = 10;
             // 
             // btnDelDepartment
             // 
@@ -67,6 +77,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDelDepartment.TabIndex = 9;
             this.btnDelDepartment.Text = "Delete Department";
             this.btnDelDepartment.UseVisualStyleBackColor = true;
+            this.btnDelDepartment.Click += new System.EventHandler(this.btnDelDepartment_Click);
             // 
             // btnEditDepartments
             // 
@@ -99,6 +110,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnRefreshDepartments.TabIndex = 6;
             this.btnRefreshDepartments.Text = "Refresh";
             this.btnRefreshDepartments.UseVisualStyleBackColor = true;
+            this.btnRefreshDepartments.Click += new System.EventHandler(this.btnRefreshDepartments_Click);
             // 
             // dataGridView3
             // 
@@ -124,7 +136,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(1188, 563);
+            this.btnBack.Location = new System.Drawing.Point(1188, 562);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 52);
             this.btnBack.TabIndex = 13;
@@ -132,26 +145,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lbDepartments
-            // 
-            this.lbDepartments.FormattingEnabled = true;
-            this.lbDepartments.ItemHeight = 25;
-            this.lbDepartments.Location = new System.Drawing.Point(63, 216);
-            this.lbDepartments.Name = "lbDepartments";
-            this.lbDepartments.Size = new System.Drawing.Size(1172, 279);
-            this.lbDepartments.TabIndex = 10;
-            // 
             // FormDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 627);
+            this.ClientSize = new System.Drawing.Size(1346, 628);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlEmployees);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormDepartment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDepartment";
+            this.Load += new System.EventHandler(this.FormDepartment_Load);
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();

@@ -150,6 +150,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Name = "FormEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";
+            this.Load += new System.EventHandler(this.FormEmployee_Load);
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();

@@ -4,22 +4,24 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class Department
+    public class Department
     {
 
         public int Id { get; set; }
         public string Name { get; set; }
-        //public int ManagerID { get; set; }
+        public Status Status { get; set; }
+        
 
         public Department()
         {
 
         }
-        public Department(int id,string name)
+        public Department(int id,string name,Status status)
         {
             this.Id = id;
             this.Name = name;
-            //this.ManagerID = managerId;
+            this.Status = status;
+            
         }
         public override string ToString()
         {
