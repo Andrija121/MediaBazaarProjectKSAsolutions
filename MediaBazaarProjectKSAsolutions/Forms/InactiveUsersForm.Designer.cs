@@ -44,18 +44,24 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(667, 404);
+            this.btnBack.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnBack.Location = new System.Drawing.Point(676, 404);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 34);
-            this.btnBack.TabIndex = 1;
+            this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // InactiveUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbInactiveUsers);

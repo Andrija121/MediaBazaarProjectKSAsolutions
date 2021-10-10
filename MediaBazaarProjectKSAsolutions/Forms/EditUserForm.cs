@@ -23,11 +23,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnEditUser_Click(object sender, EventArgs e)
         {
             try
@@ -46,22 +41,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
                 um.EditUser(u);
                 MessageBox.Show("Successfully Edited User");
+
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Error"+ex);
             }
-          
-
-
         }
 
         private void EditUserForm_Load(object sender, EventArgs e)
         {
             try
-            {
-                
+            {   
                 tbUserName.Text = u.UserName;
                 tbFirstName.Text = u.FirstName;
                 tbLastName.Text = u.LastName;
@@ -77,12 +70,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             }
             catch (Exception)
             {
-
                 throw;
             }
-                
-            
-           
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -23,10 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
@@ -56,6 +53,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
                 MessageBox.Show("Error" + ex);
             }
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
