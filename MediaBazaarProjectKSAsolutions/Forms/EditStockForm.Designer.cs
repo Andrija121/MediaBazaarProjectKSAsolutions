@@ -44,10 +44,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(210, 184);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(240, 245);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(91, 28);
+            this.btnBack.Size = new System.Drawing.Size(104, 37);
             this.btnBack.TabIndex = 26;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -56,87 +55,83 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 146);
+            this.label4.Location = new System.Drawing.Point(18, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Amount";
             // 
             // tbxNewStockAmount
             // 
-            this.tbxNewStockAmount.Location = new System.Drawing.Point(109, 146);
-            this.tbxNewStockAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxNewStockAmount.Location = new System.Drawing.Point(125, 195);
             this.tbxNewStockAmount.Name = "tbxNewStockAmount";
-            this.tbxNewStockAmount.Size = new System.Drawing.Size(192, 23);
+            this.tbxNewStockAmount.Size = new System.Drawing.Size(219, 27);
             this.tbxNewStockAmount.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 121);
+            this.label2.Location = new System.Drawing.Point(18, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Serial Number";
             // 
             // tbxNewStockSerialNumber
             // 
-            this.tbxNewStockSerialNumber.Location = new System.Drawing.Point(109, 121);
-            this.tbxNewStockSerialNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxNewStockSerialNumber.Location = new System.Drawing.Point(125, 161);
             this.tbxNewStockSerialNumber.Name = "tbxNewStockSerialNumber";
-            this.tbxNewStockSerialNumber.Size = new System.Drawing.Size(192, 23);
+            this.tbxNewStockSerialNumber.Size = new System.Drawing.Size(219, 27);
             this.tbxNewStockSerialNumber.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 97);
+            this.label1.Location = new System.Drawing.Point(18, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 15);
+            this.label1.Size = new System.Drawing.Size(41, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Price";
             // 
             // tbxNewStockPrice
             // 
-            this.tbxNewStockPrice.Location = new System.Drawing.Point(109, 97);
-            this.tbxNewStockPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxNewStockPrice.Location = new System.Drawing.Point(125, 129);
             this.tbxNewStockPrice.Name = "tbxNewStockPrice";
-            this.tbxNewStockPrice.Size = new System.Drawing.Size(192, 23);
+            this.tbxNewStockPrice.Size = new System.Drawing.Size(219, 27);
             this.tbxNewStockPrice.TabIndex = 20;
             // 
             // lblDepartmentName
             // 
             this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(16, 72);
+            this.lblDepartmentName.Location = new System.Drawing.Point(18, 96);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(39, 15);
+            this.lblDepartmentName.Size = new System.Drawing.Size(49, 20);
             this.lblDepartmentName.TabIndex = 19;
             this.lblDepartmentName.Text = "Name";
+            this.lblDepartmentName.Click += new System.EventHandler(this.lblDepartmentName_Click);
             // 
             // lblEditStock
             // 
             this.lblEditStock.AutoSize = true;
             this.lblEditStock.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEditStock.Location = new System.Drawing.Point(95, 22);
+            this.lblEditStock.Location = new System.Drawing.Point(109, 29);
             this.lblEditStock.Name = "lblEditStock";
-            this.lblEditStock.Size = new System.Drawing.Size(133, 37);
+            this.lblEditStock.Size = new System.Drawing.Size(168, 46);
             this.lblEditStock.TabIndex = 18;
             this.lblEditStock.Text = "Edit Stock";
             // 
             // tbxNewStockName
             // 
-            this.tbxNewStockName.Location = new System.Drawing.Point(109, 72);
-            this.tbxNewStockName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxNewStockName.Location = new System.Drawing.Point(125, 96);
             this.tbxNewStockName.Name = "tbxNewStockName";
-            this.tbxNewStockName.Size = new System.Drawing.Size(192, 23);
+            this.tbxNewStockName.Size = new System.Drawing.Size(219, 27);
             this.tbxNewStockName.TabIndex = 17;
             // 
             // btnEditStock
             // 
-            this.btnEditStock.Location = new System.Drawing.Point(109, 184);
-            this.btnEditStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditStock.Location = new System.Drawing.Point(125, 245);
             this.btnEditStock.Name = "btnEditStock";
-            this.btnEditStock.Size = new System.Drawing.Size(91, 28);
+            this.btnEditStock.Size = new System.Drawing.Size(104, 37);
             this.btnEditStock.TabIndex = 16;
             this.btnEditStock.Text = "Save";
             this.btnEditStock.UseVisualStyleBackColor = true;
@@ -144,9 +139,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // EditStockForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 228);
+            this.ClientSize = new System.Drawing.Size(378, 304);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbxNewStockAmount);
@@ -158,6 +153,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.lblEditStock);
             this.Controls.Add(this.tbxNewStockName);
             this.Controls.Add(this.btnEditStock);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EditStockForm";
             this.Text = "EditStockForm";
             this.Load += new System.EventHandler(this.EditStockForm_Load);

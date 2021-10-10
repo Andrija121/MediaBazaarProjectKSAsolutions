@@ -15,6 +15,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public FormCreateDepartment()
         {
             InitializeComponent();
+            cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
         private void btnAddDepartmentConfirmation_Click(object sender, EventArgs e)
@@ -23,8 +24,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             try
             {
                 string name = tbxNewDepartmentName.Text;
+                Status status = (Status)cbStatus.SelectedItem;
                 
-                Department department = new Department(0, name);
+                Department department = new Department(0,name,status);
                 dep.AddDepartment(department);
                 MessageBox.Show("Department has been added");
             }
