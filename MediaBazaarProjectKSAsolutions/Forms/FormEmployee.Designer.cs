@@ -49,9 +49,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(1172, 735);
+            this.btnBack.Location = new System.Drawing.Point(820, 434);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 34);
+            this.btnBack.Size = new System.Drawing.Size(78, 27);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.panelPage.BackColor = System.Drawing.Color.DarkOrchid;
             this.panelPage.Controls.Add(this.lblPage);
-            this.panelPage.Location = new System.Drawing.Point(0, 12);
+            this.panelPage.Location = new System.Drawing.Point(0, 7);
+            this.panelPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelPage.Name = "panelPage";
-            this.panelPage.Size = new System.Drawing.Size(337, 107);
+            this.panelPage.Size = new System.Drawing.Size(236, 64);
             this.panelPage.TabIndex = 17;
             // 
             // lblPage
@@ -71,20 +73,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblPage.AutoSize = true;
             this.lblPage.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblPage.Location = new System.Drawing.Point(25, 23);
-            this.lblPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPage.Location = new System.Drawing.Point(18, 14);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(309, 54);
+            this.lblPage.Size = new System.Drawing.Size(210, 37);
             this.lblPage.TabIndex = 18;
             this.lblPage.Text = "Employees Page";
             // 
             // lbUsers
             // 
             this.lbUsers.FormattingEnabled = true;
-            this.lbUsers.ItemHeight = 25;
-            this.lbUsers.Location = new System.Drawing.Point(63, 222);
+            this.lbUsers.ItemHeight = 15;
+            this.lbUsers.Location = new System.Drawing.Point(44, 133);
+            this.lbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(1221, 479);
+            this.lbUsers.Size = new System.Drawing.Size(856, 289);
             this.lbUsers.TabIndex = 2;
             // 
             // btnAddUser
@@ -94,9 +96,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddUser.Location = new System.Drawing.Point(63, 150);
+            this.btnAddUser.Location = new System.Drawing.Point(44, 90);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(211, 66);
+            this.btnAddUser.Size = new System.Drawing.Size(148, 40);
             this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
@@ -109,9 +112,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(406, 150);
+            this.btnEdit.Location = new System.Drawing.Point(284, 90);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(211, 66);
+            this.btnEdit.Size = new System.Drawing.Size(148, 40);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit User";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -124,9 +128,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnMakeUserInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeUserInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMakeUserInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnMakeUserInactive.Location = new System.Drawing.Point(739, 150);
+            this.btnMakeUserInactive.Location = new System.Drawing.Point(517, 90);
+            this.btnMakeUserInactive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMakeUserInactive.Name = "btnMakeUserInactive";
-            this.btnMakeUserInactive.Size = new System.Drawing.Size(211, 66);
+            this.btnMakeUserInactive.Size = new System.Drawing.Size(148, 40);
             this.btnMakeUserInactive.TabIndex = 5;
             this.btnMakeUserInactive.Text = "Make User Inactive";
             this.btnMakeUserInactive.UseVisualStyleBackColor = false;
@@ -139,9 +144,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeInactiveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeeInactiveUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(1073, 150);
+            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(751, 90);
+            this.btnSeeInactiveUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
-            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(211, 66);
+            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(148, 40);
             this.btnSeeInactiveUsers.TabIndex = 6;
             this.btnSeeInactiveUsers.Text = "See All Inactive Users";
             this.btnSeeInactiveUsers.UseVisualStyleBackColor = false;
@@ -151,20 +157,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(36, 127);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView3.Location = new System.Drawing.Point(25, 76);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(1269, 589);
+            this.dataGridView3.Size = new System.Drawing.Size(888, 353);
             this.dataGridView3.TabIndex = 1;
             // 
             // FormEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1341, 781);
+            this.ClientSize = new System.Drawing.Size(939, 469);
             this.Controls.Add(this.btnSeeInactiveUsers);
             this.Controls.Add(this.panelPage);
             this.Controls.Add(this.btnMakeUserInactive);
@@ -174,7 +179,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.lbUsers);
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";

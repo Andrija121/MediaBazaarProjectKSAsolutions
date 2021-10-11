@@ -40,10 +40,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // lblDepartmentName
             // 
             this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(71, 150);
-            this.lblDepartmentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDepartmentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblDepartmentName.Location = new System.Drawing.Point(50, 90);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(159, 25);
+            this.lblDepartmentName.Size = new System.Drawing.Size(123, 17);
             this.lblDepartmentName.TabIndex = 22;
             this.lblDepartmentName.Text = "Department Name";
             // 
@@ -51,55 +52,60 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(120, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(84, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(388, 54);
+            this.label3.Size = new System.Drawing.Size(261, 37);
             this.label3.TabIndex = 21;
             this.label3.Text = "Update Department ";
             // 
             // tbxUpdateDepartmentName
             // 
-            this.tbxUpdateDepartmentName.Location = new System.Drawing.Point(258, 146);
-            this.tbxUpdateDepartmentName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxUpdateDepartmentName.Location = new System.Drawing.Point(181, 88);
+            this.tbxUpdateDepartmentName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateDepartmentName.Name = "tbxUpdateDepartmentName";
-            this.tbxUpdateDepartmentName.Size = new System.Drawing.Size(273, 31);
+            this.tbxUpdateDepartmentName.Size = new System.Drawing.Size(192, 23);
             this.tbxUpdateDepartmentName.TabIndex = 20;
             // 
             // btnUpdateDepartmentConfirmation
             // 
-            this.btnUpdateDepartmentConfirmation.Location = new System.Drawing.Point(258, 285);
-            this.btnUpdateDepartmentConfirmation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateDepartmentConfirmation.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnUpdateDepartmentConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateDepartmentConfirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdateDepartmentConfirmation.Location = new System.Drawing.Point(181, 171);
+            this.btnUpdateDepartmentConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateDepartmentConfirmation.Name = "btnUpdateDepartmentConfirmation";
-            this.btnUpdateDepartmentConfirmation.Size = new System.Drawing.Size(130, 48);
+            this.btnUpdateDepartmentConfirmation.Size = new System.Drawing.Size(91, 29);
             this.btnUpdateDepartmentConfirmation.TabIndex = 19;
             this.btnUpdateDepartmentConfirmation.Text = "Update";
-            this.btnUpdateDepartmentConfirmation.UseVisualStyleBackColor = true;
+            this.btnUpdateDepartmentConfirmation.UseVisualStyleBackColor = false;
             this.btnUpdateDepartmentConfirmation.Click += new System.EventHandler(this.btnUpdateDepartmentConfirmation_Click);
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(71, 220);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblStatus.Location = new System.Drawing.Point(50, 132);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 25);
+            this.lblStatus.Size = new System.Drawing.Size(48, 17);
             this.lblStatus.TabIndex = 24;
             this.lblStatus.Text = "Status";
             // 
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(258, 212);
+            this.cbStatus.Location = new System.Drawing.Point(181, 127);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(273, 33);
+            this.cbStatus.Size = new System.Drawing.Size(192, 23);
             this.cbStatus.TabIndex = 23;
             // 
             // FormUpdateDepartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 346);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(421, 208);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.lblDepartmentName);
@@ -107,7 +113,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.tbxUpdateDepartmentName);
             this.Controls.Add(this.btnUpdateDepartmentConfirmation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormUpdateDepartment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUpdateDepartment";
