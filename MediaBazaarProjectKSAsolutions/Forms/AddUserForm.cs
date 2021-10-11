@@ -48,10 +48,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Please fill in all the values");
             }
         }
 

@@ -25,7 +25,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             try
             {
-
                 dep.Name = tbxUpdateDepartmentName.Text;
                 dep.Status = (Status)cbStatus.SelectedItem;
 
