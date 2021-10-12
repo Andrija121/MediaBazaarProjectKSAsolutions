@@ -21,7 +21,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public void RefreshListBox()
         {
             lbDepartments.Items.Clear();
-            foreach (var d in dm.GetDepartments())
+            foreach (var d in dm.GetActiveDepartments())
             {
                 lbDepartments.Items.Add(d);
             }
@@ -38,9 +38,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnEditDepartments_Click(object sender, EventArgs e)
         {
             Department department = (Department)lbDepartments.SelectedItem;
-            FormUpdateDepartment formUpdateDepartment = new FormUpdateDepartment(department);
-            formUpdateDepartment.Show();
-            RefreshListBox();
+            if(department==null)
+            {
+                MessageBox.Show("Please select department");
+            }
+            else 
+            {
+                FormUpdateDepartment formUpdateDepartment = new FormUpdateDepartment(department);
+                formUpdateDepartment.Show();
+                RefreshListBox();
+            }
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -57,14 +65,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnDelDepartment_Click(object sender, EventArgs e)
         {
             Department department = (Department)lbDepartments.SelectedItem;
-            dm.DeleteDepartment(department.Id);
-            MessageBox.Show("Department Delted Successfully");
-            RefreshListBox();
+            if (department == null)
+            {
+                MessageBox.Show("Please select department");
+            }
+            else
+            {
+                dm.SetDepartmentInactive(department);
+                MessageBox.Show("Department Inactivated Successfully");
+                RefreshListBox();
+            }
         }
 
         private void FormDepartment_Load(object sender, EventArgs e)
         {
             RefreshListBox();
+        }
+
+        private void btnSeeInactiveUsers_Click(object sender, EventArgs e)
+        {
+            InactiveDepartmentsForm inactiveDepartmentsForm = new InactiveDepartmentsForm();
+            inactiveDepartmentsForm.ShowDialog();
         }
     }
 }

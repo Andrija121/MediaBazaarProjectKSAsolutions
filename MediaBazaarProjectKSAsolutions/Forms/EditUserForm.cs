@@ -39,10 +39,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 u.Role = (Role)cbRole.SelectedItem;
                 u.Status = (Status)cbStatus.SelectedItem;
 
-                um.EditUser(u);
-                MessageBox.Show("Successfully Edited User");
-
-
+                if (u.Password == null || u.UserName == null || u.BSN.ToString() == null || u.FirstName == null || u.LastName == null)
+                {
+                    MessageBox.Show("Input value is not correct");
+                }
+                else
+                {
+                    um.EditUser(u);
+                    MessageBox.Show("Successfully Edited User");
+                }
             }
             catch (Exception ex)
             {

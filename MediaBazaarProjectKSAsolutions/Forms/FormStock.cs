@@ -40,10 +40,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnEditStocks_Click(object sender, EventArgs e)
         {
-            Stock stock = (Stock)lbStocks.SelectedItem;
-            EditStockForm editStockForm = new EditStockForm(stock);
-            editStockForm.ShowDialog();
-            RefreshListBox();
+            if (lbStocks.SelectedItem != null)
+            {
+                Stock stock = (Stock)lbStocks.SelectedItem;
+                EditStockForm editStockForm = new EditStockForm(stock);
+                editStockForm.ShowDialog();
+                RefreshListBox();
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to edit.");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -54,10 +61,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnDelStock_Click(object sender, EventArgs e)
         {
-            Stock stock = (Stock)lbStocks.SelectedItem;
-            sm.DeleteStock(stock.Id);
-            MessageBox.Show("Stock Deleted Succesfully");
-            RefreshListBox();
+            if (lbStocks.SelectedItem != null)
+            {
+                Stock stock = (Stock)lbStocks.SelectedItem;
+                sm.DeleteStock(stock.Id);
+                MessageBox.Show("Stock Deleted Succesfully");
+                RefreshListBox();
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to delete.");
+            }   
         }
     }
 }

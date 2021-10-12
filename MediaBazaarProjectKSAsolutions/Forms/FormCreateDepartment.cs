@@ -26,9 +26,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 string name = tbxNewDepartmentName.Text;
                 Status status = (Status)cbStatus.SelectedItem;
                 
+               
                 Department department = new Department(0,name,status);
-                dep.AddDepartment(department);
-                MessageBox.Show("Department has been added");
+                if (department.Name == "")
+                {
+                    MessageBox.Show("Please input proper values");
+                }
+                else
+                {
+                    dep.AddDepartment(department);
+                    MessageBox.Show("Department has been added");
+                }
             }
             catch (Exception ex)
             {
