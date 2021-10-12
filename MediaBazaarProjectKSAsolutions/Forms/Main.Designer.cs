@@ -40,10 +40,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblHi = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -71,7 +69,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // panelButtons
             // 
             this.panelButtons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelButtons.Controls.Add(this.pictureBox1);
             this.panelButtons.Controls.Add(this.btnStatistics);
             this.panelButtons.Controls.Add(this.btnSchedule);
             this.panelButtons.Controls.Add(this.btnDepartments);
@@ -187,18 +184,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi.Size = new System.Drawing.Size(0, 25);
             this.lblHi.TabIndex = 15;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(230, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -217,7 +202,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +218,5 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label lblHi;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
