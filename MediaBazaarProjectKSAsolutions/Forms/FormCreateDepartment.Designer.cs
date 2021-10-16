@@ -40,10 +40,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // lblDepartmentName
             // 
             this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(61, 149);
-            this.lblDepartmentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDepartmentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblDepartmentName.Location = new System.Drawing.Point(43, 89);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(159, 25);
+            this.lblDepartmentName.Size = new System.Drawing.Size(123, 17);
             this.lblDepartmentName.TabIndex = 18;
             this.lblDepartmentName.Text = "Department Name";
             // 
@@ -51,55 +52,61 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(132, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(92, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(332, 54);
+            this.label3.Size = new System.Drawing.Size(222, 37);
             this.label3.TabIndex = 17;
             this.label3.Text = "Add Department ";
             // 
             // tbxNewDepartmentName
             // 
-            this.tbxNewDepartmentName.Location = new System.Drawing.Point(248, 145);
-            this.tbxNewDepartmentName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxNewDepartmentName.Location = new System.Drawing.Point(174, 87);
+            this.tbxNewDepartmentName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxNewDepartmentName.Name = "tbxNewDepartmentName";
-            this.tbxNewDepartmentName.Size = new System.Drawing.Size(273, 31);
+            this.tbxNewDepartmentName.Size = new System.Drawing.Size(192, 23);
             this.tbxNewDepartmentName.TabIndex = 16;
             // 
             // btnAddDepartmentConfirmation
             // 
-            this.btnAddDepartmentConfirmation.Location = new System.Drawing.Point(248, 284);
-            this.btnAddDepartmentConfirmation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddDepartmentConfirmation.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnAddDepartmentConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDepartmentConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddDepartmentConfirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddDepartmentConfirmation.Location = new System.Drawing.Point(174, 170);
+            this.btnAddDepartmentConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddDepartmentConfirmation.Name = "btnAddDepartmentConfirmation";
-            this.btnAddDepartmentConfirmation.Size = new System.Drawing.Size(130, 48);
+            this.btnAddDepartmentConfirmation.Size = new System.Drawing.Size(91, 29);
             this.btnAddDepartmentConfirmation.TabIndex = 15;
             this.btnAddDepartmentConfirmation.Text = "Add";
-            this.btnAddDepartmentConfirmation.UseVisualStyleBackColor = true;
+            this.btnAddDepartmentConfirmation.UseVisualStyleBackColor = false;
             this.btnAddDepartmentConfirmation.Click += new System.EventHandler(this.btnAddDepartmentConfirmation_Click);
             // 
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(248, 211);
+            this.cbStatus.Location = new System.Drawing.Point(174, 127);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(273, 33);
+            this.cbStatus.Size = new System.Drawing.Size(192, 23);
             this.cbStatus.TabIndex = 19;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(61, 219);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblStatus.Location = new System.Drawing.Point(43, 131);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 25);
+            this.lblStatus.Size = new System.Drawing.Size(48, 17);
             this.lblStatus.TabIndex = 20;
             this.lblStatus.Text = "Status";
             // 
             // FormCreateDepartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 346);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(421, 208);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.lblDepartmentName);
@@ -107,7 +114,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.tbxNewDepartmentName);
             this.Controls.Add(this.btnAddDepartmentConfirmation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCreateDepartment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateDepartment";

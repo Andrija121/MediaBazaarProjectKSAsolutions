@@ -23,10 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
@@ -46,16 +43,29 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Role role = (Role)cbRole.SelectedItem;
                 Status status = (Status)cbStatus.SelectedItem;
                 User user = new User(0,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
-                um.AddUser(user);
-                MessageBox.Show("User Created Successfully");
+                if(user.Password == string.Empty || user.UserName == string.Empty || user.BSN.ToString()== string.Empty || user.FirstName== string.Empty || user.LastName== string.Empty)
+                {
+                    MessageBox.Show("Input value is not correct");
+
+                }
+                else
+                {
+                    um.AddUser(user);
+                    MessageBox.Show("User Created Successfully");
+                }
+                
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Please fill in all the values");
             }
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

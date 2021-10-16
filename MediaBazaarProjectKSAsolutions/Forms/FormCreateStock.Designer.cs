@@ -45,9 +45,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // lblDepartmentName
             // 
             this.lblDepartmentName.AutoSize = true;
-            this.lblDepartmentName.Location = new System.Drawing.Point(59, 57);
+            this.lblDepartmentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDepartmentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblDepartmentName.Location = new System.Drawing.Point(48, 59);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(39, 15);
+            this.lblDepartmentName.Size = new System.Drawing.Size(45, 17);
             this.lblDepartmentName.TabIndex = 8;
             this.lblDepartmentName.Text = "Name";
             // 
@@ -71,21 +73,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnAddStockConfirmation
             // 
+            this.btnAddStockConfirmation.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnAddStockConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStockConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddStockConfirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddStockConfirmation.Location = new System.Drawing.Point(152, 169);
             this.btnAddStockConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddStockConfirmation.Name = "btnAddStockConfirmation";
             this.btnAddStockConfirmation.Size = new System.Drawing.Size(91, 28);
             this.btnAddStockConfirmation.TabIndex = 5;
             this.btnAddStockConfirmation.Text = "Add";
-            this.btnAddStockConfirmation.UseVisualStyleBackColor = true;
+            this.btnAddStockConfirmation.UseVisualStyleBackColor = false;
             this.btnAddStockConfirmation.Click += new System.EventHandler(this.btnAddStockConfirmation_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 82);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(48, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 15);
+            this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Price";
             // 
@@ -100,9 +108,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 106);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(48, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Serial Number";
             // 
@@ -117,9 +127,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 131);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(48, 133);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Amount";
             // 
@@ -133,19 +145,23 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBack.Location = new System.Drawing.Point(253, 169);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(91, 28);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormCreateStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(422, 208);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);

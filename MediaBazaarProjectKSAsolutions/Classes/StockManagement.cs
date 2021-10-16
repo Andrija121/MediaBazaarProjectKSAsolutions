@@ -159,7 +159,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public void RemoveStockAtIndex(int id)
+        public void DeleteStock(int id)
         {
             try
             {

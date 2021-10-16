@@ -36,10 +36,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Input value is not correct");
             }
 
 

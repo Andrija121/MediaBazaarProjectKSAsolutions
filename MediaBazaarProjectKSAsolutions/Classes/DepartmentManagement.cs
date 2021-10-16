@@ -40,7 +40,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public List<Department> GetDepartments()
+        public List<Department> GetActiveDepartments()
         {
             try
             {
@@ -54,7 +54,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
-                    List<Department> departments= new List<Department>();
+                    List<Department> activeDepartments= new List<Department>();
 
                     while (dr.Read())
                     {
@@ -62,9 +62,47 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                         department.Id = Convert.ToInt32(dr["id"]);
                         department.Name = dr["name"].ToString();
                         department.Status = Enum.Parse<Status>(dr["status"].ToString());
-                        departments.Add(department);
+                        activeDepartments.Add(department);
                     }
-                    return departments;
+                    return activeDepartments;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+        public List<Department> GetInactiveDepartments()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "select * from department where status=@status";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@status", Status.INACTIVE.ToString());
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Department> inactiveDepartments = new List<Department>();
+
+                    while (dr.Read())
+                    {
+                        Department department = new Department();
+                        department.Id = Convert.ToInt32(dr["id"]);
+                        department.Name = dr["name"].ToString();
+                        department.Status = Enum.Parse<Status>(dr["status"].ToString());
+                        inactiveDepartments.Add(department);
+                    }
+                    return inactiveDepartments;
 
                 }
             }
@@ -137,6 +175,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     conn.Close();
                 }
             }
+        }
+        public void SetDepartmentInactive(Department department)
+        {
+            department.Status = Status.INACTIVE;
+            EditDepartment(department);
         }
         
     }

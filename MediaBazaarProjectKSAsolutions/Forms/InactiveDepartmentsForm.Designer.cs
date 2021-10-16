@@ -1,7 +1,7 @@
 ﻿
 namespace MediaBazaarProjectKSAsolutions.Forms
 {
-    partial class InactiveUsersForm
+    partial class InactiveDepartmentsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbInactiveUsers = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lbInactiveUsers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // lbInactiveUsers
-            // 
-            this.lbInactiveUsers.FormattingEnabled = true;
-            this.lbInactiveUsers.ItemHeight = 25;
-            this.lbInactiveUsers.Location = new System.Drawing.Point(13, 13);
-            this.lbInactiveUsers.Name = "lbInactiveUsers";
-            this.lbInactiveUsers.Size = new System.Drawing.Size(775, 379);
-            this.lbInactiveUsers.TabIndex = 0;
             // 
             // btnBack
             // 
@@ -52,12 +43,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.Location = new System.Drawing.Point(676, 404);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(112, 34);
-            this.btnBack.TabIndex = 17;
+            this.btnBack.TabIndex = 19;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // InactiveUsersForm
+            // lbInactiveUsers
+            // 
+            this.lbInactiveUsers.FormattingEnabled = true;
+            this.lbInactiveUsers.ItemHeight = 25;
+            this.lbInactiveUsers.Location = new System.Drawing.Point(13, 13);
+            this.lbInactiveUsers.Name = "lbInactiveUsers";
+            this.lbInactiveUsers.Size = new System.Drawing.Size(775, 379);
+            this.lbInactiveUsers.TabIndex = 18;
+            // 
+            // InactiveDepartmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,16 +66,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbInactiveUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InactiveUsersForm";
+            this.Name = "InactiveDepartmentsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InactiveUsersForm";
+            this.Text = "InactiveDepartmentsFomr";
+            this.Load += new System.EventHandler(this.InactiveDepartmentsForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbInactiveUsers;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox lbInactiveUsers;
     }
 }

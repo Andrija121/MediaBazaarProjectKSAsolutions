@@ -60,7 +60,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnStatistics.Location = new System.Drawing.Point(14, 220);
             this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(314, 37);
+            this.btnStatistics.Size = new System.Drawing.Size(314, 40);
             this.btnStatistics.TabIndex = 5;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.btnLogout.Location = new System.Drawing.Point(32, 654);
+            this.btnLogout.Location = new System.Drawing.Point(31, 653);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(314, 37);
@@ -168,8 +168,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pictureBoxLogo.Location = new System.Drawing.Point(17, 50);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(352, 300);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.Size = new System.Drawing.Size(351, 300);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 13;
             this.pictureBoxLogo.TabStop = false;
             // 
@@ -179,7 +179,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHi.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblHi.Location = new System.Drawing.Point(22, 8);
+            this.lblHi.Location = new System.Drawing.Point(21, 8);
             this.lblHi.Name = "lblHi";
             this.lblHi.Size = new System.Drawing.Size(0, 25);
             this.lblHi.TabIndex = 15;

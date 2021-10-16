@@ -12,73 +12,83 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormEmployee : Form
     {
         User u;
-        UserManagement userManagement;
         public FormEmployee(User user)
         {
             InitializeComponent();
             this.u = user;
-            userManagement = new UserManagement();
-            RefreshListBox();
+            PanelMovment(btnDashboard);
+        }
+        public void PanelMovment(Button button)
+        {
+            pnlNav.Height = button.Height;
+            pnlNav.Top = button.Top;
+            pnlNav.Left = button.Left;
+            button.BackColor = Color.DarkOrchid;
+        }
+        public void ButtonLeave(Button button)
+        {
+            button.BackColor = Color.DarkOrchid;
         }
 
-        public void RefreshListBox()
-        {
-            lbUsers.Items.Clear();
-            foreach (var u in userManagement.GetUsers())
-            {
-                lbUsers.Items.Add(u);
-            }
-        }
-        private void btnAddUser_Click(object sender, EventArgs e)
-        {
 
-            AddUserForm addUserForm = new AddUserForm();
-            addUserForm.ShowDialog();
-            RefreshListBox();
-
-        }
-
-        private void btnMakeUserInactive_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
-            User user = (User)lbUsers.SelectedItem;
-            if (user != null)
-            {
-                userManagement.SetUserStatusToInactive(user);
-                RefreshListBox();
-                MessageBox.Show("User Made Inactive Successfully");
-            }
-            else
-                MessageBox.Show("Please select the user you want to make inactive");
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            User user = (User)lbUsers.SelectedItem;
-            if (user != null)
-            {
-                EditUserForm editUserForm = new EditUserForm(user);
-                editUserForm.ShowDialog();
-                RefreshListBox();
-            }
-            else
-                MessageBox.Show("Please select the user you want to edit");
-        }
-
-        private void btnSeeInactiveUsers_Click(object sender, EventArgs e)
-        {
-            InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
-            inactiveUsersForm.ShowDialog();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
+            PanelMovment(btnBack);
             this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
             
         }
 
-        private void FormEmployee_Load(object sender, EventArgs e)
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
+            PanelMovment(btnDashboard);
+            tcNavigation.SelectedTab = tabPageDashboard;
+            
 
+        }
+
+        private void btnShift_Click(object sender, EventArgs e)
+        {
+            PanelMovment(btnShift);
+            tcNavigation.SelectedTab = tabPageShift;
+        }
+
+        private void btnDashboard_Leave(object sender, EventArgs e)
+        {
+            ButtonLeave(btnDashboard);
+        }
+
+        private void btnShift_Leave(object sender, EventArgs e)
+        {
+            ButtonLeave(btnShift);
+        }
+
+        private void btnProfile_Leave(object sender, EventArgs e)
+        {
+            ButtonLeave(btnProfile);
+        }
+
+        private void btnBack_Leave(object sender, EventArgs e)
+        {
+            ButtonLeave(btnBack);
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            PanelMovment(btnProfile);
+            tcNavigation.SelectedTab = tabPageProfile;
+        }
+
+        private void btnContract_Click(object sender, EventArgs e)
+        {
+            PanelMovment(btnContract);
+            tcNavigation.SelectedTab = tabPageContract;
+        }
+
+        private void btnContract_Leave(object sender, EventArgs e)
+        {
+            ButtonLeave(btnContract);
         }
     }
 }
