@@ -8,73 +8,22 @@
         <Name>User</Name>
         <Access>Public</Access>
         <Location left="406" top="623" />
-        <Size width="162" height="366" />
+        <Size width="162" height="393" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">int id</Member>
-        <Member type="Field">string firstName</Member>
-        <Member type="Field">string lastName</Member>
-        <Member type="Field">string email</Member>
-        <Member type="Field">string password</Member>
-        <Member type="Field">string gender</Member>
-        <Member type="Field">string birthday</Member>
-        <Member type="Field">int BSN</Member>
-        <Member type="Field">string zipCode</Member>
-        <Member type="Field">string adres</Member>
         <Member type="Constructor">public User()</Member>
         <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public string UserName { get; set; }</Member>
         <Member type="Property">public string FirstName { get; set; }</Member>
+        <Member type="Property">public string LastName { get; set; }</Member>
         <Member type="Property">public string Email { get; set; }</Member>
         <Member type="Property">public string Password { get; set; }</Member>
-        <Member type="Method">public override string ToString()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>GeneralManager</Name>
-        <Access>Public</Access>
-        <Location left="55" top="1101" />
-        <Size width="162" height="111" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public GeneralManager()</Member>
-        <Member type="Method">public override string ToString()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>DepartmentManager</Name>
-        <Access>Public</Access>
-        <Location left="230" top="1101" />
-        <Size width="162" height="111" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public DepartmentManager()</Member>
-        <Member type="Method">public override string ToString()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>HRManager</Name>
-        <Access>Public</Access>
-        <Location left="406" top="1101" />
-        <Size width="162" height="111" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public HRManager()</Member>
-        <Member type="Method">public void NewMethod()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>StoreEmployee</Name>
-        <Access>Public</Access>
-        <Location left="582" top="1101" />
-        <Size width="162" height="111" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public StoreEmployee()</Member>
-        <Member type="Method">public override string ToString()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>WarehouseEmployee</Name>
-        <Access>Public</Access>
-        <Location left="754" top="1101" />
-        <Size width="162" height="111" />
-        <Collapsed>False</Collapsed>
-        <Member type="Constructor">public WarehouseEmployee()</Member>
+        <Member type="Property">public DateTime Birthday { get; set; }</Member>
+        <Member type="Property">public int BSN { get; set; }</Member>
+        <Member type="Property">public string Zipcode { get; set; }</Member>
+        <Member type="Property">public string Address { get; set; }</Member>
+        <Member type="Property">public Gender Gender { get; set; }</Member>
+        <Member type="Property">public Role Role { get; set; }</Member>
+        <Member type="Property">public Status Status { get; set; }</Member>
         <Member type="Method">public override string ToString()</Member>
         <Modifier>None</Modifier>
       </Entity>
@@ -159,75 +108,138 @@
         <Member type="Field">public DepartmentManager dm</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Enum">
+        <Name>Gender</Name>
+        <Access>Public</Access>
+        <Location left="93" top="530" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>MALE</Value>
+        <Value>FEMALE</Value>
+        <Value>OTHER</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Role</Name>
+        <Access>Public</Access>
+        <Location left="28" top="757" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>GENERALMANAGER</Value>
+        <Value>HRMANAGER</Value>
+        <Value>DEPARTMENTMANAGER</Value>
+        <Value>STOREEMPLOYEE</Value>
+        <Value>WAREHOUSEEMPLOYEE</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Status</Name>
+        <Access>Public</Access>
+        <Location left="186" top="1042" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>ACTIVE</Value>
+        <Value>INACTIVE</Value>
+        <Value>AWAY</Value>
+      </Entity>
+      <Entity type="Comment">
+        <Text>TODO :
+- Accessabillity levels
+- Profil Page (Change Password here)
+- Input Validation for the whole application
+- Filter / Search
+- Set Inactive User Delete Time (7 years)
+- Toggle Between ACTIVE / INACTIVE / AWAY Users
+- UI Chagnes (DGV instaed of LB, etc. )
+- Stock Categories
+- Stocks Should Be Declared To Deaprtments (Every Deparmtent Should have list of stocs or just stock category)
+- Resupply (DM sends a request to SE for resupplying) 
+- Event Logger With Resupply Invoices
+- Shift 1st, 2nd and 3rd shift, around 20 active users per shift 
+- Employees Contract (Start Date, End Date), Every Employee must have a contract, Can work maximum 2 shifts per day
+-Website Login Page</Text>
+        <Location left="340" top="14" />
+        <Size width="286" height="301" />
+      </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Generalization" first="1" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-      </Relationship>
-      <Relationship type="Generalization" first="2" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-      </Relationship>
-      <Relationship type="Generalization" first="3" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-      </Relationship>
-      <Relationship type="Generalization" first="4" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-      </Relationship>
-      <Relationship type="Generalization" first="5" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-      </Relationship>
-      <Relationship type="Association" first="0" second="7">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="0" second="2">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <EndRole>- users</EndRole>
       </Relationship>
-      <Relationship type="Association" first="6" second="8">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="1" second="3">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <EndRole>- stocks</EndRole>
       </Relationship>
-      <Relationship type="Association" first="10" second="9">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="5" second="4">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <EndRole>- departments</EndRole>
       </Relationship>
-      <Relationship type="Association" first="11" second="7">
+      <Relationship type="Association" first="6" second="2">
         <Label>contains</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="11" second="8">
+      <Relationship type="Association" first="6" second="3">
         <Label>contains</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="11" second="9">
+      <Relationship type="Association" first="6" second="4">
         <Label>contains</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="7" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>301</X>
+          <Y>575</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>381</X>
+          <Y>658</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="8" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>233</X>
+          <Y>866</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>381</X>
+          <Y>866</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="9" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>381</X>
+          <Y>946</Y>
+        </BendPoint>
       </Relationship>
     </Relationships>
   </ProjectItem>

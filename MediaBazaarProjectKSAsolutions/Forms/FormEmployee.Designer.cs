@@ -29,175 +29,318 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnContract = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panelPage = new System.Windows.Forms.Panel();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.lbUsers = new System.Windows.Forms.ListBox();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnMakeUserInactive = new System.Windows.Forms.Button();
-            this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panelPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnShift = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.tcNavigation = new System.Windows.Forms.TabControl();
+            this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.lblDashboard = new System.Windows.Forms.Label();
+            this.tabPageProfile = new System.Windows.Forms.TabPage();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.tabPageShift = new System.Windows.Forms.TabPage();
+            this.lblShift = new System.Windows.Forms.Label();
+            this.tabPageContract = new System.Windows.Forms.TabPage();
+            this.lblContract = new System.Windows.Forms.Label();
+            this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.tcNavigation.SuspendLayout();
+            this.tabPageDashboard.SuspendLayout();
+            this.tabPageProfile.SuspendLayout();
+            this.tabPageShift.SuspendLayout();
+            this.tabPageContract.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panelMenu.Controls.Add(this.btnContract);
+            this.panelMenu.Controls.Add(this.btnBack);
+            this.panelMenu.Controls.Add(this.btnProfile);
+            this.panelMenu.Controls.Add(this.btnShift);
+            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(248, 782);
+            this.panelMenu.TabIndex = 18;
+            // 
+            // btnContract
+            // 
+            this.btnContract.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnContract.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContract.FlatAppearance.BorderSize = 0;
+            this.btnContract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnContract.Location = new System.Drawing.Point(0, 485);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Size = new System.Drawing.Size(248, 98);
+            this.btnContract.TabIndex = 5;
+            this.btnContract.Text = "Contract";
+            this.btnContract.UseVisualStyleBackColor = false;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
+            this.btnContract.Leave += new System.EventHandler(this.btnContract_Leave);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(820, 434);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(0, 700);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(78, 27);
-            this.btnBack.TabIndex = 16;
+            this.btnBack.Size = new System.Drawing.Size(248, 82);
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
+            this.btnBack.Leave += new System.EventHandler(this.btnBack_Leave);
             // 
-            // panelPage
+            // btnProfile
             // 
-            this.panelPage.BackColor = System.Drawing.Color.DarkOrchid;
-            this.panelPage.Controls.Add(this.lblPage);
-            this.panelPage.Location = new System.Drawing.Point(0, 7);
-            this.panelPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelPage.Name = "panelPage";
-            this.panelPage.Size = new System.Drawing.Size(236, 64);
-            this.panelPage.TabIndex = 17;
+            this.btnProfile.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnProfile.Location = new System.Drawing.Point(0, 387);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(248, 98);
+            this.btnProfile.TabIndex = 3;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnProfile.Leave += new System.EventHandler(this.btnProfile_Leave);
             // 
-            // lblPage
+            // btnShift
             // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblPage.Location = new System.Drawing.Point(18, 14);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(210, 37);
-            this.lblPage.TabIndex = 18;
-            this.lblPage.Text = "Employees Page";
+            this.btnShift.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnShift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnShift.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShift.FlatAppearance.BorderSize = 0;
+            this.btnShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnShift.Location = new System.Drawing.Point(0, 289);
+            this.btnShift.Name = "btnShift";
+            this.btnShift.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnShift.Size = new System.Drawing.Size(248, 98);
+            this.btnShift.TabIndex = 2;
+            this.btnShift.Text = "Shift";
+            this.btnShift.UseVisualStyleBackColor = false;
+            this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
+            this.btnShift.Leave += new System.EventHandler(this.btnShift_Leave);
             // 
-            // lbUsers
+            // btnDashboard
             // 
-            this.lbUsers.FormattingEnabled = true;
-            this.lbUsers.ItemHeight = 15;
-            this.lbUsers.Location = new System.Drawing.Point(44, 133);
-            this.lbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(856, 289);
-            this.lbUsers.TabIndex = 2;
+            this.btnDashboard.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 191);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(248, 98);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
-            // btnAddUser
+            // panelLogo
             // 
-            this.btnAddUser.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddUser.Location = new System.Drawing.Point(44, 90);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(148, 40);
-            this.btnAddUser.TabIndex = 3;
-            this.btnAddUser.Text = "Add User";
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            this.panelLogo.BackColor = System.Drawing.Color.Gold;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLogo.Controls.Add(this.pnlNav);
+            this.panelLogo.Controls.Add(this.pbLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(248, 191);
+            this.panelLogo.TabIndex = 0;
             // 
-            // btnEdit
+            // pnlNav
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(284, 90);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(148, 40);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Edit User";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.pnlNav.BackColor = System.Drawing.Color.Coral;
+            this.pnlNav.Location = new System.Drawing.Point(0, 193);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 20;
             // 
-            // btnMakeUserInactive
+            // pbLogo
             // 
-            this.btnMakeUserInactive.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnMakeUserInactive.FlatAppearance.BorderSize = 0;
-            this.btnMakeUserInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMakeUserInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMakeUserInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnMakeUserInactive.Location = new System.Drawing.Point(517, 90);
-            this.btnMakeUserInactive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMakeUserInactive.Name = "btnMakeUserInactive";
-            this.btnMakeUserInactive.Size = new System.Drawing.Size(148, 40);
-            this.btnMakeUserInactive.TabIndex = 5;
-            this.btnMakeUserInactive.Text = "Make User Inactive";
-            this.btnMakeUserInactive.UseVisualStyleBackColor = false;
-            this.btnMakeUserInactive.Click += new System.EventHandler(this.btnMakeUserInactive_Click);
+            this.pbLogo.Image = global::MediaBazaarProjectKSAsolutions.Properties.Resources.Logo;
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(246, 194);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbLogo.TabIndex = 19;
+            this.pbLogo.TabStop = false;
             // 
-            // btnSeeInactiveUsers
+            // tcNavigation
             // 
-            this.btnSeeInactiveUsers.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnSeeInactiveUsers.FlatAppearance.BorderSize = 0;
-            this.btnSeeInactiveUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeeInactiveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSeeInactiveUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(751, 90);
-            this.btnSeeInactiveUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
-            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(148, 40);
-            this.btnSeeInactiveUsers.TabIndex = 6;
-            this.btnSeeInactiveUsers.Text = "See All Inactive Users";
-            this.btnSeeInactiveUsers.UseVisualStyleBackColor = false;
-            this.btnSeeInactiveUsers.Click += new System.EventHandler(this.btnSeeInactiveUsers_Click);
+            this.tcNavigation.Controls.Add(this.tabPageDashboard);
+            this.tcNavigation.Controls.Add(this.tabPageProfile);
+            this.tcNavigation.Controls.Add(this.tabPageShift);
+            this.tcNavigation.Controls.Add(this.tabPageContract);
+            this.tcNavigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tcNavigation.Location = new System.Drawing.Point(241, -35);
+            this.tcNavigation.Name = "tcNavigation";
+            this.tcNavigation.SelectedIndex = 0;
+            this.tcNavigation.Size = new System.Drawing.Size(799, 817);
+            this.tcNavigation.TabIndex = 19;
             // 
-            // dataGridView3
+            // tabPageDashboard
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(25, 76);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(888, 353);
-            this.dataGridView3.TabIndex = 1;
+            this.tabPageDashboard.Controls.Add(this.lblDashboard);
+            this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
+            this.tabPageDashboard.Name = "tabPageDashboard";
+            this.tabPageDashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDashboard.Size = new System.Drawing.Size(791, 778);
+            this.tabPageDashboard.TabIndex = 0;
+            this.tabPageDashboard.Text = "Dashboard";
+            this.tabPageDashboard.UseVisualStyleBackColor = true;
+            // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDashboard.ForeColor = System.Drawing.Color.Gray;
+            this.lblDashboard.Location = new System.Drawing.Point(3, 3);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(270, 55);
+            this.lblDashboard.TabIndex = 1;
+            this.lblDashboard.Text = "Dashboard";
+            // 
+            // tabPageProfile
+            // 
+            this.tabPageProfile.Controls.Add(this.lblProfile);
+            this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
+            this.tabPageProfile.Name = "tabPageProfile";
+            this.tabPageProfile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProfile.Size = new System.Drawing.Size(791, 778);
+            this.tabPageProfile.TabIndex = 2;
+            this.tabPageProfile.Text = "Profile";
+            this.tabPageProfile.UseVisualStyleBackColor = true;
+            // 
+            // lblProfile
+            // 
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblProfile.ForeColor = System.Drawing.Color.Gray;
+            this.lblProfile.Location = new System.Drawing.Point(6, 3);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(166, 55);
+            this.lblProfile.TabIndex = 0;
+            this.lblProfile.Text = "Profile";
+            // 
+            // tabPageShift
+            // 
+            this.tabPageShift.Controls.Add(this.lblShift);
+            this.tabPageShift.Location = new System.Drawing.Point(4, 35);
+            this.tabPageShift.Name = "tabPageShift";
+            this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageShift.Size = new System.Drawing.Size(791, 778);
+            this.tabPageShift.TabIndex = 1;
+            this.tabPageShift.Text = "Shift";
+            this.tabPageShift.UseVisualStyleBackColor = true;
+            // 
+            // lblShift
+            // 
+            this.lblShift.AutoSize = true;
+            this.lblShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblShift.ForeColor = System.Drawing.Color.Gray;
+            this.lblShift.Location = new System.Drawing.Point(3, 3);
+            this.lblShift.Name = "lblShift";
+            this.lblShift.Size = new System.Drawing.Size(124, 55);
+            this.lblShift.TabIndex = 1;
+            this.lblShift.Text = "Shift";
+            // 
+            // tabPageContract
+            // 
+            this.tabPageContract.Controls.Add(this.lblContract);
+            this.tabPageContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPageContract.Location = new System.Drawing.Point(4, 35);
+            this.tabPageContract.Name = "tabPageContract";
+            this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageContract.Size = new System.Drawing.Size(791, 778);
+            this.tabPageContract.TabIndex = 3;
+            this.tabPageContract.Text = "Contract";
+            this.tabPageContract.UseVisualStyleBackColor = true;
+            // 
+            // lblContract
+            // 
+            this.lblContract.AutoSize = true;
+            this.lblContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblContract.ForeColor = System.Drawing.Color.Gray;
+            this.lblContract.Location = new System.Drawing.Point(3, 3);
+            this.lblContract.Name = "lblContract";
+            this.lblContract.Size = new System.Drawing.Size(214, 55);
+            this.lblContract.TabIndex = 1;
+            this.lblContract.Text = "Contract";
             // 
             // FormEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 469);
-            this.Controls.Add(this.btnSeeInactiveUsers);
-            this.Controls.Add(this.panelPage);
-            this.Controls.Add(this.btnMakeUserInactive);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.lbUsers);
-            this.Controls.Add(this.dataGridView3);
+            this.ClientSize = new System.Drawing.Size(1040, 782);
+            this.Controls.Add(this.tcNavigation);
+            this.Controls.Add(this.panelMenu);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";
-            this.panelPage.ResumeLayout(false);
-            this.panelPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.tcNavigation.ResumeLayout(false);
+            this.tabPageDashboard.ResumeLayout(false);
+            this.tabPageDashboard.PerformLayout();
+            this.tabPageProfile.ResumeLayout(false);
+            this.tabPageProfile.PerformLayout();
+            this.tabPageShift.ResumeLayout(false);
+            this.tabPageShift.PerformLayout();
+            this.tabPageContract.ResumeLayout(false);
+            this.tabPageContract.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Panel panelPage;
-        private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.ListBox lbUsers;
-        private System.Windows.Forms.Button btnAddUser;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnMakeUserInactive;
-        private System.Windows.Forms.Button btnSeeInactiveUsers;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnShift;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Panel pnlNav;
+        private System.Windows.Forms.TabControl tcNavigation;
+        private System.Windows.Forms.TabPage tabPageDashboard;
+        private System.Windows.Forms.TabPage tabPageShift;
+        private System.Windows.Forms.TabPage tabPageProfile;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.Label lblDashboard;
+        private System.Windows.Forms.Label lblShift;
+        private System.Windows.Forms.Button btnContract;
+        private System.Windows.Forms.TabPage tabPageContract;
+        private System.Windows.Forms.Label lblContract;
     }
 }

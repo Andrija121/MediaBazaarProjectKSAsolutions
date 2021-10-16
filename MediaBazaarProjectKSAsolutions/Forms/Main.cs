@@ -21,7 +21,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee(u);
+            FormCRUDEmployee FormEmployee = new FormCRUDEmployee(u);
             FormEmployee.ShowDialog();
           
         }
