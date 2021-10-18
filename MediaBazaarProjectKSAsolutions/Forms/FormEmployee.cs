@@ -23,7 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             pnlNav.Height = button.Height;
             pnlNav.Top = button.Top;
             pnlNav.Left = button.Left;
-            button.BackColor = Color.DarkOrchid;
+            button.BackColor = Color.Blue;
         }
         public void ButtonLeave(Button button)
         {
@@ -57,16 +57,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
             ButtonLeave(btnDashboard);
+            btnDashboard.BackColor = Color.DarkOrchid;
         }
 
         private void btnShift_Leave(object sender, EventArgs e)
         {
             ButtonLeave(btnShift);
+            btnShift.BackColor = Color.DarkOrchid;
         }
 
         private void btnProfile_Leave(object sender, EventArgs e)
         {
+
             ButtonLeave(btnProfile);
+            btnProfile.BackColor = Color.DarkOrchid;
         }
 
         private void btnBack_Leave(object sender, EventArgs e)

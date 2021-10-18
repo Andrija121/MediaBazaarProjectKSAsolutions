@@ -19,7 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                using (conn)
                 {
                     string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
 
@@ -112,7 +112,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                using (conn)
                 {
                     conn.Open();
                     string sql = "Update user set username=@userName, firstName=@firstName,lastName=@lastName,email=@email,password=@password,birthday=@birthday,bsn=@bsn,zipcode=@zipCode,address=@address,gender=@gender,role=@role,status=@status where id =@id";
@@ -152,7 +152,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
             try
             {
-                using(MySqlConnection conn=new MySqlConnection(Params.connectionString))
+                using(conn)
                 {
                     conn.Open();
                     string sql = "select * from user where status=@status";
@@ -195,7 +195,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 try
                 {
-                    using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                    using (conn)
                     {
                     conn.Open();
                     string sql = "select * from user where status=@status ";

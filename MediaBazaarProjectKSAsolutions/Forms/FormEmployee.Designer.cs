@@ -200,7 +200,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.Location = new System.Drawing.Point(241, -35);
             this.tcNavigation.Name = "tcNavigation";
             this.tcNavigation.SelectedIndex = 0;
-            this.tcNavigation.Size = new System.Drawing.Size(799, 817);
+            this.tcNavigation.Size = new System.Drawing.Size(798, 817);
             this.tcNavigation.TabIndex = 19;
             // 
             // tabPageDashboard
@@ -209,7 +209,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
             this.tabPageDashboard.Name = "tabPageDashboard";
             this.tabPageDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashboard.Size = new System.Drawing.Size(791, 778);
+            this.tabPageDashboard.Size = new System.Drawing.Size(525, 542);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
             this.tabPageDashboard.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDashboard.ForeColor = System.Drawing.Color.Gray;
-            this.lblDashboard.Location = new System.Drawing.Point(3, 3);
+            this.lblDashboard.Location = new System.Drawing.Point(3, 9);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(270, 55);
             this.lblDashboard.TabIndex = 1;
@@ -231,7 +231,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
             this.tabPageProfile.Name = "tabPageProfile";
             this.tabPageProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProfile.Size = new System.Drawing.Size(791, 778);
+            this.tabPageProfile.Size = new System.Drawing.Size(790, 778);
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
             this.tabPageProfile.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageShift.Location = new System.Drawing.Point(4, 35);
             this.tabPageShift.Name = "tabPageShift";
             this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShift.Size = new System.Drawing.Size(791, 778);
+            this.tabPageShift.Size = new System.Drawing.Size(525, 542);
             this.tabPageShift.TabIndex = 1;
             this.tabPageShift.Text = "Shift";
             this.tabPageShift.UseVisualStyleBackColor = true;
