@@ -40,6 +40,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.lblHi = new System.Windows.Forms.Label();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.lblProfile = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(248, 782);
+            this.panelMenu.Size = new System.Drawing.Size(245, 782);
             this.panelMenu.TabIndex = 18;
             // 
             // btnContract
@@ -82,7 +83,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnContract.Location = new System.Drawing.Point(0, 485);
             this.btnContract.Name = "btnContract";
-            this.btnContract.Size = new System.Drawing.Size(248, 98);
+            this.btnContract.Size = new System.Drawing.Size(245, 98);
             this.btnContract.TabIndex = 5;
             this.btnContract.Text = "Contract";
             this.btnContract.UseVisualStyleBackColor = false;
@@ -99,7 +100,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBack.Location = new System.Drawing.Point(0, 700);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(248, 82);
+            this.btnBack.Size = new System.Drawing.Size(245, 82);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -116,7 +117,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnProfile.Location = new System.Drawing.Point(0, 387);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(248, 98);
+            this.btnProfile.Size = new System.Drawing.Size(245, 98);
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -135,7 +136,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnShift.Location = new System.Drawing.Point(0, 289);
             this.btnShift.Name = "btnShift";
             this.btnShift.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnShift.Size = new System.Drawing.Size(248, 98);
+            this.btnShift.Size = new System.Drawing.Size(245, 98);
             this.btnShift.TabIndex = 2;
             this.btnShift.Text = "Shift";
             this.btnShift.UseVisualStyleBackColor = false;
@@ -153,7 +154,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDashboard.Location = new System.Drawing.Point(0, 191);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(248, 98);
+            this.btnDashboard.Size = new System.Drawing.Size(245, 98);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
@@ -169,7 +170,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(248, 191);
+            this.panelLogo.Size = new System.Drawing.Size(245, 191);
             this.panelLogo.TabIndex = 0;
             // 
             // pnlNav
@@ -197,22 +198,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.Controls.Add(this.tabPageShift);
             this.tcNavigation.Controls.Add(this.tabPageContract);
             this.tcNavigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tcNavigation.Location = new System.Drawing.Point(241, -35);
+            this.tcNavigation.Location = new System.Drawing.Point(237, -35);
             this.tcNavigation.Name = "tcNavigation";
             this.tcNavigation.SelectedIndex = 0;
-            this.tcNavigation.Size = new System.Drawing.Size(798, 817);
+            this.tcNavigation.Size = new System.Drawing.Size(811, 828);
             this.tcNavigation.TabIndex = 19;
             // 
             // tabPageDashboard
             // 
+            this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
+            this.tabPageDashboard.Controls.Add(this.lblHi);
             this.tabPageDashboard.Controls.Add(this.lblDashboard);
             this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
             this.tabPageDashboard.Name = "tabPageDashboard";
             this.tabPageDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashboard.Size = new System.Drawing.Size(525, 542);
+            this.tabPageDashboard.Size = new System.Drawing.Size(803, 789);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
-            this.tabPageDashboard.UseVisualStyleBackColor = true;
+            // 
+            // lblHi
+            // 
+            this.lblHi.AutoSize = true;
+            this.lblHi.Location = new System.Drawing.Point(379, 12);
+            this.lblHi.Name = "lblHi";
+            this.lblHi.Size = new System.Drawing.Size(404, 52);
+            this.lblHi.TabIndex = 3;
+            this.lblHi.Text = "Welcome back, user.username \r\nYou are currently logged in as a Eployee\r\n";
             // 
             // lblDashboard
             // 
@@ -227,14 +238,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // tabPageProfile
             // 
+            this.tabPageProfile.BackColor = System.Drawing.Color.Gold;
             this.tabPageProfile.Controls.Add(this.lblProfile);
             this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
             this.tabPageProfile.Name = "tabPageProfile";
             this.tabPageProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProfile.Size = new System.Drawing.Size(790, 778);
+            this.tabPageProfile.Size = new System.Drawing.Size(803, 789);
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
-            this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
             // lblProfile
             // 
@@ -249,14 +260,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // tabPageShift
             // 
+            this.tabPageShift.BackColor = System.Drawing.Color.Gold;
             this.tabPageShift.Controls.Add(this.lblShift);
             this.tabPageShift.Location = new System.Drawing.Point(4, 35);
             this.tabPageShift.Name = "tabPageShift";
             this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShift.Size = new System.Drawing.Size(525, 542);
+            this.tabPageShift.Size = new System.Drawing.Size(803, 789);
             this.tabPageShift.TabIndex = 1;
             this.tabPageShift.Text = "Shift";
-            this.tabPageShift.UseVisualStyleBackColor = true;
             // 
             // lblShift
             // 
@@ -271,15 +282,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // tabPageContract
             // 
+            this.tabPageContract.BackColor = System.Drawing.Color.Gold;
             this.tabPageContract.Controls.Add(this.lblContract);
             this.tabPageContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPageContract.Location = new System.Drawing.Point(4, 35);
             this.tabPageContract.Name = "tabPageContract";
             this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageContract.Size = new System.Drawing.Size(791, 778);
+            this.tabPageContract.Size = new System.Drawing.Size(803, 789);
             this.tabPageContract.TabIndex = 3;
             this.tabPageContract.Text = "Contract";
-            this.tabPageContract.UseVisualStyleBackColor = true;
             // 
             // lblContract
             // 
@@ -298,8 +309,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 782);
-            this.Controls.Add(this.tcNavigation);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.tcNavigation);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -342,5 +353,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnContract;
         private System.Windows.Forms.TabPage tabPageContract;
         private System.Windows.Forms.Label lblContract;
+        private System.Windows.Forms.Label lblHi;
     }
 }

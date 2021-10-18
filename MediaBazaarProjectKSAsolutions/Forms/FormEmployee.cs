@@ -17,15 +17,16 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             InitializeComponent();
             this.u = user;
             PanelMovment(btnDashboard);
+            lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
         }
         public void PanelMovment(Button button)
         {
             pnlNav.Height = button.Height;
             pnlNav.Top = button.Top;
             pnlNav.Left = button.Left;
-            button.BackColor = Color.Blue;
+            button.BackColor = Color.Black;
         }
-        public void ButtonLeave(Button button)
+        public void ButtonLeaveChangeColor(Button button)
         {
             button.BackColor = Color.DarkOrchid;
         }
@@ -42,57 +43,52 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            PanelMovment(btnDashboard);
             tcNavigation.SelectedTab = tabPageDashboard;
-            
+            PanelMovment(btnDashboard);
 
         }
 
         private void btnShift_Click(object sender, EventArgs e)
         {
-            PanelMovment(btnShift);
             tcNavigation.SelectedTab = tabPageShift;
+            PanelMovment(btnShift);
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
-            ButtonLeave(btnDashboard);
-            btnDashboard.BackColor = Color.DarkOrchid;
+            ButtonLeaveChangeColor(btnDashboard);
         }
 
         private void btnShift_Leave(object sender, EventArgs e)
         {
-            ButtonLeave(btnShift);
-            btnShift.BackColor = Color.DarkOrchid;
+            ButtonLeaveChangeColor(btnShift);
         }
 
         private void btnProfile_Leave(object sender, EventArgs e)
         {
-
-            ButtonLeave(btnProfile);
-            btnProfile.BackColor = Color.DarkOrchid;
+            ButtonLeaveChangeColor(btnProfile);
         }
 
         private void btnBack_Leave(object sender, EventArgs e)
         {
-            ButtonLeave(btnBack);
+            ButtonLeaveChangeColor(btnBack);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            PanelMovment(btnProfile);
             tcNavigation.SelectedTab = tabPageProfile;
+            PanelMovment(btnProfile);
         }
 
         private void btnContract_Click(object sender, EventArgs e)
         {
-            PanelMovment(btnContract);
             tcNavigation.SelectedTab = tabPageContract;
+            PanelMovment(btnContract);
         }
 
         private void btnContract_Leave(object sender, EventArgs e)
         {
-            ButtonLeave(btnContract);
+            ButtonLeaveChangeColor(btnContract);
         }
     }
 }
