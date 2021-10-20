@@ -22,9 +22,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
-
-
-
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
             try
@@ -42,24 +39,25 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Gender gender = (Gender)cbGender.SelectedItem;
                 Role role = (Role)cbRole.SelectedItem;
                 Status status = (Status)cbStatus.SelectedItem;
-                User user = new User(0,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
-                if(user.Password == string.Empty || user.UserName == string.Empty || user.BSN.ToString()== string.Empty || user.FirstName== string.Empty || user.LastName== string.Empty)
+                if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(bsn.ToString()) )
                 {
-                    MessageBox.Show("Input value is not correct");
+                    MessageBox.Show("Fields are empty");
 
+                }
+                else if (um.CheckIfUserAlreadyExist(userName,email,bsn))
+                {
+                    MessageBox.Show("Values already exist");
                 }
                 else
                 {
+                    User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
                     um.AddUser(user);
                     MessageBox.Show("User Created Successfully");
                 }
-                
-
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Please fill in all the values");
+                MessageBox.Show("Please fill in all the values " + ex.Message);
             }
         }
 

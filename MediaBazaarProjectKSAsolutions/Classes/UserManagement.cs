@@ -12,17 +12,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public UserManagement()
         {
-
         }
-
         public void AddUser(User user)
         {
             try
             {
                 using (conn)
                 {
-                    string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
-
+                    string sql="INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
 
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -102,10 +99,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
-
-
-
-
 
         public User EditUser(User u)
         {
@@ -241,13 +234,48 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 }
 
          }
-
         public void SetUserStatusToInactive(User user)
-            {
+        {
             user.Status = Status.INACTIVE;
             EditUser(user);
+        }
+        public bool CheckIfUserAlreadyExist(string username,string email,int bsn)
+        {
+            bool userAlreadyExist = false;
+
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM USER WHERE username=@username or email=@email or bsn=@bsn";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("username", username);
+                    cmd.Parameters.AddWithValue("email", email);
+                    cmd.Parameters.AddWithValue("bsn", bsn);
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        userAlreadyExist = true;
+                    }
+                    
+
+                }
+               
             }
+            
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return userAlreadyExist;
+
 
 
         }
-    } 
+    }
+} 
