@@ -31,7 +31,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@email", user.Email);
                     cmd.Parameters.AddWithValue("@password", user.Password);
                     cmd.Parameters.AddWithValue("@birthday", user.Birtyhday);
-                    cmd.Parameters.AddWithValue("@bsn", user.BSN);
+                    cmd.Parameters.AddWithValue("@bsn", user.BSN.ToString()); 
                     cmd.Parameters.AddWithValue("@zipcode", user.ZipCode);
                     cmd.Parameters.AddWithValue("@address", user.Address);
                     cmd.Parameters.AddWithValue("@gender", user.Gender.ToString());
