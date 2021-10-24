@@ -29,12 +29,57 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tbCategoryName = new System.Windows.Forms.TextBox();
+            this.btnCategorySave = new System.Windows.Forms.Button();
+            this.tbWindowClose = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // tbCategoryName
+            // 
+            this.tbCategoryName.Location = new System.Drawing.Point(29, 78);
+            this.tbCategoryName.Name = "tbCategoryName";
+            this.tbCategoryName.Size = new System.Drawing.Size(247, 23);
+            this.tbCategoryName.TabIndex = 0;
+            // 
+            // btnCategorySave
+            // 
+            this.btnCategorySave.Location = new System.Drawing.Point(294, 78);
+            this.btnCategorySave.Name = "btnCategorySave";
+            this.btnCategorySave.Size = new System.Drawing.Size(75, 23);
+            this.btnCategorySave.TabIndex = 1;
+            this.btnCategorySave.Text = "Add Category";
+            this.btnCategorySave.UseVisualStyleBackColor = true;
+            this.btnCategorySave.Click += new System.EventHandler(this.btnCategorySave_Click);
+            // 
+            // tbWindowClose
+            // 
+            this.tbWindowClose.Location = new System.Drawing.Point(294, 133);
+            this.tbWindowClose.Name = "tbWindowClose";
+            this.tbWindowClose.Size = new System.Drawing.Size(75, 23);
+            this.tbWindowClose.TabIndex = 2;
+            this.tbWindowClose.Text = "Cancel";
+            this.tbWindowClose.UseVisualStyleBackColor = true;
+            this.tbWindowClose.Click += new System.EventHandler(this.tbWindowClose_Click);
+            // 
+            // FormCreateCategory
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(406, 193);
+            this.Controls.Add(this.tbWindowClose);
+            this.Controls.Add(this.btnCategorySave);
+            this.Controls.Add(this.tbCategoryName);
+            this.Name = "FormCreateCategory";
             this.Text = "FormCreateCategory";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox tbCategoryName;
+        private System.Windows.Forms.Button btnCategorySave;
+        private System.Windows.Forms.Button tbWindowClose;
     }
 }

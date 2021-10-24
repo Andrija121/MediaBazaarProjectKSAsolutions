@@ -14,5 +14,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
         }
+
+        private void tbWindowClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCategorySave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
