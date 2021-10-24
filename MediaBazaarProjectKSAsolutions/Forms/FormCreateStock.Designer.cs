@@ -40,6 +40,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.tbxNewStockAmount = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCreateCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDepartmentName
@@ -77,7 +80,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnAddStockConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStockConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddStockConfirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddStockConfirmation.Location = new System.Drawing.Point(152, 169);
+            this.btnAddStockConfirmation.Location = new System.Drawing.Point(152, 192);
             this.btnAddStockConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddStockConfirmation.Name = "btnAddStockConfirmation";
             this.btnAddStockConfirmation.Size = new System.Drawing.Size(91, 28);
@@ -148,7 +151,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.BackColor = System.Drawing.Color.DarkOrchid;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(253, 169);
+            this.btnBack.Location = new System.Drawing.Point(253, 192);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(91, 28);
@@ -157,12 +160,49 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(48, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Category";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 155);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // btnCreateCategory
+            // 
+            this.btnCreateCategory.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnCreateCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCreateCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCreateCategory.Location = new System.Drawing.Point(279, 155);
+            this.btnCreateCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreateCategory.Name = "btnCreateCategory";
+            this.btnCreateCategory.Size = new System.Drawing.Size(65, 23);
+            this.btnCreateCategory.TabIndex = 18;
+            this.btnCreateCategory.Text = "Add Cat.";
+            this.btnCreateCategory.UseVisualStyleBackColor = false;
+            this.btnCreateCategory.Click += new System.EventHandler(this.btnCreateCategory_Click);
+            // 
             // FormCreateStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(422, 208);
+            this.ClientSize = new System.Drawing.Size(422, 232);
+            this.Controls.Add(this.btnCreateCategory);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbxNewStockAmount);
@@ -197,5 +237,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxNewStockAmount;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnCreateCategory;
     }
 }

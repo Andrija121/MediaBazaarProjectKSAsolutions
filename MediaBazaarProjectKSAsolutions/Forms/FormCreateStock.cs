@@ -50,5 +50,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             this.Close();
         }
+
+        private void btnCreateCategory_Click(object sender, EventArgs e)
+        {
+            FormCreateCategory formCreateCategory = new FormCreateCategory();
+            formCreateCategory.ShowDialog();
+        }
     }
 }
