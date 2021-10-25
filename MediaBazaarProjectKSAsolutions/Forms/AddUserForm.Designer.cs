@@ -55,12 +55,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.StartDatedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.EndDatedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.cbContractType = new System.Windows.Forms.ComboBox();
+            this.tbSalaryPH = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbUserName
             // 
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbUserName.Location = new System.Drawing.Point(176, 26);
+            this.tbUserName.Location = new System.Drawing.Point(178, 105);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(227, 30);
             this.tbUserName.TabIndex = 0;
@@ -68,7 +74,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbFirstName
             // 
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbFirstName.Location = new System.Drawing.Point(176, 81);
+            this.tbFirstName.Location = new System.Drawing.Point(178, 160);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(182, 30);
             this.tbFirstName.TabIndex = 1;
@@ -76,7 +82,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbLastName
             // 
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbLastName.Location = new System.Drawing.Point(176, 135);
+            this.tbLastName.Location = new System.Drawing.Point(178, 214);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(182, 30);
             this.tbLastName.TabIndex = 2;
@@ -84,7 +90,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbEmail.Location = new System.Drawing.Point(176, 192);
+            this.tbEmail.Location = new System.Drawing.Point(178, 271);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(227, 30);
             this.tbEmail.TabIndex = 3;
@@ -92,7 +98,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPassword.Location = new System.Drawing.Point(176, 250);
+            this.tbPassword.Location = new System.Drawing.Point(178, 329);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(227, 30);
             this.tbPassword.TabIndex = 4;
@@ -104,7 +110,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddNewUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddNewUser.Location = new System.Drawing.Point(479, 25);
+            this.btnAddNewUser.Location = new System.Drawing.Point(973, 13);
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(146, 69);
             this.btnAddNewUser.TabIndex = 5;
@@ -117,7 +123,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblUserName.Location = new System.Drawing.Point(52, 29);
+            this.lblUserName.Location = new System.Drawing.Point(54, 108);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(110, 25);
             this.lblUserName.TabIndex = 7;
@@ -128,7 +134,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblFirstName.Location = new System.Drawing.Point(54, 84);
+            this.lblFirstName.Location = new System.Drawing.Point(56, 163);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(106, 25);
             this.lblFirstName.TabIndex = 8;
@@ -139,7 +145,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblLastName.Location = new System.Drawing.Point(52, 138);
+            this.lblLastName.Location = new System.Drawing.Point(54, 217);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(106, 25);
             this.lblLastName.TabIndex = 9;
@@ -150,7 +156,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblPassword.Location = new System.Drawing.Point(54, 253);
+            this.lblPassword.Location = new System.Drawing.Point(56, 332);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(98, 25);
             this.lblPassword.TabIndex = 10;
@@ -161,7 +167,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblEmail.Location = new System.Drawing.Point(55, 195);
+            this.lblEmail.Location = new System.Drawing.Point(57, 274);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(60, 25);
             this.lblEmail.TabIndex = 11;
@@ -172,7 +178,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblBirthday.AutoSize = true;
             this.lblBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblBirthday.Location = new System.Drawing.Point(55, 314);
+            this.lblBirthday.Location = new System.Drawing.Point(57, 393);
             this.lblBirthday.Name = "lblBirthday";
             this.lblBirthday.Size = new System.Drawing.Size(83, 25);
             this.lblBirthday.TabIndex = 12;
@@ -183,7 +189,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblZipCode.AutoSize = true;
             this.lblZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblZipCode.Location = new System.Drawing.Point(52, 429);
+            this.lblZipCode.Location = new System.Drawing.Point(54, 508);
             this.lblZipCode.Name = "lblZipCode";
             this.lblZipCode.Size = new System.Drawing.Size(92, 25);
             this.lblZipCode.TabIndex = 13;
@@ -194,7 +200,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblBSN.AutoSize = true;
             this.lblBSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblBSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblBSN.Location = new System.Drawing.Point(54, 370);
+            this.lblBSN.Location = new System.Drawing.Point(56, 449);
             this.lblBSN.Name = "lblBSN";
             this.lblBSN.Size = new System.Drawing.Size(53, 25);
             this.lblBSN.TabIndex = 13;
@@ -205,7 +211,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblAddress.Location = new System.Drawing.Point(52, 484);
+            this.lblAddress.Location = new System.Drawing.Point(54, 563);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(85, 25);
             this.lblAddress.TabIndex = 14;
@@ -216,7 +222,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblGender.Location = new System.Drawing.Point(52, 534);
+            this.lblGender.Location = new System.Drawing.Point(54, 613);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(77, 25);
             this.lblGender.TabIndex = 15;
@@ -227,7 +233,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblStatus.Location = new System.Drawing.Point(49, 651);
+            this.lblStatus.Location = new System.Drawing.Point(51, 730);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(68, 25);
             this.lblStatus.TabIndex = 17;
@@ -238,7 +244,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblRole.Location = new System.Drawing.Point(52, 593);
+            this.lblRole.Location = new System.Drawing.Point(54, 672);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(51, 25);
             this.lblRole.TabIndex = 16;
@@ -247,7 +253,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // DTPBirthday
             // 
             this.DTPBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DTPBirthday.Location = new System.Drawing.Point(176, 311);
+            this.DTPBirthday.Location = new System.Drawing.Point(178, 390);
             this.DTPBirthday.Name = "DTPBirthday";
             this.DTPBirthday.Size = new System.Drawing.Size(306, 30);
             this.DTPBirthday.TabIndex = 18;
@@ -255,7 +261,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbBSN
             // 
             this.tbBSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbBSN.Location = new System.Drawing.Point(176, 367);
+            this.tbBSN.Location = new System.Drawing.Point(178, 446);
             this.tbBSN.Name = "tbBSN";
             this.tbBSN.Size = new System.Drawing.Size(150, 30);
             this.tbBSN.TabIndex = 19;
@@ -263,7 +269,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbZipCode
             // 
             this.tbZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbZipCode.Location = new System.Drawing.Point(176, 420);
+            this.tbZipCode.Location = new System.Drawing.Point(178, 499);
             this.tbZipCode.Name = "tbZipCode";
             this.tbZipCode.Size = new System.Drawing.Size(150, 30);
             this.tbZipCode.TabIndex = 20;
@@ -271,7 +277,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbAddress
             // 
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAddress.Location = new System.Drawing.Point(176, 477);
+            this.tbAddress.Location = new System.Drawing.Point(178, 556);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(227, 30);
             this.tbAddress.TabIndex = 21;
@@ -280,7 +286,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(176, 527);
+            this.cbGender.Location = new System.Drawing.Point(178, 606);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(227, 33);
             this.cbGender.TabIndex = 22;
@@ -289,7 +295,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.cbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbRole.FormattingEnabled = true;
-            this.cbRole.Location = new System.Drawing.Point(176, 586);
+            this.cbRole.Location = new System.Drawing.Point(178, 665);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(227, 33);
             this.cbRole.TabIndex = 23;
@@ -298,7 +304,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(176, 644);
+            this.cbStatus.Location = new System.Drawing.Point(178, 723);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(227, 33);
             this.cbStatus.TabIndex = 24;
@@ -310,7 +316,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(454, 106);
+            this.btnBack.Location = new System.Drawing.Point(941, 88);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(192, 64);
             this.btnBack.TabIndex = 25;
@@ -318,12 +324,69 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(145, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Create user";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(780, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 25);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Create Users Contrcat";
+            // 
+            // StartDatedateTimePicker
+            // 
+            this.StartDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.StartDatedateTimePicker.Location = new System.Drawing.Point(714, 379);
+            this.StartDatedateTimePicker.Name = "StartDatedateTimePicker";
+            this.StartDatedateTimePicker.Size = new System.Drawing.Size(306, 30);
+            this.StartDatedateTimePicker.TabIndex = 28;
+            // 
+            // EndDatedateTimePicker
+            // 
+            this.EndDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EndDatedateTimePicker.Location = new System.Drawing.Point(714, 428);
+            this.EndDatedateTimePicker.Name = "EndDatedateTimePicker";
+            this.EndDatedateTimePicker.Size = new System.Drawing.Size(306, 30);
+            this.EndDatedateTimePicker.TabIndex = 29;
+            // 
+            // cbContractType
+            // 
+            this.cbContractType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbContractType.FormattingEnabled = true;
+            this.cbContractType.Location = new System.Drawing.Point(714, 476);
+            this.cbContractType.Name = "cbContractType";
+            this.cbContractType.Size = new System.Drawing.Size(306, 33);
+            this.cbContractType.TabIndex = 30;
+            // 
+            // tbSalaryPH
+            // 
+            this.tbSalaryPH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbSalaryPH.Location = new System.Drawing.Point(714, 529);
+            this.tbSalaryPH.Name = "tbSalaryPH";
+            this.tbSalaryPH.Size = new System.Drawing.Size(306, 30);
+            this.tbSalaryPH.TabIndex = 31;
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(668, 703);
+            this.ClientSize = new System.Drawing.Size(1141, 779);
+            this.Controls.Add(this.tbSalaryPH);
+            this.Controls.Add(this.cbContractType);
+            this.Controls.Add(this.EndDatedateTimePicker);
+            this.Controls.Add(this.StartDatedateTimePicker);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbRole);
@@ -387,5 +450,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker StartDatedateTimePicker;
+        private System.Windows.Forms.DateTimePicker EndDatedateTimePicker;
+        private System.Windows.Forms.ComboBox cbContractType;
+        private System.Windows.Forms.TextBox tbSalaryPH;
     }
 }

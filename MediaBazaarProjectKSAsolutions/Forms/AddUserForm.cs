@@ -21,6 +21,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
+            cbContractType.DataSource = Enum.GetValues(typeof(ContractType));
         }
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Gender gender = (Gender)cbGender.SelectedItem;
                 Role role = (Role)cbRole.SelectedItem;
                 Status status = (Status)cbStatus.SelectedItem;
+
+                DateTime startDate = StartDatedateTimePicker.Value;
+                DateTime endTime = EndDatedateTimePicker.Value;
+                double salaryPH = Convert.ToDouble(tbSalaryPH.Text);
+                ContractType contractType = (ContractType)cbContractType.SelectedItem;
                 if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(bsn.ToString()) )
                 {
                     MessageBox.Show("Fields are empty");
@@ -50,7 +56,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 }
                 else
                 {
-                    User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
+                    if(startDate>endTime)
+                    {
+                        MessageBox.Show("Please Select proper values for contract");
+                    }
+                    Contract contract = new Contract(0, startDate, endTime, contractType, salaryPH);
+                    User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address,contract,gender, role, status);
                     um.AddUser(user);
                     MessageBox.Show("User Created Successfully");
                 }
