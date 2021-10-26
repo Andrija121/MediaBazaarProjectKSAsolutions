@@ -13,14 +13,16 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public UserManagement()
         {
         }
-        public void AddUser(User user)
+        
+        public int AddUser(User user)
         {
+            int id = -1;
             try
             {
                 using (conn)
                 {
-                    string sql="INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status)";
-
+                    string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status) ";
+                    
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -38,6 +40,72 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@role", user.Role.ToString());
                     cmd.Parameters.AddWithValue("@status", user.Status.ToString());
                     cmd.ExecuteNonQuery();
+                    id = (int)cmd.LastInsertedId;
+                }
+                return id;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+                
+            }
+        }
+
+        public void AssignContractToUser(Contract contract,int userId)
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "INSERT INTO contract (userId,startDate,endDate,SalaryPerHour) values(@userId,@startDate,@endDate,@SalaryPerHour)";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("userId", userId);
+                    cmd.Parameters.AddWithValue("startDate", contract.StartDate);
+                    cmd.Parameters.AddWithValue("EndDate", contract.EndDate);
+                    cmd.Parameters.AddWithValue("SalaryPerHour", contract.SalaryPerHour);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Contract GetContract(int id)
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string query = "select * from contract where userId=@id";
+                    Contract c = new Contract();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("id", id);
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        c.ContractId = dr.GetInt32("contractId");
+                        c.StartDate= dr.GetDateTime("startDate");
+                        c.EndDate= dr.GetDateTime("EndDate");
+                        c.ContractType = Enum.Parse<ContractType>(dr["ContractType"].ToString());
+                        c.SalaryPerHour = dr.GetInt32("salaryPerHour");
+                    }
+                    return c;
+
                 }
             }
             catch (Exception)

@@ -60,10 +60,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                     {
                         MessageBox.Show("Please Select proper values for contract");
                     }
-                    Contract contract = new Contract(0, startDate, endTime, contractType, salaryPH);
-                    User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address,contract,gender, role, status);
-                    um.AddUser(user);
-                    MessageBox.Show("User Created Successfully");
+                    else
+                    {
+                        Contract contract = new Contract(0, startDate, endTime, contractType, salaryPH);
+                        User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, contract, gender, role, status);
+                        int id= um.AddUser(user);
+                        MessageBox.Show("User Created Successfully");
+                        um.AssignContractToUser(contract, id);
+                        MessageBox.Show("Contract Made Successfully");
+                    }
                 }
             }
             catch (Exception ex)

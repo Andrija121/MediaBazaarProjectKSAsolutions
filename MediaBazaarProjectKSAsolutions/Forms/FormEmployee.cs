@@ -12,10 +12,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormEmployee : Form
     {
         User u;
+        UserManagement um;
         public FormEmployee(User user)
         {
             InitializeComponent();
             this.u = user;
+            this.um = new UserManagement();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
         }
@@ -84,6 +86,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             tcNavigation.SelectedTab = tabPageContract;
             PanelMovment(btnContract);
+
+           Contract contract= um.GetContract(u.Id);
+            tbStartDate.Text = contract.StartDate.ToString();
+            tbEndDate.Text = contract.EndDate.ToString();
+            tbContractType.Text = contract.ContractType.ToString();
+            tbSalaryPerHour.Text = contract.SalaryPerHour.ToString();
+            
         }
 
         private void btnContract_Leave(object sender, EventArgs e)

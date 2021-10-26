@@ -24,13 +24,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
 
         }
-
-        public string ToString()
+        public override string ToString()
         {
             return StartDate + " - " + EndDate + " || " + ContractType + " - " + SalaryPerHour + " $ / H ";
         }
-
-        // every time we create user we should have boolean contract to say if that user is going to have a contract or not if yes add contract to user else nothing
-
+      
     }
 }
