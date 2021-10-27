@@ -80,6 +80,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             tcNavigation.SelectedTab = tabPageProfile;
             PanelMovment(btnProfile);
+
+            tbUserName.Text = u.UserName;
+            tbFirstName.Text = u.FirstName;
+            tbLastName.Text = u.LastName;
+            tbEmail.Text = u.Email;
+            tbPassword.Text = u.Password;
+            DTPBirthday.Value = u.Birtyhday;
+            cbGender.SelectedItem = u.Gender.ToString();
+            cbRole.SelectedItem = u.Role.ToString();
+            tbBSN.Text = u.BSN.ToString();
+            tbAddress.Text = u.Address;
+            tbZipCode.Text = u.ZipCode;
         }
 
         private void btnContract_Click(object sender, EventArgs e)
@@ -98,6 +110,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnContract_Leave(object sender, EventArgs e)
         {
             ButtonLeaveChangeColor(btnContract);
+        }
+
+        private void btnSetUserAway_Click(object sender, EventArgs e)
+        {
+
+            
+            DaysAwayForm daysAwayForm = new DaysAwayForm(u);
+            daysAwayForm.ShowDialog();
+            
         }
     }
 }

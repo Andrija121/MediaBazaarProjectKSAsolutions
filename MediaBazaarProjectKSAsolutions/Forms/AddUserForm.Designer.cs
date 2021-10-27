@@ -55,12 +55,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCreateUser = new System.Windows.Forms.Label();
+            this.lblUserContract = new System.Windows.Forms.Label();
             this.StartDatedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EndDatedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cbContractType = new System.Windows.Forms.ComboBox();
             this.tbSalaryPH = new System.Windows.Forms.TextBox();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblContractType = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.lblMoneyPerHour = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbUserName
@@ -324,28 +329,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
-            // label1
+            // lblCreateUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Create user";
+            this.lblCreateUser.AutoSize = true;
+            this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCreateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCreateUser.Location = new System.Drawing.Point(136, 34);
+            this.lblCreateUser.Name = "lblCreateUser";
+            this.lblCreateUser.Size = new System.Drawing.Size(164, 38);
+            this.lblCreateUser.TabIndex = 26;
+            this.lblCreateUser.Text = "Create user";
             // 
-            // label2
+            // lblUserContract
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(780, 329);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 25);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Create Users Contrcat";
+            this.lblUserContract.AutoSize = true;
+            this.lblUserContract.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUserContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUserContract.Location = new System.Drawing.Point(738, 235);
+            this.lblUserContract.Name = "lblUserContract";
+            this.lblUserContract.Size = new System.Drawing.Size(287, 38);
+            this.lblUserContract.TabIndex = 27;
+            this.lblUserContract.Text = "Create User Contrcat";
             // 
             // StartDatedateTimePicker
             // 
             this.StartDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StartDatedateTimePicker.Location = new System.Drawing.Point(714, 379);
+            this.StartDatedateTimePicker.Location = new System.Drawing.Point(719, 309);
             this.StartDatedateTimePicker.Name = "StartDatedateTimePicker";
             this.StartDatedateTimePicker.Size = new System.Drawing.Size(306, 30);
             this.StartDatedateTimePicker.TabIndex = 28;
@@ -353,7 +362,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // EndDatedateTimePicker
             // 
             this.EndDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EndDatedateTimePicker.Location = new System.Drawing.Point(714, 428);
+            this.EndDatedateTimePicker.Location = new System.Drawing.Point(719, 364);
             this.EndDatedateTimePicker.Name = "EndDatedateTimePicker";
             this.EndDatedateTimePicker.Size = new System.Drawing.Size(306, 30);
             this.EndDatedateTimePicker.TabIndex = 29;
@@ -362,7 +371,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.cbContractType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbContractType.FormattingEnabled = true;
-            this.cbContractType.Location = new System.Drawing.Point(714, 476);
+            this.cbContractType.Location = new System.Drawing.Point(719, 417);
             this.cbContractType.Name = "cbContractType";
             this.cbContractType.Size = new System.Drawing.Size(306, 33);
             this.cbContractType.TabIndex = 30;
@@ -370,10 +379,65 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbSalaryPH
             // 
             this.tbSalaryPH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbSalaryPH.Location = new System.Drawing.Point(714, 529);
+            this.tbSalaryPH.Location = new System.Drawing.Point(719, 475);
             this.tbSalaryPH.Name = "tbSalaryPH";
             this.tbSalaryPH.Size = new System.Drawing.Size(306, 30);
             this.tbSalaryPH.TabIndex = 31;
+            // 
+            // lblStartDate
+            // 
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblStartDate.Location = new System.Drawing.Point(581, 314);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(99, 25);
+            this.lblStartDate.TabIndex = 32;
+            this.lblStartDate.Text = "Start Date";
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblEndDate.Location = new System.Drawing.Point(581, 369);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(93, 25);
+            this.lblEndDate.TabIndex = 33;
+            this.lblEndDate.Text = "End Date";
+            // 
+            // lblContractType
+            // 
+            this.lblContractType.AutoSize = true;
+            this.lblContractType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblContractType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblContractType.Location = new System.Drawing.Point(581, 420);
+            this.lblContractType.Name = "lblContractType";
+            this.lblContractType.Size = new System.Drawing.Size(136, 25);
+            this.lblContractType.TabIndex = 34;
+            this.lblContractType.Text = "Contract Type";
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSalary.Location = new System.Drawing.Point(581, 475);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(68, 25);
+            this.lblSalary.TabIndex = 35;
+            this.lblSalary.Text = "Salary";
+            // 
+            // lblMoneyPerHour
+            // 
+            this.lblMoneyPerHour.AutoSize = true;
+            this.lblMoneyPerHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMoneyPerHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblMoneyPerHour.Location = new System.Drawing.Point(1025, 476);
+            this.lblMoneyPerHour.Name = "lblMoneyPerHour";
+            this.lblMoneyPerHour.Size = new System.Drawing.Size(53, 25);
+            this.lblMoneyPerHour.TabIndex = 36;
+            this.lblMoneyPerHour.Text = "$ / H";
             // 
             // AddUserForm
             // 
@@ -381,12 +445,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1141, 779);
+            this.Controls.Add(this.lblMoneyPerHour);
+            this.Controls.Add(this.lblSalary);
+            this.Controls.Add(this.lblContractType);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.tbSalaryPH);
             this.Controls.Add(this.cbContractType);
             this.Controls.Add(this.EndDatedateTimePicker);
             this.Controls.Add(this.StartDatedateTimePicker);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUserContract);
+            this.Controls.Add(this.lblCreateUser);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbRole);
@@ -450,11 +519,16 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCreateUser;
+        private System.Windows.Forms.Label lblUserContract;
         private System.Windows.Forms.DateTimePicker StartDatedateTimePicker;
         private System.Windows.Forms.DateTimePicker EndDatedateTimePicker;
         private System.Windows.Forms.ComboBox cbContractType;
         private System.Windows.Forms.TextBox tbSalaryPH;
+        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Label lblContractType;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.Label lblMoneyPerHour;
     }
 }

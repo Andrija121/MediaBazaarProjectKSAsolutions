@@ -167,6 +167,36 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
+        public Contract EditContract(Contract contract)
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "Update contract set startDate=@startDate, endDate=@endDate, contractType=@contractType,salaryPerHour=@salaryPerHour where contractId=@contractId";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@contractId", contract.ContractId);
+                    cmd.Parameters.AddWithValue("stratDate", contract.StartDate);
+                    cmd.Parameters.AddWithValue("EndDate", contract.EndDate);
+                    cmd.Parameters.AddWithValue("SalaryPerHour", contract.SalaryPerHour);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return contract;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
         public User EditUser(User u)
         {
@@ -213,7 +243,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
             try
             {
-                using(conn)
+                using (conn)
                 {
                     conn.Open();
                     string sql = "select * from user where status=@status";
@@ -252,7 +282,50 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 throw;
             }
         }
-        public List<User> GetUsers()
+        public List<User> GetAwayUsers()
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "select * from user where status=@status";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@status", Status.AWAY.ToString());
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<User> awayUsers = new List<User>();
+
+                    while (dr.Read())
+                    {
+                        User user = new User();
+                        user.Id = Convert.ToInt32(dr["id"]);
+                        user.UserName = dr["USERNAME"].ToString();
+                        user.FirstName = dr["FIRSTNAME"].ToString();
+                        user.LastName = dr["LASTNAME"].ToString();
+                        user.Email = dr["EMAIL"].ToString();
+                        user.Password = dr["PASSWORD"].ToString();
+                        user.Birtyhday = Convert.ToDateTime(dr["BIRTHDAY"]);
+                        user.BSN = Convert.ToInt32(dr["BSN"]);
+                        user.ZipCode = dr["ZIPCODE"].ToString();
+                        user.Address = dr["ADDRESS"].ToString();
+                        user.Gender = Enum.Parse<Gender>(dr["GENDER"].ToString());
+                        user.Role = Enum.Parse<Role>(dr["ROLE"].ToString());
+                        user.Status = Enum.Parse<Status>(dr["STATUS"].ToString());
+                        awayUsers.Add(user);
+                    }
+                    return awayUsers;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+            public List<User> GetUsers()
             {
                 try
                 {
@@ -305,6 +378,20 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public void SetUserStatusToInactive(User user)
         {
             user.Status = Status.INACTIVE;
+            EditUser(user);
+        }
+        public void SetUserStatusToAway(User user, double days)
+        {
+
+            
+            DateTime StartDate = DateTime.Now;
+            DateTime EndDate = DateTime.Now.AddDays(days);
+            while(StartDate<=EndDate)
+            {
+                user.Status = Status.AWAY;
+                EditUser(user);
+            }
+            user.Status = Status.ACTIVE;
             EditUser(user);
         }
         public bool CheckIfUserAlreadyExist(string username,string email,int bsn)

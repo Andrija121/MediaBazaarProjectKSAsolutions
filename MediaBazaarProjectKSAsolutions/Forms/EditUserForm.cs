@@ -21,6 +21,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
+            cbContractType.DataSource = Enum.GetValues(typeof(ContractType));
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 cbGender.SelectedItem = u.Gender;
                 cbRole.SelectedItem = u.Role;
                 cbStatus.SelectedItem = u.Status;
+                Contract contract = um.GetContract(u.Id);
+                StartDatedateTimePicker.Value = contract.StartDate;
+                EndDatedateTimePicker.Value = contract.EndDate;
+                cbContractType.SelectedItem = contract.ContractType;
+                tbSalaryPH.Text = contract.SalaryPerHour.ToString();
             }
             catch (Exception)
             {

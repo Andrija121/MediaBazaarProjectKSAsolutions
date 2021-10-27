@@ -31,6 +31,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             this.lbInactiveUsers = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.rbInactiveUsers = new System.Windows.Forms.RadioButton();
+            this.rbAwayUsers = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lbInactiveUsers
@@ -57,12 +59,40 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
+            // rbInactiveUsers
+            // 
+            this.rbInactiveUsers.AutoSize = true;
+            this.rbInactiveUsers.Location = new System.Drawing.Point(13, 404);
+            this.rbInactiveUsers.Name = "rbInactiveUsers";
+            this.rbInactiveUsers.Size = new System.Drawing.Size(145, 29);
+            this.rbInactiveUsers.TabIndex = 18;
+            this.rbInactiveUsers.TabStop = true;
+            this.rbInactiveUsers.Text = "Inactive Users";
+            this.rbInactiveUsers.UseVisualStyleBackColor = true;
+            this.rbInactiveUsers.CheckedChanged += new System.EventHandler(this.rbInactiveUsers_CheckedChanged);
+            this.rbInactiveUsers.Leave += new System.EventHandler(this.rbInactiveUsers_Leave);
+            // 
+            // rbAwayUsers
+            // 
+            this.rbAwayUsers.AutoSize = true;
+            this.rbAwayUsers.Location = new System.Drawing.Point(189, 404);
+            this.rbAwayUsers.Name = "rbAwayUsers";
+            this.rbAwayUsers.Size = new System.Drawing.Size(128, 29);
+            this.rbAwayUsers.TabIndex = 19;
+            this.rbAwayUsers.TabStop = true;
+            this.rbAwayUsers.Text = "Away Users";
+            this.rbAwayUsers.UseVisualStyleBackColor = true;
+            this.rbAwayUsers.CheckedChanged += new System.EventHandler(this.rbAwayUsers_CheckedChanged);
+            this.rbAwayUsers.Leave += new System.EventHandler(this.rbAwayUsers_Leave);
+            // 
             // InactiveUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rbAwayUsers);
+            this.Controls.Add(this.rbInactiveUsers);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbInactiveUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -70,6 +100,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InactiveUsersForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +108,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private System.Windows.Forms.ListBox lbInactiveUsers;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.RadioButton rbInactiveUsers;
+        private System.Windows.Forms.RadioButton rbAwayUsers;
     }
 }

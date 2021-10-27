@@ -58,6 +58,30 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbEndDate = new System.Windows.Forms.TextBox();
             this.tbStartDate = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
+            this.lblCreateUser = new System.Windows.Forms.Label();
+            this.cbRole = new System.Windows.Forms.ComboBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbZipCode = new System.Windows.Forms.TextBox();
+            this.tbBSN = new System.Windows.Forms.TextBox();
+            this.DTPBirthday = new System.Windows.Forms.DateTimePicker();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblBSN = new System.Windows.Forms.Label();
+            this.lblZipCode = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbLastName = new System.Windows.Forms.TextBox();
+            this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.btnSetUserAway = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -249,6 +273,30 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageProfile
             // 
             this.tabPageProfile.BackColor = System.Drawing.Color.Gold;
+            this.tabPageProfile.Controls.Add(this.btnSetUserAway);
+            this.tabPageProfile.Controls.Add(this.lblCreateUser);
+            this.tabPageProfile.Controls.Add(this.cbRole);
+            this.tabPageProfile.Controls.Add(this.cbGender);
+            this.tabPageProfile.Controls.Add(this.tbAddress);
+            this.tabPageProfile.Controls.Add(this.tbZipCode);
+            this.tabPageProfile.Controls.Add(this.tbBSN);
+            this.tabPageProfile.Controls.Add(this.DTPBirthday);
+            this.tabPageProfile.Controls.Add(this.lblRole);
+            this.tabPageProfile.Controls.Add(this.lblGender);
+            this.tabPageProfile.Controls.Add(this.lblAddress);
+            this.tabPageProfile.Controls.Add(this.lblBSN);
+            this.tabPageProfile.Controls.Add(this.lblZipCode);
+            this.tabPageProfile.Controls.Add(this.lblBirthday);
+            this.tabPageProfile.Controls.Add(this.lblEmail);
+            this.tabPageProfile.Controls.Add(this.lblPassword);
+            this.tabPageProfile.Controls.Add(this.lblLastName);
+            this.tabPageProfile.Controls.Add(this.lblFirstName);
+            this.tabPageProfile.Controls.Add(this.lblUserName);
+            this.tabPageProfile.Controls.Add(this.tbPassword);
+            this.tabPageProfile.Controls.Add(this.tbEmail);
+            this.tabPageProfile.Controls.Add(this.tbLastName);
+            this.tabPageProfile.Controls.Add(this.tbFirstName);
+            this.tabPageProfile.Controls.Add(this.tbUserName);
             this.tabPageProfile.Controls.Add(this.lblProfile);
             this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
             this.tabPageProfile.Name = "tabPageProfile";
@@ -420,6 +468,253 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
+            // lblCreateUser
+            // 
+            this.lblCreateUser.AutoSize = true;
+            this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCreateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCreateUser.Location = new System.Drawing.Point(108, 108);
+            this.lblCreateUser.Name = "lblCreateUser";
+            this.lblCreateUser.Size = new System.Drawing.Size(271, 38);
+            this.lblCreateUser.TabIndex = 51;
+            this.lblCreateUser.Text = "Profile Infomration";
+            // 
+            // cbRole
+            // 
+            this.cbRole.Enabled = false;
+            this.cbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.Location = new System.Drawing.Point(152, 726);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(376, 34);
+            this.cbRole.TabIndex = 49;
+            // 
+            // cbGender
+            // 
+            this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(152, 667);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(376, 34);
+            this.cbGender.TabIndex = 48;
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbAddress.Location = new System.Drawing.Point(152, 617);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(376, 25);
+            this.tbAddress.TabIndex = 47;
+            // 
+            // tbZipCode
+            // 
+            this.tbZipCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbZipCode.Location = new System.Drawing.Point(152, 560);
+            this.tbZipCode.Name = "tbZipCode";
+            this.tbZipCode.Size = new System.Drawing.Size(299, 25);
+            this.tbZipCode.TabIndex = 46;
+            // 
+            // tbBSN
+            // 
+            this.tbBSN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbBSN.Enabled = false;
+            this.tbBSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbBSN.Location = new System.Drawing.Point(152, 507);
+            this.tbBSN.Name = "tbBSN";
+            this.tbBSN.Size = new System.Drawing.Size(299, 25);
+            this.tbBSN.TabIndex = 45;
+            // 
+            // DTPBirthday
+            // 
+            this.DTPBirthday.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DTPBirthday.Enabled = false;
+            this.DTPBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DTPBirthday.Location = new System.Drawing.Point(152, 451);
+            this.DTPBirthday.Name = "DTPBirthday";
+            this.DTPBirthday.Size = new System.Drawing.Size(455, 32);
+            this.DTPBirthday.TabIndex = 44;
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblRole.Location = new System.Drawing.Point(32, 729);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(51, 25);
+            this.lblRole.TabIndex = 42;
+            this.lblRole.Text = "Role";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblGender.Location = new System.Drawing.Point(32, 670);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(77, 25);
+            this.lblGender.TabIndex = 41;
+            this.lblGender.Text = "Gender";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblAddress.Location = new System.Drawing.Point(32, 620);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(85, 25);
+            this.lblAddress.TabIndex = 40;
+            this.lblAddress.Text = "Address";
+            // 
+            // lblBSN
+            // 
+            this.lblBSN.AutoSize = true;
+            this.lblBSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblBSN.Location = new System.Drawing.Point(34, 506);
+            this.lblBSN.Name = "lblBSN";
+            this.lblBSN.Size = new System.Drawing.Size(53, 25);
+            this.lblBSN.TabIndex = 39;
+            this.lblBSN.Text = "BSN";
+            // 
+            // lblZipCode
+            // 
+            this.lblZipCode.AutoSize = true;
+            this.lblZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblZipCode.Location = new System.Drawing.Point(32, 565);
+            this.lblZipCode.Name = "lblZipCode";
+            this.lblZipCode.Size = new System.Drawing.Size(92, 25);
+            this.lblZipCode.TabIndex = 38;
+            this.lblZipCode.Text = "Zip Code";
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblBirthday.Location = new System.Drawing.Point(35, 450);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(83, 25);
+            this.lblBirthday.TabIndex = 37;
+            this.lblBirthday.Text = "Birthday";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblEmail.Location = new System.Drawing.Point(35, 331);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(60, 25);
+            this.lblEmail.TabIndex = 36;
+            this.lblEmail.Text = "Email";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblPassword.Location = new System.Drawing.Point(34, 389);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(98, 25);
+            this.lblPassword.TabIndex = 35;
+            this.lblPassword.Text = "Password";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblLastName.Location = new System.Drawing.Point(28, 278);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(106, 25);
+            this.lblLastName.TabIndex = 34;
+            this.lblLastName.Text = "Last Name";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblFirstName.Location = new System.Drawing.Point(30, 224);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(106, 25);
+            this.lblFirstName.TabIndex = 33;
+            this.lblFirstName.Text = "First Name";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUserName.Location = new System.Drawing.Point(28, 169);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(110, 25);
+            this.lblUserName.TabIndex = 32;
+            this.lblUserName.Text = "User Name";
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbPassword.Location = new System.Drawing.Point(152, 390);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(376, 25);
+            this.tbPassword.TabIndex = 31;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbEmail.Location = new System.Drawing.Point(152, 332);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(376, 25);
+            this.tbEmail.TabIndex = 30;
+            // 
+            // tbLastName
+            // 
+            this.tbLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbLastName.Location = new System.Drawing.Point(152, 275);
+            this.tbLastName.Name = "tbLastName";
+            this.tbLastName.Size = new System.Drawing.Size(331, 25);
+            this.tbLastName.TabIndex = 29;
+            // 
+            // tbFirstName
+            // 
+            this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbFirstName.Location = new System.Drawing.Point(152, 221);
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(331, 25);
+            this.tbFirstName.TabIndex = 28;
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbUserName.Location = new System.Drawing.Point(152, 166);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(376, 25);
+            this.tbUserName.TabIndex = 27;
+            // 
+            // btnSetUserAway
+            // 
+            this.btnSetUserAway.BackColor = System.Drawing.Color.Gold;
+            this.btnSetUserAway.FlatAppearance.BorderSize = 0;
+            this.btnSetUserAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetUserAway.Location = new System.Drawing.Point(634, 154);
+            this.btnSetUserAway.Name = "btnSetUserAway";
+            this.btnSetUserAway.Size = new System.Drawing.Size(131, 146);
+            this.btnSetUserAway.TabIndex = 52;
+            this.btnSetUserAway.Text = "Ask For Away";
+            this.btnSetUserAway.UseVisualStyleBackColor = false;
+            this.btnSetUserAway.Click += new System.EventHandler(this.btnSetUserAway_Click);
+            // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -481,5 +776,29 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Label lblContractType;
         private System.Windows.Forms.Label lblExpiryDate;
         private System.Windows.Forms.Label lblStartDAte;
+        private System.Windows.Forms.Button btnSetUserAway;
+        private System.Windows.Forms.Label lblCreateUser;
+        private System.Windows.Forms.ComboBox cbRole;
+        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbZipCode;
+        private System.Windows.Forms.TextBox tbBSN;
+        private System.Windows.Forms.DateTimePicker DTPBirthday;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblBSN;
+        private System.Windows.Forms.Label lblZipCode;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbLastName;
+        private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.TextBox tbUserName;
     }
 }
