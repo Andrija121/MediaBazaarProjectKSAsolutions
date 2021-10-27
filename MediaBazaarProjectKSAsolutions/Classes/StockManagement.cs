@@ -127,6 +127,46 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
+
+        public List<Stock> SearchAllStock(string text)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM stock WHERE productName LIKE '%" + text + "%' OR serialNumber LIKE '%" + text + "%'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Stock> stocks = new List<Stock>();
+
+                    while (dr.Read())
+                    {
+                        Stock stock = new Stock();
+                        stock.Id = Convert.ToInt32(dr["id"]);
+                        stock.ProductName = dr["productName"].ToString();
+                        stock.Price = Convert.ToInt32(dr["price"]);
+                        stock.SerialNumber = Convert.ToInt32(dr["serialNumber"]);
+                        stock.Amount = Convert.ToInt32(dr["amount"]);
+                        stocks.Add(stock);
+                    }
+                    return stocks;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
         public Stock EditStock(Stock stock)
         {
             try
