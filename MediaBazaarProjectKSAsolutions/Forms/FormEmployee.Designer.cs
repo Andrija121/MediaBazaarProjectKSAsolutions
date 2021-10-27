@@ -43,21 +43,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi = new System.Windows.Forms.Label();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
-            this.lblProfile = new System.Windows.Forms.Label();
-            this.tabPageShift = new System.Windows.Forms.TabPage();
-            this.lblShift = new System.Windows.Forms.Label();
-            this.tabPageContract = new System.Windows.Forms.TabPage();
-            this.lblMoneyPerHour = new System.Windows.Forms.Label();
-            this.lblSalary = new System.Windows.Forms.Label();
-            this.lblContractType = new System.Windows.Forms.Label();
-            this.lblExpiryDate = new System.Windows.Forms.Label();
-            this.lblStartDAte = new System.Windows.Forms.Label();
-            this.tbContractType = new System.Windows.Forms.TextBox();
-            this.lblTopic = new System.Windows.Forms.Label();
-            this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
-            this.tbEndDate = new System.Windows.Forms.TextBox();
-            this.tbStartDate = new System.Windows.Forms.TextBox();
-            this.lblContract = new System.Windows.Forms.Label();
+            this.btnSetUserAway = new System.Windows.Forms.Button();
             this.lblCreateUser = new System.Windows.Forms.Label();
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
@@ -81,7 +67,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbUserName = new System.Windows.Forms.TextBox();
-            this.btnSetUserAway = new System.Windows.Forms.Button();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.tabPageShift = new System.Windows.Forms.TabPage();
+            this.lblShift = new System.Windows.Forms.Label();
+            this.tabPageContract = new System.Windows.Forms.TabPage();
+            this.lblMoneyPerHour = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.lblContractType = new System.Windows.Forms.Label();
+            this.lblExpiryDate = new System.Windows.Forms.Label();
+            this.lblStartDAte = new System.Windows.Forms.Label();
+            this.tbContractType = new System.Windows.Forms.TextBox();
+            this.lblTopic = new System.Windows.Forms.Label();
+            this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
+            this.tbEndDate = new System.Windows.Forms.TextBox();
+            this.tbStartDate = new System.Windows.Forms.TextBox();
+            this.lblContract = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -305,168 +305,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
             // 
-            // lblProfile
+            // btnSetUserAway
             // 
-            this.lblProfile.AutoSize = true;
-            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProfile.ForeColor = System.Drawing.Color.Gray;
-            this.lblProfile.Location = new System.Drawing.Point(6, 3);
-            this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(166, 55);
-            this.lblProfile.TabIndex = 0;
-            this.lblProfile.Text = "Profile";
-            // 
-            // tabPageShift
-            // 
-            this.tabPageShift.BackColor = System.Drawing.Color.Gold;
-            this.tabPageShift.Controls.Add(this.lblShift);
-            this.tabPageShift.Location = new System.Drawing.Point(4, 35);
-            this.tabPageShift.Name = "tabPageShift";
-            this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShift.Size = new System.Drawing.Size(803, 789);
-            this.tabPageShift.TabIndex = 1;
-            this.tabPageShift.Text = "Shift";
-            // 
-            // lblShift
-            // 
-            this.lblShift.AutoSize = true;
-            this.lblShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblShift.ForeColor = System.Drawing.Color.Gray;
-            this.lblShift.Location = new System.Drawing.Point(3, 3);
-            this.lblShift.Name = "lblShift";
-            this.lblShift.Size = new System.Drawing.Size(124, 55);
-            this.lblShift.TabIndex = 1;
-            this.lblShift.Text = "Shift";
-            // 
-            // tabPageContract
-            // 
-            this.tabPageContract.BackColor = System.Drawing.Color.Gold;
-            this.tabPageContract.Controls.Add(this.lblMoneyPerHour);
-            this.tabPageContract.Controls.Add(this.lblSalary);
-            this.tabPageContract.Controls.Add(this.lblContractType);
-            this.tabPageContract.Controls.Add(this.lblExpiryDate);
-            this.tabPageContract.Controls.Add(this.lblStartDAte);
-            this.tabPageContract.Controls.Add(this.tbContractType);
-            this.tabPageContract.Controls.Add(this.lblTopic);
-            this.tabPageContract.Controls.Add(this.tbSalaryPerHour);
-            this.tabPageContract.Controls.Add(this.tbEndDate);
-            this.tabPageContract.Controls.Add(this.tbStartDate);
-            this.tabPageContract.Controls.Add(this.lblContract);
-            this.tabPageContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPageContract.Location = new System.Drawing.Point(4, 35);
-            this.tabPageContract.Name = "tabPageContract";
-            this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageContract.Size = new System.Drawing.Size(803, 789);
-            this.tabPageContract.TabIndex = 3;
-            this.tabPageContract.Text = "Contract";
-            // 
-            // lblMoneyPerHour
-            // 
-            this.lblMoneyPerHour.AutoSize = true;
-            this.lblMoneyPerHour.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblMoneyPerHour.Location = new System.Drawing.Point(537, 508);
-            this.lblMoneyPerHour.Name = "lblMoneyPerHour";
-            this.lblMoneyPerHour.Size = new System.Drawing.Size(58, 26);
-            this.lblMoneyPerHour.TabIndex = 11;
-            this.lblMoneyPerHour.Text = "$ / H";
-            // 
-            // lblSalary
-            // 
-            this.lblSalary.AutoSize = true;
-            this.lblSalary.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblSalary.Location = new System.Drawing.Point(355, 476);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(80, 26);
-            this.lblSalary.TabIndex = 10;
-            this.lblSalary.Text = "Salary ";
-            // 
-            // lblContractType
-            // 
-            this.lblContractType.AutoSize = true;
-            this.lblContractType.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblContractType.Location = new System.Drawing.Point(320, 410);
-            this.lblContractType.Name = "lblContractType";
-            this.lblContractType.Size = new System.Drawing.Size(147, 26);
-            this.lblContractType.TabIndex = 9;
-            this.lblContractType.Text = "Contract Type";
-            // 
-            // lblExpiryDate
-            // 
-            this.lblExpiryDate.AutoSize = true;
-            this.lblExpiryDate.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblExpiryDate.Location = new System.Drawing.Point(286, 333);
-            this.lblExpiryDate.Name = "lblExpiryDate";
-            this.lblExpiryDate.Size = new System.Drawing.Size(213, 26);
-            this.lblExpiryDate.TabIndex = 8;
-            this.lblExpiryDate.Text = "Contract Expiry Date";
-            // 
-            // lblStartDAte
-            // 
-            this.lblStartDAte.AutoSize = true;
-            this.lblStartDAte.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblStartDAte.Location = new System.Drawing.Point(298, 245);
-            this.lblStartDAte.Name = "lblStartDAte";
-            this.lblStartDAte.Size = new System.Drawing.Size(204, 26);
-            this.lblStartDAte.TabIndex = 7;
-            this.lblStartDAte.Text = "Contract Issue Date";
-            // 
-            // tbContractType
-            // 
-            this.tbContractType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbContractType.Location = new System.Drawing.Point(243, 439);
-            this.tbContractType.Name = "tbContractType";
-            this.tbContractType.ReadOnly = true;
-            this.tbContractType.Size = new System.Drawing.Size(293, 25);
-            this.tbContractType.TabIndex = 6;
-            // 
-            // lblTopic
-            // 
-            this.lblTopic.AutoSize = true;
-            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTopic.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblTopic.Location = new System.Drawing.Point(160, 157);
-            this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(461, 37);
-            this.lblTopic.TabIndex = 5;
-            this.lblTopic.Text = "Personal Contract Infomation";
-            // 
-            // tbSalaryPerHour
-            // 
-            this.tbSalaryPerHour.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSalaryPerHour.Location = new System.Drawing.Point(243, 509);
-            this.tbSalaryPerHour.Name = "tbSalaryPerHour";
-            this.tbSalaryPerHour.ReadOnly = true;
-            this.tbSalaryPerHour.Size = new System.Drawing.Size(293, 25);
-            this.tbSalaryPerHour.TabIndex = 4;
-            // 
-            // tbEndDate
-            // 
-            this.tbEndDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbEndDate.Location = new System.Drawing.Point(213, 362);
-            this.tbEndDate.Name = "tbEndDate";
-            this.tbEndDate.ReadOnly = true;
-            this.tbEndDate.Size = new System.Drawing.Size(375, 25);
-            this.tbEndDate.TabIndex = 3;
-            // 
-            // tbStartDate
-            // 
-            this.tbStartDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbStartDate.Location = new System.Drawing.Point(213, 276);
-            this.tbStartDate.Name = "tbStartDate";
-            this.tbStartDate.ReadOnly = true;
-            this.tbStartDate.Size = new System.Drawing.Size(375, 25);
-            this.tbStartDate.TabIndex = 2;
-            // 
-            // lblContract
-            // 
-            this.lblContract.AutoSize = true;
-            this.lblContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblContract.ForeColor = System.Drawing.Color.Gray;
-            this.lblContract.Location = new System.Drawing.Point(3, 3);
-            this.lblContract.Name = "lblContract";
-            this.lblContract.Size = new System.Drawing.Size(214, 55);
-            this.lblContract.TabIndex = 1;
-            this.lblContract.Text = "Contract";
+            this.btnSetUserAway.BackColor = System.Drawing.Color.Gold;
+            this.btnSetUserAway.FlatAppearance.BorderSize = 0;
+            this.btnSetUserAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetUserAway.Location = new System.Drawing.Point(634, 154);
+            this.btnSetUserAway.Name = "btnSetUserAway";
+            this.btnSetUserAway.Size = new System.Drawing.Size(131, 146);
+            this.btnSetUserAway.TabIndex = 52;
+            this.btnSetUserAway.Text = "Request for Time off\r\n";
+            this.btnSetUserAway.UseVisualStyleBackColor = false;
+            this.btnSetUserAway.Click += new System.EventHandler(this.btnSetUserAway_Click);
             // 
             // lblCreateUser
             // 
@@ -702,18 +552,168 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbUserName.Size = new System.Drawing.Size(376, 25);
             this.tbUserName.TabIndex = 27;
             // 
-            // btnSetUserAway
+            // lblProfile
             // 
-            this.btnSetUserAway.BackColor = System.Drawing.Color.Gold;
-            this.btnSetUserAway.FlatAppearance.BorderSize = 0;
-            this.btnSetUserAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetUserAway.Location = new System.Drawing.Point(634, 154);
-            this.btnSetUserAway.Name = "btnSetUserAway";
-            this.btnSetUserAway.Size = new System.Drawing.Size(131, 146);
-            this.btnSetUserAway.TabIndex = 52;
-            this.btnSetUserAway.Text = "Ask For Away";
-            this.btnSetUserAway.UseVisualStyleBackColor = false;
-            this.btnSetUserAway.Click += new System.EventHandler(this.btnSetUserAway_Click);
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblProfile.ForeColor = System.Drawing.Color.Gray;
+            this.lblProfile.Location = new System.Drawing.Point(6, 3);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(166, 55);
+            this.lblProfile.TabIndex = 0;
+            this.lblProfile.Text = "Profile";
+            // 
+            // tabPageShift
+            // 
+            this.tabPageShift.BackColor = System.Drawing.Color.Gold;
+            this.tabPageShift.Controls.Add(this.lblShift);
+            this.tabPageShift.Location = new System.Drawing.Point(4, 35);
+            this.tabPageShift.Name = "tabPageShift";
+            this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageShift.Size = new System.Drawing.Size(803, 789);
+            this.tabPageShift.TabIndex = 1;
+            this.tabPageShift.Text = "Shift";
+            // 
+            // lblShift
+            // 
+            this.lblShift.AutoSize = true;
+            this.lblShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblShift.ForeColor = System.Drawing.Color.Gray;
+            this.lblShift.Location = new System.Drawing.Point(3, 3);
+            this.lblShift.Name = "lblShift";
+            this.lblShift.Size = new System.Drawing.Size(124, 55);
+            this.lblShift.TabIndex = 1;
+            this.lblShift.Text = "Shift";
+            // 
+            // tabPageContract
+            // 
+            this.tabPageContract.BackColor = System.Drawing.Color.Gold;
+            this.tabPageContract.Controls.Add(this.lblMoneyPerHour);
+            this.tabPageContract.Controls.Add(this.lblSalary);
+            this.tabPageContract.Controls.Add(this.lblContractType);
+            this.tabPageContract.Controls.Add(this.lblExpiryDate);
+            this.tabPageContract.Controls.Add(this.lblStartDAte);
+            this.tabPageContract.Controls.Add(this.tbContractType);
+            this.tabPageContract.Controls.Add(this.lblTopic);
+            this.tabPageContract.Controls.Add(this.tbSalaryPerHour);
+            this.tabPageContract.Controls.Add(this.tbEndDate);
+            this.tabPageContract.Controls.Add(this.tbStartDate);
+            this.tabPageContract.Controls.Add(this.lblContract);
+            this.tabPageContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPageContract.Location = new System.Drawing.Point(4, 35);
+            this.tabPageContract.Name = "tabPageContract";
+            this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageContract.Size = new System.Drawing.Size(803, 789);
+            this.tabPageContract.TabIndex = 3;
+            this.tabPageContract.Text = "Contract";
+            // 
+            // lblMoneyPerHour
+            // 
+            this.lblMoneyPerHour.AutoSize = true;
+            this.lblMoneyPerHour.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblMoneyPerHour.Location = new System.Drawing.Point(537, 508);
+            this.lblMoneyPerHour.Name = "lblMoneyPerHour";
+            this.lblMoneyPerHour.Size = new System.Drawing.Size(58, 26);
+            this.lblMoneyPerHour.TabIndex = 11;
+            this.lblMoneyPerHour.Text = "$ / H";
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblSalary.Location = new System.Drawing.Point(355, 476);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(80, 26);
+            this.lblSalary.TabIndex = 10;
+            this.lblSalary.Text = "Salary ";
+            // 
+            // lblContractType
+            // 
+            this.lblContractType.AutoSize = true;
+            this.lblContractType.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblContractType.Location = new System.Drawing.Point(320, 410);
+            this.lblContractType.Name = "lblContractType";
+            this.lblContractType.Size = new System.Drawing.Size(147, 26);
+            this.lblContractType.TabIndex = 9;
+            this.lblContractType.Text = "Contract Type";
+            // 
+            // lblExpiryDate
+            // 
+            this.lblExpiryDate.AutoSize = true;
+            this.lblExpiryDate.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblExpiryDate.Location = new System.Drawing.Point(286, 333);
+            this.lblExpiryDate.Name = "lblExpiryDate";
+            this.lblExpiryDate.Size = new System.Drawing.Size(213, 26);
+            this.lblExpiryDate.TabIndex = 8;
+            this.lblExpiryDate.Text = "Contract Expiry Date";
+            // 
+            // lblStartDAte
+            // 
+            this.lblStartDAte.AutoSize = true;
+            this.lblStartDAte.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblStartDAte.Location = new System.Drawing.Point(298, 245);
+            this.lblStartDAte.Name = "lblStartDAte";
+            this.lblStartDAte.Size = new System.Drawing.Size(204, 26);
+            this.lblStartDAte.TabIndex = 7;
+            this.lblStartDAte.Text = "Contract Issue Date";
+            // 
+            // tbContractType
+            // 
+            this.tbContractType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbContractType.Location = new System.Drawing.Point(243, 439);
+            this.tbContractType.Name = "tbContractType";
+            this.tbContractType.ReadOnly = true;
+            this.tbContractType.Size = new System.Drawing.Size(293, 25);
+            this.tbContractType.TabIndex = 6;
+            // 
+            // lblTopic
+            // 
+            this.lblTopic.AutoSize = true;
+            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTopic.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblTopic.Location = new System.Drawing.Point(160, 157);
+            this.lblTopic.Name = "lblTopic";
+            this.lblTopic.Size = new System.Drawing.Size(461, 37);
+            this.lblTopic.TabIndex = 5;
+            this.lblTopic.Text = "Personal Contract Infomation";
+            // 
+            // tbSalaryPerHour
+            // 
+            this.tbSalaryPerHour.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSalaryPerHour.Location = new System.Drawing.Point(243, 509);
+            this.tbSalaryPerHour.Name = "tbSalaryPerHour";
+            this.tbSalaryPerHour.ReadOnly = true;
+            this.tbSalaryPerHour.Size = new System.Drawing.Size(293, 25);
+            this.tbSalaryPerHour.TabIndex = 4;
+            // 
+            // tbEndDate
+            // 
+            this.tbEndDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEndDate.Location = new System.Drawing.Point(213, 362);
+            this.tbEndDate.Name = "tbEndDate";
+            this.tbEndDate.ReadOnly = true;
+            this.tbEndDate.Size = new System.Drawing.Size(375, 25);
+            this.tbEndDate.TabIndex = 3;
+            // 
+            // tbStartDate
+            // 
+            this.tbStartDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbStartDate.Location = new System.Drawing.Point(213, 276);
+            this.tbStartDate.Name = "tbStartDate";
+            this.tbStartDate.ReadOnly = true;
+            this.tbStartDate.Size = new System.Drawing.Size(375, 25);
+            this.tbStartDate.TabIndex = 2;
+            // 
+            // lblContract
+            // 
+            this.lblContract.AutoSize = true;
+            this.lblContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblContract.ForeColor = System.Drawing.Color.Gray;
+            this.lblContract.Location = new System.Drawing.Point(3, 3);
+            this.lblContract.Name = "lblContract";
+            this.lblContract.Size = new System.Drawing.Size(214, 55);
+            this.lblContract.TabIndex = 1;
+            this.lblContract.Text = "Contract";
             // 
             // FormEmployee
             // 

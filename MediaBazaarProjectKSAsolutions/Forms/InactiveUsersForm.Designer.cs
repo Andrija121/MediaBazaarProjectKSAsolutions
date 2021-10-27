@@ -43,6 +43,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbInactiveUsers.Name = "lbInactiveUsers";
             this.lbInactiveUsers.Size = new System.Drawing.Size(775, 379);
             this.lbInactiveUsers.TabIndex = 0;
+            this.lbInactiveUsers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbInactiveUsers_MouseDoubleClick);
             // 
             // btnBack
             // 
@@ -99,6 +100,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Name = "InactiveUsersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InactiveUsersForm";
+            this.Load += new System.EventHandler(this.InactiveUsersForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

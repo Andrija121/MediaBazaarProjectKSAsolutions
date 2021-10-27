@@ -44,6 +44,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             if (user != null)
             {
                 userManagement.SetUserStatusToInactive(user);
+                timer7Years.Start();
                 RefreshListBox();
                 MessageBox.Show("User Made Inactive Successfully");
             }
@@ -68,6 +69,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
             inactiveUsersForm.ShowDialog();
+            RefreshListBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

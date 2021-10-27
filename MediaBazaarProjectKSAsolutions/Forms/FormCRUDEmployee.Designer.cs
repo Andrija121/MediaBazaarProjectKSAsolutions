@@ -29,6 +29,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelPage = new System.Windows.Forms.Panel();
             this.lblPage = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnMakeUserInactive = new System.Windows.Forms.Button();
             this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.timer7Years = new System.Windows.Forms.Timer(this.components);
             this.panelPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -143,7 +145,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
             this.btnSeeInactiveUsers.Size = new System.Drawing.Size(211, 67);
             this.btnSeeInactiveUsers.TabIndex = 6;
-            this.btnSeeInactiveUsers.Text = "See All Inactive Users";
+            this.btnSeeInactiveUsers.Text = "Inactive and Away Users";
             this.btnSeeInactiveUsers.UseVisualStyleBackColor = false;
             this.btnSeeInactiveUsers.Click += new System.EventHandler(this.btnSeeInactiveUsers_Click);
             // 
@@ -195,5 +197,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnMakeUserInactive;
         private System.Windows.Forms.Button btnSeeInactiveUsers;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Timer timer7Years;
     }
 }
