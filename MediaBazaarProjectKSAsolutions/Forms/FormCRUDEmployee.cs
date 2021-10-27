@@ -29,6 +29,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 lbUsers.Items.Add(u);
             }
         }
+
+        public void StockSearch(string text)
+        {
+            lbUsers.Items.Clear();
+            foreach (var u in userManagement.SearchUsers(text))
+            {
+                lbUsers.Items.Add(u);
+            }
+        }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
 
@@ -79,6 +88,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void FormEmployee_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbxSearchBar_Employees_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchBar_Employees.Text == "")
+            {
+
+            }
+            else
+            {
+                string text = Convert.ToString(tbxSearchBar_Employees.Text);
+                StockSearch(text);
+            }
         }
     }
 }
