@@ -78,6 +78,44 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
+        public List<Department> SearchDepartments(string text)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM department WHERE name LIKE '%" + text + "%'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Department> activeDepartments = new List<Department>();
+
+                    while (dr.Read())
+                    {
+                        Department department = new Department();
+                        department.Id = Convert.ToInt32(dr["id"]);
+                        department.Name = dr["name"].ToString();
+                        department.Status = Enum.Parse<Status>(dr["status"].ToString());
+                        activeDepartments.Add(department);
+                    }
+                    return activeDepartments;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
         public List<Department> GetInactiveDepartments()
         {
             try
