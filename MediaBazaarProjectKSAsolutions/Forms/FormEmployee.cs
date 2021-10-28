@@ -13,13 +13,16 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         User u;
         UserManagement um;
+        Contract c;
         public FormEmployee(User user)
         {
             InitializeComponent();
             this.u = user;
             this.um = new UserManagement();
+            this.c = um.GetContract(u.Id);
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
+            lblApproximateEarning.Text = c.SalaryPerHour * 120 + " $ - " + c.SalaryPerHour * 240 + " $ ";
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             
@@ -31,6 +34,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             pnlNav.Left = button.Left;
             button.BackColor = Color.Black;
         }
+        public void NavigationPanelMovment(Button button)
+        {
+            pnlNav.Height = button.Height;
+            pnlNav.Top = button.Top;
+            button.BackColor = Color.Black;
+        }
         public void ButtonLeaveChangeColor(Button button)
         {
             button.BackColor = Color.DarkOrchid;
@@ -39,7 +48,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            PanelMovment(btnBack);
+            NavigationPanelMovment(btnBack);
             this.Close();
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
@@ -50,41 +59,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             tcNavigation.SelectedTab = tabPageDashboard;
             PanelMovment(btnDashboard);
-            Contract contract= um.GetContract(u.Id);
-                lblApproximateEarning.Text =contract.SalaryPerHour * 120 + " $ - " + contract.SalaryPerHour * 240 + " $ ";
 
         }
 
         private void btnShift_Click(object sender, EventArgs e)
         {
             tcNavigation.SelectedTab = tabPageShift;
-            PanelMovment(btnShift);
+            NavigationPanelMovment(btnShift);
         }
 
-        private void btnDashboard_Leave(object sender, EventArgs e)
-        {
-            ButtonLeaveChangeColor(btnDashboard);
-        }
-
-        private void btnShift_Leave(object sender, EventArgs e)
-        {
-            ButtonLeaveChangeColor(btnShift);
-        }
-
-        private void btnProfile_Leave(object sender, EventArgs e)
-        {
-            ButtonLeaveChangeColor(btnProfile);
-        }
-
-        private void btnBack_Leave(object sender, EventArgs e)
-        {
-            ButtonLeaveChangeColor(btnBack);
-        }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             tcNavigation.SelectedTab = tabPageProfile;
-            PanelMovment(btnProfile);
+            NavigationPanelMovment(btnProfile);
 
             tbUserName.Text = u.UserName;
             tbFirstName.Text = u.FirstName;
@@ -102,28 +90,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnContract_Click(object sender, EventArgs e)
         {
             tcNavigation.SelectedTab = tabPageContract;
-            PanelMovment(btnContract);
+            NavigationPanelMovment(btnContract);
 
-           Contract contract= um.GetContract(u.Id);
-            tbStartDate.Text = contract.StartDate.ToString();
-            tbEndDate.Text = contract.EndDate.ToString();
-            tbContractType.Text = contract.ContractType.ToString();
-            tbSalaryPerHour.Text = contract.SalaryPerHour.ToString();
+            StartDatedateTimePicker.Value = c.StartDate;
+            EndDatedateTimePicker.Value = c.EndDate;
+            tbContractType.Text = c.ContractType.ToString();
+            tbSalaryPerHour.Text = c.SalaryPerHour.ToString();
             
-        }
-
-        private void btnContract_Leave(object sender, EventArgs e)
-        {
-            ButtonLeaveChangeColor(btnContract);
         }
 
         private void btnSetUserAway_Click(object sender, EventArgs e)
         {
-
-            
             DaysAwayForm daysAwayForm = new DaysAwayForm(u);
-            daysAwayForm.ShowDialog();
-            
+            daysAwayForm.ShowDialog();   
         }
 
         private void btnSaveUserInformation_Click(object sender, EventArgs e)
@@ -158,5 +137,31 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 MessageBox.Show("Error" + ex);
             }
         }
+        private void btnContract_Leave(object sender, EventArgs e)
+        {
+            ButtonLeaveChangeColor(btnContract);
+        }
+
+        private void btnDashboard_Leave(object sender, EventArgs e)
+        {
+            ButtonLeaveChangeColor(btnDashboard);
+        }
+
+        private void btnShift_Leave(object sender, EventArgs e)
+        {
+            ButtonLeaveChangeColor(btnShift);
+        }
+
+        private void btnProfile_Leave(object sender, EventArgs e)
+        {
+            ButtonLeaveChangeColor(btnProfile);
+        }
+
+        private void btnBack_Leave(object sender, EventArgs e)
+        {
+            ButtonLeaveChangeColor(btnBack);
+        }
+
+
     }
 }
