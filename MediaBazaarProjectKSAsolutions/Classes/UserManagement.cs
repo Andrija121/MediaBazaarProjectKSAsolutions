@@ -178,9 +178,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@contractId", contract.ContractId);
-                    cmd.Parameters.AddWithValue("stratDate", contract.StartDate);
-                    cmd.Parameters.AddWithValue("EndDate", contract.EndDate);
-                    cmd.Parameters.AddWithValue("SalaryPerHour", contract.SalaryPerHour);
+                    cmd.Parameters.AddWithValue("@startDate", contract.StartDate);
+                    cmd.Parameters.AddWithValue("@EndDate", contract.EndDate);
+                    cmd.Parameters.AddWithValue("@contractType", contract.ContractType.ToString());
+                    cmd.Parameters.AddWithValue("@SalaryPerHour", contract.SalaryPerHour);
 
                     cmd.ExecuteNonQuery();
 
@@ -420,10 +421,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     {
                         userAlreadyExist = true;
                     }
-                    
-
                 }
-               
             }
             
             catch (Exception)

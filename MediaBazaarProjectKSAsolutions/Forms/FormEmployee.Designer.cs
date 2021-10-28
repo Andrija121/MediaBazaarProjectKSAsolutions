@@ -40,6 +40,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.pnlEarnings = new System.Windows.Forms.Panel();
+            this.lblMonthlyEarning = new System.Windows.Forms.Label();
+            this.lblApproximateEarning = new System.Windows.Forms.Label();
+            this.lbEarnings = new System.Windows.Forms.Label();
             this.lblHi = new System.Windows.Forms.Label();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
@@ -82,11 +86,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbEndDate = new System.Windows.Forms.TextBox();
             this.tbStartDate = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
+            this.btnSaveUserInformation = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.tcNavigation.SuspendLayout();
             this.tabPageDashboard.SuspendLayout();
+            this.pnlEarnings.SuspendLayout();
             this.tabPageProfile.SuspendLayout();
             this.tabPageShift.SuspendLayout();
             this.tabPageContract.SuspendLayout();
@@ -241,6 +247,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageDashboard
             // 
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
+            this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
             this.tabPageDashboard.Controls.Add(this.lblDashboard);
             this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
@@ -249,6 +256,48 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.Size = new System.Drawing.Size(803, 789);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
+            // 
+            // pnlEarnings
+            // 
+            this.pnlEarnings.Controls.Add(this.lblMonthlyEarning);
+            this.pnlEarnings.Controls.Add(this.lblApproximateEarning);
+            this.pnlEarnings.Controls.Add(this.lbEarnings);
+            this.pnlEarnings.Location = new System.Drawing.Point(37, 142);
+            this.pnlEarnings.Name = "pnlEarnings";
+            this.pnlEarnings.Size = new System.Drawing.Size(373, 262);
+            this.pnlEarnings.TabIndex = 4;
+            // 
+            // lblMonthlyEarning
+            // 
+            this.lblMonthlyEarning.AutoSize = true;
+            this.lblMonthlyEarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMonthlyEarning.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblMonthlyEarning.Location = new System.Drawing.Point(93, 216);
+            this.lblMonthlyEarning.Name = "lblMonthlyEarning";
+            this.lblMonthlyEarning.Size = new System.Drawing.Size(194, 29);
+            this.lblMonthlyEarning.TabIndex = 2;
+            this.lblMonthlyEarning.Text = "Salary per month";
+            // 
+            // lblApproximateEarning
+            // 
+            this.lblApproximateEarning.AutoSize = true;
+            this.lblApproximateEarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApproximateEarning.Location = new System.Drawing.Point(119, 111);
+            this.lblApproximateEarning.Name = "lblApproximateEarning";
+            this.lblApproximateEarning.Size = new System.Drawing.Size(57, 40);
+            this.lblApproximateEarning.TabIndex = 1;
+            this.lblApproximateEarning.Text = "$$";
+            // 
+            // lbEarnings
+            // 
+            this.lbEarnings.AutoSize = true;
+            this.lbEarnings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbEarnings.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lbEarnings.Location = new System.Drawing.Point(119, 22);
+            this.lbEarnings.Name = "lbEarnings";
+            this.lbEarnings.Size = new System.Drawing.Size(135, 32);
+            this.lbEarnings.TabIndex = 0;
+            this.lbEarnings.Text = "Earnings";
             // 
             // lblHi
             // 
@@ -273,6 +322,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageProfile
             // 
             this.tabPageProfile.BackColor = System.Drawing.Color.Gold;
+            this.tabPageProfile.Controls.Add(this.btnSaveUserInformation);
             this.tabPageProfile.Controls.Add(this.btnSetUserAway);
             this.tabPageProfile.Controls.Add(this.lblCreateUser);
             this.tabPageProfile.Controls.Add(this.cbRole);
@@ -310,9 +360,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSetUserAway.BackColor = System.Drawing.Color.Gold;
             this.btnSetUserAway.FlatAppearance.BorderSize = 0;
             this.btnSetUserAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetUserAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSetUserAway.ForeColor = System.Drawing.Color.DarkOrchid;
             this.btnSetUserAway.Location = new System.Drawing.Point(634, 154);
             this.btnSetUserAway.Name = "btnSetUserAway";
-            this.btnSetUserAway.Size = new System.Drawing.Size(131, 146);
+            this.btnSetUserAway.Size = new System.Drawing.Size(153, 169);
             this.btnSetUserAway.TabIndex = 52;
             this.btnSetUserAway.Text = "Request for Time off\r\n";
             this.btnSetUserAway.UseVisualStyleBackColor = false;
@@ -546,6 +598,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tbUserName
             // 
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Enabled = false;
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbUserName.Location = new System.Drawing.Point(152, 166);
             this.tbUserName.Name = "tbUserName";
@@ -715,6 +768,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
+            // btnSaveUserInformation
+            // 
+            this.btnSaveUserInformation.BackColor = System.Drawing.Color.Gold;
+            this.btnSaveUserInformation.FlatAppearance.BorderSize = 0;
+            this.btnSaveUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveUserInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveUserInformation.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.btnSaveUserInformation.Location = new System.Drawing.Point(634, 335);
+            this.btnSaveUserInformation.Name = "btnSaveUserInformation";
+            this.btnSaveUserInformation.Size = new System.Drawing.Size(153, 169);
+            this.btnSaveUserInformation.TabIndex = 53;
+            this.btnSaveUserInformation.Text = "Save";
+            this.btnSaveUserInformation.UseVisualStyleBackColor = false;
+            this.btnSaveUserInformation.Click += new System.EventHandler(this.btnSaveUserInformation_Click);
+            // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -735,6 +803,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.ResumeLayout(false);
             this.tabPageDashboard.ResumeLayout(false);
             this.tabPageDashboard.PerformLayout();
+            this.pnlEarnings.ResumeLayout(false);
+            this.pnlEarnings.PerformLayout();
             this.tabPageProfile.ResumeLayout(false);
             this.tabPageProfile.PerformLayout();
             this.tabPageShift.ResumeLayout(false);
@@ -800,5 +870,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbUserName;
+        private System.Windows.Forms.Panel pnlEarnings;
+        private System.Windows.Forms.Label lblMonthlyEarning;
+        private System.Windows.Forms.Label lblApproximateEarning;
+        private System.Windows.Forms.Label lbEarnings;
+        private System.Windows.Forms.Button btnSaveUserInformation;
     }
 }

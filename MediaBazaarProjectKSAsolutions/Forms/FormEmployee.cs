@@ -20,6 +20,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.um = new UserManagement();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
+            cbGender.DataSource = Enum.GetValues(typeof(Gender));
+            cbRole.DataSource = Enum.GetValues(typeof(Role));
+            
         }
         public void PanelMovment(Button button)
         {
@@ -47,6 +50,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             tcNavigation.SelectedTab = tabPageDashboard;
             PanelMovment(btnDashboard);
+            Contract contract= um.GetContract(u.Id);
+                lblApproximateEarning.Text =contract.SalaryPerHour * 120 + " $ - " + contract.SalaryPerHour * 240 + " $ ";
 
         }
 
@@ -87,8 +92,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             tbEmail.Text = u.Email;
             tbPassword.Text = u.Password;
             DTPBirthday.Value = u.Birtyhday;
-            cbGender.SelectedItem = u.Gender.ToString();
-            cbRole.SelectedItem = u.Role.ToString();
+            cbGender.SelectedItem= u.Gender.ToString();
+            cbRole.Text= u.Role.ToString();
             tbBSN.Text = u.BSN.ToString();
             tbAddress.Text = u.Address;
             tbZipCode.Text = u.ZipCode;
@@ -119,6 +124,39 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             DaysAwayForm daysAwayForm = new DaysAwayForm(u);
             daysAwayForm.ShowDialog();
             
+        }
+
+        private void btnSaveUserInformation_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                u.UserName = tbUserName.Text;
+                u.FirstName = tbFirstName.Text;
+                u.LastName = tbLastName.Text;
+                u.Email = tbEmail.Text;
+                u.Birtyhday = DTPBirthday.Value;
+                u.BSN = Convert.ToInt32(tbBSN.Text);
+                u.ZipCode = tbZipCode.Text;
+                u.Address = tbAddress.Text;
+                u.Gender = (Gender)cbGender.SelectedItem;
+                u.Role = (Role)cbRole.SelectedItem;
+
+
+                if (u.Password == null || u.UserName == null || u.BSN.ToString() == null || u.FirstName == null || u.LastName == null)
+                {
+                    MessageBox.Show("Input value is not correct");
+                }
+                else
+                {
+                    um.EditUser(u);
+                    MessageBox.Show("Successfully Edited User");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error" + ex);
+            }
         }
     }
 }

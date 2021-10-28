@@ -42,7 +42,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Status status = (Status)cbStatus.SelectedItem;
 
                 DateTime startDate = StartDatedateTimePicker.Value;
-                DateTime endTime = EndDatedateTimePicker.Value;
+                DateTime endDate = EndDatedateTimePicker.Value;
                 double salaryPH = Convert.ToDouble(tbSalaryPH.Text);
                 ContractType contractType = (ContractType)cbContractType.SelectedItem;
                 if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(bsn.ToString()) )
@@ -56,13 +56,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 }
                 else
                 {
-                    if(startDate>endTime)
+                    if(startDate>=endDate)
                     {
                         MessageBox.Show("Please Select proper values for contract");
                     }
                     else
                     {
-                        Contract contract = new Contract(0, startDate, endTime, contractType, salaryPH);
+                        Contract contract = new Contract(0, startDate, endDate, contractType, salaryPH);
                         User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, contract, gender, role, status);
                         int id= um.AddUser(user);
                         MessageBox.Show("User Created Successfully");

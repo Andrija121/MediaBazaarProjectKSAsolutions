@@ -40,14 +40,29 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 u.Role = (Role)cbRole.SelectedItem;
                 u.Status = (Status)cbStatus.SelectedItem;
 
+                Contract contract=um.GetContract(u.Id);
+
+                contract.StartDate = StartDatedateTimePicker.Value;
+                contract.EndDate= EndDatedateTimePicker.Value;
+                contract.SalaryPerHour= Convert.ToDouble(tbSalaryPH.Text);
+                contract.ContractType= (ContractType)cbContractType.SelectedItem;
+
                 if (u.Password == null || u.UserName == null || u.BSN.ToString() == null || u.FirstName == null || u.LastName == null)
                 {
                     MessageBox.Show("Input value is not correct");
                 }
                 else
                 {
-                    um.EditUser(u);
-                    MessageBox.Show("Successfully Edited User");
+                    if(contract.StartDate>=contract.EndDate)
+                    {
+                        MessageBox.Show("Please select propper values");
+                    }
+                    else
+                    {
+                        um.EditUser(u);
+                        um.EditContract(contract);
+                        MessageBox.Show("User Edited Successfully");
+                    }
                 }
             }
             catch (Exception ex)

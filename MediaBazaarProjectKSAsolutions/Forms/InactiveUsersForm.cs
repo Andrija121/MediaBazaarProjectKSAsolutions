@@ -18,7 +18,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             InitializeComponent();
             userManagement = new UserManagement();
             RefreshListBox();
-            MessageBox.Show("Double click the user to make persons status set to active");
+            MessageBox.Show("Double click the user from the following list to make their status set to active");
         }
         public void RefreshListBox()
         {
