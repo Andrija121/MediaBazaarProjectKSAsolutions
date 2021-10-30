@@ -21,12 +21,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (conn)
                 {
+                    conn.Open();
                     string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status) ";
                     
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    conn.Open();
                     cmd.Parameters.AddWithValue("@userName", user.UserName);
                     cmd.Parameters.AddWithValue("@firstName", user.FirstName);
                     cmd.Parameters.AddWithValue("@lastName", user.LastName);
@@ -79,6 +79,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                 throw;
             }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public Contract GetContract(int id)
@@ -89,7 +93,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
                     string query = "select * from contract where userId=@id";
-                    Contract c = new Contract();
+                    Contract c = null;
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     cmd.Parameters.AddWithValue("id", id);
@@ -98,6 +102,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     while (dr.Read())
                     {
+                        c = new Contract();
                         c.ContractId = dr.GetInt32("contractId");
                         c.StartDate= dr.GetDateTime("startDate");
                         c.EndDate= dr.GetDateTime("EndDate");
@@ -282,6 +287,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                 throw;
             }
+            finally
+            {
+                conn.Close();
+            }
         }
         public List<User> GetAwayUsers()
         {
@@ -324,6 +333,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
 
                 throw;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
             public List<User> GetUsers()
@@ -382,8 +395,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             EditUser(user);
         }
         public void SetUserStatusToAway(User user, double days)
-        {
-            
+        {            
             DateTime StartDate = DateTime.Now;
             DateTime EndDate = DateTime.Now.AddDays(days);
             while(StartDate<=EndDate)
@@ -422,17 +434,20 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                         userAlreadyExist = true;
                     }
                 }
+                return userAlreadyExist;
             }
-            
+
+
             catch (Exception)
             {
 
                 throw;
             }
-            return userAlreadyExist;
-
-
-
+            finally
+            {
+                
+                conn.Close();
+            }
         }
     }
 } 

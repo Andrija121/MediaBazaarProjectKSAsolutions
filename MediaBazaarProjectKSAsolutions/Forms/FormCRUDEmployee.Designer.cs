@@ -160,6 +160,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dataGridView3.RowTemplate.Height = 25;
             this.dataGridView3.Size = new System.Drawing.Size(1269, 588);
             this.dataGridView3.TabIndex = 1;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // FormCRUDEmployee
             // 

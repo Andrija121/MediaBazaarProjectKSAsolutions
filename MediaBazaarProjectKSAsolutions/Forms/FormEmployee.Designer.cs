@@ -40,6 +40,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbStocks = new System.Windows.Forms.ListBox();
+            this.lblStocks = new System.Windows.Forms.Label();
             this.pnlEarnings = new System.Windows.Forms.Panel();
             this.pbMoney = new System.Windows.Forms.PictureBox();
             this.lblMonthlyEarning = new System.Windows.Forms.Label();
@@ -93,6 +96,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.tcNavigation.SuspendLayout();
             this.tabPageDashboard.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlEarnings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoney)).BeginInit();
             this.tabPageProfile.SuspendLayout();
@@ -249,6 +253,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageDashboard
             // 
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
+            this.tabPageDashboard.Controls.Add(this.panel1);
             this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
             this.tabPageDashboard.Controls.Add(this.lblDashboard);
@@ -258,6 +263,37 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.Size = new System.Drawing.Size(803, 789);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbStocks);
+            this.panel1.Controls.Add(this.lblStocks);
+            this.panel1.Location = new System.Drawing.Point(37, 452);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(373, 262);
+            this.panel1.TabIndex = 6;
+            // 
+            // lbStocks
+            // 
+            this.lbStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbStocks.FormattingEnabled = true;
+            this.lbStocks.ItemHeight = 17;
+            this.lbStocks.Location = new System.Drawing.Point(4, 55);
+            this.lbStocks.Name = "lbStocks";
+            this.lbStocks.Size = new System.Drawing.Size(366, 174);
+            this.lbStocks.TabIndex = 3;
+            this.lbStocks.DoubleClick += new System.EventHandler(this.lbStocks_DoubleClick);
+            // 
+            // lblStocks
+            // 
+            this.lblStocks.AutoSize = true;
+            this.lblStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblStocks.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblStocks.Location = new System.Drawing.Point(119, 22);
+            this.lblStocks.Name = "lblStocks";
+            this.lblStocks.Size = new System.Drawing.Size(105, 32);
+            this.lblStocks.TabIndex = 0;
+            this.lblStocks.Text = "Stocks";
             // 
             // pnlEarnings
             // 
@@ -821,6 +857,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.ResumeLayout(false);
             this.tabPageDashboard.ResumeLayout(false);
             this.tabPageDashboard.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnlEarnings.ResumeLayout(false);
             this.pnlEarnings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoney)).EndInit();
@@ -895,5 +933,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.PictureBox pbMoney;
         private System.Windows.Forms.DateTimePicker EndDatedateTimePicker;
         private System.Windows.Forms.DateTimePicker StartDatedateTimePicker;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox lbStocks;
+        private System.Windows.Forms.Label lblStocks;
     }
 }

@@ -13,19 +13,35 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         User u;
         UserManagement um;
+        RequestResupplyManagement rrm;
+        StockManagement sm;
         Contract c;
         public FormEmployee(User user)
         {
             InitializeComponent();
             this.u = user;
             this.um = new UserManagement();
+            this.sm = new StockManagement();
             this.c = um.GetContract(u.Id);
+            this.rrm = new RequestResupplyManagement();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
             lblApproximateEarning.Text = c.SalaryPerHour * 120 + " $ - " + c.SalaryPerHour * 240 + " $ ";
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
+            RefreshListBox(lbStocks);
             
+        }
+
+        public void RefreshListBox(ListBox listBox)
+        {
+            listBox.Items.Clear();
+            foreach (var item in sm.GetAllStock())
+            {
+                listBox.Items.Add(item);
+
+            }
+
         }
         public void PanelMovment(Button button)
         {
@@ -162,6 +178,26 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             ButtonLeaveChangeColor(btnBack);
         }
 
+        private void lbStocks_DoubleClick(object sender, EventArgs e)
+        {
+            
+            Stock stock = (Stock)lbStocks.SelectedItem;
+            //ResupplyRequest rr = new ResupplyRequest(u.Id,, stock.Id, double, requestStatus);
+            if (stock != null)
+            {
+                if (u.Role == Role.WAREHOUSEEMPLOYEE)
+                {
+                  //  rrm.CreateNewRequest()   
+                }
+                else
+                {
+                    MessageBox.Show("You are not Warehouse employee, you can not ask for resupply");
+                }
 
+            }
+            else
+                MessageBox.Show("Please select the stock you want to edit");
+
+        }
     }
 }

@@ -55,9 +55,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnEdit_Click(object sender, EventArgs e)
         {
             User user = (User)lbUsers.SelectedItem;
-            if (user != null)
+            if (user != null)   
             {
-                EditUserForm editUserForm = new EditUserForm(user);
+                Contract contract = userManagement.GetContract(user.Id);
+                EditUserForm editUserForm = new EditUserForm(user,contract);
                 editUserForm.ShowDialog();
                 RefreshListBox();
             }
@@ -79,6 +80,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
 
         private void FormEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
