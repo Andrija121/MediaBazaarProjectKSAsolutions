@@ -15,6 +15,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (conn)
                 {
+                    conn.Open();
                     string sql = "Insert INTO ResupplyRequest values(WheId,DmId,StockId,Amount,RequestStatus) where(@wheId,@dmid,@stockid,@amount,@requestStatus)";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 

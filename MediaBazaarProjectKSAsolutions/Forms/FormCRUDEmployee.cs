@@ -88,5 +88,29 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
 
         }
+
+        private void FormCRUDEmployee_Load(object sender, EventArgs e)
+        {
+            ChekcIfUserDMorGM();
+        }
+
+        private User ChekcIfUserDMorGM()
+        {
+
+            foreach (var u in userManagement.GetUsers())
+            {
+                if (u.Role == Role.GENERALMANAGER || u.Role == Role.DEPARTMENTMANAGER)
+                {
+                    panelDMandGM.Enabled = true;
+                }
+            }
+            return u;
+        }
+
+        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
+        {
+            FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
+            formResupplyRequestS.ShowDialog();
+        }
     }
 }

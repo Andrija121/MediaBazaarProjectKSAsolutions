@@ -40,8 +40,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.timer7Years = new System.Windows.Forms.Timer(this.components);
+            this.panelDMandGM = new System.Windows.Forms.Panel();
+            this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.panelPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panelDMandGM.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -51,7 +54,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(1171, 723);
+            this.btnBack.Location = new System.Drawing.Point(1218, 725);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(111, 45);
             this.btnBack.TabIndex = 16;
@@ -84,9 +87,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.lbUsers.FormattingEnabled = true;
             this.lbUsers.ItemHeight = 25;
-            this.lbUsers.Location = new System.Drawing.Point(63, 222);
+            this.lbUsers.Location = new System.Drawing.Point(62, 222);
             this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(1221, 479);
+            this.lbUsers.Size = new System.Drawing.Size(1225, 479);
             this.lbUsers.TabIndex = 2;
             // 
             // btnAddUser
@@ -111,7 +114,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(406, 150);
+            this.btnEdit.Location = new System.Drawing.Point(379, 150);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(211, 67);
             this.btnEdit.TabIndex = 4;
@@ -126,7 +129,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnMakeUserInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeUserInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMakeUserInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnMakeUserInactive.Location = new System.Drawing.Point(739, 150);
+            this.btnMakeUserInactive.Location = new System.Drawing.Point(738, 150);
             this.btnMakeUserInactive.Name = "btnMakeUserInactive";
             this.btnMakeUserInactive.Size = new System.Drawing.Size(211, 67);
             this.btnMakeUserInactive.TabIndex = 5;
@@ -141,7 +144,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeInactiveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeeInactiveUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(1073, 150);
+            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(1076, 149);
             this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
             this.btnSeeInactiveUsers.Size = new System.Drawing.Size(211, 67);
             this.btnSeeInactiveUsers.TabIndex = 6;
@@ -158,9 +161,33 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(1269, 588);
+            this.dataGridView3.Size = new System.Drawing.Size(1279, 588);
             this.dataGridView3.TabIndex = 1;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // panelDMandGM
+            // 
+            this.panelDMandGM.Controls.Add(this.btnSeeResupplyRequests);
+            this.panelDMandGM.Enabled = false;
+            this.panelDMandGM.Location = new System.Drawing.Point(422, 13);
+            this.panelDMandGM.Name = "panelDMandGM";
+            this.panelDMandGM.Size = new System.Drawing.Size(816, 93);
+            this.panelDMandGM.TabIndex = 18;
+            // 
+            // btnSeeResupplyRequests
+            // 
+            this.btnSeeResupplyRequests.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnSeeResupplyRequests.FlatAppearance.BorderSize = 0;
+            this.btnSeeResupplyRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeeResupplyRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSeeResupplyRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(21, 11);
+            this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
+            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(211, 67);
+            this.btnSeeResupplyRequests.TabIndex = 4;
+            this.btnSeeResupplyRequests.Text = "See Resupply Requests";
+            this.btnSeeResupplyRequests.UseVisualStyleBackColor = false;
+            this.btnSeeResupplyRequests.Click += new System.EventHandler(this.btnSeeResupplyRequests_Click);
             // 
             // FormCRUDEmployee
             // 
@@ -168,6 +195,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 782);
+            this.Controls.Add(this.panelDMandGM);
             this.Controls.Add(this.btnSeeInactiveUsers);
             this.Controls.Add(this.panelPage);
             this.Controls.Add(this.btnMakeUserInactive);
@@ -181,9 +209,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Name = "FormCRUDEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";
+            this.Load += new System.EventHandler(this.FormCRUDEmployee_Load);
             this.panelPage.ResumeLayout(false);
             this.panelPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panelDMandGM.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,5 +229,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnSeeInactiveUsers;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Timer timer7Years;
+        private System.Windows.Forms.Panel panelDMandGM;
+        private System.Windows.Forms.Button btnSeeResupplyRequests;
     }
 }

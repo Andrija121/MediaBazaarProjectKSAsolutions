@@ -32,6 +32,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             RefreshListBox(lbStocks);
             
         }
+        public void NotifyWareHouseEmployees()
+        {
+            //Add info button or some "House Rules"
+        }
 
         public void RefreshListBox(ListBox listBox)
         {
@@ -187,7 +191,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 if (u.Role == Role.WAREHOUSEEMPLOYEE)
                 {
-                  //  rrm.CreateNewRequest()   
+                    RequestResupplyForm requestResupplyForm = new RequestResupplyForm(u,stock);
+                    requestResupplyForm.ShowDialog();
                 }
                 else
                 {

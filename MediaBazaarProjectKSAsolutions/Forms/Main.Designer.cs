@@ -189,7 +189,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(377, 705);
+            this.ClientSize = new System.Drawing.Size(387, 705);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHi);
             this.Controls.Add(this.panelButtons);
