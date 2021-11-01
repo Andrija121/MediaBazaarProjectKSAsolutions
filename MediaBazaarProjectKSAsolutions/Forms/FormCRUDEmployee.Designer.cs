@@ -42,25 +42,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.timer7Years = new System.Windows.Forms.Timer(this.components);
             this.panelDMandGM = new System.Windows.Forms.Panel();
             this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DGid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVBSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVZipCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGVStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGVId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panelDMandGM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -204,134 +189,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeResupplyRequests.UseVisualStyleBackColor = false;
             this.btnSeeResupplyRequests.Click += new System.EventHandler(this.btnSeeResupplyRequests_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DGid,
-            this.DGVUserName,
-            this.DGVFirstName,
-            this.DGVLastName,
-            this.DGVEmail,
-            this.DGVPassword,
-            this.DGVBirthday,
-            this.DGVBSN,
-            this.DGVZipCode,
-            this.DGVAddress,
-            this.Gender,
-            this.Role,
-            this.DGVStatus});
-            this.dataGridView1.Location = new System.Drawing.Point(80, 279);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1225, 225);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // DGid
-            // 
-            this.DGid.HeaderText = "Id";
-            this.DGid.MinimumWidth = 8;
-            this.DGid.Name = "DGid";
-            this.DGid.ReadOnly = true;
-            this.DGid.Width = 150;
-            // 
-            // DGVUserName
-            // 
-            this.DGVUserName.HeaderText = "User Name";
-            this.DGVUserName.MinimumWidth = 8;
-            this.DGVUserName.Name = "DGVUserName";
-            this.DGVUserName.ReadOnly = true;
-            this.DGVUserName.Width = 150;
-            // 
-            // DGVFirstName
-            // 
-            this.DGVFirstName.HeaderText = "First Name";
-            this.DGVFirstName.MinimumWidth = 8;
-            this.DGVFirstName.Name = "DGVFirstName";
-            this.DGVFirstName.ReadOnly = true;
-            this.DGVFirstName.Width = 150;
-            // 
-            // DGVLastName
-            // 
-            this.DGVLastName.HeaderText = "Last Name";
-            this.DGVLastName.MinimumWidth = 8;
-            this.DGVLastName.Name = "DGVLastName";
-            this.DGVLastName.ReadOnly = true;
-            this.DGVLastName.Width = 150;
-            // 
-            // DGVEmail
-            // 
-            this.DGVEmail.HeaderText = "Email";
-            this.DGVEmail.MinimumWidth = 8;
-            this.DGVEmail.Name = "DGVEmail";
-            this.DGVEmail.ReadOnly = true;
-            this.DGVEmail.Width = 150;
-            // 
-            // DGVPassword
-            // 
-            this.DGVPassword.HeaderText = "Password";
-            this.DGVPassword.MinimumWidth = 8;
-            this.DGVPassword.Name = "DGVPassword";
-            this.DGVPassword.ReadOnly = true;
-            this.DGVPassword.Width = 150;
-            // 
-            // DGVBirthday
-            // 
-            this.DGVBirthday.HeaderText = "Birthday";
-            this.DGVBirthday.MinimumWidth = 8;
-            this.DGVBirthday.Name = "DGVBirthday";
-            this.DGVBirthday.ReadOnly = true;
-            this.DGVBirthday.Width = 150;
-            // 
-            // DGVBSN
-            // 
-            this.DGVBSN.HeaderText = "BSN";
-            this.DGVBSN.MinimumWidth = 8;
-            this.DGVBSN.Name = "DGVBSN";
-            this.DGVBSN.ReadOnly = true;
-            this.DGVBSN.Width = 150;
-            // 
-            // DGVZipCode
-            // 
-            this.DGVZipCode.HeaderText = "Zip Code";
-            this.DGVZipCode.MinimumWidth = 8;
-            this.DGVZipCode.Name = "DGVZipCode";
-            this.DGVZipCode.ReadOnly = true;
-            this.DGVZipCode.Width = 150;
-            // 
-            // DGVAddress
-            // 
-            this.DGVAddress.HeaderText = "Address";
-            this.DGVAddress.MinimumWidth = 8;
-            this.DGVAddress.Name = "DGVAddress";
-            this.DGVAddress.ReadOnly = true;
-            this.DGVAddress.Width = 150;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "DGVGender";
-            this.Gender.MinimumWidth = 8;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 150;
-            // 
-            // Role
-            // 
-            this.Role.HeaderText = "DGVRole";
-            this.Role.MinimumWidth = 8;
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            this.Role.Width = 150;
-            // 
-            // DGVStatus
-            // 
-            this.DGVStatus.HeaderText = "Status";
-            this.DGVStatus.MinimumWidth = 8;
-            this.DGVStatus.Name = "DGVStatus";
-            this.DGVStatus.ReadOnly = true;
-            this.DGVStatus.Width = 150;
-            // 
             // DGVId
             // 
             this.DGVId.HeaderText = "Id";
@@ -346,7 +203,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 782);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelDMandGM);
             this.Controls.Add(this.btnSeeInactiveUsers);
             this.Controls.Add(this.panelPage);
@@ -366,7 +222,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panelDMandGM.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,20 +239,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Timer timer7Years;
         private System.Windows.Forms.Panel panelDMandGM;
         private System.Windows.Forms.Button btnSeeResupplyRequests;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVFirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVLastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVPassword;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVBirthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVBSN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVZipCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGVStatus;
     }
 }

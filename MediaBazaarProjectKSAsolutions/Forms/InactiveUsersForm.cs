@@ -27,6 +27,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 lbInactiveUsers.Items.Add(u);
             }
+            lbInactiveUsers.Items.Clear();
             foreach (var u in userManagement.GetAwayUsers())
             {
                 lbInactiveUsers.Items.Add(u);
@@ -52,7 +53,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void rbInactiveUsers_CheckedChanged(object sender, EventArgs e)
         {
-            
+            lbInactiveUsers.Items.Clear();
             if(rbInactiveUsers.Checked)
             {
                 foreach (var u in userManagement.GetInactiveUsers())

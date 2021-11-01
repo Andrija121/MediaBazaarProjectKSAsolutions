@@ -204,5 +204,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 MessageBox.Show("Please select the stock you want to edit");
 
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
     }
 }

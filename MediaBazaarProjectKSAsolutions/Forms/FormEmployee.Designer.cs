@@ -40,7 +40,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblEvenLogger = new System.Windows.Forms.Label();
+            this.lbEventLogger = new System.Windows.Forms.ListBox();
+            this.pnlStocks = new System.Windows.Forms.Panel();
             this.lbStocks = new System.Windows.Forms.ListBox();
             this.lblStocks = new System.Windows.Forms.Label();
             this.pnlEarnings = new System.Windows.Forms.Panel();
@@ -51,6 +53,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi = new System.Windows.Forms.Label();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnSaveUserInformation = new System.Windows.Forms.Button();
             this.btnSetUserAway = new System.Windows.Forms.Button();
             this.lblCreateUser = new System.Windows.Forms.Label();
@@ -91,14 +94,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblTopic = new System.Windows.Forms.Label();
             this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
-            this.lbEventLogger = new System.Windows.Forms.ListBox();
-            this.lblEvenLogger = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.tcNavigation.SuspendLayout();
             this.tabPageDashboard.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlStocks.SuspendLayout();
             this.pnlEarnings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoney)).BeginInit();
             this.tabPageProfile.SuspendLayout();
@@ -257,7 +259,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
             this.tabPageDashboard.Controls.Add(this.lblEvenLogger);
             this.tabPageDashboard.Controls.Add(this.lbEventLogger);
-            this.tabPageDashboard.Controls.Add(this.panel1);
+            this.tabPageDashboard.Controls.Add(this.pnlStocks);
             this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
             this.tabPageDashboard.Controls.Add(this.lblDashboard);
@@ -268,14 +270,35 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
             // 
-            // panel1
+            // lblEvenLogger
             // 
-            this.panel1.Controls.Add(this.lbStocks);
-            this.panel1.Controls.Add(this.lblStocks);
-            this.panel1.Location = new System.Drawing.Point(37, 452);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 262);
-            this.panel1.TabIndex = 6;
+            this.lblEvenLogger.AutoSize = true;
+            this.lblEvenLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblEvenLogger.Location = new System.Drawing.Point(526, 95);
+            this.lblEvenLogger.Name = "lblEvenLogger";
+            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
+            this.lblEvenLogger.TabIndex = 8;
+            this.lblEvenLogger.Text = "Event Logger";
+            // 
+            // lbEventLogger
+            // 
+            this.lbEventLogger.FormattingEnabled = true;
+            this.lbEventLogger.ItemHeight = 26;
+            this.lbEventLogger.Location = new System.Drawing.Point(444, 142);
+            this.lbEventLogger.Name = "lbEventLogger";
+            this.lbEventLogger.Size = new System.Drawing.Size(339, 576);
+            this.lbEventLogger.TabIndex = 7;
+            // 
+            // pnlStocks
+            // 
+            this.pnlStocks.Controls.Add(this.label1);
+            this.pnlStocks.Controls.Add(this.lbStocks);
+            this.pnlStocks.Controls.Add(this.lblStocks);
+            this.pnlStocks.Location = new System.Drawing.Point(37, 452);
+            this.pnlStocks.Name = "pnlStocks";
+            this.pnlStocks.Size = new System.Drawing.Size(373, 258);
+            this.pnlStocks.TabIndex = 6;
             // 
             // lbStocks
             // 
@@ -378,6 +401,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageProfile
             // 
             this.tabPageProfile.BackColor = System.Drawing.Color.Gold;
+            this.tabPageProfile.Controls.Add(this.btnChangePassword);
             this.tabPageProfile.Controls.Add(this.btnSaveUserInformation);
             this.tabPageProfile.Controls.Add(this.btnSetUserAway);
             this.tabPageProfile.Controls.Add(this.lblCreateUser);
@@ -410,6 +434,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.Size = new System.Drawing.Size(803, 789);
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.Gold;
+            this.btnChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.btnChangePassword.Location = new System.Drawing.Point(634, 545);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(153, 169);
+            this.btnChangePassword.TabIndex = 54;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnSaveUserInformation
             // 
@@ -446,7 +485,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblCreateUser.AutoSize = true;
             this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCreateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblCreateUser.Location = new System.Drawing.Point(108, 108);
+            this.lblCreateUser.Location = new System.Drawing.Point(121, 107);
             this.lblCreateUser.Name = "lblCreateUser";
             this.lblCreateUser.Size = new System.Drawing.Size(271, 38);
             this.lblCreateUser.TabIndex = 51;
@@ -841,25 +880,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
-            // lbEventLogger
+            // label1
             // 
-            this.lbEventLogger.FormattingEnabled = true;
-            this.lbEventLogger.ItemHeight = 26;
-            this.lbEventLogger.Location = new System.Drawing.Point(444, 142);
-            this.lbEventLogger.Name = "lbEventLogger";
-            this.lbEventLogger.Size = new System.Drawing.Size(339, 576);
-            this.lbEventLogger.TabIndex = 7;
-            // 
-            // lblEvenLogger
-            // 
-            this.lblEvenLogger.AutoSize = true;
-            this.lblEvenLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblEvenLogger.Location = new System.Drawing.Point(526, 95);
-            this.lblEvenLogger.Name = "lblEvenLogger";
-            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
-            this.lblEvenLogger.TabIndex = 8;
-            this.lblEvenLogger.Text = "Event Logger";
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(25, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(326, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Please Double click the stock you want to resupply";
             // 
             // FormEmployee
             // 
@@ -881,8 +912,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.ResumeLayout(false);
             this.tabPageDashboard.ResumeLayout(false);
             this.tabPageDashboard.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlStocks.ResumeLayout(false);
+            this.pnlStocks.PerformLayout();
             this.pnlEarnings.ResumeLayout(false);
             this.pnlEarnings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoney)).EndInit();
@@ -957,10 +988,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.PictureBox pbMoney;
         private System.Windows.Forms.DateTimePicker EndDatedateTimePicker;
         private System.Windows.Forms.DateTimePicker StartDatedateTimePicker;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlStocks;
         private System.Windows.Forms.ListBox lbStocks;
         private System.Windows.Forms.Label lblStocks;
         private System.Windows.Forms.Label lblEvenLogger;
         private System.Windows.Forms.ListBox lbEventLogger;
+        private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Label label1;
     }
 }
