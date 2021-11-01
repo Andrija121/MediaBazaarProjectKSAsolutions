@@ -100,7 +100,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public ResupplyRequest EditResupplyRequest(ResupplyRequest rr)
+        public ResupplyRequest EditResupplyRequest(ResupplyRequest rr,int dmid)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("@wheId", rr.WheId);
-                    cmd.Parameters.AddWithValue("@dmid", rr.DmId);
+                    cmd.Parameters.AddWithValue("@dmid", dmid);
                     cmd.Parameters.AddWithValue("@sid", rr.StockId);
                     cmd.Parameters.AddWithValue("@amount", rr.Amount);
                     cmd.Parameters.AddWithValue("@requestStatus", rr.RequestStatus.ToString());
@@ -131,15 +131,15 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
         }
 
-        public void ApproveRequest(ResupplyRequest rr)
+        public void ApproveRequest(ResupplyRequest rr, int  dmid)
         {
             rr.RequestStatus = RequestStatus.APPROVED;
-            EditResupplyRequest(rr);
+            EditResupplyRequest(rr,dmid);
         }
-        public void DeclineRequest(ResupplyRequest rr)
+        public void DeclineRequest(ResupplyRequest rr, int dmid)
         {
             rr.RequestStatus = RequestStatus.DECLINED;
-            EditResupplyRequest(rr);
+            EditResupplyRequest(rr,dmid);
         }
     }
 }

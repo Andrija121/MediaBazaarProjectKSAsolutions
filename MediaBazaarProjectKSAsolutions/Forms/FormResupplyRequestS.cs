@@ -41,7 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
             if(resupplyRequest!=null)
             {
-                FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest);
+                FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest,u);
                 formApproveOrDeclineRequest.Show();
             }
         }
