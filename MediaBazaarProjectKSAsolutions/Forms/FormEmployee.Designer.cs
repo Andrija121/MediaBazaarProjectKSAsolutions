@@ -91,6 +91,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblTopic = new System.Windows.Forms.Label();
             this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
+            this.lbEventLogger = new System.Windows.Forms.ListBox();
+            this.lblEvenLogger = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -253,6 +255,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageDashboard
             // 
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
+            this.tabPageDashboard.Controls.Add(this.lblEvenLogger);
+            this.tabPageDashboard.Controls.Add(this.lbEventLogger);
             this.tabPageDashboard.Controls.Add(this.panel1);
             this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
@@ -837,6 +841,26 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
+            // lbEventLogger
+            // 
+            this.lbEventLogger.FormattingEnabled = true;
+            this.lbEventLogger.ItemHeight = 26;
+            this.lbEventLogger.Location = new System.Drawing.Point(444, 142);
+            this.lbEventLogger.Name = "lbEventLogger";
+            this.lbEventLogger.Size = new System.Drawing.Size(339, 576);
+            this.lbEventLogger.TabIndex = 7;
+            // 
+            // lblEvenLogger
+            // 
+            this.lblEvenLogger.AutoSize = true;
+            this.lblEvenLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblEvenLogger.Location = new System.Drawing.Point(526, 95);
+            this.lblEvenLogger.Name = "lblEvenLogger";
+            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
+            this.lblEvenLogger.TabIndex = 8;
+            this.lblEvenLogger.Text = "Event Logger";
+            // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -936,5 +960,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox lbStocks;
         private System.Windows.Forms.Label lblStocks;
+        private System.Windows.Forms.Label lblEvenLogger;
+        private System.Windows.Forms.ListBox lbEventLogger;
     }
 }

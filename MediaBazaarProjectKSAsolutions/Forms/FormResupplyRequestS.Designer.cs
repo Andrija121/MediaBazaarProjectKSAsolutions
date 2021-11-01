@@ -50,7 +50,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(389, 395);
+            this.btnBack.Location = new System.Drawing.Point(388, 444);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(111, 45);
             this.btnBack.TabIndex = 17;

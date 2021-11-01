@@ -79,16 +79,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             
         }
 
-        private void FormEmployee_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormCRUDEmployee_Load(object sender, EventArgs e)
         {
             ChekcIfUserDMorGM();
