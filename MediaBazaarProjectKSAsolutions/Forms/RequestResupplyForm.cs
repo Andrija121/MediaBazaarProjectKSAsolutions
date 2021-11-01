@@ -57,7 +57,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 RequestStatus rs = RequestStatus.PENNDING;
                 int amount = Convert.ToInt32(tbAmount.Text);
                 ResupplyRequest rr = new ResupplyRequest(u.Id, user.Id, s.Id, amount, rs);
-  //              rrm.CreateNewRequest(rr);
+                rrm.CreateNewRequest(rr);
+                MessageBox.Show("Resupply request was sent succesfully, in short the asnwer will be visble on the dasboard");
             }
             catch (Exception ex)
             {

@@ -16,12 +16,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "Insert INTO ResupplyRequest values(WheId,DmId,StockId,Amount,RequestStatus) where(@wheId,@dmid,@stockid,@amount,@requestStatus)";
+                    string sql = "Insert INTO requestresupply (wheId,dmId,sId,amount,requestStatus) values(@wheId,@dmid,@sid,@amount,@requestStatus)";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("wheId", rr.WheId);
                     cmd.Parameters.AddWithValue("dmid", rr.DmId);
-                    cmd.Parameters.AddWithValue("stockId", rr.StockId);
+                    cmd.Parameters.AddWithValue("sid", rr.StockId);
                     cmd.Parameters.AddWithValue("amount", rr.Amount);
                     cmd.Parameters.AddWithValue("requestStatus", rr.RequestStatus.ToString());
                     cmd.ExecuteNonQuery();
@@ -44,7 +44,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "Insert INTO ResupplyRequest values(WheId,StockId,Amount,RequestStatus) where(@wheId,@stockid,@amount,@requestStatus) where dmid=@dmid";
+                    string sql = "Insert INTO ResupplyRequest values(wheId,dmid,stockId,amount,requestStatus) where(@wheId,@dmid,@stockid,@amount,@requestStatus) ";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("WheId", rr.WheId);
@@ -74,7 +74,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 { 
                     conn.Open();
                     ResupplyRequest rr = new ResupplyRequest();
-                    string sql = "select * from ResupplyRequest where dmid=@dmid";
+                    string sql = "select * from requestresupply where dmid=@dmid";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("dmid", dmid);
                     
@@ -82,6 +82,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     while (dr.Read())
                     {
+                        rr.WheId = dr.GetInt32("wheId");
+                        rr.StockId = dr.GetInt32("sid");
                         rr.Amount = dr.GetInt32("Amount");
                         rr.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
                     }
@@ -106,14 +108,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
 
-                    string sql = "Update RequestResupply set wheId=@WheId,dmid=@dmId,sid=@stockId,amount=@amount,requestStatus=@requestStatus";
+                    string sql = "Update RequestResupply set wheId=@wheId,dmid=@dmId,sid=@sid,amount=@amount,requestStatus=@requestStatus";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("weId", rr.WheId);
-                    cmd.Parameters.AddWithValue("dmid", rr.DmId);
-                    cmd.Parameters.AddWithValue("sid", rr.StockId);
-                    cmd.Parameters.AddWithValue("amount", rr.Amount);
-                    cmd.Parameters.AddWithValue("requestStatus", rr.RequestStatus.ToString());
+                    cmd.Parameters.AddWithValue("@wheId", rr.WheId);
+                    cmd.Parameters.AddWithValue("@dmid", rr.DmId);
+                    cmd.Parameters.AddWithValue("@sid", rr.StockId);
+                    cmd.Parameters.AddWithValue("@amount", rr.Amount);
+                    cmd.Parameters.AddWithValue("@requestStatus", rr.RequestStatus.ToString());
                     cmd.ExecuteNonQuery();
                 }
                 return rr;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class ResupplyRequest
+    public class ResupplyRequest
     {
         public int WheId { get; set; } // da li mi treba vrednost int ili tipa User
         public int DmId { get; set; }

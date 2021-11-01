@@ -181,7 +181,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeResupplyRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeResupplyRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeeResupplyRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(21, 11);
+            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(21, 12);
             this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
             this.btnSeeResupplyRequests.Size = new System.Drawing.Size(211, 67);
             this.btnSeeResupplyRequests.TabIndex = 4;
