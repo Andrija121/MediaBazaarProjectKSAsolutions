@@ -41,8 +41,16 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
             if(resupplyRequest!=null)
             {
-                FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest,u);
-                formApproveOrDeclineRequest.Show();
+                if(u.Role==Role.GENERALMANAGER)
+                {
+                    MessageBox.Show("Sorry, Only Department Manager can do that (:");
+                }
+                else
+                {
+                    FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
+                    formApproveOrDeclineRequest.Show();
+                    lbResupplyRequests.Items.RemoveAt(lbResupplyRequests.SelectedIndex);
+                }
             }
         }
     }

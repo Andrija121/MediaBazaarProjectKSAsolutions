@@ -31,13 +31,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             this.lbResupplyRequests = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbResupplyRequests
             // 
             this.lbResupplyRequests.FormattingEnabled = true;
             this.lbResupplyRequests.ItemHeight = 30;
-            this.lbResupplyRequests.Location = new System.Drawing.Point(159, 63);
+            this.lbResupplyRequests.Location = new System.Drawing.Point(12, 12);
             this.lbResupplyRequests.Name = "lbResupplyRequests";
             this.lbResupplyRequests.Size = new System.Drawing.Size(586, 274);
             this.lbResupplyRequests.TabIndex = 0;
@@ -46,24 +47,35 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(388, 444);
+            this.btnBack.Location = new System.Drawing.Point(0, 373);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(111, 45);
+            this.btnBack.Size = new System.Drawing.Size(625, 74);
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 299);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(555, 30);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Double click the requset you want to approve or decline";
             // 
             // FormResupplyRequestS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
-            this.ClientSize = new System.Drawing.Size(960, 540);
+            this.ClientSize = new System.Drawing.Size(625, 447);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbResupplyRequests);
             this.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -74,6 +86,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Text = "FormResupplyRequestS";
             this.Load += new System.EventHandler(this.FormResupplyRequestS_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,5 +94,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private System.Windows.Forms.ListBox lbResupplyRequests;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label1;
     }
 }
