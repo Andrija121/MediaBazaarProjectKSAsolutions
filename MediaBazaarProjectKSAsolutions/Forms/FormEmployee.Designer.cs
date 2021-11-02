@@ -361,7 +361,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.lblApproximateEarning.AutoSize = true;
             this.lblApproximateEarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblApproximateEarning.Location = new System.Drawing.Point(71, 111);
+            this.lblApproximateEarning.Location = new System.Drawing.Point(65, 111);
             this.lblApproximateEarning.Name = "lblApproximateEarning";
             this.lblApproximateEarning.Size = new System.Drawing.Size(57, 40);
             this.lblApproximateEarning.TabIndex = 1;

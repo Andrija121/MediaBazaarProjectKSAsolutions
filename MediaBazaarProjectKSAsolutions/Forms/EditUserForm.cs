@@ -42,8 +42,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 u.Role = (Role)cbRole.SelectedItem;
                 u.Status = (Status)cbStatus.SelectedItem;
 
-                c.StartDate = StartDatedateTimePicker.MinDate;
-                c.EndDate = EndDatedateTimePicker.MaxDate;
+                if (c == null)
+                {
+                    c = new Contract();
+                }
+
+                c.StartDate = StartDatedateTimePicker.Value;
+                c.EndDate = EndDatedateTimePicker.Value;
                 c.SalaryPerHour = Convert.ToDouble(tbSalaryPH.Text);
                 c.ContractType = (ContractType)cbContractType.SelectedItem;
                 
@@ -61,7 +66,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                     else
                     {
                         um.EditUser(u);
-                        um.EditContract(c);
+                        Contract contract=um.EditContract(c);
+                        um.AssignContractToUser(contract, u.Id);
                         MessageBox.Show("User Edited Successfully");
                     }
                 }
