@@ -66,6 +66,46 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        public List<ResupplyRequest> GetResupplyRequests()
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "select * from requestresupply ";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+
+                    List<ResupplyRequest> rrs = new List<ResupplyRequest>();
+
+                    while (dr.Read())
+                    {
+                        ResupplyRequest rr = new ResupplyRequest();
+                        rr.WheId = Convert.ToInt32(dr["wheid"]);
+                        rr.DmId = Convert.ToInt32(dr["dmid"]);
+                        rr.StockId = Convert.ToInt32(dr["sid"]);
+                        rr.Amount = Convert.ToInt32(dr["amount"]);
+                        rr.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
+                        rrs.Add(rr);
+
+                    }
+                    return rrs;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public ResupplyRequest GetResupplyRequest(int dmid)
         {
             try

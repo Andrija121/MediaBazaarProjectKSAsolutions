@@ -398,7 +398,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {            
             DateTime StartDate = DateTime.Now;
             DateTime EndDate = DateTime.Now.AddDays(days);
-            while(StartDate<=EndDate)
+            if(StartDate<=EndDate)
             {
                 user.Status = Status.AWAY;
                 EditUser(user);

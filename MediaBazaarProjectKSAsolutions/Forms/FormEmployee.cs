@@ -26,10 +26,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.rrm = new RequestResupplyManagement();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
-            lblApproximateEarning.Text = c.SalaryPerHour * 120 + " $ - " + c.SalaryPerHour * 240 + " $ ";
+            lblApproximateEarning.Text = "100 $ - " + c.SalaryPerHour * 156 + " $ ";
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             RefreshListBox(lbStocks);
+            RefreshEventLogger(lbEventLogger);
+            
             
         }
         public void NotifyWareHouseEmployees()
@@ -39,6 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         public void RefreshListBox(ListBox listBox)
         {
+            
             listBox.Items.Clear();
             foreach (var item in sm.GetAllStock())
             {
@@ -46,6 +49,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
             }
 
+        }
+        public void RefreshEventLogger(ListBox listbox)
+        {
+            listbox.Items.Clear();
+            foreach (var item in rrm.GetResupplyRequests())
+            {
+                listbox.Items.Add(item);
+            }
         }
         public void PanelMovment(Button button)
         {
@@ -208,6 +219,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             //TODO
+        }
+
+        private void lblApproximateEarning_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void lblApproximateEarning_Click(object sender, EventArgs e)
+        {
+            FormEarnings formEarnings = new FormEarnings(u);
+            formEarnings.ShowDialog();
         }
     }
 }
