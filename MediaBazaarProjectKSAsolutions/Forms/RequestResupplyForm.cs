@@ -54,9 +54,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             try
              {
                 User user = (User)cbDMs.SelectedItem;
+                if(user==null)
+                {
+                    MessageBox.Show("Please select Department manager you want to send request to");
+                    return;
+                }
                 RequestStatus rs = RequestStatus.PENNDING;
                 int amount = Convert.ToInt32(tbAmount.Text);
-                ResupplyRequest rr = new ResupplyRequest(u.Id, user.Id, s.Id, amount, rs);
+                ResupplyRequest rr = new ResupplyRequest(0,u.Id, user.Id, s.Id, amount, rs);
                 rrm.CreateNewRequest(rr);
                 MessageBox.Show("Resupply request was sent succesfully, in short the asnwer will be visble on the dasboard");
             }

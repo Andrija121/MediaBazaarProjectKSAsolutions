@@ -24,8 +24,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-
-            rrm.ApproveRequest(rr, user.Id); 
             int  stockId=rr.StockId;
 
             foreach (var s in sm.GetAllStock())
@@ -33,6 +31,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 if(s.Id==stockId)
                 {
                     s.Amount += rr.Amount;
+                    rrm.ApproveRequest(rr, user.Id);
                     MessageBox.Show("Stock was resupplied successfully");
                     this.Close();
                 }

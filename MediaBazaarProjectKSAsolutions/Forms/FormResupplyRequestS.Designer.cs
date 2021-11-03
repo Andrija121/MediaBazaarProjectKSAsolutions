@@ -52,7 +52,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(0, 373);
+            this.btnBack.Location = new System.Drawing.Point(0, 339);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(625, 74);
             this.btnBack.TabIndex = 17;
@@ -63,6 +63,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label1.Location = new System.Drawing.Point(30, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(555, 30);
@@ -74,7 +75,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
-            this.ClientSize = new System.Drawing.Size(625, 447);
+            this.ClientSize = new System.Drawing.Size(625, 413);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbResupplyRequests);

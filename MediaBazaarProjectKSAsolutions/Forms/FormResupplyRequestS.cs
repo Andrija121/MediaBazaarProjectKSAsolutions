@@ -17,28 +17,32 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
             this.u = user;
+            RefreshListBox();
+           
         }
         public void RefreshListBox()
         {
             lbResupplyRequests.Items.Clear();
+            foreach (var prr in rrm.GetPendingResupplyRequests())
+            {
+                lbResupplyRequests.Items.Add(prr);
+            }
 
         }
         private void FormResupplyRequestS_Load(object sender, EventArgs e)
         {
-            ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
-            
-            lbResupplyRequests.Items.Add(rr);
+            RefreshListBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            RefreshListBox();
         }
 
         private void lbResupplyRequests_DoubleClick(object sender, EventArgs e)
         {
             ResupplyRequest resupplyRequest = (ResupplyRequest)lbResupplyRequests.SelectedItem;
-
             if(resupplyRequest!=null)
             {
                 if(u.Role==Role.GENERALMANAGER)
@@ -47,11 +51,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 }
                 else
                 {
+                    resupplyRequest = rrm.GetResupplyRequest(u.Id);
                     FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
                     formApproveOrDeclineRequest.Show();
-                    lbResupplyRequests.Items.RemoveAt(lbResupplyRequests.SelectedIndex);
+                    
                 }
             }
+            
         }
     }
 }

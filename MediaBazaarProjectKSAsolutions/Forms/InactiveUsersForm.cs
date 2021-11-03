@@ -27,7 +27,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 lbInactiveUsers.Items.Add(u);
             }
-            lbInactiveUsers.Items.Clear();
             foreach (var u in userManagement.GetAwayUsers())
             {
                 lbInactiveUsers.Items.Add(u);
@@ -80,11 +79,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
             User user = (User)lbInactiveUsers.SelectedItem;
             if (user != null)
+            {
                 userManagement.SetUserStatusToActive(user);
+                RefreshListBox();
+            }
             else
                 MessageBox.Show("Please double click the user You want to make active");
 
-            RefreshListBox();
+
         }
 
         private void InactiveUsersForm_Load(object sender, EventArgs e)

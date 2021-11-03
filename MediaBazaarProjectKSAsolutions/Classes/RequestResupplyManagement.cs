@@ -106,6 +106,47 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        public List<ResupplyRequest> GetPendingResupplyRequests()
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "select * from requestresupply where requestStatus=@requestStatus";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("requestStatus", RequestStatus.PENNDING.ToString());
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+
+                    List<ResupplyRequest> rrs = new List<ResupplyRequest>();
+
+                    while (dr.Read())
+                    {
+                        ResupplyRequest rr = new ResupplyRequest();
+                        rr.WheId = Convert.ToInt32(dr["wheid"]);
+                        rr.DmId = Convert.ToInt32(dr["dmid"]);
+                        rr.StockId = Convert.ToInt32(dr["sid"]);
+                        rr.Amount = Convert.ToInt32(dr["amount"]);
+                        rr.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
+                        rrs.Add(rr);
+
+                    }
+                    return rrs;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public ResupplyRequest GetResupplyRequest(int dmid)
         {
             try
@@ -122,6 +163,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     while (dr.Read())
                     {
+                        rr.RequestID = dr.GetInt32("requestId");
                         rr.WheId = dr.GetInt32("wheId");
                         rr.StockId = dr.GetInt32("sid");
                         rr.Amount = dr.GetInt32("Amount");
@@ -148,9 +190,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
 
-                    string sql = "Update RequestResupply set wheId=@wheId,dmid=@dmId,sid=@sid,amount=@amount,requestStatus=@requestStatus";
+                    string sql = "Update RequestResupply set wheId=@wheId,dmid=@dmId,sid=@sid,amount=@amount,requestStatus=@requestStatus where requestId=@requestId";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-
+                    cmd.Parameters.AddWithValue("requestId", rr.RequestID);
                     cmd.Parameters.AddWithValue("@wheId", rr.WheId);
                     cmd.Parameters.AddWithValue("@dmid", dmid);
                     cmd.Parameters.AddWithValue("@sid", rr.StockId);
