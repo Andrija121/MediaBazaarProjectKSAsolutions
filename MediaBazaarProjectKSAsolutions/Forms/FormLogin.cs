@@ -51,7 +51,7 @@ namespace MediaBazaarProjectKSAsolutions
                                 this.Hide();
                                 break;
                             }
-                            else if(u.Role==Role.STOREEMPLOYEE || u.Role==Role.WAREHOUSEEMPLYEE)
+                            else if(u.Role==Role.STOREEMPLOYEE || u.Role==Role.WAREHOUSEEMPLOYEE    )
                             {
                                 user = u;
                                 FormEmployee formEmployee = new FormEmployee(user);

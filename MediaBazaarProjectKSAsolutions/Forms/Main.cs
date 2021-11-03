@@ -43,8 +43,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Currently not available. ");
-        }
+            FormSchedule formSchedule = new FormSchedule();
+            formSchedule.ShowDialog();
+      }
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {

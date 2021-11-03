@@ -18,14 +18,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using(MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO shifts(user_id,shift_date,shift_type) VALUES(@User_Id,@Shift_date,Shift_Type)";
+                    string sql = "INSERT INTO shifts(user_Id,shift_Date,shift_Type) VALUES(@user_Id,@Shift_Date,shift_Type)";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     conn.Open();
-                    cmd.Parameters.AddWithValue("@User_id", shifts.User_Id);
-                    cmd.Parameters.AddWithValue("@U", shifts.Shift_Date);
-                    cmd.Parameters.AddWithValue("@User_id", shifts.Shift_Type.ToString());
+                    cmd.Parameters.AddWithValue("@user_Id", shifts.User_Id);
+                    cmd.Parameters.AddWithValue("@shift_Date", shifts.Shift_Date);
+                    cmd.Parameters.AddWithValue("@shift_Type", shifts.Shift_Type.ToString());
                     cmd.ExecuteNonQuery(); 
                 }
             }
@@ -47,7 +47,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
                     Shift shifts = new Shift();
-                    string query = "SELECT * FROM shift WHERE shift_id= @Shift_id";
+                    string query = "SELECT * FROM shifts WHERE id= @id";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     cmd.Parameters.AddWithValue("shift_Id", Shift_id);
@@ -58,10 +58,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
 
-                        shifts.Shift_Id = dr.GetInt32("shift_id");
-                        shifts.User_Id = dr.GetInt32("user_id");
-                        shifts.Shift_Date = dr.GetDateTime("shift_date");
-                        shifts.Shift_Type = (Shift_Type)dr.GetInt32("shift_type");
+                        shifts.Shift_Id = dr.GetInt32("id");
+                        shifts.User_Id = dr.GetInt32("user_Id");
+                        shifts.Shift_Date = dr.GetDateTime("shift_Date");
+                        shifts.Shift_Type = (Shift_Type)dr.GetInt32("shift_Type");
 
                         return shifts;
 
@@ -86,7 +86,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM Shift";
+                    string sql = "SELECT * FROM shifts";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
@@ -96,10 +96,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         Shift shift = new Shift();
-                        shift.Shift_Id = Convert.ToInt32(dr["Shift_Id"]);
-                        shift.User_Id = Convert.ToInt32(dr["User_Id"]);
-                        shift.Shift_Date = Convert.ToDateTime(dr["Shift_Date"]);
-                        shift.Shift_Type = Enum.Parse<Shift_Type>(dr["Shift_Type"].ToString());
+                        
+                        shift.Shift_Id = Convert.ToInt32(dr["id"]);
+                        shift.User_Id = Convert.ToInt32(dr["user_Id"]);
+                        shift.Shift_Date = Convert.ToDateTime(dr["shift_Date"]);
+                        shift.Shift_Type = Enum.Parse<Shift_Type>(dr["shift_Type"].ToString());
                         shifts.Add(shift);
                     }
                     return shifts;
@@ -121,13 +122,13 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "UPDATE shift SET User_Id =@User_Id, Shift_Date =@Shift_Date, Shift_Type=@Shift_Type";
+                    string sql = "UPDATE shifts SET User_Id =@user_Id, shift_Date =@shift_Date, shift_Type=@Shift_Type";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@Shift_Id", shift.Shift_Id);
-                    cmd.Parameters.AddWithValue("@User_Id", shift.User_Id);
-                    cmd.Parameters.AddWithValue("@Shift_Date", shift.Shift_Date);
-                    cmd.Parameters.AddWithValue("@Shift_Type", shift.Shift_Type);
+                    cmd.Parameters.AddWithValue("@id", shift.Shift_Id);
+                    cmd.Parameters.AddWithValue("@user_Id", shift.User_Id);
+                    cmd.Parameters.AddWithValue("@shift_Date", shift.Shift_Date);
+                    cmd.Parameters.AddWithValue("@shift_Type", shift.Shift_Type);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -149,9 +150,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "DELETE FROM shift WHERE Shift_Id =@Shift_Id";
+                    string sql = "DELETE FROM shifts WHERE id =@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@Shift_Id", Shift_Id);
+                    cmd.Parameters.AddWithValue("@id", Shift_Id);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
