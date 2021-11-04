@@ -13,33 +13,47 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
 
         StockManagement sm;
-
+        CategoryManagement cm;
         public FormCreateStock()
         {
             InitializeComponent();
             sm = new StockManagement();
+            cm = new CategoryManagement();
+            RefreshCB();
         }
+
+        public void RefreshCB()
+        {
+            cbCategories.Items.Clear();
+            foreach (var c in cm.GetCategories())
+            {
+                cbCategories.Items.Add(c);
+            }
+        }
+
+     
 
         private void btnAddStockConfirmation_Click(object sender, EventArgs e)
         {
             try
             {
-
+                Category category = (Category)cbCategories.SelectedItem;
                 string stockName = tbxNewStockName.Text;
                 double stockPrice = Convert.ToDouble(tbxNewStockPrice.Text);
                 int stockSerialNumber = Convert.ToInt32(tbxNewStockSerialNumber.Text);
                 int stockAmount = Convert.ToInt32(tbxNewStockAmount.Text);
+                
 
-                Stock stock = new Stock(0, stockName,stockPrice, stockSerialNumber, stockAmount);
+                Stock stock = new Stock(0, stockName,stockPrice, stockSerialNumber, stockAmount,category);
                 sm.AddStock(stock);
                 MessageBox.Show("Item Created Successfully");
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Input value is not correct");
+                MessageBox.Show("Input value is not correct" + ex);
             }
 
 
@@ -55,6 +69,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             FormCreateCategory formCreateCategory = new FormCreateCategory();
             formCreateCategory.ShowDialog();
+            RefreshCB();
         }
     }
 }

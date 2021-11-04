@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class Category
+    public class Category
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }

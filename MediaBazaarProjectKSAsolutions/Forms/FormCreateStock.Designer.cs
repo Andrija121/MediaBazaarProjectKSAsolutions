@@ -41,7 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbxNewStockAmount = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.btnCreateCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -171,13 +171,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label5.TabIndex = 16;
             this.label5.Text = "Category";
             // 
-            // comboBox1
+            // cbCategories
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 17;
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Location = new System.Drawing.Point(152, 155);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(121, 23);
+            this.cbCategories.TabIndex = 17;
             // 
             // btnCreateCategory
             // 
@@ -201,7 +201,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(422, 232);
             this.Controls.Add(this.btnCreateCategory);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCategories);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);
@@ -238,7 +238,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.TextBox tbxNewStockAmount;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCategories;
         private System.Windows.Forms.Button btnCreateCategory;
     }
 }
