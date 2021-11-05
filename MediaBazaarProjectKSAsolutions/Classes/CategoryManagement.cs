@@ -27,7 +27,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-               
+
                     cmd.Parameters.AddWithValue("@name", category.CategoryName);
                     cmd.ExecuteNonQuery();
                 }
@@ -86,6 +86,42 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     conn.Open();
                     string query = "select * from category";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<Category> categories = new List<Category>();
+
+                    while (dr.Read())
+                    {
+                        Category c = new Category();
+                        c.Id = dr.GetInt32("categoryid");
+                        c.CategoryName = dr.GetString("name");
+                        categories.Add(c);
+                    }
+                    return categories;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+        public List<Category> GetCombinedCategories()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT stock.productName, stock.price, stock.serialNumber, stock.amount, category.name FROM category INNER JOIN stock on category.categoryID = stock.CategoryID";
+                    //"select * from category";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();

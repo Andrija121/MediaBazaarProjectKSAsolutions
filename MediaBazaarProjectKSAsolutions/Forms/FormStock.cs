@@ -12,7 +12,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormStock : Form
     {
         StockManagement sm = new StockManagement();
-        //DataTable table = new DataTable();
         public FormStock()
         {
             InitializeComponent();
@@ -25,7 +24,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             DVGStock.Rows.Clear();
             foreach (var s in sm.GetAllStock())
             { 
-                DVGStock.Rows.Add(s.ProductName, s.Price, s.SerialNumber, s.Amount);
+                DVGStock.Rows.Add(s.ProductName, s.Price, s.SerialNumber, s.Amount, s.Category);
             }
         }
 
