@@ -10,6 +10,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         HRMANAGER,
         DEPARTMENTMANAGER,
         STOREEMPLOYEE,
-        WAREHOUSEEMPLYEE
+        WAREHOUSEEMPLOYEE
     }
 }

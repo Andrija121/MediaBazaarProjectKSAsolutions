@@ -44,6 +44,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             if (user != null)
             {
                 userManagement.SetUserStatusToInactive(user);
+                timer7Years.Start();
                 RefreshListBox();
                 MessageBox.Show("User Made Inactive Successfully");
             }
@@ -54,9 +55,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnEdit_Click(object sender, EventArgs e)
         {
             User user = (User)lbUsers.SelectedItem;
-            if (user != null)
+            if (user != null)   
             {
-                EditUserForm editUserForm = new EditUserForm(user);
+                Contract contract = userManagement.GetContract(user.Id);
+                EditUserForm editUserForm = new EditUserForm(user,contract);
                 editUserForm.ShowDialog();
                 RefreshListBox();
             }
@@ -68,6 +70,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
             inactiveUsersForm.ShowDialog();
+            RefreshListBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -76,9 +79,28 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             
         }
 
-        private void FormEmployee_Load(object sender, EventArgs e)
+        private void FormCRUDEmployee_Load(object sender, EventArgs e)
+        {
+            ChekcIfUserDMorGM();
+        }
+
+        private User ChekcIfUserDMorGM()
         {
 
+            foreach (var u in userManagement.GetUsers())
+            {
+                if (u.Role == Role.GENERALMANAGER || u.Role == Role.DEPARTMENTMANAGER)
+                {
+                    panelDMandGM.Enabled = true;
+                }
+            } 
+            return u;
+        }
+
+        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
+        {
+            FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
+            formResupplyRequestS.ShowDialog();
         }
     }
 }

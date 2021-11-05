@@ -21,10 +21,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
+            cbContractType.DataSource = Enum.GetValues(typeof(ContractType));
         }
-
-
-
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
             try
@@ -42,24 +40,40 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Gender gender = (Gender)cbGender.SelectedItem;
                 Role role = (Role)cbRole.SelectedItem;
                 Status status = (Status)cbStatus.SelectedItem;
-                User user = new User(0,userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, gender, role, status);
-                if(user.Password == string.Empty || user.UserName == string.Empty || user.BSN.ToString()== string.Empty || user.FirstName== string.Empty || user.LastName== string.Empty)
-                {
-                    MessageBox.Show("Input value is not correct");
 
+                DateTime startDate = StartDatedateTimePicker.Value;
+                DateTime endDate = EndDatedateTimePicker.Value;
+                double salaryPH = Convert.ToDouble(tbSalaryPH.Text);
+                ContractType contractType = (ContractType)cbContractType.SelectedItem;
+                if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(bsn.ToString()) )
+                {
+                    MessageBox.Show("Fields are empty");
+
+                }
+                else if (um.CheckIfUserAlreadyExist(userName,email,bsn))
+                {
+                    MessageBox.Show("Values already exist");
                 }
                 else
                 {
-                    um.AddUser(user);
-                    MessageBox.Show("User Created Successfully");
+                    if(startDate>=endDate)
+                    {
+                        MessageBox.Show("Please Select proper values for contract");
+                    }
+                    else
+                    {
+                        Contract contract = new Contract(0, startDate, endDate, contractType, salaryPH);
+                        User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, contract, gender, role, status);
+                        int id= um.AddUser(user);
+                        MessageBox.Show("User Created Successfully");
+                        um.AssignContractToUser(contract, id);
+                        MessageBox.Show("Contract Made Successfully");
+                    }
                 }
-                
-
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Please fill in all the values");
+                MessageBox.Show("Please fill in all the values " + ex.Message);
             }
         }
 

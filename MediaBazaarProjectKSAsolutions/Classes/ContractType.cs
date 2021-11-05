@@ -4,10 +4,9 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    public enum Status
-    {
-        ACTIVE,
-        INACTIVE,
-        AWAY
+    public enum ContractType
+    { 
+        FULLTIME,
+        PARTIME
     }
 }

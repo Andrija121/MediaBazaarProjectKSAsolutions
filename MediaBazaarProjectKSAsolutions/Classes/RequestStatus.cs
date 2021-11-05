@@ -4,10 +4,10 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    public enum Status
+    public enum RequestStatus
     {
-        ACTIVE,
-        INACTIVE,
-        AWAY
+        APPROVED,
+        DECLINED,
+        PENNDING
     }
 }
