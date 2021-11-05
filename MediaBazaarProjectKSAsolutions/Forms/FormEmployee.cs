@@ -16,6 +16,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         RequestResupplyManagement rrm;
         StockManagement sm;
         Contract c;
+        EventDTO eventDTO;
         public FormEmployee(User user)
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.sm = new StockManagement();
             this.c = um.GetContract(u.Id);
             this.rrm = new RequestResupplyManagement();
+            this.eventDTO = new EventDTO();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
             lblApproximateEarning.Text = "100 $ - " + c.SalaryPerHour * 156 + " $ ";
@@ -52,10 +54,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         public void RefreshEventLogger(ListBox listbox)
         {
+            
             listbox.Items.Clear();
-            foreach (var item in rrm.GetResupplyRequests())
+            foreach (var resupplyRequest in eventDTO.GetAllResupplyEvents())
             {
-                listbox.Items.Add(item);
+                listbox.Items.Add(resupplyRequest);
             }
         }
         public void PanelMovment(Button button)
