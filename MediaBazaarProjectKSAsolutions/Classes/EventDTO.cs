@@ -48,33 +48,33 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public List<String> GetAllAnsweredRequestsOFDaysOff()
-        {
-            try
-            {
-                using (conn)
-                {
-                    conn.Open();
-                    string sql = "";
-                    MySqlCommand cmd = new MySqlCommand(sql,conn);
+        //public List<String> GetAllAnsweredRequestsOFDaysOff()
+        //{
+        //    try
+        //    {
+        //        using (conn)
+        //        {
+        //            conn.Open();
+        //            string sql = "";
+        //            MySqlCommand cmd = new MySqlCommand(sql,conn);
 
-                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+        //            MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
-                    while (dr.Read())
-                    {
+        //            while (dr.Read())
+        //            {
 
-                    }
-                }
-            }
-            catch (Exception)
-            {
+        //            }
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
 
-                throw;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        //        throw;
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
     }
 }
