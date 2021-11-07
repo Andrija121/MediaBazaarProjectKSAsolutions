@@ -43,9 +43,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelDMandGM = new System.Windows.Forms.Panel();
             this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.DGVId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDaysOffRequests = new System.Windows.Forms.Button();
+            this.panelHRorGM = new System.Windows.Forms.Panel();
             this.panelPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panelDMandGM.SuspendLayout();
+            this.panelHRorGM.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -88,7 +91,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.lbUsers.FormattingEnabled = true;
             this.lbUsers.ItemHeight = 25;
-            this.lbUsers.Location = new System.Drawing.Point(116, 208);
+            this.lbUsers.Location = new System.Drawing.Point(62, 222);
             this.lbUsers.Name = "lbUsers";
             this.lbUsers.Size = new System.Drawing.Size(1225, 479);
             this.lbUsers.TabIndex = 2;
@@ -171,7 +174,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelDMandGM.Enabled = false;
             this.panelDMandGM.Location = new System.Drawing.Point(422, 13);
             this.panelDMandGM.Name = "panelDMandGM";
-            this.panelDMandGM.Size = new System.Drawing.Size(816, 93);
+            this.panelDMandGM.Size = new System.Drawing.Size(280, 93);
             this.panelDMandGM.TabIndex = 18;
             // 
             // btnSeeResupplyRequests
@@ -197,12 +200,37 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.DGVId.ReadOnly = true;
             this.DGVId.Width = 150;
             // 
+            // btnDaysOffRequests
+            // 
+            this.btnDaysOffRequests.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnDaysOffRequests.FlatAppearance.BorderSize = 0;
+            this.btnDaysOffRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDaysOffRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDaysOffRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDaysOffRequests.Location = new System.Drawing.Point(26, 10);
+            this.btnDaysOffRequests.Name = "btnDaysOffRequests";
+            this.btnDaysOffRequests.Size = new System.Drawing.Size(211, 67);
+            this.btnDaysOffRequests.TabIndex = 5;
+            this.btnDaysOffRequests.Text = "See Days off Requests";
+            this.btnDaysOffRequests.UseVisualStyleBackColor = false;
+            this.btnDaysOffRequests.Click += new System.EventHandler(this.btnDaysOffRequests_Click);
+            // 
+            // panelHRorGM
+            // 
+            this.panelHRorGM.Controls.Add(this.btnDaysOffRequests);
+            this.panelHRorGM.Enabled = false;
+            this.panelHRorGM.Location = new System.Drawing.Point(738, 15);
+            this.panelHRorGM.Name = "panelHRorGM";
+            this.panelHRorGM.Size = new System.Drawing.Size(280, 93);
+            this.panelHRorGM.TabIndex = 19;
+            // 
             // FormCRUDEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 782);
+            this.Controls.Add(this.panelHRorGM);
             this.Controls.Add(this.panelDMandGM);
             this.Controls.Add(this.btnSeeInactiveUsers);
             this.Controls.Add(this.panelPage);
@@ -222,6 +250,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panelDMandGM.ResumeLayout(false);
+            this.panelHRorGM.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -240,5 +269,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel panelDMandGM;
         private System.Windows.Forms.Button btnSeeResupplyRequests;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVId;
+        private System.Windows.Forms.Button btnDaysOffRequests;
+        private System.Windows.Forms.Panel panelHRorGM;
     }
 }

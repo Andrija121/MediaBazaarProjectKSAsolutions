@@ -28,17 +28,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.eventDTO = new EventDTO();
             PanelMovment(btnDashboard);
             lblHi.Text = "Welcome Back, " + u.FirstName + "\n You are currently logged in as: \n " + u.Role.ToString().ToLower();
-            lblApproximateEarning.Text = "100 $ - " + c.SalaryPerHour * 156 + " $ ";
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             RefreshListBox(lbStocks);
             RefreshEventLogger(lbEventLogger);
-            
-            
-        }
-        public void NotifyWareHouseEmployees()
-        {
-            //Add info button or some "House Rules"
+            if (c == null)
+            {
+                MessageBox.Show("Contract does not exist");
+                return;
+            }
+            else
+            {
+                lblApproximateEarning.Text = "100 $ - " + c.SalaryPerHour * 156 + " $ ";
+            }  
         }
 
         public void RefreshListBox(ListBox listBox)
@@ -122,14 +124,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
 
         private void btnContract_Click(object sender, EventArgs e)
-        {
-            tcNavigation.SelectedTab = tabPageContract;
-            NavigationPanelMovment(btnContract);
+        {   if(c==null)
+            {
+                MessageBox.Show("Curent User does not have a contract");
+            }
+            else
+            {
+                tcNavigation.SelectedTab = tabPageContract;
+                NavigationPanelMovment(btnContract);
 
-            StartDatedateTimePicker.Value = c.StartDate;
-            EndDatedateTimePicker.Value = c.EndDate;
-            tbContractType.Text = c.ContractType.ToString();
-            tbSalaryPerHour.Text = c.SalaryPerHour.ToString();
+                StartDatedateTimePicker.Value = c.StartDate;
+                EndDatedateTimePicker.Value = c.EndDate;
+                tbContractType.Text = c.ContractType.ToString();
+                tbSalaryPerHour.Text = c.SalaryPerHour.ToString();
+            }
             
         }
 
@@ -200,7 +208,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             
             Stock stock = (Stock)lbStocks.SelectedItem;
-            //ResupplyRequest rr = new ResupplyRequest(u.Id,, stock.Id, double, requestStatus);
             if (stock != null)
             {
                 if (u.Role == Role.WAREHOUSEEMPLOYEE)
@@ -219,20 +226,24 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            //TODO
-        }
-
-        private void lblApproximateEarning_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void lblApproximateEarning_Click(object sender, EventArgs e)
         {
-            FormEarnings formEarnings = new FormEarnings(u);
-            formEarnings.ShowDialog();
+            if(c==null)
+            {
+                MessageBox.Show("Contract Is null");
+                return;
+            }
+            else
+            {
+                FormEarnings formEarnings = new FormEarnings(u);
+                formEarnings.ShowDialog();
+            }
+        }
+
+        private void btnAnnouncement_Click(object sender, EventArgs e)
+        {
+            tcNavigation.SelectedTab = tabPageAnnouncements;
+            PanelMovment(btnAnnouncement);
         }
     }
 }

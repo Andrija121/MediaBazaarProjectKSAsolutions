@@ -13,6 +13,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         User u;
         UserManagement um = new UserManagement();
+        DaysOffManagement doffm = new DaysOffManagement();
         public DaysAwayForm(User user)
         {
             this.u = user;
@@ -26,10 +27,57 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            double daysoff = Convert.ToDouble(nUPDDaysOff.Value);
-            um.SetUserStatusToAway(u, daysoff);
-            MessageBox.Show("Your request was successfully sent,\n  even, if the request is not yet accepted your next " + daysoff + " days off starts now");
+            try
+            {
+                User user = (User)cbHrManagers.SelectedItem;
+                if(user==null)
+                {
+                    MessageBox.Show("Please Select HR Manager who will receive the request");
+                    return;
+                }
+                else
+                {
+                    
+                    DateTime startDate = dtpStartDate.Value;
+                    DateTime endDate = dtpEndDate.Value;
+                    string reason = tbReason.Text;
+                    DaysOff daysOff = new DaysOff(0, user.Id, startDate, endDate, reason, RequestStatus.PENNDING);
+                    if(startDate>=DateTime.Now)
+                    {
+                        doffm.CreateDaysOffRequest(daysOff);
+                        MessageBox.Show("You have succesfully created request");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Start Date is not valid");
+                    }
+                    
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        private void DaysAwayForm_Load(object sender, EventArgs e)
+        {
+            tbUserName.Text = u.UserName;
+            FindHRManagers();
+
+        }
+        private List<User> FindHRManagers()
+        {
+            List<User> hrManagers = new List<User>();
+            foreach (var hr in um.GetUsers())
+            {
+                if(hr.Role==Role.HRMANAGER)
+                {
+                    cbHrManagers.Items.Add(hr);
+                }
+            }
+            return hrManagers;
         }
     }
 }

@@ -396,15 +396,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public void SetUserStatusToAway(User user, double days)
         {            
-            DateTime StartDate = DateTime.Now;
-            DateTime EndDate = DateTime.Now.AddDays(days);
-            if(StartDate<=EndDate)
-            {
+
                 user.Status = Status.AWAY;
                 EditUser(user);
-            }
-            user.Status = Status.ACTIVE;
-            EditUser(user);
         }
         public void SetUserStatusToActive(User user)
         {

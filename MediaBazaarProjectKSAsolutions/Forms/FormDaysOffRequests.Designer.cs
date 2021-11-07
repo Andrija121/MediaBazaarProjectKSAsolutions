@@ -1,7 +1,7 @@
 ﻿
 namespace MediaBazaarProjectKSAsolutions.Forms
 {
-    partial class FormResupplyRequestS
+    partial class FormDaysOffRequests
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbResupplyRequests = new System.Windows.Forms.ListBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblSelect = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lbDaysOffRequests = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // lbResupplyRequests
+            // lblSelect
             // 
-            this.lbResupplyRequests.FormattingEnabled = true;
-            this.lbResupplyRequests.ItemHeight = 30;
-            this.lbResupplyRequests.Location = new System.Drawing.Point(12, 12);
-            this.lbResupplyRequests.Name = "lbResupplyRequests";
-            this.lbResupplyRequests.Size = new System.Drawing.Size(586, 274);
-            this.lbResupplyRequests.TabIndex = 0;
-            this.lbResupplyRequests.DoubleClick += new System.EventHandler(this.lbResupplyRequests_DoubleClick);
+            this.lblSelect.AutoSize = true;
+            this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSelect.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblSelect.Location = new System.Drawing.Point(41, 292);
+            this.lblSelect.Name = "lblSelect";
+            this.lblSelect.Size = new System.Drawing.Size(545, 26);
+            this.lblSelect.TabIndex = 21;
+            this.lblSelect.Text = "Double click the requset you want to approve or decline";
             // 
             // btnBack
             // 
@@ -50,42 +51,39 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(0, 339);
+            this.btnBack.Location = new System.Drawing.Point(0, 344);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(625, 74);
-            this.btnBack.TabIndex = 17;
+            this.btnBack.Size = new System.Drawing.Size(613, 74);
+            this.btnBack.TabIndex = 20;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblSelect
+            // lbDaysOffRequests
             // 
-            this.lblSelect.AutoSize = true;
-            this.lblSelect.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSelect.Location = new System.Drawing.Point(30, 299);
-            this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(555, 30);
-            this.lblSelect.TabIndex = 18;
-            this.lblSelect.Text = "Double click the requset you want to approve or decline";
+            this.lbDaysOffRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbDaysOffRequests.FormattingEnabled = true;
+            this.lbDaysOffRequests.ItemHeight = 26;
+            this.lbDaysOffRequests.Location = new System.Drawing.Point(12, 6);
+            this.lbDaysOffRequests.Name = "lbDaysOffRequests";
+            this.lbDaysOffRequests.Size = new System.Drawing.Size(586, 264);
+            this.lbDaysOffRequests.TabIndex = 19;
             // 
-            // FormResupplyRequestS
+            // FormDaysOffRequests
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
-            this.ClientSize = new System.Drawing.Size(625, 413);
+            this.ClientSize = new System.Drawing.Size(613, 418);
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lbResupplyRequests);
-            this.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Controls.Add(this.lbDaysOffRequests);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormResupplyRequestS";
+            this.Name = "FormDaysOffRequests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormResupplyRequestS";
-            this.Load += new System.EventHandler(this.FormResupplyRequestS_Load);
+            this.Text = "FormDaysOffRequests";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +91,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbResupplyRequests;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblSelect;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox lbDaysOffRequests;
     }
 }

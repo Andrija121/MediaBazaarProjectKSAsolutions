@@ -30,6 +30,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnAnnouncement = new System.Windows.Forms.Button();
             this.btnContract = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -40,10 +41,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
-            this.lblEvenLogger = new System.Windows.Forms.Label();
-            this.lbEventLogger = new System.Windows.Forms.ListBox();
             this.pnlStocks = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblResupplyStock = new System.Windows.Forms.Label();
             this.lbStocks = new System.Windows.Forms.ListBox();
             this.lblStocks = new System.Windows.Forms.Label();
             this.pnlEarnings = new System.Windows.Forms.Panel();
@@ -53,7 +52,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi = new System.Windows.Forms.Label();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnSaveUserInformation = new System.Windows.Forms.Button();
             this.btnSetUserAway = new System.Windows.Forms.Button();
             this.lblCreateUser = new System.Windows.Forms.Label();
@@ -94,6 +92,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblTopic = new System.Windows.Forms.Label();
             this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
+            this.tabPageAnnouncements = new System.Windows.Forms.TabPage();
+            this.lblAnnouncement = new System.Windows.Forms.Label();
+            this.lblEvenLogger = new System.Windows.Forms.Label();
+            this.lbEventLogger = new System.Windows.Forms.ListBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -104,11 +106,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.SuspendLayout();
             this.tabPageShift.SuspendLayout();
             this.tabPageContract.SuspendLayout();
+            this.tabPageAnnouncements.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panelMenu.Controls.Add(this.btnAnnouncement);
             this.panelMenu.Controls.Add(this.btnContract);
             this.panelMenu.Controls.Add(this.btnBack);
             this.panelMenu.Controls.Add(this.btnProfile);
@@ -118,8 +122,24 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(245, 782);
+            this.panelMenu.Size = new System.Drawing.Size(245, 869);
             this.panelMenu.TabIndex = 18;
+            // 
+            // btnAnnouncement
+            // 
+            this.btnAnnouncement.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnAnnouncement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnnouncement.FlatAppearance.BorderSize = 0;
+            this.btnAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAnnouncement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAnnouncement.Location = new System.Drawing.Point(0, 583);
+            this.btnAnnouncement.Name = "btnAnnouncement";
+            this.btnAnnouncement.Size = new System.Drawing.Size(245, 98);
+            this.btnAnnouncement.TabIndex = 6;
+            this.btnAnnouncement.Text = "Announcements";
+            this.btnAnnouncement.UseVisualStyleBackColor = false;
+            this.btnAnnouncement.Click += new System.EventHandler(this.btnAnnouncement_Click);
             // 
             // btnContract
             // 
@@ -146,7 +166,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(0, 700);
+            this.btnBack.Location = new System.Drawing.Point(0, 787);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(245, 82);
             this.btnBack.TabIndex = 4;
@@ -245,18 +265,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tcNavigation.Controls.Add(this.tabPageProfile);
             this.tcNavigation.Controls.Add(this.tabPageShift);
             this.tcNavigation.Controls.Add(this.tabPageContract);
+            this.tcNavigation.Controls.Add(this.tabPageAnnouncements);
             this.tcNavigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tcNavigation.Location = new System.Drawing.Point(237, -35);
             this.tcNavigation.Name = "tcNavigation";
             this.tcNavigation.SelectedIndex = 0;
-            this.tcNavigation.Size = new System.Drawing.Size(811, 828);
+            this.tcNavigation.Size = new System.Drawing.Size(811, 911);
             this.tcNavigation.TabIndex = 19;
             // 
             // tabPageDashboard
             // 
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
-            this.tabPageDashboard.Controls.Add(this.lblEvenLogger);
-            this.tabPageDashboard.Controls.Add(this.lbEventLogger);
             this.tabPageDashboard.Controls.Add(this.pnlStocks);
             this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
@@ -264,34 +283,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
             this.tabPageDashboard.Name = "tabPageDashboard";
             this.tabPageDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashboard.Size = new System.Drawing.Size(803, 789);
+            this.tabPageDashboard.Size = new System.Drawing.Size(803, 872);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
             // 
-            // lblEvenLogger
-            // 
-            this.lblEvenLogger.AutoSize = true;
-            this.lblEvenLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblEvenLogger.Location = new System.Drawing.Point(526, 95);
-            this.lblEvenLogger.Name = "lblEvenLogger";
-            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
-            this.lblEvenLogger.TabIndex = 8;
-            this.lblEvenLogger.Text = "Event Logger";
-            // 
-            // lbEventLogger
-            // 
-            this.lbEventLogger.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbEventLogger.FormattingEnabled = true;
-            this.lbEventLogger.ItemHeight = 26;
-            this.lbEventLogger.Location = new System.Drawing.Point(444, 142);
-            this.lbEventLogger.Name = "lbEventLogger";
-            this.lbEventLogger.Size = new System.Drawing.Size(339, 576);
-            this.lbEventLogger.TabIndex = 7;
-            // 
             // pnlStocks
             // 
-            this.pnlStocks.Controls.Add(this.label1);
+            this.pnlStocks.Controls.Add(this.lblResupplyStock);
             this.pnlStocks.Controls.Add(this.lbStocks);
             this.pnlStocks.Controls.Add(this.lblStocks);
             this.pnlStocks.Location = new System.Drawing.Point(37, 452);
@@ -299,17 +297,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStocks.Size = new System.Drawing.Size(373, 258);
             this.pnlStocks.TabIndex = 6;
             // 
-            // label1
+            // lblResupplyStock
             // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(25, 232);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Please Double click the stock you want to resupply";
+            this.lblResupplyStock.AutoSize = true;
+            this.lblResupplyStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblResupplyStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResupplyStock.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblResupplyStock.Location = new System.Drawing.Point(25, 232);
+            this.lblResupplyStock.Name = "lblResupplyStock";
+            this.lblResupplyStock.Size = new System.Drawing.Size(326, 17);
+            this.lblResupplyStock.TabIndex = 4;
+            this.lblResupplyStock.Text = "Please Double click the stock you want to resupply";
             // 
             // lbStocks
             // 
@@ -366,7 +364,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblApproximateEarning.TabIndex = 1;
             this.lblApproximateEarning.Text = "$$";
             this.lblApproximateEarning.Click += new System.EventHandler(this.lblApproximateEarning_Click);
-            this.lblApproximateEarning.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblApproximateEarning_MouseDoubleClick);
             // 
             // lbEarnings
             // 
@@ -403,7 +400,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageProfile
             // 
             this.tabPageProfile.BackColor = System.Drawing.Color.Gold;
-            this.tabPageProfile.Controls.Add(this.btnChangePassword);
             this.tabPageProfile.Controls.Add(this.btnSaveUserInformation);
             this.tabPageProfile.Controls.Add(this.btnSetUserAway);
             this.tabPageProfile.Controls.Add(this.lblCreateUser);
@@ -433,24 +429,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
             this.tabPageProfile.Name = "tabPageProfile";
             this.tabPageProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProfile.Size = new System.Drawing.Size(803, 789);
+            this.tabPageProfile.Size = new System.Drawing.Size(803, 872);
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackColor = System.Drawing.Color.Gold;
-            this.btnChangePassword.FlatAppearance.BorderSize = 0;
-            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChangePassword.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.btnChangePassword.Location = new System.Drawing.Point(634, 545);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(153, 169);
-            this.btnChangePassword.TabIndex = 54;
-            this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnSaveUserInformation
             // 
@@ -735,7 +716,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageShift.Location = new System.Drawing.Point(4, 35);
             this.tabPageShift.Name = "tabPageShift";
             this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShift.Size = new System.Drawing.Size(803, 789);
+            this.tabPageShift.Size = new System.Drawing.Size(803, 872);
             this.tabPageShift.TabIndex = 1;
             this.tabPageShift.Text = "Shift";
             // 
@@ -768,7 +749,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageContract.Location = new System.Drawing.Point(4, 35);
             this.tabPageContract.Name = "tabPageContract";
             this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageContract.Size = new System.Drawing.Size(803, 789);
+            this.tabPageContract.Size = new System.Drawing.Size(803, 872);
             this.tabPageContract.TabIndex = 3;
             this.tabPageContract.Text = "Contract";
             // 
@@ -882,12 +863,56 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
+            // tabPageAnnouncements
+            // 
+            this.tabPageAnnouncements.BackColor = System.Drawing.Color.Gold;
+            this.tabPageAnnouncements.Controls.Add(this.lblEvenLogger);
+            this.tabPageAnnouncements.Controls.Add(this.lbEventLogger);
+            this.tabPageAnnouncements.Controls.Add(this.lblAnnouncement);
+            this.tabPageAnnouncements.Location = new System.Drawing.Point(4, 35);
+            this.tabPageAnnouncements.Name = "tabPageAnnouncements";
+            this.tabPageAnnouncements.Size = new System.Drawing.Size(803, 872);
+            this.tabPageAnnouncements.TabIndex = 4;
+            this.tabPageAnnouncements.Text = "Announcements";
+            // 
+            // lblAnnouncement
+            // 
+            this.lblAnnouncement.AutoSize = true;
+            this.lblAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAnnouncement.ForeColor = System.Drawing.Color.Gray;
+            this.lblAnnouncement.Location = new System.Drawing.Point(11, 9);
+            this.lblAnnouncement.Name = "lblAnnouncement";
+            this.lblAnnouncement.Size = new System.Drawing.Size(386, 55);
+            this.lblAnnouncement.TabIndex = 2;
+            this.lblAnnouncement.Text = "Announcements";
+            // 
+            // lblEvenLogger
+            // 
+            this.lblEvenLogger.AutoSize = true;
+            this.lblEvenLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblEvenLogger.Location = new System.Drawing.Point(26, 139);
+            this.lblEvenLogger.Name = "lblEvenLogger";
+            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
+            this.lblEvenLogger.TabIndex = 10;
+            this.lblEvenLogger.Text = "Event Logger";
+            // 
+            // lbEventLogger
+            // 
+            this.lbEventLogger.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbEventLogger.FormattingEnabled = true;
+            this.lbEventLogger.ItemHeight = 26;
+            this.lbEventLogger.Location = new System.Drawing.Point(26, 191);
+            this.lbEventLogger.Name = "lbEventLogger";
+            this.lbEventLogger.Size = new System.Drawing.Size(735, 628);
+            this.lbEventLogger.TabIndex = 9;
+            // 
             // FormEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 782);
+            this.ClientSize = new System.Drawing.Size(1040, 869);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.tcNavigation);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -912,6 +937,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageShift.PerformLayout();
             this.tabPageContract.ResumeLayout(false);
             this.tabPageContract.PerformLayout();
+            this.tabPageAnnouncements.ResumeLayout(false);
+            this.tabPageAnnouncements.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -979,9 +1006,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel pnlStocks;
         private System.Windows.Forms.ListBox lbStocks;
         private System.Windows.Forms.Label lblStocks;
+        private System.Windows.Forms.Label lblResupplyStock;
+        private System.Windows.Forms.Button btnAnnouncement;
+        private System.Windows.Forms.TabPage tabPageAnnouncements;
         private System.Windows.Forms.Label lblEvenLogger;
         private System.Windows.Forms.ListBox lbEventLogger;
-        private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAnnouncement;
     }
 }
