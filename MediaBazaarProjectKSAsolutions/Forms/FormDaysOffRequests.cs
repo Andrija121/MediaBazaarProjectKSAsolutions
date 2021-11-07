@@ -32,5 +32,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             this.Close();
         }
+
+        private void lbDaysOffRequests_DoubleClick(object sender, EventArgs e)
+        {
+            DaysOff doff = doffm.GetDayOff(u.Id);
+
+            if (doff==null)
+            {
+                MessageBox.Show("Please Select request you want to approve");
+            }
+            else
+            {
+            DaysOffAproveOrDeclineForm daysOffAproveOrDeclineForm = new DaysOffAproveOrDeclineForm(doff,u);
+            daysOffAproveOrDeclineForm.ShowDialog();
+                RefreshListBox();
+            }
+        }
     }
 }

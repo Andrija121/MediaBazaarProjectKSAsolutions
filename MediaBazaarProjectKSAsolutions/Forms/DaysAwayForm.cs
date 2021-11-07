@@ -42,7 +42,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                     DateTime endDate = dtpEndDate.Value;
                     string reason = tbReason.Text;
                     DaysOff daysOff = new DaysOff(0, user.Id, startDate, endDate, reason, RequestStatus.PENNDING);
-                    if(startDate>=DateTime.Now && startDate<endDate)
+                    if(DateTime.Now<startDate && startDate <endDate)
                     {
                         doffm.CreateDaysOffRequest(daysOff);
                         MessageBox.Show("You have succesfully created request");

@@ -37,6 +37,42 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
                     }
         }
+        public DaysOff GetDayOff(int hrManagerId)
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    DaysOff dayOff = new DaysOff();
+                    string sql = "select * from daysoff where hrManagerId=@hrManagerId";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("hrManagerId", hrManagerId);
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        dayOff.StartDate = dr.GetDateTime("startDate");
+                        dayOff.EndDate = dr.GetDateTime("endDate");
+                        dayOff.Reason = dr.GetString("reason");
+                        dayOff.RequestStatus = Enum.Parse<RequestStatus>(dr["requestStatus"].ToString());
+
+                    }
+                    return dayOff;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public List<DaysOff> GetRequestsForDaysOff()
         {
             try
@@ -44,11 +80,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM daysOff where requestStatus=@requestStatus";
+                    string sql = "SELECT * FROM daysoff where requestStatus=@requestStatus";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("status", RequestStatus.PENNDING.ToString());
+                    cmd.Parameters.AddWithValue("requestStatus", RequestStatus.PENNDING.ToString());
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
@@ -77,6 +113,44 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        public DaysOff EditDaysOff(DaysOff doff,int hrManagerId)
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "Update daysoff set startDate=@startDate,endDate=@endDate,reason=reason,requestStatus=@requestStatus where hrManagerId=@hrManagerId";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
+                    cmd.Parameters.AddWithValue("hrManagerId", hrManagerId);
+                    cmd.Parameters.AddWithValue("startDate", doff.StartDate);
+                    cmd.Parameters.AddWithValue("endDate", doff.EndDate);
+                    cmd.Parameters.AddWithValue("reason", doff.Reason);
+                    cmd.Parameters.AddWithValue("requestStatus", doff.RequestStatus.ToString());
+                    cmd.ExecuteNonQuery();
+                }
+                return doff;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally 
+            {
+                conn.Close();
+            }
+        }
+        public void ApproveRequest(DaysOff doff, int hrManagerId)
+        {
+            doff.RequestStatus = RequestStatus.APPROVED;
+            EditDaysOff(doff, hrManagerId);
+        }
+        public void DeclineRequest(DaysOff doff, int hrManagerId)
+        {
+            doff.RequestStatus = RequestStatus.DECLINED;
+            EditDaysOff(doff,hrManagerId);
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class DaysOff
+   public class DaysOff
     {
         public int RequestId { get; set; }
         public int HRManagerId { get; set; }
@@ -30,7 +30,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public override string ToString()
         {
-            return Reason;
+            return StartDate + " - "+ EndDate + " - " + Reason;
         }
     }
 }

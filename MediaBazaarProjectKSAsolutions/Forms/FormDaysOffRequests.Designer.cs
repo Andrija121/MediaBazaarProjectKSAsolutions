@@ -70,6 +70,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbDaysOffRequests.Name = "lbDaysOffRequests";
             this.lbDaysOffRequests.Size = new System.Drawing.Size(586, 264);
             this.lbDaysOffRequests.TabIndex = 19;
+//            this.lbDaysOffRequests.SelectedIndexChanged += new System.EventHandler(this.lbDaysOffRequests_SelectedIndexChanged);
+            this.lbDaysOffRequests.DoubleClick += new System.EventHandler(this.lbDaysOffRequests_DoubleClick);
             // 
             // FormDaysOffRequests
             // 

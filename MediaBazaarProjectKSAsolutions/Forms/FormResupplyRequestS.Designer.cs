@@ -42,6 +42,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbResupplyRequests.Name = "lbResupplyRequests";
             this.lbResupplyRequests.Size = new System.Drawing.Size(586, 274);
             this.lbResupplyRequests.TabIndex = 0;
+      //      this.lbResupplyRequests.SelectedIndexChanged += new System.EventHandler(this.lbResupplyRequests_SelectedIndexChanged);
             this.lbResupplyRequests.DoubleClick += new System.EventHandler(this.lbResupplyRequests_DoubleClick);
             // 
             // btnBack

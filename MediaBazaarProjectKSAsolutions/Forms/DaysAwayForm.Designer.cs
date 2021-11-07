@@ -33,7 +33,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack = new System.Windows.Forms.Button();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.tbReason = new System.Windows.Forms.TextBox();
@@ -88,13 +87,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(300, 31);
             this.dtpEndDate.TabIndex = 7;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(6, 209);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker3.TabIndex = 8;
             // 
             // lblFrom
             // 
@@ -188,7 +180,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.tbReason);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dtpEndDate);
             this.Controls.Add(this.dtpStartDate);
             this.Controls.Add(this.lblUser);
@@ -209,7 +200,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.TextBox tbReason;
