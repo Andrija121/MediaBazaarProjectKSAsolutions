@@ -38,17 +38,23 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnMakeUserInactive = new System.Windows.Forms.Button();
             this.btnSeeInactiveUsers = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.timer7Years = new System.Windows.Forms.Timer(this.components);
             this.panelDMandGM = new System.Windows.Forms.Panel();
             this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.DGVId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDaysOffRequests = new System.Windows.Forms.Button();
             this.panelHRorGM = new System.Windows.Forms.Panel();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panelDMandGM.SuspendLayout();
             this.panelHRorGM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -156,18 +162,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers.UseVisualStyleBackColor = false;
             this.btnSeeInactiveUsers.Click += new System.EventHandler(this.btnSeeInactiveUsers_Click);
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(36, 127);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(1279, 588);
-            this.dataGridView3.TabIndex = 1;
-            // 
             // panelDMandGM
             // 
             this.panelDMandGM.Controls.Add(this.btnSeeResupplyRequests);
@@ -224,12 +218,72 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelHRorGM.Size = new System.Drawing.Size(280, 93);
             this.panelHRorGM.TabIndex = 19;
             // 
+            // dgvUsers
+            // 
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.UserName,
+            this.FirstName,
+            this.LastName,
+            this.Password,
+            this.Email});
+            this.dgvUsers.Location = new System.Drawing.Point(36, 223);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.RowHeadersWidth = 62;
+            this.dgvUsers.RowTemplate.Height = 33;
+            this.dgvUsers.Size = new System.Drawing.Size(1279, 492);
+            this.dgvUsers.TabIndex = 20;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 8;
+            this.Id.Name = "Id";
+            this.Id.Width = 150;
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "Username";
+            this.UserName.MinimumWidth = 8;
+            this.UserName.Name = "UserName";
+            this.UserName.Width = 150;
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "Firstname";
+            this.FirstName.MinimumWidth = 8;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Width = 150;
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "Lastname";
+            this.LastName.MinimumWidth = 8;
+            this.LastName.Name = "LastName";
+            this.LastName.Width = 150;
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.MinimumWidth = 8;
+            this.Password.Name = "Password";
+            this.Password.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 8;
+            this.Email.Name = "Email";
+            this.Email.Width = 150;
+            // 
             // FormCRUDEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 782);
+            this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.panelHRorGM);
             this.Controls.Add(this.panelDMandGM);
             this.Controls.Add(this.btnSeeInactiveUsers);
@@ -239,7 +293,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.lbUsers);
-            this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormCRUDEmployee";
@@ -248,9 +301,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Load += new System.EventHandler(this.FormCRUDEmployee_Load);
             this.panelPage.ResumeLayout(false);
             this.panelPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panelDMandGM.ResumeLayout(false);
             this.panelHRorGM.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,12 +317,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnMakeUserInactive;
         private System.Windows.Forms.Button btnSeeInactiveUsers;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Timer timer7Years;
         private System.Windows.Forms.Panel panelDMandGM;
         private System.Windows.Forms.Button btnSeeResupplyRequests;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGVId;
         private System.Windows.Forms.Button btnDaysOffRequests;
         private System.Windows.Forms.Panel panelHRorGM;
+        private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

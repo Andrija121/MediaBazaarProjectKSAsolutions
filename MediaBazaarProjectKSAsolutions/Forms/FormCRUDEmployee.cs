@@ -19,6 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.u = user;
             userManagement = new UserManagement();
             RefreshListBox();
+            RefreshDGV();
         }
 
         public void RefreshListBox()
@@ -27,6 +28,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             foreach (var u in userManagement.GetUsers())
             {
                 lbUsers.Items.Add(u);
+            }
+        }
+        public void RefreshDGV()
+        {
+            dgvUsers.Rows.Clear();
+            foreach (var u in userManagement.GetUsers())
+            {
+                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email);
             }
         }
         private void btnAddUser_Click(object sender, EventArgs e)
