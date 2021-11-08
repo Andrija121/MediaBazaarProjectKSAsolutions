@@ -154,6 +154,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "FormEarnings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEarnings";
             this.Load += new System.EventHandler(this.FormEarnings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUDHours)).EndInit();

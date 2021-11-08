@@ -93,9 +93,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbSalaryPerHour = new System.Windows.Forms.TextBox();
             this.lblContract = new System.Windows.Forms.Label();
             this.tabPageAnnouncements = new System.Windows.Forms.TabPage();
-            this.lblAnnouncement = new System.Windows.Forms.Label();
+            this.lblEvents = new System.Windows.Forms.Label();
+            this.lbDayOffEvents = new System.Windows.Forms.ListBox();
             this.lblEvenLogger = new System.Windows.Forms.Label();
             this.lbEventLogger = new System.Windows.Forms.ListBox();
+            this.lblAnnouncement = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -292,7 +294,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStocks.Controls.Add(this.lblResupplyStock);
             this.pnlStocks.Controls.Add(this.lbStocks);
             this.pnlStocks.Controls.Add(this.lblStocks);
-            this.pnlStocks.Location = new System.Drawing.Point(37, 452);
+            this.pnlStocks.Location = new System.Drawing.Point(37, 583);
             this.pnlStocks.Name = "pnlStocks";
             this.pnlStocks.Size = new System.Drawing.Size(373, 258);
             this.pnlStocks.TabIndex = 6;
@@ -337,7 +339,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEarnings.Controls.Add(this.lblMonthlyEarning);
             this.pnlEarnings.Controls.Add(this.lblApproximateEarning);
             this.pnlEarnings.Controls.Add(this.lbEarnings);
-            this.pnlEarnings.Location = new System.Drawing.Point(37, 142);
+            this.pnlEarnings.Location = new System.Drawing.Point(37, 289);
             this.pnlEarnings.Name = "pnlEarnings";
             this.pnlEarnings.Size = new System.Drawing.Size(373, 262);
             this.pnlEarnings.TabIndex = 4;
@@ -866,6 +868,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageAnnouncements
             // 
             this.tabPageAnnouncements.BackColor = System.Drawing.Color.Gold;
+            this.tabPageAnnouncements.Controls.Add(this.lblEvents);
+            this.tabPageAnnouncements.Controls.Add(this.lbDayOffEvents);
             this.tabPageAnnouncements.Controls.Add(this.lblEvenLogger);
             this.tabPageAnnouncements.Controls.Add(this.lbEventLogger);
             this.tabPageAnnouncements.Controls.Add(this.lblAnnouncement);
@@ -875,16 +879,27 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageAnnouncements.TabIndex = 4;
             this.tabPageAnnouncements.Text = "Announcements";
             // 
-            // lblAnnouncement
+            // lblEvents
             // 
-            this.lblAnnouncement.AutoSize = true;
-            this.lblAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAnnouncement.ForeColor = System.Drawing.Color.Gray;
-            this.lblAnnouncement.Location = new System.Drawing.Point(11, 9);
-            this.lblAnnouncement.Name = "lblAnnouncement";
-            this.lblAnnouncement.Size = new System.Drawing.Size(386, 55);
-            this.lblAnnouncement.TabIndex = 2;
-            this.lblAnnouncement.Text = "Announcements";
+            this.lblEvents.AutoSize = true;
+            this.lblEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEvents.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblEvents.Location = new System.Drawing.Point(26, 524);
+            this.lblEvents.Name = "lblEvents";
+            this.lblEvents.Size = new System.Drawing.Size(358, 32);
+            this.lblEvents.TabIndex = 12;
+            this.lblEvents.Text = "Days Off Announcements";
+            // 
+            // lbDayOffEvents
+            // 
+            this.lbDayOffEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbDayOffEvents.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbDayOffEvents.FormattingEnabled = true;
+            this.lbDayOffEvents.ItemHeight = 20;
+            this.lbDayOffEvents.Location = new System.Drawing.Point(26, 593);
+            this.lbDayOffEvents.Name = "lbDayOffEvents";
+            this.lbDayOffEvents.Size = new System.Drawing.Size(761, 244);
+            this.lbDayOffEvents.TabIndex = 11;
             // 
             // lblEvenLogger
             // 
@@ -899,13 +914,25 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // lbEventLogger
             // 
+            this.lbEventLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEventLogger.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbEventLogger.FormattingEnabled = true;
-            this.lbEventLogger.ItemHeight = 26;
+            this.lbEventLogger.ItemHeight = 22;
             this.lbEventLogger.Location = new System.Drawing.Point(26, 191);
             this.lbEventLogger.Name = "lbEventLogger";
-            this.lbEventLogger.Size = new System.Drawing.Size(735, 628);
+            this.lbEventLogger.Size = new System.Drawing.Size(761, 224);
             this.lbEventLogger.TabIndex = 9;
+            // 
+            // lblAnnouncement
+            // 
+            this.lblAnnouncement.AutoSize = true;
+            this.lblAnnouncement.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAnnouncement.ForeColor = System.Drawing.Color.Gray;
+            this.lblAnnouncement.Location = new System.Drawing.Point(11, 9);
+            this.lblAnnouncement.Name = "lblAnnouncement";
+            this.lblAnnouncement.Size = new System.Drawing.Size(386, 55);
+            this.lblAnnouncement.TabIndex = 2;
+            this.lblAnnouncement.Text = "Announcements";
             // 
             // FormEmployee
             // 
@@ -1012,5 +1039,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Label lblEvenLogger;
         private System.Windows.Forms.ListBox lbEventLogger;
         private System.Windows.Forms.Label lblAnnouncement;
+        private System.Windows.Forms.ListBox lbDayOffEvents;
+        private System.Windows.Forms.Label lblEvents;
     }
 }

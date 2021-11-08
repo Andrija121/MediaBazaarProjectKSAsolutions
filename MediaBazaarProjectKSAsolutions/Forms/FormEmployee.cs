@@ -31,7 +31,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             RefreshListBox(lbStocks);
-            RefreshEventLogger(lbEventLogger);
+            RefreshEventLoggerWithResupplyRequests(lbEventLogger);
+            RefreshEventLoggerWithDaysOffRequests(lbDayOffEvents);
             if (c == null)
             {
                 MessageBox.Show("Contract does not exist");
@@ -50,17 +51,24 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             foreach (var item in sm.GetAllStock())
             {
                 listBox.Items.Add(item);
-
             }
 
         }
-        public void RefreshEventLogger(ListBox listbox)
+        public void RefreshEventLoggerWithResupplyRequests(ListBox listbox)
         {
             
             listbox.Items.Clear();
             foreach (var resupplyRequest in eventDTO.GetAllResupplyEvents())
             {
                 listbox.Items.Add(resupplyRequest);
+            }
+        }
+        public void RefreshEventLoggerWithDaysOffRequests(ListBox listBox)
+        {
+            listBox.Items.Clear();
+            foreach (var item in eventDTO.GetAllAnsweredRequestsOFDaysOff())
+            {
+                listBox.Items.Add(item);
             }
         }
         public void PanelMovment(Button button)

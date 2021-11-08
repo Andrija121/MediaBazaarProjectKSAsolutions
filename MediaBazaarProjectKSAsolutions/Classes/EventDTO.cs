@@ -48,33 +48,40 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        //public List<String> GetAllAnsweredRequestsOFDaysOff()
-        //{
-        //    try
-        //    {
-        //        using (conn)
-        //        {
-        //            conn.Open();
-        //            string sql = "";
-        //            MySqlCommand cmd = new MySqlCommand(sql,conn);
+        public List<String> GetAllAnsweredRequestsOFDaysOff()
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "SELECT reason,`requestStatus`,u.userName,startDate,endDate FROM `daysoff` INNER JOIN user AS u on daysoff.hrManagerId = u.id";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-        //            MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+                    List<string> vs = new List<string>();
+                    while (dr.Read())
+                    {
+                        string reason = dr.GetString("reason");
+                        string requestStatus = dr.GetString("requestStatus");
+                        string username = dr.GetString("userName");
+                        string startDate = dr.GetDateTime("startDate").ToString();
+                        string endDate = dr.GetDateTime("endDate").ToString();
+                        string answer = "Request for " + reason + " starting " + startDate + " and ending on " + endDate + " is " + requestStatus + " by " + username;
+                        vs.Add(answer);
+                    }
+                    return vs;
+                }
+            }
+            catch (Exception)
+            {
 
-        //            while (dr.Read())
-        //            {
-
-        //            }
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-        //}
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
