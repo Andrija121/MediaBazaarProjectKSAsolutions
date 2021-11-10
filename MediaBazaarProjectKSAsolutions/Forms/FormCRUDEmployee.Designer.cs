@@ -51,6 +51,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZipCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPage.SuspendLayout();
             this.panelDMandGM.SuspendLayout();
             this.panelHRorGM.SuspendLayout();
@@ -227,7 +233,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.FirstName,
             this.LastName,
             this.Password,
-            this.Email});
+            this.Email,
+            this.Birthday,
+            this.BSN,
+            this.Address,
+            this.ZipCode,
+            this.Gender,
+            this.Role});
             this.dgvUsers.Location = new System.Drawing.Point(36, 223);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 62;
@@ -276,6 +288,48 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Email.MinimumWidth = 8;
             this.Email.Name = "Email";
             this.Email.Width = 150;
+            // 
+            // Birthday
+            // 
+            this.Birthday.HeaderText = "Birthday";
+            this.Birthday.MinimumWidth = 8;
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Width = 150;
+            // 
+            // BSN
+            // 
+            this.BSN.HeaderText = "BSN";
+            this.BSN.MinimumWidth = 8;
+            this.BSN.Name = "BSN";
+            this.BSN.Width = 150;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 8;
+            this.Address.Name = "Address";
+            this.Address.Width = 150;
+            // 
+            // ZipCode
+            // 
+            this.ZipCode.HeaderText = "ZipCode";
+            this.ZipCode.MinimumWidth = 8;
+            this.ZipCode.Name = "ZipCode";
+            this.ZipCode.Width = 150;
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Gender";
+            this.Gender.MinimumWidth = 8;
+            this.Gender.Name = "Gender";
+            this.Gender.Width = 150;
+            // 
+            // Role
+            // 
+            this.Role.HeaderText = "Role";
+            this.Role.MinimumWidth = 8;
+            this.Role.Name = "Role";
+            this.Role.Width = 150;
             // 
             // FormCRUDEmployee
             // 
@@ -330,5 +384,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BSN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZipCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
     }
 }
