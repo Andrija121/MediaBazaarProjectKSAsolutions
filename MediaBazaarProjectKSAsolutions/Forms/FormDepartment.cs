@@ -35,6 +35,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             RefreshListBox();
         }
 
+        public void SearchListBox(string text)
+        {
+            lbDepartments.Items.Clear();
+            foreach (var d in dm.SearchDepartments(text))
+            {
+                lbDepartments.Items.Add(d);
+            }
+        }
+
         private void btnEditDepartments_Click(object sender, EventArgs e)
         {
             Department department = (Department)lbDepartments.SelectedItem;
@@ -86,6 +95,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveDepartmentsForm inactiveDepartmentsForm = new InactiveDepartmentsForm();
             inactiveDepartmentsForm.ShowDialog();
+        }
+
+        private void tbxSearchBar_Departments_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchBar_Departments.Text == "")
+            {
+
+            }
+            else
+            {
+                string text = Convert.ToString(tbxSearchBar_Departments.Text);
+                SearchListBox(text);
+            }
         }
     }
 }

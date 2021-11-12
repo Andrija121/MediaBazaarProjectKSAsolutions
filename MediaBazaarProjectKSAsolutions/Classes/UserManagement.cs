@@ -85,6 +85,61 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
         }
 
+
+
+        public List<User> SearchUsers(string text)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
+                {
+                    conn.Open();
+                    string sql = "select * FROM user WHERE firstName LIKE '%" + text + "%' OR lastName LIKE '%" + text + "%' OR email LIKE '%" + text + "%' OR BSN LIKE '%" + text + "%' OR address LIKE '%" + text + "%' OR zipCode LIKE '%" + text + "%'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());
+
+
+
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<User> users = new List<User>();
+
+                    while (dr.Read())
+                    {
+                        User user = new User();
+                        user.Id = Convert.ToInt32(dr["id"]);
+                        user.UserName = dr["USERNAME"].ToString();
+                        user.FirstName = dr["FIRSTNAME"].ToString();
+                        user.LastName = dr["LASTNAME"].ToString();
+                        user.Email = dr["EMAIL"].ToString();
+                        user.Password = dr["PASSWORD"].ToString();
+                        user.Birtyhday = Convert.ToDateTime(dr["BIRTHDAY"]);
+                        user.BSN = Convert.ToInt32(dr["BSN"]);
+                        user.ZipCode = dr["ZIPCODE"].ToString();
+                        user.Address = dr["ADDRESS"].ToString();
+                        user.Gender = Enum.Parse<Gender>(dr["GENDER"].ToString());
+                        user.Role = Enum.Parse<Role>(dr["ROLE"].ToString());
+                        user.Status = Enum.Parse<Status>(dr["STATUS"].ToString());
+                        users.Add(user);
+                    }
+                    return users;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
         public Contract GetContract(int id)
         {
             try

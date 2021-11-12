@@ -65,6 +65,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             }
         }
 
+        public void StockSearch(string text)
+        {
+            lbStocks.Items.Clear();
+            foreach (var s in sm.SearchAllStock(text))
+            {
+                lbStocks.Items.Add(s);
+            }
+        } 
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,6 +93,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 MessageBox.Show("Please select an item to delete.");
             }   
+        }
+
+        private void tbxSearchBar_Stocks_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchBar_Stocks.Text == "")
+            {
+
+            }
+            else
+            {
+                string text = Convert.ToString(tbxSearchBar_Stocks.Text);
+                StockSearch(text);
+            }
         }
     }
 }
