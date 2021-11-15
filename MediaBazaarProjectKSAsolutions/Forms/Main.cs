@@ -17,7 +17,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
             u = user;
-            lblHi.Text = "Welcome back, "+u.FirstName;
+            if (u.Role == Role.GENERALMANAGER)
+            {
+            }
+            else if (u.Role == Role.DEPARTMENTMANAGER)
+            {
+                btnStatistics.Hide();
+                btnStocks.Hide();
+
+            }
+            else
+                btnStatistics.Hide();
+
+            lblHi.Text = "Welcome back, " + u.FirstName;
         }
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {

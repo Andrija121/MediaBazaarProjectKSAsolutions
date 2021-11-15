@@ -7,6 +7,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     public enum Status
     {
         ACTIVE,
-        INACTIVE
+        INACTIVE,
+        AWAY
     }
 }

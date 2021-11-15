@@ -156,12 +156,14 @@
 - Shift 1st, 2nd and 3rd shift, around 20 active users per shift 
 - Employees Contract (Start Date, End Date), Every Employee must have a contract, Can work maximum 2 shifts per day
 -Website Login Page</Text>
-        <Location left="340" top="14" />
+        <Location left="315" top="14" />
         <Size width="286" height="301" />
       </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Association" first="0" second="2">
+        <Label>
+        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -169,6 +171,8 @@
         <EndRole>- users</EndRole>
       </Relationship>
       <Relationship type="Association" first="1" second="3">
+        <Label>
+        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -176,6 +180,8 @@
         <EndRole>- stocks</EndRole>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
+        <Label>
+        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
@@ -204,8 +210,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Dependency" first="7" second="0">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -218,8 +222,6 @@
         </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="8" second="0">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -232,8 +234,6 @@
         </BendPoint>
       </Relationship>
       <Relationship type="Dependency" first="9" second="0">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
