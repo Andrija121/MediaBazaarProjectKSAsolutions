@@ -33,10 +33,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         public void EmployeeSearch(string text)
         {
-            lbUsers.Items.Clear();
+            dgvUsers.Rows.Clear();
             foreach (var u in userManagement.SearchUsers(text))
             {
-                lbUsers.Items.Add(u);
+                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email);
             }
         }
         public void RefreshDGV()

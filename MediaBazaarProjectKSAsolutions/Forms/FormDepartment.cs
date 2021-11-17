@@ -37,6 +37,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         public void SearchListBox(string text)
         {
+            
             lbDepartments.Items.Clear();
             foreach (var d in dm.SearchDepartments(text))
             {

@@ -67,10 +67,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         public void StockSearch(string text)
         {
-            lbStocks.Items.Clear();
+            DVGStock.Rows.Clear();
             foreach (var s in sm.SearchAllStock(text))
             {
-                lbStocks.Items.Add(s);
+                DVGStock.Rows.Add(s.ProductName, s.Price, s.SerialNumber, s.Amount, s.Category);
             }
         } 
 
