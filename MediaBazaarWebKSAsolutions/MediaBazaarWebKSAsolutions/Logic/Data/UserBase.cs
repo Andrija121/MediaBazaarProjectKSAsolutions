@@ -43,26 +43,26 @@ namespace MediaBazaarWebKSAsolutions.Logic.Data
             return null;
         }
 
-        public void CreateUser(User client)
-        {
-            using (MySqlConnection conn = new MySqlConnection(Database.connectionString))
-                try
-                {
-                    string sql = "INSERT INTO user(username, email, password) values(@Username, @Email, @Password)";
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+        //public void CreateUser(User client)
+        //{
+        //    using (MySqlConnection conn = new MySqlConnection(Database.connectionString))
+        //        try
+        //        {
+        //            string sql = "INSERT INTO user(username, email, password) values(@Username, @Email, @Password)";
+        //            MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@username", client.Username);
-                    cmd.Parameters.AddWithValue("@email", client.Email);
-                    cmd.Parameters.AddWithValue("@password", client.Password);
+        //            conn.Open();
+        //            cmd.Parameters.AddWithValue("@username", client.Username);
+        //            cmd.Parameters.AddWithValue("@email", client.Email);
+        //            cmd.Parameters.AddWithValue("@password", client.Password);
 
-                    cmd.ExecuteNonQuery();
-                }
-                finally
-                {
-                    conn.Close();
-                }
-        }
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //        finally
+        //        {
+        //            conn.Close();
+        //        }
+        //}
 
         public User GetUser(string username)
         {
