@@ -4,16 +4,16 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    public class Category
+    public class @int
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
 
-        public Category()
+        public @int()
         {
 
         }
-        public Category(int id, string categoryName)
+        public @int(int id, string categoryName)
         {
             this.Id = id;
             this.CategoryName = categoryName;

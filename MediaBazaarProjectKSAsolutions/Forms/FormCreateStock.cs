@@ -37,14 +37,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             try
             {
-                Category category = (Category)cbCategories.SelectedItem;
+                int categoryId = (int)cbCategories.SelectedItem;
                 string stockName = tbxNewStockName.Text;
                 double stockPrice = Convert.ToDouble(tbxNewStockPrice.Text);
                 int stockSerialNumber = Convert.ToInt32(tbxNewStockSerialNumber.Text);
                 int stockAmount = Convert.ToInt32(tbxNewStockAmount.Text);
                 
 
-                Stock stock = new Stock(0, stockName,stockPrice, stockSerialNumber, stockAmount,category);
+                Stock stock = new Stock(0, stockName,stockPrice, stockSerialNumber, stockAmount,categoryId);
                 sm.AddStock(stock);
                 MessageBox.Show("Item Created Successfully");
 

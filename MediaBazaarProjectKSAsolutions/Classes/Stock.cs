@@ -11,20 +11,20 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public double Price { get; set; }
         public int SerialNumber { get; set; }
         public int Amount { get; set; }
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
 
         public Stock()
         {
 
         }
-        public Stock(int id,string productName,double price,int serialNumber, int amount,Category category)
+        public Stock(int id,string productName,double price,int serialNumber, int amount,int categoryId)
         {
-            this.Category = category;
             this.Id = id;
             this.ProductName = productName;
             this.Price = price;
             this.SerialNumber = serialNumber;
             this.Amount = amount;
+            this.CategoryId = categoryId;
         }
 
         public override string ToString()

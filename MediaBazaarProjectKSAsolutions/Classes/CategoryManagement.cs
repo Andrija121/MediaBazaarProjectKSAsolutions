@@ -14,7 +14,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         }
 
-        public void AddCategory(Category category)
+        public void AddCategory(@int category)
         {
             try
             {
@@ -41,14 +41,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public Category GetCategory(int id)
+        public @int GetCategory(int id)
         {
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    Category c = new Category();
+                    @int c = new @int();
                     string query = "select * from category where id=@id";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -78,7 +78,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
-        public List<Category> GetCategories()
+        public List<@int> GetCategories()
         {
             try
             {
@@ -90,11 +90,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
-                    List<Category> categories = new List<Category>();
+                    List<@int> categories = new List<@int>();
 
                     while (dr.Read())
                     {
-                        Category c = new Category();
+                        @int c = new @int();
                         c.Id = dr.GetInt32("categoryid");
                         c.CategoryName = dr.GetString("name");
                         categories.Add(c);
@@ -113,29 +113,33 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
 
         }
-        public List<Category> GetCombinedCategories()
+        public List<Stock> GetCombinedCategories()
         {
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT stock.productName, stock.price, stock.serialNumber, stock.amount, category.name FROM category INNER JOIN stock on category.categoryID = stock.CategoryID";
+                    string query ="SELECT stock.productName, stock.price, stock.serialNumber, stock.amount, category.name FROM category INNER JOIN stock on category.categoryID = stock.CategoryID";
                     //"select * from category";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
-                    List<Category> categories = new List<Category>();
+                    List<Stock> data = new List<Stock>();
 
                     while (dr.Read())
                     {
-                        Category c = new Category();
-                        c.Id = dr.GetInt32("categoryid");
-                        c.CategoryName = dr.GetString("name");
-                        categories.Add(c);
+                        Stock stock = new Stock();
+                        stock.ProductName = dr.GetString("productName");
+                        stock.Price = dr.GetUInt32("price");
+                        stock.SerialNumber = dr.GetInt32("serialNumber");
+                        stock.Amount = dr.GetInt32("amount");
+                        stock.CategoryId = dr.GetInt32("name".ToString());
+
+                        data.Add(stock);
                     }
-                    return categories;
+                    return data;
 
                 }
             }

@@ -12,9 +12,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormStock : Form
     {
         StockManagement sm = new StockManagement();
+        CategoryManagement cm;
         public FormStock()
         {
             InitializeComponent();
+            cm = new CategoryManagement();
             RefreshListBox();
             RefreshDVG();
         }
@@ -22,9 +24,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public void RefreshDVG()
         {
             DVGStock.Rows.Clear();
-            foreach (var s in sm.GetAllStock())
+            foreach (var s in cm.GetCombinedCategories())
             { 
-                DVGStock.Rows.Add(s.ProductName, s.Price, s.SerialNumber, s.Amount, s.Category);
+                DVGStock.Rows.Add(s);
             }
         }
 

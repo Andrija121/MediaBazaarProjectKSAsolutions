@@ -36,7 +36,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@price", stock.Price.ToString());
                     cmd.Parameters.AddWithValue("@serialNumber", stock.SerialNumber);
                     cmd.Parameters.AddWithValue("@amount", stock.Amount);
-                    cmd.Parameters.AddWithValue("@categoryId", stock.Category.Id);
+                    cmd.Parameters.AddWithValue("@categoryId", stock.CategoryId);
 
                     cmd.ExecuteNonQuery();
                 }

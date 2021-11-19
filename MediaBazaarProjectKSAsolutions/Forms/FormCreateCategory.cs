@@ -26,7 +26,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnCategorySave_Click(object sender, EventArgs e)
         {
             string categoryName = tbCategoryName.Text;
-            Category category = new Category(0, categoryName);
+            @int category = new @int(0, categoryName);
             if (category.CategoryName == string.Empty)
             {
                 MessageBox.Show("Invalid category name.");
