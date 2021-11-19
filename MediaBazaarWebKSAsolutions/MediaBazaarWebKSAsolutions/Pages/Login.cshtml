@@ -1,0 +1,24 @@
+﻿@page
+@model MediaBazaarWebKSAsolutions.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div id="Login">
+    <div id="LoginField">
+        <h1>Login</h1>
+        <form method="post">
+            <label asp-for="loginUsername">Username: * </label> <br />
+            <span asp-validation-for="loginUsername"></span><br />
+            <input class="loginwidth" asp-for="loginUsername" /> <br /> <br />
+
+            <label asp-for="loginPassword"> Password: * </label> <br />
+            <span asp-validation-for="loginPassword"></span><br />
+            <input class="loginwidth" type="password" asp-for="loginPassword" /> <br /> <br />
+
+            <input class="button loginwidth" type="submit" value="Login" /> <br /> <br />
+            <input class="button loginwidth" type="reset" value="Cancel" />
+            <br /><br />
+        </form>
+    </div>
+</div>

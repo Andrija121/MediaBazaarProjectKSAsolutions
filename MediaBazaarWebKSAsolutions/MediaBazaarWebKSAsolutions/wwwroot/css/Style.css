@@ -1,0 +1,163 @@
+/* Start main body properties */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+/* End main body properties */
+
+/* Start grid Css properties */
+.grid-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 160px auto; /* specify the width of columns(vertically) */
+    grid-template-rows: 80px auto 60px; /* specify the height of rows(horizontally) */
+}
+
+#SideNav {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+
+#Header{
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(168, 168, 168);
+    font-size: 46px;
+}
+
+#SubNav{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#Main{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    overflow-y: auto;
+}
+/* End grid Css properties */
+
+/* Start content page properties */
+#Login {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    height: calc(100% - 240px);
+}
+
+#LoginField {
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    background-color: lightgray;
+    height: 100%;
+}
+
+#Base{
+    padding: 20px;
+    height: calc(100% - 80px);
+}
+
+#BaseField {
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+    height: 100%;
+}
+/* End content page properties*/
+/* Start flexbox Css properties */
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container > div {
+    background-color: rgb(230, 230, 230);
+    width: 410.95px;
+    height: 300px;
+    margin: 5px 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+/* End flexbox Css properties */
+
+/* Start other Css properties */
+.SideBar{
+    background-color: rgb(90, 214, 90);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ImageCard{
+    height: 200px;
+    background-size: cover;
+}
+
+.TextCard{
+    height: 100px;
+    font-size: 25px;
+}
+
+.FoodImage{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.Bazaar{
+    color: forestgreen;
+}
+
+.Nav{
+    width: 150px;
+}
+
+.NavSearch{
+    width: 142px;
+}
+
+#Create {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button {
+    border-radius: 4px 4px;
+    background-color: rgb(168, 168, 168);
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: none;
+}
+.button:hover{
+    background-color: lightgray;
+    color: black;
+}
+.loginwidth{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+    height: 30px;
+}
+
+#SubNavText{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Test{
+    Margin: 0px;
+    font-size: 12px;
+}
