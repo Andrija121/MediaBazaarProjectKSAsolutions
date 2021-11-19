@@ -1,17 +1,35 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";}
+@{ 
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <!-- Fullcalendar below -->
+    <meta charset='utf-8' />
+    <link href='~/lib/fullcalendar/main.css' rel='stylesheet' />
+    <script src='~/lib/fullcalendar/main.js'></script>
+    <script>
 
-<div class="flex-container">
-    <p>
-        
-    </p>
-    @try 
-    { 
-    }
-     catch
-     {
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+    <!-- Fullcalendar above -->
+</head>
+
+
+<div id="Base">
+    @try
+        {
+        <div id='calendar'></div> 
+        }
+    catch
+        {
         <p>We're sorry, something went wrong</p>
-     }
+        }
 </div>
