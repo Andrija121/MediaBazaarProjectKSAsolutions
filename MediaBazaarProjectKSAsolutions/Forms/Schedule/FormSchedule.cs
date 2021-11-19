@@ -16,7 +16,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public FormSchedule()
         {
             InitializeComponent();
-            RefreshDVG();
+
         }
 
         public void RefreshDVG()
@@ -25,6 +25,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             foreach(var shift in shm.GetAllShifts())
             {
                 DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
+
             }
         }
         private void btnRefreshSchedule_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnEditSchedule_Click(object sender, EventArgs e)
         {
+
             //Shift shift = (shift)DVG_Shift.SelectedCells.
             //if (shift != null)
             //{

@@ -55,11 +55,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            using (FormSchedule formSchedule = new FormSchedule())
-            {
-                formSchedule.ShowDialog();
-            }
-        }
+
+            FormSchedule formSchedule = new FormSchedule();
+            formSchedule.ShowDialog();
+      }
+
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {
