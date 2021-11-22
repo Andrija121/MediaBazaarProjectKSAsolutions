@@ -3,11 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Classes
+namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 {
     public class Shift
     {
-   
+       
+        private UserManagement uerCon = new UserManagement();
+        private DepartmentManagement depCon = new DepartmentManagement();
+
+        public Department department = new Department(); //Give a Department and employee
         public int Shift_Id { get; set; }
        
         public int User_Id { get; set; }

@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-namespace MediaBazaarProjectKSAsolutions.Classes
-{
-    class ShiftManagments
+namespace MediaBazaarProjectKSAsolutions.Classes.Shift
+{   
+    public class ShiftManagments
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
@@ -12,7 +12,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
 
         }
-        public void AddShift( Shift shifts)  //This Adds Shifts
+        public void AddShift(Shift shifts)  //This Adds Shifts
         {
             try
             {
@@ -170,3 +170,4 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
     }
 }
+

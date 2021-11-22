@@ -1,4 +1,5 @@
 ﻿using MediaBazaarProjectKSAsolutions.Classes;
+using MediaBazaarProjectKSAsolutions.Classes.Shift;
 using MediaBazaarProjectKSAsolutions.Forms.Schedule;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public FormSchedule()
         {
             InitializeComponent();
-
         }
 
         public void RefreshDVG()

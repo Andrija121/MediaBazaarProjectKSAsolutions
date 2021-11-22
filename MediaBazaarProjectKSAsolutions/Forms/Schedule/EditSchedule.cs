@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using MediaBazaarProjectKSAsolutions.Classes;
+using MediaBazaarProjectKSAsolutions.Classes.Shift;
+
 namespace MediaBazaarProjectKSAsolutions.Forms.Schedule
 {
     public partial class EditSchedule : Form
