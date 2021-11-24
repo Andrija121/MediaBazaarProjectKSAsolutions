@@ -13,12 +13,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms.Schedule
     public partial class EditSchedule : Form
     {
         Shift sh;
-        ShiftManagments shm;
+        ShiftDAL shm;
         public EditSchedule( Shift shift)
         {
             InitializeComponent();
             this.sh = shift;
-            shm = new ShiftManagments();
+            shm = new ShiftDAL();
             cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
         }
 

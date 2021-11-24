@@ -27,7 +27,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 Status status = (Status)cbStatus.SelectedItem;
                 
                
-                Department department = new Department(0,name,status);
+                Department department = new Department();
                 if (department.Name == "")
                 {
                     MessageBox.Show("Please input proper values");

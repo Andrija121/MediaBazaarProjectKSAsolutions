@@ -13,7 +13,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormSchedule : Form
     {
-        ShiftManagments shm = new ShiftManagments();
+        ShiftDAL shm = new ShiftDAL();
         public FormSchedule()
         {
             InitializeComponent();
@@ -21,12 +21,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         public void RefreshDVG()
         {
-            DVG_Shift.Rows.Clear();
-            foreach(var shift in shm.GetAllShifts())
-            {
-                DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
+            //DVG_Shift.Rows.Clear();
+            //foreach(var shift in shm.GetAllShifts())
+            //{
+            //    DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
 
-            }
+            //}
         }
         private void btnRefreshSchedule_Click(object sender, EventArgs e)
         {

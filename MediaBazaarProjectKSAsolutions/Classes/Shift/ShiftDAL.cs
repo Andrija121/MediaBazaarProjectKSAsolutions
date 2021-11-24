@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 {   
-    public class ShiftManagments
+    public class ShiftDAL
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
-        public ShiftManagments()
+        public ShiftDAL()
         {
 
         }
