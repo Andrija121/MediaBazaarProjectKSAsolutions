@@ -28,7 +28,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return Name + " - " + Status;
+            return Id + " - " + Name + " - " + Department_Manager;
         }
     }
 }
