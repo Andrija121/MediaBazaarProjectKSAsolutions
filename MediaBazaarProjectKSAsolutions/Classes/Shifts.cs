@@ -7,7 +7,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 {
     public class Shift
     {
-   
+        UserManagement usercon = new UserManagement(); //To use fro shifts 
+
         public int Shift_Id { get; set; }
        
         public int User_Id { get; set; }
@@ -27,9 +28,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
 
         }
-        public override string ToString()
+        public virtual string[] GetInfo()
         {
-            return User_Id + " " + Shift_Date+ " " + Shift_Type + " " ;
+            string[] s = { this.User_Id.ToString(), this.Shift_Date.ToString("dd/MM/yyyy"), this.Shift_Type.ToString() };
+            return s;
         }
     }
 }

@@ -168,5 +168,66 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        public List<Shift> GetShiftByDate(DateTime date)
+        {
+            using(var con = new MySqlConnection(Params.connectionString))
+            {
+                con.Open();
+                using (var command = con.CreateCommand())
+                {
+                    //Select Statemnt
+                    command.CommandText = @"SELECT * FROM shift as s INNER JOIN user as u on s.User_Id = u.User_ID HHERE u.Active is TRUE AND Shift_Day = @date";
+                    command.Parameters.AddWithValue("date", date);
+
+                    //Executing it
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Shift> shifts = new List<Shift>();
+                        while(reader.Read())
+                        {
+                            Shift shift = new Shift();
+                            shift.Shift_Id = Convert.ToInt32(reader["id"]);
+                            shift.User_Id = Convert.ToInt32(reader["user_Id"]);
+                            shift.Shift_Date = Convert.ToDateTime(reader["shift_Date"]);
+                            shift.Shift_Type = Enum.Parse<Shift_Type>(reader["shift_Type"].ToString());
+                            shifts.Add(shift);
+
+                        }
+                        return shifts;
+                    }
+
+                }
+            }
+        }
+
+        public List<Shift> GetShiftbyEmployyeID(int U_ID)
+        {
+            conn.Open();
+            using (var command = conn.CreateCommand())
+            {
+                //Select Statment
+                command.CommandText = @"SELECT * FROM shifts WHERE User_Id = @User_Id ORDER BY Shift_Date=@Shift_Date ASC";
+                command.Parameters.AddWithValue("@User_Id", U_ID);
+
+                //EXecuting it
+                {
+                   using (var reader = command.ExecuteReader())
+                    {
+                        List<Shift> shifts = new List<Shift>();
+                        while(reader.Read())
+                        {
+                            Shift shift = new Shift();
+                            shift.Shift_Id = Convert.ToInt32(reader["id"]);
+                            shift.User_Id = Convert.ToInt32(reader["user_Id"]);
+                            shift.Shift_Date = Convert.ToDateTime(reader["shift_Date"]);
+                            shift.Shift_Type = Enum.Parse<Shift_Type>(reader["shift_Type"].ToString());
+                            shifts.Add(shift);
+
+                        }
+                        return shifts;
+                    }
+                }
+            }       
+        }
     }
 }
