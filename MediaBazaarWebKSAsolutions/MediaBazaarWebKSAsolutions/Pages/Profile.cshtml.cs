@@ -17,13 +17,33 @@ namespace MediaBazaarWebKSAsolutions.Pages
 
 
         [BindProperty]
+        public string profileId { get; set; }
+        [BindProperty]
         public string profileUsername { get; set; }
+        [BindProperty]
+        public string profileFirstName { get; set; }
+        [BindProperty]
+        public string profileLastName { get; set; }
         [BindProperty]
         [Required, EmailAddress(ErrorMessage = "Please enter a correct email adress")]
         public string profileEmail { get; set; }
         [BindProperty]
         [Required, MinLength(6, ErrorMessage = "Please enter a password with at least 6 characters")]
         public string profilePassword { get; set; }
+        [BindProperty]
+        public string profileBirthday { get; set; }
+        [BindProperty]
+        public string profileBSN { get; set; }
+        [BindProperty]
+        public string profileZipCode { get; set; }
+        [BindProperty]
+        public string profileAdress { get; set; }
+        [BindProperty]
+        public string profileGender { get; set; }
+        [BindProperty]
+        public string profileRole { get; set; }
+        [BindProperty]
+        public string profileStatus { get; set; }
 
         public string UsernameFromSession { get; set; }
 
@@ -66,7 +86,7 @@ namespace MediaBazaarWebKSAsolutions.Pages
         public void LoadTextboxes()
         {
             User loadUser = ub.GetUser(HttpContext.Session.GetString("username"));
-            profileUsername = loadUser.Username;
+            profileUsername = loadUser.UserName;
             profileEmail = loadUser.Email;
             profilePassword = loadUser.Password;
             //loadUser.Username = profileUsername;

@@ -79,7 +79,7 @@ namespace MediaBazaarWebKSAsolutions.Logic.Data
                     while (dr.Read())
                     {
                         c.Id = dr.GetInt32("id");
-                        c.Username = dr.GetString("username");
+                        c.UserName = dr.GetString("username");
                         c.Email = dr.GetString("email");
                         c.Password = dr.GetString("password");
                         return c;

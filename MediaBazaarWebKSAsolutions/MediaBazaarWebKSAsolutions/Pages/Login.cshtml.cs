@@ -31,7 +31,7 @@ namespace MediaBazaarWebKSAsolutions.Pages
                 User loginUser = ub.Login(loginUsername, loginPassword);
                 if (loginUser != null)
                 {
-                    HttpContext.Session.SetString("username", loginUser.Username);
+                    HttpContext.Session.SetString("username", loginUser.UserName);
 
                     return RedirectToPage("Index");
                 }
