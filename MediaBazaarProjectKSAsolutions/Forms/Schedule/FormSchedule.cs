@@ -14,7 +14,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         ShiftManagments shm = new ShiftManagments();
         private int addDay = 0;
-        
+
         public FormSchedule()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 =======
             DVG_Shift.Rows.Clear();
 >>>>>>> 0cc146c6fa5073c7524df81fc67371000ba5283d
-            foreach(var shift in shm.GetAllShifts())
+            foreach (var shift in shm.GetAllShifts())
             {
                 DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
 
@@ -55,54 +55,54 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 EditSchedule editSchedule = new EditSchedule(shift);
                 editSchedule.ShowDialog();
                 RefreshListBox();
+
 =======
 >>>>>>> 0cc146c6fa5073c7524df81fc67371000ba5283d
+                //Shift shift = (shift)DVG_Shift.SelectedCells.
+                //if (shift != null)
+                //{
+                //    EditSchedule editSchedule = new EditSchedule(shift);
+                //    editSchedule.ShowDialog();
+                //    RefreshDVG();
 
-            //Shift shift = (shift)DVG_Shift.SelectedCells.
-            //if (shift != null)
-            //{
-            //    EditSchedule editSchedule = new EditSchedule(shift);
-            //    editSchedule.ShowDialog();
-            //    RefreshDVG();
 
+                //}
+                //else
+                //    MessageBox.Show("Please slecet the shift you want to edit");
+            }
 
-            //}
-            //else
-            //    MessageBox.Show("Please slecet the shift you want to edit");
+            private void btnBack_Click(object sender, EventArgs e)
+            {
+                this.Close();
+            }
+
+            private void showDate(DateTime now)
+            {
+                this.dateCenter.Text = now.ToString("dd");
+                this.monthCenter.Text = now.ToString("MMM").ToUpper();
+                this.yearCenter.Text = now.ToString("yyyy").ToUpper();
+
+                DateTime yesterday = now.AddDays(-1);
+                this.dateLeft.Text = yesterday.ToString("dd");
+                this.monthLeft.Text = yesterday.ToString("MMMM").ToUpper();
+                this.yearLeft.Text = yesterday.ToString("yyyy").ToUpper();
+
+                DateTime tommorrow = now.AddDays(+1);
+                this.dateRight.Text = tommorrow.ToString("dd");
+                this.monthRight.Text = tommorrow.ToString("MMM").ToUpper();
+                this.yearRight.Text = tommorrow.ToString("yyyy").ToUpper();
+            }
+
+            public void displayShift(DateTime dateTime)
+            {
+                Shift[] shifts = ShiftManagments.GetShiftByDate(dateTime.Date).ToArray();
+            }
+
+            private void Left_Click(object sender, EventArgs e)
+            {
+                addDay--;
+                showDate(DateTime.UtcNow.Date.AddDays(addDay));
+                displayShift(DateTime.UtcNow.Date.AddDays(addDay));
+            }
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void showDate(DateTime now)
-        {
-            this.dateCenter.Text = now.ToString("dd");
-            this.monthCenter.Text = now.ToString("MMM").ToUpper();
-            this.yearCenter.Text = now.ToString("yyyy").ToUpper();
-
-            DateTime yesterday = now.AddDays(-1);
-            this.dateLeft.Text = yesterday.ToString("dd");
-            this.monthLeft.Text = yesterday.ToString("MMMM").ToUpper();
-            this.yearLeft.Text = yesterday.ToString("yyyy").ToUpper();
-
-            DateTime tommorrow = now.AddDays(+1);
-            this.dateRight.Text = tommorrow.ToString("dd");
-            this.monthRight.Text = tommorrow.ToString("MMM").ToUpper();
-            this.yearRight.Text = tommorrow.ToString("yyyy").ToUpper();
-        }
-
-        public void displayShift(DateTime dateTime)
-        {
-            Shift[] shifts = ShiftManagments.GetShiftByDate(dateTime.Date).ToArray();
-        }
-
-        private void Left_Click(object sender, EventArgs e)
-        {
-            addDay--;
-            showDate(DateTime.UtcNow.Date.AddDays(addDay));
-            displayShift(DateTime.UtcNow.Date.AddDays(addDay));
-        }
-    }
-}
+    } 
