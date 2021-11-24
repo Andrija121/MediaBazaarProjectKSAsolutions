@@ -73,7 +73,7 @@ namespace MediaBazaarProjectKSAsolutions
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Please Connect To database for further access");
             }
             
             
