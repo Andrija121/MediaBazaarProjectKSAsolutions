@@ -23,7 +23,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO stock(productName,price,serialNumber,amount) values(@productName,@price,@serialNumber,@amount)";
+                    string sql = "INSERT INTO stock(productName,price,serialNumber,amount,categoryId) values(@productName,@price,@serialNumber,@amount,@categoryId)";
 
 
 
@@ -36,6 +36,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@price", stock.Price.ToString());
                     cmd.Parameters.AddWithValue("@serialNumber", stock.SerialNumber);
                     cmd.Parameters.AddWithValue("@amount", stock.Amount);
+                    cmd.Parameters.AddWithValue("@categoryId", stock.Category.Id);
 
                     cmd.ExecuteNonQuery();
                 }

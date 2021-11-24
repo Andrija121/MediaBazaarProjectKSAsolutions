@@ -31,6 +31,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
             return shiftcon.GetShiftbyEmployyeID(id);
         }
+        public List<Shift> GetShiftByDate(DateTime date) //This retirves the shift by date.
+        {
+            return shiftcon.GetShiftByDate(date);
+        }
 
     }
 }

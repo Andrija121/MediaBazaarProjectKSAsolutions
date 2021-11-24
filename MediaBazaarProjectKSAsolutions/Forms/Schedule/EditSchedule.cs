@@ -20,6 +20,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms.Schedule
             cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
         }
 
+        public EditSchedule()
+        {
+        }
+
         private void btnEditSchedule_Click(object sender, EventArgs e)
         {
             try

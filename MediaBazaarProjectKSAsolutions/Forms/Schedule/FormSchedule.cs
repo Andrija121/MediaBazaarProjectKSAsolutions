@@ -18,42 +18,57 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public FormSchedule()
         {
             InitializeComponent();
-            RefreshListBox();
+
         }
 
-        public void RefreshListBox()
+        public void RefreshDVG()
         {
+<<<<<<< HEAD
             //lbSchedule.Items.Clear();
+=======
+            DVG_Shift.Rows.Clear();
+>>>>>>> 0cc146c6fa5073c7524df81fc67371000ba5283d
             foreach(var shift in shm.GetAllShifts())
             {
-                lbSchedule.Items.Add(shift);
+                DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
+
             }
         }
         private void btnRefreshSchedule_Click(object sender, EventArgs e)
         {
-            RefreshListBox();
+            RefreshDVG();
         }
 
         private void btnCreateSchedule_Click(object sender, EventArgs e)
         {
             CreateSchedule createSchedule = new CreateSchedule();
             createSchedule.ShowDialog();
-            RefreshListBox();
+            RefreshDVG();
         }
 
         private void btnEditSchedule_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //Shift shift = (Shift)lbSchedule.SelectedItem;
             if (shift != null)
             {
                 EditSchedule editSchedule = new EditSchedule(shift);
                 editSchedule.ShowDialog();
                 RefreshListBox();
+=======
+>>>>>>> 0cc146c6fa5073c7524df81fc67371000ba5283d
+
+            //Shift shift = (shift)DVG_Shift.SelectedCells.
+            //if (shift != null)
+            //{
+            //    EditSchedule editSchedule = new EditSchedule(shift);
+            //    editSchedule.ShowDialog();
+            //    RefreshDVG();
 
 
-            }
-            else
-                MessageBox.Show("Please slecet the shift you want to edit");
+            //}
+            //else
+            //    MessageBox.Show("Please slecet the shift you want to edit");
         }
 
         private void btnBack_Click(object sender, EventArgs e)

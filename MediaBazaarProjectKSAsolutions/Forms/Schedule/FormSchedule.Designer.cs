@@ -34,7 +34,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnCreateSchedule = new System.Windows.Forms.Button();
             this.btnEditSchedule = new System.Windows.Forms.Button();
             this.btnDelSchedule = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgActiveShifts = new System.Windows.Forms.DataGridView();
             this.Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShiftType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShiftDateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.monthRight = new System.Windows.Forms.TextBox();
             this.yearLeft = new System.Windows.Forms.TextBox();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgActiveShifts)).BeginInit();
             this.pnlEmployees.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,19 +139,19 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDelSchedule.Text = "Delete Schdeule";
             this.btnDelSchedule.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dvgActiveShifts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgActiveShifts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgActiveShifts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Employee,
             this.ShiftType,
             this.ShiftDateDate});
-            this.dataGridView1.Location = new System.Drawing.Point(177, 437);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(653, 371);
-            this.dataGridView1.TabIndex = 6;
+            this.dvgActiveShifts.Location = new System.Drawing.Point(177, 437);
+            this.dvgActiveShifts.Name = "dvgActiveShifts";
+            this.dvgActiveShifts.RowHeadersWidth = 51;
+            this.dvgActiveShifts.RowTemplate.Height = 29;
+            this.dvgActiveShifts.Size = new System.Drawing.Size(653, 371);
+            this.dvgActiveShifts.TabIndex = 6;
             // 
             // Employee
             // 
@@ -180,7 +180,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(934, 783);
+            this.btnBack.Location = new System.Drawing.Point(908, 708);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(103, 38);
@@ -196,13 +196,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.label1);
             this.pnlEmployees.Controls.Add(this.panel4);
             this.pnlEmployees.Controls.Add(this.btnBack);
-            this.pnlEmployees.Controls.Add(this.dataGridView1);
+            this.pnlEmployees.Controls.Add(this.dvgActiveShifts);
             this.pnlEmployees.Controls.Add(this.btnDelSchedule);
             this.pnlEmployees.Controls.Add(this.btnEditSchedule);
             this.pnlEmployees.Controls.Add(this.btnCreateSchedule);
             this.pnlEmployees.Controls.Add(this.btnRefreshSchedule);
             this.pnlEmployees.Controls.Add(this.Stock);
-            this.pnlEmployees.Location = new System.Drawing.Point(7, 13);
+            this.pnlEmployees.Location = new System.Drawing.Point(12, 2);
             this.pnlEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEmployees.Name = "pnlEmployees";
             this.pnlEmployees.Size = new System.Drawing.Size(1126, 850);
@@ -380,13 +380,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 846);
+            this.ClientSize = new System.Drawing.Size(1139, 854);
             this.Controls.Add(this.pnlEmployees);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSchedule";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgActiveShifts)).EndInit();
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -407,7 +407,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnCreateSchedule;
         private System.Windows.Forms.Button btnEditSchedule;
         private System.Windows.Forms.Button btnDelSchedule;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgActiveShifts;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlEmployees;
         private System.Windows.Forms.DataGridViewTextBoxColumn Employee;

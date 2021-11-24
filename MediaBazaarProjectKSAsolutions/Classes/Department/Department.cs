@@ -9,6 +9,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public int Department_Manager { get; set; } //Give Department a Manager. 
         public Status Status { get; set; }
         
 
@@ -16,10 +17,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
 
         }
-        public Department(int id,string name,Status status)
+        public Department(int id,string name,int depo_manager,Status status)
         {
             this.Id = id;
             this.Name = name;
+            this.Department_Manager = depo_manager;
             this.Status = status;
             
         }

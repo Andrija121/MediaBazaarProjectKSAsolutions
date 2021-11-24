@@ -13,14 +13,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     {
         User u;
         UserManagement um;
-        public EditUserForm(User user)
+        Contract c;
+        public EditUserForm(User user,Contract contract)
         {
             InitializeComponent();
             this.u = user;
             um = new UserManagement();
+            this.c = contract;
             cbGender.DataSource = Enum.GetValues(typeof(Gender));
             cbRole.DataSource = Enum.GetValues(typeof(Role));
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
+            cbContractType.DataSource = Enum.GetValues(typeof(ContractType));
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
@@ -39,14 +42,34 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 u.Role = (Role)cbRole.SelectedItem;
                 u.Status = (Status)cbStatus.SelectedItem;
 
+                if (c == null)
+                {
+                    c = new Contract();
+                }
+
+                c.StartDate = StartDatedateTimePicker.Value;
+                c.EndDate = EndDatedateTimePicker.Value;
+                c.SalaryPerHour = Convert.ToDouble(tbSalaryPH.Text);
+                c.ContractType = (ContractType)cbContractType.SelectedItem;
+                
+
                 if (u.Password == null || u.UserName == null || u.BSN.ToString() == null || u.FirstName == null || u.LastName == null)
                 {
                     MessageBox.Show("Input value is not correct");
                 }
                 else
                 {
-                    um.EditUser(u);
-                    MessageBox.Show("Successfully Edited User");
+                    if(c.StartDate>=c.EndDate)
+                    {
+                        MessageBox.Show("Please select propper values");
+                    }
+                    else
+                    {
+                        um.EditUser(u);
+                        Contract contract=um.EditContract(c);
+                        um.AssignContractToUser(contract, u.Id);
+                        MessageBox.Show("User Edited Successfully");
+                    }
                 }
             }
             catch (Exception ex)
@@ -72,6 +95,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 cbGender.SelectedItem = u.Gender;
                 cbRole.SelectedItem = u.Role;
                 cbStatus.SelectedItem = u.Status;
+                if (c==null)
+                {
+                    MessageBox.Show("This user doesnt have a contract please add new one");
+                }
+                else
+                {
+                    StartDatedateTimePicker.Value = c.StartDate;
+                    EndDatedateTimePicker.Value = c.EndDate;
+                    cbContractType.SelectedItem = c.ContractType;
+                    tbSalaryPH.Text = c.SalaryPerHour.ToString();
+                }
+                
             }
             catch (Exception)
             {

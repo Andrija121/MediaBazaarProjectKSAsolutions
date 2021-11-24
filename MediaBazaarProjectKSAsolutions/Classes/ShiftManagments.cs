@@ -176,7 +176,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (var command = con.CreateCommand())
                 {
                     //Select Statemnt
-                    command.CommandText = @"SELECT * FROM shift as s INNER JOIN user as u on s.User_Id = u.User_ID HHERE u.Active is TRUE AND Shift_Day = @date";
+                    command.CommandText = @"SELECT * FROM shift as s INNER JOIN user as u on s.user_id = u.employee_id WHERE u.status is ACTIVE AND Shift_Day = @date";
                     command.Parameters.AddWithValue("date", date);
 
                     //Executing it
