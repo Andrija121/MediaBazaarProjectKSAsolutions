@@ -13,34 +13,89 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormSchedule : Form
     {
-        //ShiftDAL shm = new ShiftDAL();
-        public FormSchedule()
+        User u;
+        private ShiftManagement shiftM;
+        private UserManagement userM;
+        ShiftDAL shiftD; 
+
+
+        private List<User> users = new List<User>(); //Getting a List of Users
+        private List<Shift_Type> shiftTypes = new List<Shift_Type>(); //Calling the Object of the shift type
+
+        private int addDays = 0;
+        private DateTime now = DateTime.UtcNow.Date;
+
+        public FormSchedule(User user)
+
         {
             InitializeComponent();
+            this.u = user;
+
         }
 
-        public void RefreshDVG()
+        public void RefreshDVG() //This Automatically refreshing the Datagrid view
         {
-            //DVG_Shift.Rows.Clear();
-            //foreach(var shift in shm.GetAllShifts())
-            //{
-            //    DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
-
-            //}
+            this.dvgShift.Rows.Clear();
+            
+            foreach (var s in shiftM.GetAllShifts())
+            {
+                if(this.u.Role == Classes.Role.GENERALMANAGER)
+                {
+                    
+                    dvgShift.Rows.Add(s.Shift_Id, s.User_Id,s.Shift_Type, s.Shift_Date);
+                }
+            }
         }
-        private void btnRefreshSchedule_Click(object sender, EventArgs e)
+        public void ShowShifts (DateTime dateTime) //This is suppose to show the already made shifts when the system is loaded
         {
-            RefreshDVG();
-        }
+            this.dvgShift.Rows.Clear();
+             shiftM.GetAllShifts();
+            //Shift[] shift = shiftM.GetShiftByDate( dateTime.Date).ToArray();
 
+            foreach (var s in shiftM.GetAllShifts())
+            {
+                if(this.u.Role == Classes.Role.GENERALMANAGER)
+                {
+                    var add = ToString();
+                    dvgShift.Rows.Add(s.Shift_Id, s.User_Id, s.Shift_Type, s.Shift_Date);
+                }
+            }
+        }
+        public void ShowDate (DateTime now) //This is for moving the tables
+        {
+            DateTime yesterday = now.AddDays(-1);
+            this.dayLeft.Text = now.ToString("dd");
+            this.mothLeft.Text = now.ToString("MMM");
+            this.yearLeft.Text = now.ToString("yyyy");
+
+            this.middleDay.Text = now.ToString("dd");
+            this.middleMonth.Text = now.ToString("MMM");
+            this.middleYear.Text = now.ToString("yyyy");
+
+            DateTime tommorrow = now.AddDays(+1);
+            this.rightDay.Text = now.ToString("dd");
+            this.RightMonth.Text = now.ToString("MMM");
+            this.RightYear.Text = now.ToString("yyyy");
+        }
+     
         private void btnCreateSchedule_Click(object sender, EventArgs e)
         {
-            CreateSchedule createSchedule = new CreateSchedule();
+            CreateSchedule createSchedule = new CreateSchedule(u);
             createSchedule.ShowDialog();
             RefreshDVG();
+            
+        }
+        public void Accesscibility() //This checks for the accessibilty role of the user. If you're general manager then you should be able 
+            //to create shits.
+        {
+            if(this.u.Role == Classes.Role.GENERALMANAGER)
+            {
+                users = WorkerList();
+                
+            }
         }
 
-        private void btnEditSchedule_Click(object sender, EventArgs e)
+        private void btnEditSchedule_Click(object sender, EventArgs e) //Yet to be done.
         {
 
             //Shift shift = (shift)DVG_Shift.SelectedCells.
@@ -59,6 +114,47 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public List<User> WorkerList() //This holds a list of user
+        {
+            List<User> employeeList = new List<User>();
+            foreach(User u in  this.users)
+            {
+                if (u.Role == Classes.Role.STOREEMPLOYEE && u.Role == Classes.Role.STOREEMPLOYEE ) //Allow the General Manager to only create shifts for store employee and warhouse
+                    employeeList.Add(u);
+
+            }
+            return employeeList;
+        }
+
+        private void FormSchedule_Load(object sender, EventArgs e) //Initializing the Methods wheneber the FormSchedule is loaded
+        {
+            userM = new UserManagement();
+            shiftD = new ShiftDAL();
+            shiftM = new ShiftManagement();
+            WorkerList();
+            ShowDate(now);
+            ShowShifts(now);
+
+        }
+
+        private void Left_Click(object sender, EventArgs e)
+        {
+            addDays--;
+            ShowDate(DateTime.UtcNow.Date.AddDays(addDays));
+            ShowShifts(DateTime.UtcNow.Date.AddDays(addDays));
+        }
+
+        private void Right_Click(object sender, EventArgs e)
+        {
+            addDays++;
+            ShowDate(DateTime.UtcNow.Date.AddDays(addDays));
+            ShowShifts(DateTime.UtcNow.Date.AddDays(addDays));
+        }
+
+        private void btnRefreshSchedule_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

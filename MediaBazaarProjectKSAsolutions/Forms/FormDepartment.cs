@@ -22,12 +22,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public void RefreshListBox()
         {
             lbDepartments.Items.Clear();
-            foreach (var d in dm.GetActiveDepartments())
-            {
-                d.Department_Manager = u;
-                lbDepartments.Items.Add(d);
-            }
-            
+            //foreach (var d in dm.GetActiveDepartments())
+            //{
+            //    lbDepartments.Items.Add(d);
+            //}
+           
 
         }
         private void btnCreateDepartments_Click(object sender, EventArgs e)
