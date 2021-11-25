@@ -97,31 +97,36 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private User ChekcIfUserDMorGM()
         {
 
-            foreach (var u in userManagement.GetUsers())
-            {
                 if (u.Role == Role.GENERALMANAGER || u.Role == Role.DEPARTMENTMANAGER)
                 {
                     panelDMandGM.Enabled = true;
                 }
-            } 
+                else
+                {
+                    panelDMandGM.Enabled = false;
+                }
             return u;
         }
         private User CheckIfUserHRorGM()
         {
-            foreach (var u in userManagement.GetUsers())
-            {
                 if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER)
                 {
                     panelHRorGM.Enabled = true;
                 }
+            else
+            {
+                panelHRorGM.Enabled = false;
             }
             return u;
         }
+        
 
-        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
+        private void BtnSeeResupplyRequests_Click(object sender, EventArgs e)
         {
-            FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
-            formResupplyRequestS.ShowDialog();
+            //FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
+            //formResupplyRequestS.ShowDialog();
+            RequestResupplyForm rrf = new RequestResupplyForm(u);
+            rrf.ShowDialog();
         }
 
         private void btnDaysOffRequests_Click(object sender, EventArgs e)

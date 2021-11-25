@@ -19,12 +19,13 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public Gender Gender { get; set; }
         public Role Role { get; set; }
         public Status Status { get; set; }
-        Contract contract;
-        
+        public Contract Contract { get; set; }
+        public Department UserDeparmnet { get; set; }
 
 
 
-        public User(int id,string userName,string firstName,string lastName, string email, string password,DateTime birthday,int bsn, string zipCode,string address,Contract contract,Gender gender, Role role,Status status)
+
+        public User(int id,string userName,string firstName,string lastName, string email, string password,DateTime birthday,int bsn, string zipCode,string address,Contract contract,Gender gender, Role role,Status status,Department userDepartment)
         {
             this.Id = id;
             this.UserName = userName;
@@ -39,7 +40,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             this.Gender = gender;
             this.Role = role;
             this.Status = status;
-            this.contract = contract;
+            this.Contract= contract;
+            this.UserDeparmnet = userDepartment;
         }
         public User()
         {

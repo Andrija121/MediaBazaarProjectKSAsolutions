@@ -17,7 +17,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         private UserManagement userCon = new UserManagement();
       
         public int Shift_Id { get; set; }
+
         public int User_Id { get; set; }
+
         public DateTime Shift_Date { get; set; }
 
         public Shift_Type Shift_Type { get; set; }
@@ -38,7 +40,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         public override  string ToString()
         {
             return this.Shift_Id + " - " + userCon.GetUser(this.User_Id).FirstName + " - " + userCon.GetUser(this.User_Id).LastName + "-" + Shift_Date + " " + Shift_Type; /*+ " " + depCon.GetActiveDepartments(this.Department.Id)*/
-            
         }
     }
 }

@@ -26,6 +26,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private DateTime now = DateTime.UtcNow.Date;
 
         public FormSchedule(User user)
+
         {
             InitializeComponent();
             this.u = user;

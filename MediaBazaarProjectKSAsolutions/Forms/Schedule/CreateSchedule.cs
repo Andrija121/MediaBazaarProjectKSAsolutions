@@ -12,17 +12,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class CreateSchedule : Form
     {
+
         ShiftDAL shm;
         private UserManagement user_controller; //Getting the Employee Id from the UserDAL
         private ShiftManagement shift_controllers;
         private FormSchedule schedForm;
         User u;
 
+
         public CreateSchedule(User user)
         {
             InitializeComponent();
             this.u = user;
             shm = new ShiftDAL();
+
             cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
             user_controller = new UserManagement();
             shift_controllers = new ShiftManagement();
@@ -31,6 +34,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnAddSchedule_Click(object sender, EventArgs e)
         {
+
             
             try
             {
@@ -52,6 +56,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 MessageBox.Show("Input value is not correct" + ex);
             }
+
            
         }
 

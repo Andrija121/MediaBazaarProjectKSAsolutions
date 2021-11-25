@@ -22,8 +22,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         public void RefreshListBox()
         {
+            ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
             lbResupplyRequests.Items.Clear();
-            foreach (var prr in rrm.GetPendingResupplyRequests())
+            foreach (var prr in rrm.GetPendingResupplyRequests(rr))
             {
                 lbResupplyRequests.Items.Add(prr);
             }
@@ -31,7 +32,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         private void FormResupplyRequestS_Load(object sender, EventArgs e)
         {
-            RefreshListBox();
+           RefreshListBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
