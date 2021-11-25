@@ -13,7 +13,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormSchedule : Form
     {
-        ShiftDAL shm = new ShiftDAL();
+        //ShiftDAL shm = new ShiftDAL();
         public FormSchedule()
         {
             InitializeComponent();

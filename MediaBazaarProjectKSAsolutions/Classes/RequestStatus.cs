@@ -7,6 +7,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     public enum RequestStatus
     {
         APPROVED,
+        PARTIALLYDONE,
         DECLINED,
         PENNDING
     }

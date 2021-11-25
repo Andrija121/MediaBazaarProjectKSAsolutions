@@ -24,13 +24,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-            int  stockId=rr.StockId;
+            int  stockId=rr.Stock.Id;
 
             foreach (var s in sm.GetAllStock())
             {
                 if(s.Id==stockId)
                 {
-                    s.Amount += rr.Amount;
+                    s.Amount += rr.AmountRequested;
                     rrm.ApproveRequest(rr, user.Id);
                     MessageBox.Show("Stock was resupplied successfully");
                     this.Close();
@@ -46,6 +46,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             rrm.DeclineRequest(rr,user.Id);
             MessageBox.Show("Stock resupply declined");
             this.Close();
+        }
+
+        private void btnApprovePartially_Click(object sender, EventArgs e)
+        {
+            label1.Text = " / " + rr.AmountRequested;
+            int amount = rr.AmountFulfilled;
+            amount= Convert.ToInt32(tbApprovePartially.Text);
+            rrm.PartiallyApproveRquest(rr, user.Id,amount);
         }
     }
 }

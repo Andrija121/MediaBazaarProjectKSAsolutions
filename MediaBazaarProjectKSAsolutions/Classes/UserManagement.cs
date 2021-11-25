@@ -14,7 +14,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
         }
         
-        public int AddUser(User user,Department department)
+        public int AddUser(User user)
         {
             int id = -1;
             try
@@ -39,16 +39,16 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@gender", user.Gender.ToString());
                     cmd.Parameters.AddWithValue("@role", user.Role.ToString());
                     cmd.Parameters.AddWithValue("@status", user.Status.ToString());
-                    cmd.Parameters.AddWithValue("@deparment_id", department.Id);
+                    cmd.Parameters.AddWithValue("@department_id", user.UserDeparmnet.Id);
                     cmd.ExecuteNonQuery();
                     id = (int)cmd.LastInsertedId;
                 }
                 return id;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             finally
             {

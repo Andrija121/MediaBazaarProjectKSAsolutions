@@ -68,7 +68,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                     {
                         Contract contract = new Contract(0, startDate, endDate, contractType, salaryPH);
                         User user = new User(0, userName, firstName, lastName, email, password, birthday, bsn, zipCode, address, contract, gender, role, status,department);
-                        int id = um.AddUser(user,department);
+                        int id = um.AddUser(user);
                         MessageBox.Show("User Created Successfully");
                         um.AssignContractToUser(contract, id);
                         MessageBox.Show("Contract Made Successfully");

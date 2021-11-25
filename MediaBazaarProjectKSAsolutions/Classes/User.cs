@@ -19,8 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public Gender Gender { get; set; }
         public Role Role { get; set; }
         public Status Status { get; set; }
-        Contract contract;
-        Department department;
+        public Contract Contract { get; set; }
         public Department UserDeparmnet { get; set; }
 
 
@@ -41,7 +40,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             this.Gender = gender;
             this.Role = role;
             this.Status = status;
-            this.contract = contract;
+            this.Contract= contract;
             this.UserDeparmnet = userDepartment;
         }
         public User()

@@ -98,6 +98,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEvenLogger = new System.Windows.Forms.Label();
             this.lbEventLogger = new System.Windows.Forms.ListBox();
             this.lblAnnouncement = new System.Windows.Forms.Label();
+            this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -278,14 +279,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // tabPageDashboard
             // 
             this.tabPageDashboard.BackColor = System.Drawing.Color.Gold;
+            this.tabPageDashboard.Controls.Add(this.btnSeeResupplyRequests);
             this.tabPageDashboard.Controls.Add(this.pnlStocks);
             this.tabPageDashboard.Controls.Add(this.pnlEarnings);
             this.tabPageDashboard.Controls.Add(this.lblHi);
             this.tabPageDashboard.Controls.Add(this.lblDashboard);
-            this.tabPageDashboard.Location = new System.Drawing.Point(4, 35);
+            this.tabPageDashboard.Location = new System.Drawing.Point(4, 31);
             this.tabPageDashboard.Name = "tabPageDashboard";
             this.tabPageDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashboard.Size = new System.Drawing.Size(803, 872);
+            this.tabPageDashboard.Size = new System.Drawing.Size(803, 876);
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
             // 
@@ -307,7 +309,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblResupplyStock.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblResupplyStock.Location = new System.Drawing.Point(25, 232);
             this.lblResupplyStock.Name = "lblResupplyStock";
-            this.lblResupplyStock.Size = new System.Drawing.Size(326, 17);
+            this.lblResupplyStock.Size = new System.Drawing.Size(279, 15);
             this.lblResupplyStock.TabIndex = 4;
             this.lblResupplyStock.Text = "Please Double click the stock you want to resupply";
             // 
@@ -316,10 +318,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbStocks.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbStocks.FormattingEnabled = true;
-            this.lbStocks.ItemHeight = 22;
+            this.lbStocks.ItemHeight = 18;
             this.lbStocks.Location = new System.Drawing.Point(2, 55);
             this.lbStocks.Name = "lbStocks";
-            this.lbStocks.Size = new System.Drawing.Size(370, 158);
+            this.lbStocks.Size = new System.Drawing.Size(370, 148);
             this.lbStocks.TabIndex = 3;
             this.lbStocks.DoubleClick += new System.EventHandler(this.lbStocks_DoubleClick);
             // 
@@ -330,7 +332,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblStocks.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblStocks.Location = new System.Drawing.Point(119, 22);
             this.lblStocks.Name = "lblStocks";
-            this.lblStocks.Size = new System.Drawing.Size(105, 32);
+            this.lblStocks.Size = new System.Drawing.Size(91, 29);
             this.lblStocks.TabIndex = 0;
             this.lblStocks.Text = "Stocks";
             // 
@@ -351,7 +353,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblMonthlyEarning.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblMonthlyEarning.Location = new System.Drawing.Point(93, 216);
             this.lblMonthlyEarning.Name = "lblMonthlyEarning";
-            this.lblMonthlyEarning.Size = new System.Drawing.Size(194, 29);
+            this.lblMonthlyEarning.Size = new System.Drawing.Size(160, 25);
             this.lblMonthlyEarning.TabIndex = 2;
             this.lblMonthlyEarning.Text = "Salary per month";
             // 
@@ -362,7 +364,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblApproximateEarning.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblApproximateEarning.Location = new System.Drawing.Point(64, 111);
             this.lblApproximateEarning.Name = "lblApproximateEarning";
-            this.lblApproximateEarning.Size = new System.Drawing.Size(57, 40);
+            this.lblApproximateEarning.Size = new System.Drawing.Size(49, 36);
             this.lblApproximateEarning.TabIndex = 1;
             this.lblApproximateEarning.Text = "$$";
             this.lblApproximateEarning.Click += new System.EventHandler(this.lblApproximateEarning_Click);
@@ -374,7 +376,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbEarnings.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lbEarnings.Location = new System.Drawing.Point(119, 22);
             this.lbEarnings.Name = "lbEarnings";
-            this.lbEarnings.Size = new System.Drawing.Size(135, 32);
+            this.lbEarnings.Size = new System.Drawing.Size(116, 29);
             this.lbEarnings.TabIndex = 0;
             this.lbEarnings.Text = "Earnings";
             // 
@@ -384,7 +386,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblHi.Location = new System.Drawing.Point(379, 12);
             this.lblHi.Name = "lblHi";
-            this.lblHi.Size = new System.Drawing.Size(404, 52);
+            this.lblHi.Size = new System.Drawing.Size(351, 48);
             this.lblHi.TabIndex = 3;
             this.lblHi.Text = "Welcome back, user.username \r\nYou are currently logged in as a Eployee\r\n";
             // 
@@ -395,7 +397,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblDashboard.ForeColor = System.Drawing.Color.Gray;
             this.lblDashboard.Location = new System.Drawing.Point(3, 9);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(270, 55);
+            this.lblDashboard.Size = new System.Drawing.Size(224, 46);
             this.lblDashboard.TabIndex = 1;
             this.lblDashboard.Text = "Dashboard";
             // 
@@ -428,10 +430,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageProfile.Controls.Add(this.tbFirstName);
             this.tabPageProfile.Controls.Add(this.tbUserName);
             this.tabPageProfile.Controls.Add(this.lblProfile);
-            this.tabPageProfile.Location = new System.Drawing.Point(4, 35);
+            this.tabPageProfile.Location = new System.Drawing.Point(4, 31);
             this.tabPageProfile.Name = "tabPageProfile";
             this.tabPageProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProfile.Size = new System.Drawing.Size(803, 872);
+            this.tabPageProfile.Size = new System.Drawing.Size(803, 876);
             this.tabPageProfile.TabIndex = 2;
             this.tabPageProfile.Text = "Profile";
             // 
@@ -472,7 +474,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblCreateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblCreateUser.Location = new System.Drawing.Point(121, 107);
             this.lblCreateUser.Name = "lblCreateUser";
-            this.lblCreateUser.Size = new System.Drawing.Size(271, 38);
+            this.lblCreateUser.Size = new System.Drawing.Size(235, 32);
             this.lblCreateUser.TabIndex = 51;
             this.lblCreateUser.Text = "Profile Infomration";
             // 
@@ -483,7 +485,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Location = new System.Drawing.Point(152, 726);
             this.cbRole.Name = "cbRole";
-            this.cbRole.Size = new System.Drawing.Size(376, 34);
+            this.cbRole.Size = new System.Drawing.Size(376, 30);
             this.cbRole.TabIndex = 49;
             // 
             // cbGender
@@ -492,7 +494,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Location = new System.Drawing.Point(152, 667);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(376, 34);
+            this.cbGender.Size = new System.Drawing.Size(376, 30);
             this.cbGender.TabIndex = 48;
             // 
             // tbAddress
@@ -501,7 +503,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbAddress.Location = new System.Drawing.Point(152, 617);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(376, 25);
+            this.tbAddress.Size = new System.Drawing.Size(376, 21);
             this.tbAddress.TabIndex = 47;
             // 
             // tbZipCode
@@ -510,7 +512,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbZipCode.Location = new System.Drawing.Point(152, 560);
             this.tbZipCode.Name = "tbZipCode";
-            this.tbZipCode.Size = new System.Drawing.Size(299, 25);
+            this.tbZipCode.Size = new System.Drawing.Size(299, 21);
             this.tbZipCode.TabIndex = 46;
             // 
             // tbBSN
@@ -520,7 +522,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbBSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbBSN.Location = new System.Drawing.Point(152, 507);
             this.tbBSN.Name = "tbBSN";
-            this.tbBSN.Size = new System.Drawing.Size(299, 25);
+            this.tbBSN.Size = new System.Drawing.Size(299, 21);
             this.tbBSN.TabIndex = 45;
             // 
             // DTPBirthday
@@ -530,7 +532,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.DTPBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DTPBirthday.Location = new System.Drawing.Point(152, 451);
             this.DTPBirthday.Name = "DTPBirthday";
-            this.DTPBirthday.Size = new System.Drawing.Size(455, 32);
+            this.DTPBirthday.Size = new System.Drawing.Size(455, 28);
             this.DTPBirthday.TabIndex = 44;
             // 
             // lblRole
@@ -540,7 +542,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblRole.Location = new System.Drawing.Point(32, 729);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(51, 25);
+            this.lblRole.Size = new System.Drawing.Size(43, 20);
             this.lblRole.TabIndex = 42;
             this.lblRole.Text = "Role";
             // 
@@ -551,7 +553,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblGender.Location = new System.Drawing.Point(32, 670);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(77, 25);
+            this.lblGender.Size = new System.Drawing.Size(64, 20);
             this.lblGender.TabIndex = 41;
             this.lblGender.Text = "Gender";
             // 
@@ -562,7 +564,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblAddress.Location = new System.Drawing.Point(32, 620);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(85, 25);
+            this.lblAddress.Size = new System.Drawing.Size(71, 20);
             this.lblAddress.TabIndex = 40;
             this.lblAddress.Text = "Address";
             // 
@@ -573,7 +575,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblBSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblBSN.Location = new System.Drawing.Point(34, 506);
             this.lblBSN.Name = "lblBSN";
-            this.lblBSN.Size = new System.Drawing.Size(53, 25);
+            this.lblBSN.Size = new System.Drawing.Size(44, 20);
             this.lblBSN.TabIndex = 39;
             this.lblBSN.Text = "BSN";
             // 
@@ -584,7 +586,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblZipCode.Location = new System.Drawing.Point(32, 565);
             this.lblZipCode.Name = "lblZipCode";
-            this.lblZipCode.Size = new System.Drawing.Size(92, 25);
+            this.lblZipCode.Size = new System.Drawing.Size(75, 20);
             this.lblZipCode.TabIndex = 38;
             this.lblZipCode.Text = "Zip Code";
             // 
@@ -595,7 +597,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblBirthday.Location = new System.Drawing.Point(35, 450);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(83, 25);
+            this.lblBirthday.Size = new System.Drawing.Size(71, 20);
             this.lblBirthday.TabIndex = 37;
             this.lblBirthday.Text = "Birthday";
             // 
@@ -606,7 +608,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblEmail.Location = new System.Drawing.Point(35, 331);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(60, 25);
+            this.lblEmail.Size = new System.Drawing.Size(51, 20);
             this.lblEmail.TabIndex = 36;
             this.lblEmail.Text = "Email";
             // 
@@ -617,7 +619,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblPassword.Location = new System.Drawing.Point(34, 389);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(98, 25);
+            this.lblPassword.Size = new System.Drawing.Size(83, 20);
             this.lblPassword.TabIndex = 35;
             this.lblPassword.Text = "Password";
             // 
@@ -628,7 +630,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblLastName.Location = new System.Drawing.Point(28, 278);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(106, 25);
+            this.lblLastName.Size = new System.Drawing.Size(91, 20);
             this.lblLastName.TabIndex = 34;
             this.lblLastName.Text = "Last Name";
             // 
@@ -639,7 +641,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblFirstName.Location = new System.Drawing.Point(30, 224);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(106, 25);
+            this.lblFirstName.Size = new System.Drawing.Size(92, 20);
             this.lblFirstName.TabIndex = 33;
             this.lblFirstName.Text = "First Name";
             // 
@@ -650,7 +652,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblUserName.Location = new System.Drawing.Point(28, 169);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(110, 25);
+            this.lblUserName.Size = new System.Drawing.Size(94, 20);
             this.lblUserName.TabIndex = 32;
             this.lblUserName.Text = "User Name";
             // 
@@ -660,7 +662,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbPassword.Location = new System.Drawing.Point(152, 390);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(376, 25);
+            this.tbPassword.Size = new System.Drawing.Size(376, 21);
             this.tbPassword.TabIndex = 31;
             // 
             // tbEmail
@@ -669,7 +671,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbEmail.Location = new System.Drawing.Point(152, 332);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(376, 25);
+            this.tbEmail.Size = new System.Drawing.Size(376, 21);
             this.tbEmail.TabIndex = 30;
             // 
             // tbLastName
@@ -678,7 +680,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbLastName.Location = new System.Drawing.Point(152, 275);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(331, 25);
+            this.tbLastName.Size = new System.Drawing.Size(331, 21);
             this.tbLastName.TabIndex = 29;
             // 
             // tbFirstName
@@ -687,7 +689,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbFirstName.Location = new System.Drawing.Point(152, 221);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(331, 25);
+            this.tbFirstName.Size = new System.Drawing.Size(331, 21);
             this.tbFirstName.TabIndex = 28;
             // 
             // tbUserName
@@ -697,7 +699,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbUserName.Location = new System.Drawing.Point(152, 166);
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(376, 25);
+            this.tbUserName.Size = new System.Drawing.Size(376, 21);
             this.tbUserName.TabIndex = 27;
             // 
             // lblProfile
@@ -707,7 +709,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblProfile.ForeColor = System.Drawing.Color.Gray;
             this.lblProfile.Location = new System.Drawing.Point(6, 3);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(166, 55);
+            this.lblProfile.Size = new System.Drawing.Size(141, 46);
             this.lblProfile.TabIndex = 0;
             this.lblProfile.Text = "Profile";
             // 
@@ -715,10 +717,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.tabPageShift.BackColor = System.Drawing.Color.Gold;
             this.tabPageShift.Controls.Add(this.lblShift);
-            this.tabPageShift.Location = new System.Drawing.Point(4, 35);
+            this.tabPageShift.Location = new System.Drawing.Point(4, 31);
             this.tabPageShift.Name = "tabPageShift";
             this.tabPageShift.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageShift.Size = new System.Drawing.Size(803, 872);
+            this.tabPageShift.Size = new System.Drawing.Size(803, 876);
             this.tabPageShift.TabIndex = 1;
             this.tabPageShift.Text = "Shift";
             // 
@@ -729,7 +731,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblShift.ForeColor = System.Drawing.Color.Gray;
             this.lblShift.Location = new System.Drawing.Point(3, 3);
             this.lblShift.Name = "lblShift";
-            this.lblShift.Size = new System.Drawing.Size(124, 55);
+            this.lblShift.Size = new System.Drawing.Size(105, 46);
             this.lblShift.TabIndex = 1;
             this.lblShift.Text = "Shift";
             // 
@@ -748,10 +750,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageContract.Controls.Add(this.tbSalaryPerHour);
             this.tabPageContract.Controls.Add(this.lblContract);
             this.tabPageContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPageContract.Location = new System.Drawing.Point(4, 35);
+            this.tabPageContract.Location = new System.Drawing.Point(4, 31);
             this.tabPageContract.Name = "tabPageContract";
             this.tabPageContract.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageContract.Size = new System.Drawing.Size(803, 872);
+            this.tabPageContract.Size = new System.Drawing.Size(803, 876);
             this.tabPageContract.TabIndex = 3;
             this.tabPageContract.Text = "Contract";
             // 
@@ -761,7 +763,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.EndDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EndDatedateTimePicker.Location = new System.Drawing.Point(208, 362);
             this.EndDatedateTimePicker.Name = "EndDatedateTimePicker";
-            this.EndDatedateTimePicker.Size = new System.Drawing.Size(378, 30);
+            this.EndDatedateTimePicker.Size = new System.Drawing.Size(378, 26);
             this.EndDatedateTimePicker.TabIndex = 56;
             // 
             // StartDatedateTimePicker
@@ -770,7 +772,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.StartDatedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartDatedateTimePicker.Location = new System.Drawing.Point(208, 289);
             this.StartDatedateTimePicker.Name = "StartDatedateTimePicker";
-            this.StartDatedateTimePicker.Size = new System.Drawing.Size(378, 30);
+            this.StartDatedateTimePicker.Size = new System.Drawing.Size(378, 26);
             this.StartDatedateTimePicker.TabIndex = 55;
             // 
             // lblMoneyPerHour
@@ -779,7 +781,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblMoneyPerHour.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblMoneyPerHour.Location = new System.Drawing.Point(537, 508);
             this.lblMoneyPerHour.Name = "lblMoneyPerHour";
-            this.lblMoneyPerHour.Size = new System.Drawing.Size(58, 26);
+            this.lblMoneyPerHour.Size = new System.Drawing.Size(49, 24);
             this.lblMoneyPerHour.TabIndex = 11;
             this.lblMoneyPerHour.Text = "$ / H";
             // 
@@ -789,7 +791,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblSalary.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblSalary.Location = new System.Drawing.Point(355, 476);
             this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(80, 26);
+            this.lblSalary.Size = new System.Drawing.Size(66, 24);
             this.lblSalary.TabIndex = 10;
             this.lblSalary.Text = "Salary ";
             // 
@@ -799,7 +801,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContractType.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblContractType.Location = new System.Drawing.Point(320, 410);
             this.lblContractType.Name = "lblContractType";
-            this.lblContractType.Size = new System.Drawing.Size(147, 26);
+            this.lblContractType.Size = new System.Drawing.Size(127, 24);
             this.lblContractType.TabIndex = 9;
             this.lblContractType.Text = "Contract Type";
             // 
@@ -809,7 +811,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblExpiryDate.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblExpiryDate.Location = new System.Drawing.Point(287, 329);
             this.lblExpiryDate.Name = "lblExpiryDate";
-            this.lblExpiryDate.Size = new System.Drawing.Size(213, 26);
+            this.lblExpiryDate.Size = new System.Drawing.Size(180, 24);
             this.lblExpiryDate.TabIndex = 8;
             this.lblExpiryDate.Text = "Contract Expiry Date";
             // 
@@ -819,7 +821,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblStartDAte.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblStartDAte.Location = new System.Drawing.Point(298, 245);
             this.lblStartDAte.Name = "lblStartDAte";
-            this.lblStartDAte.Size = new System.Drawing.Size(204, 26);
+            this.lblStartDAte.Size = new System.Drawing.Size(171, 24);
             this.lblStartDAte.TabIndex = 7;
             this.lblStartDAte.Text = "Contract Issue Date";
             // 
@@ -830,7 +832,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbContractType.Location = new System.Drawing.Point(243, 439);
             this.tbContractType.Name = "tbContractType";
             this.tbContractType.ReadOnly = true;
-            this.tbContractType.Size = new System.Drawing.Size(293, 25);
+            this.tbContractType.Size = new System.Drawing.Size(293, 21);
             this.tbContractType.TabIndex = 6;
             // 
             // lblTopic
@@ -840,7 +842,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblTopic.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblTopic.Location = new System.Drawing.Point(163, 150);
             this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(461, 37);
+            this.lblTopic.Size = new System.Drawing.Size(394, 31);
             this.lblTopic.TabIndex = 5;
             this.lblTopic.Text = "Personal Contract Infomation";
             // 
@@ -851,7 +853,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbSalaryPerHour.Location = new System.Drawing.Point(243, 509);
             this.tbSalaryPerHour.Name = "tbSalaryPerHour";
             this.tbSalaryPerHour.ReadOnly = true;
-            this.tbSalaryPerHour.Size = new System.Drawing.Size(293, 25);
+            this.tbSalaryPerHour.Size = new System.Drawing.Size(293, 21);
             this.tbSalaryPerHour.TabIndex = 4;
             // 
             // lblContract
@@ -861,7 +863,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblContract.ForeColor = System.Drawing.Color.Gray;
             this.lblContract.Location = new System.Drawing.Point(3, 3);
             this.lblContract.Name = "lblContract";
-            this.lblContract.Size = new System.Drawing.Size(214, 55);
+            this.lblContract.Size = new System.Drawing.Size(180, 46);
             this.lblContract.TabIndex = 1;
             this.lblContract.Text = "Contract";
             // 
@@ -873,9 +875,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageAnnouncements.Controls.Add(this.lblEvenLogger);
             this.tabPageAnnouncements.Controls.Add(this.lbEventLogger);
             this.tabPageAnnouncements.Controls.Add(this.lblAnnouncement);
-            this.tabPageAnnouncements.Location = new System.Drawing.Point(4, 35);
+            this.tabPageAnnouncements.Location = new System.Drawing.Point(4, 31);
             this.tabPageAnnouncements.Name = "tabPageAnnouncements";
-            this.tabPageAnnouncements.Size = new System.Drawing.Size(803, 872);
+            this.tabPageAnnouncements.Size = new System.Drawing.Size(803, 876);
             this.tabPageAnnouncements.TabIndex = 4;
             this.tabPageAnnouncements.Text = "Announcements";
             // 
@@ -886,7 +888,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEvents.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblEvents.Location = new System.Drawing.Point(26, 524);
             this.lblEvents.Name = "lblEvents";
-            this.lblEvents.Size = new System.Drawing.Size(358, 32);
+            this.lblEvents.Size = new System.Drawing.Size(303, 29);
             this.lblEvents.TabIndex = 12;
             this.lblEvents.Text = "Days Off Announcements";
             // 
@@ -895,7 +897,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbDayOffEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbDayOffEvents.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbDayOffEvents.FormattingEnabled = true;
-            this.lbDayOffEvents.ItemHeight = 20;
+            this.lbDayOffEvents.ItemHeight = 16;
             this.lbDayOffEvents.Location = new System.Drawing.Point(26, 593);
             this.lbDayOffEvents.Name = "lbDayOffEvents";
             this.lbDayOffEvents.Size = new System.Drawing.Size(761, 244);
@@ -908,7 +910,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEvenLogger.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblEvenLogger.Location = new System.Drawing.Point(26, 139);
             this.lblEvenLogger.Name = "lblEvenLogger";
-            this.lblEvenLogger.Size = new System.Drawing.Size(195, 32);
+            this.lblEvenLogger.Size = new System.Drawing.Size(168, 29);
             this.lblEvenLogger.TabIndex = 10;
             this.lblEvenLogger.Text = "Event Logger";
             // 
@@ -917,10 +919,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lbEventLogger.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEventLogger.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lbEventLogger.FormattingEnabled = true;
-            this.lbEventLogger.ItemHeight = 22;
+            this.lbEventLogger.ItemHeight = 18;
             this.lbEventLogger.Location = new System.Drawing.Point(26, 191);
             this.lbEventLogger.Name = "lbEventLogger";
-            this.lbEventLogger.Size = new System.Drawing.Size(761, 224);
+            this.lbEventLogger.Size = new System.Drawing.Size(761, 220);
             this.lbEventLogger.TabIndex = 9;
             // 
             // lblAnnouncement
@@ -930,13 +932,23 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblAnnouncement.ForeColor = System.Drawing.Color.Gray;
             this.lblAnnouncement.Location = new System.Drawing.Point(11, 9);
             this.lblAnnouncement.Name = "lblAnnouncement";
-            this.lblAnnouncement.Size = new System.Drawing.Size(386, 55);
+            this.lblAnnouncement.Size = new System.Drawing.Size(322, 46);
             this.lblAnnouncement.TabIndex = 2;
             this.lblAnnouncement.Text = "Announcements";
             // 
+            // btnSeeResupplyRequests
+            // 
+            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(495, 289);
+            this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
+            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(208, 133);
+            this.btnSeeResupplyRequests.TabIndex = 7;
+            this.btnSeeResupplyRequests.Text = "See Resupply Requests";
+            this.btnSeeResupplyRequests.UseVisualStyleBackColor = true;
+            this.btnSeeResupplyRequests.Click += new System.EventHandler(this.btnSeeResupplyRequests_Click);
+            // 
             // FormEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 869);
@@ -1041,5 +1053,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Label lblAnnouncement;
         private System.Windows.Forms.ListBox lbDayOffEvents;
         private System.Windows.Forms.Label lblEvents;
+        private System.Windows.Forms.Button btnSeeResupplyRequests;
     }
 }

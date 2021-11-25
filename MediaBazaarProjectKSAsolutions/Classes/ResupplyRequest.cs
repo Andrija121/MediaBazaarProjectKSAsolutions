@@ -7,19 +7,21 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     public class ResupplyRequest
     {
         public int RequestID { get; set; }
-        public int WheId { get; set; } // da li mi treba vrednost int ili tipa User
-        public int DmId { get; set; }
-        public int StockId { get; set; }
-        public int Amount { get; set; }
+        public User Whe { get; set; } // da li mi treba vrednost int ili tipa User
+        public User Dm { get; set; }
+        public Stock Stock { get; set; }
+        public int AmountRequested { get; set; }
+        public int AmountFulfilled { get; set; }
         public RequestStatus RequestStatus { get; set; }
 
-        public ResupplyRequest(int requestId,int wheId,int dmId,int stockId,int amount,RequestStatus requestStatus)
+        public ResupplyRequest(int requestId,User wheId,User dmId,Stock stockId,int amountRequested,int amountfulfiled,RequestStatus requestStatus)
         {
             this.RequestID = requestId;
-            this.WheId = wheId;
-            this.DmId = dmId;
-            this.StockId = stockId;
-            this.Amount += amount;
+            this.Whe = wheId;
+            this.Dm = dmId;
+            this.Stock = stockId;
+            this.AmountRequested += amountRequested;
+            this.AmountFulfilled = amountfulfiled;
             this.RequestStatus = requestStatus;
         }
         public ResupplyRequest()
@@ -28,7 +30,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return WheId + " - " + DmId + " - " + StockId + " - " + Amount + " - " + RequestStatus;
+            return Whe + " - " + Dm + " - " + Stock + " - " + AmountRequested + " - " + RequestStatus;
         }
 
 

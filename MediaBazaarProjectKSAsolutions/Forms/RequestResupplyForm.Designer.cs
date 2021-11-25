@@ -41,6 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.tbStock = new System.Windows.Forms.TextBox();
+            this.cbStock = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbUserName
@@ -49,7 +50,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbUserName.Location = new System.Drawing.Point(89, 47);
             this.tbUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(179, 33);
+            this.tbUserName.Size = new System.Drawing.Size(179, 24);
             this.tbUserName.TabIndex = 0;
             // 
             // cbDMs
@@ -58,7 +59,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbDMs.Location = new System.Drawing.Point(89, 116);
             this.cbDMs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbDMs.Name = "cbDMs";
-            this.cbDMs.Size = new System.Drawing.Size(218, 33);
+            this.cbDMs.Size = new System.Drawing.Size(218, 25);
             this.cbDMs.TabIndex = 1;
             // 
             // tbAmount
@@ -66,7 +67,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbAmount.Location = new System.Drawing.Point(97, 267);
             this.tbAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbAmount.Name = "tbAmount";
-            this.tbAmount.Size = new System.Drawing.Size(179, 33);
+            this.tbAmount.Size = new System.Drawing.Size(179, 24);
             this.tbAmount.TabIndex = 3;
             // 
             // lblUser
@@ -77,7 +78,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblUser.Location = new System.Drawing.Point(25, 50);
             this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(55, 25);
+            this.lblUser.Size = new System.Drawing.Size(40, 18);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "User";
             // 
@@ -89,7 +90,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblIsSendingRequest.Location = new System.Drawing.Point(90, 85);
             this.lblIsSendingRequest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIsSendingRequest.Name = "lblIsSendingRequest";
-            this.lblIsSendingRequest.Size = new System.Drawing.Size(188, 25);
+            this.lblIsSendingRequest.Size = new System.Drawing.Size(134, 18);
             this.lblIsSendingRequest.TabIndex = 5;
             this.lblIsSendingRequest.Text = "Is sending request";
             // 
@@ -101,7 +102,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblTo.Location = new System.Drawing.Point(43, 119);
             this.lblTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(33, 25);
+            this.lblTo.Size = new System.Drawing.Size(22, 18);
             this.lblTo.TabIndex = 6;
             this.lblTo.Text = "to";
             // 
@@ -113,7 +114,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblforStock.Location = new System.Drawing.Point(134, 152);
             this.lblforStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblforStock.Name = "lblforStock";
-            this.lblforStock.Size = new System.Drawing.Size(96, 25);
+            this.lblforStock.Size = new System.Drawing.Size(68, 18);
             this.lblforStock.TabIndex = 7;
             this.lblforStock.Text = "for stock";
             // 
@@ -125,7 +126,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblOfTheTotalAmount.Location = new System.Drawing.Point(99, 237);
             this.lblOfTheTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOfTheTotalAmount.Name = "lblOfTheTotalAmount";
-            this.lblOfTheTotalAmount.Size = new System.Drawing.Size(189, 25);
+            this.lblOfTheTotalAmount.Size = new System.Drawing.Size(131, 18);
             this.lblOfTheTotalAmount.TabIndex = 8;
             this.lblOfTheTotalAmount.Text = "of the total amout";
             // 
@@ -137,7 +138,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblUnits.Location = new System.Drawing.Point(285, 273);
             this.lblUnits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnits.Name = "lblUnits";
-            this.lblUnits.Size = new System.Drawing.Size(63, 25);
+            this.lblUnits.Size = new System.Drawing.Size(44, 18);
             this.lblUnits.TabIndex = 9;
             this.lblUnits.Text = "Units";
             // 
@@ -179,16 +180,25 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tbStock.Location = new System.Drawing.Point(97, 187);
             this.tbStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbStock.Name = "tbStock";
-            this.tbStock.Size = new System.Drawing.Size(179, 33);
+            this.tbStock.Size = new System.Drawing.Size(179, 24);
             this.tbStock.TabIndex = 12;
+            // 
+            // cbStock
+            // 
+            this.cbStock.FormattingEnabled = true;
+            this.cbStock.Location = new System.Drawing.Point(97, 209);
+            this.cbStock.Name = "cbStock";
+            this.cbStock.Size = new System.Drawing.Size(179, 25);
+            this.cbStock.TabIndex = 13;
             // 
             // RequestResupplyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(372, 518);
+            this.Controls.Add(this.cbStock);
             this.Controls.Add(this.tbStock);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnBack);
@@ -227,5 +237,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox tbStock;
+        private System.Windows.Forms.ComboBox cbStock;
     }
 }

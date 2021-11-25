@@ -118,10 +118,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             return u;
         }
 
-        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
+        private void BtnSeeResupplyRequests_Click(object sender, EventArgs e)
         {
-            FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
-            formResupplyRequestS.ShowDialog();
+            //FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
+            //formResupplyRequestS.ShowDialog();
+            RequestResupplyForm rrf = new RequestResupplyForm(u);
+            rrf.ShowDialog();
         }
 
         private void btnDaysOffRequests_Click(object sender, EventArgs e)
