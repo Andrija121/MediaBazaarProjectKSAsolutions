@@ -2,17 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-namespace MediaBazaarProjectKSAsolutions.Classes
-{
-    class ShiftManagments
+namespace MediaBazaarProjectKSAsolutions.Classes.Shift
+{   
+    public class ShiftDAL
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
-        public ShiftManagments()
+        public ShiftDAL()
         {
 
         }
-        public void AddShift( Shift shifts)  //This Adds Shifts
+        public void AddShift(Shift shifts)  //This Adds Shifts
         {
             try
             {
@@ -170,3 +170,4 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
     }
 }
+

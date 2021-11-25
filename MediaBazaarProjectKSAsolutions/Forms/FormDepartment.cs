@@ -11,10 +11,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormDepartment : Form
     {
-        User user;
+        User u;
         DepartmentManagement dm = new DepartmentManagement();
-        public FormDepartment()
+        public FormDepartment(User user)
         {
+            this.u = user;
             InitializeComponent();
             RefreshListBox();
         }
@@ -23,6 +24,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             lbDepartments.Items.Clear();
             foreach (var d in dm.GetActiveDepartments())
             {
+                d.Department_Manager = u;
                 lbDepartments.Items.Add(d);
             }
             
@@ -30,7 +32,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         private void btnCreateDepartments_Click(object sender, EventArgs e)
         {
-            FormCreateDepartment formCreateDepartment = new FormCreateDepartment();
+            FormCreateDepartment formCreateDepartment = new FormCreateDepartment(u);
             formCreateDepartment.ShowDialog();
             RefreshListBox();
         }
@@ -86,6 +88,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveDepartmentsForm inactiveDepartmentsForm = new InactiveDepartmentsForm();
             inactiveDepartmentsForm.ShowDialog();
+        }
+
+        private void pnlEmployees_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

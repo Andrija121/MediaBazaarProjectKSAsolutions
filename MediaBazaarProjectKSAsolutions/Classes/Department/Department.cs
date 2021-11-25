@@ -9,15 +9,16 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Department_Manager { get; set; } //Give Department a Manager. 
+        public User Department_Manager { get; set; } 
         public Status Status { get; set; }
-        
+        public List<User> UserInDepartment { get; set; }
+
 
         public Department()
         {
 
         }
-        public Department(int id,string name,int depo_manager,Status status)
+        public Department(int id,string name,User depo_manager,Status status)
         {
             this.Id = id;
             this.Name = name;
@@ -27,7 +28,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return Name + " - " + Status;
+            return Id + " - " + Name + " - " + Department_Manager;
         }
     }
 }

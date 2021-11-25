@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MediaBazaarProjectKSAsolutions.Classes
+namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 {
-    public class Shift 
+    public class Shift
     {
        
         private UserManagement uerCon = new UserManagement();

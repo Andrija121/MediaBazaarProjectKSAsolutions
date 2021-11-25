@@ -1,4 +1,5 @@
 ﻿using MediaBazaarProjectKSAsolutions.Classes;
+using MediaBazaarProjectKSAsolutions.Classes.Shift;
 using MediaBazaarProjectKSAsolutions.Forms.Schedule;
 using System;
 using System.Collections.Generic;
@@ -12,20 +13,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 {
     public partial class FormSchedule : Form
     {
-        ShiftManagments shm = new ShiftManagments();
+        ShiftDAL shm = new ShiftDAL();
         public FormSchedule()
         {
             InitializeComponent();
-            RefreshDVG();
         }
 
         public void RefreshDVG()
         {
-            DVG_Shift.Rows.Clear();
-            foreach(var shift in shm.GetAllShifts())
-            {
-                DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
-            }
+            //DVG_Shift.Rows.Clear();
+            //foreach(var shift in shm.GetAllShifts())
+            //{
+            //    DVG_Shift.Rows.Add(shift.Shift_Id, shift.Shift_Date, shift.Shift_Type);
+
+            //}
         }
         private void btnRefreshSchedule_Click(object sender, EventArgs e)
         {
@@ -41,6 +42,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnEditSchedule_Click(object sender, EventArgs e)
         {
+
             //Shift shift = (shift)DVG_Shift.SelectedCells.
             //if (shift != null)
             //{

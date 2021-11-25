@@ -40,8 +40,16 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnDepartments_Click_1(object sender, EventArgs e)
         {
-            FormDepartment FormDepartment = new FormDepartment();
+            if (u.Role==Role.DEPARTMENTMANAGER || u.Role==Role.GENERALMANAGER)
+            {
+
+            FormDepartment FormDepartment = new FormDepartment(u);
             FormDepartment.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You are not deparmtnet manager");
+            }
           
         }
 
@@ -55,11 +63,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            using (FormSchedule formSchedule = new FormSchedule())
-            {
-                formSchedule.ShowDialog();
-            }
-        }
+
+            FormSchedule formSchedule = new FormSchedule();
+            formSchedule.ShowDialog();
+      }
+
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {

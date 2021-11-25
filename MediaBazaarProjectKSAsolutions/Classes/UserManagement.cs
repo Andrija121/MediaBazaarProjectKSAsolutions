@@ -14,7 +14,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         {
         }
         
-        public int AddUser(User user)
+        public int AddUser(User user,Department department)
         {
             int id = -1;
             try
@@ -22,7 +22,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status) ";
+                    string sql = "INSERT INTO user(userName,firstName,lastName,email,password,birthday,bsn,zipcode,address,gender,role,status,department_id) values(@userName,@firstName,@lastName,@email,@password,@birthday,@bsn,@zipcode,@address,@gender,@role,@status,@department_id) ";
                     
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -39,6 +39,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@gender", user.Gender.ToString());
                     cmd.Parameters.AddWithValue("@role", user.Role.ToString());
                     cmd.Parameters.AddWithValue("@status", user.Status.ToString());
+                    cmd.Parameters.AddWithValue("@deparment_id", department.Id);
                     cmd.ExecuteNonQuery();
                     id = (int)cmd.LastInsertedId;
                 }
