@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class UserManagement
+     public class UserManagement
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
@@ -443,5 +443,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
+        
     }
 } 

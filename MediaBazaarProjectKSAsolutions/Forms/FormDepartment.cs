@@ -21,10 +21,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public void RefreshListBox()
         {
             lbDepartments.Items.Clear();
-            foreach (var d in dm.GetActiveDepartments())
-            {
-                lbDepartments.Items.Add(d);
-            }
+            //foreach (var d in dm.GetActiveDepartments())
+            //{
+            //    lbDepartments.Items.Add(d);
+            //}
             
 
         }

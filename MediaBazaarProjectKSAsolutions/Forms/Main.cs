@@ -16,7 +16,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public Main(User user)
         {
             InitializeComponent();
-            u = user;
+            this.u = user;
             if (u.Role == Role.GENERALMANAGER)
             {
             }
@@ -56,9 +56,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
 
-            FormSchedule formSchedule = new FormSchedule();
+            FormSchedule formSchedule = new FormSchedule(u);
             formSchedule.ShowDialog();
-      }
+        }
 
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
