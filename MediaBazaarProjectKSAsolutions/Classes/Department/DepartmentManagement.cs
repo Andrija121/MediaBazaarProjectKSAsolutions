@@ -41,7 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public List<Department> GetActiveDepartments(int id)
+        public List<Department> GetActiveDepartments()
         {
             try
             {
