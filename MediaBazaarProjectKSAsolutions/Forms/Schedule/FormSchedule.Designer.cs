@@ -32,7 +32,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlEmployees = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.jumpTo = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Right = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
@@ -49,15 +49,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.mothLeft = new System.Windows.Forms.TextBox();
             this.dayLeft = new System.Windows.Forms.TextBox();
             this.dvgShift = new System.Windows.Forms.DataGridView();
+            this.btnDeleteSchedule = new System.Windows.Forms.Button();
+            this.btnEditSchedule = new System.Windows.Forms.Button();
+            this.btnCreateSchedule = new System.Windows.Forms.Button();
+            this.Stock = new System.Windows.Forms.Label();
             this.User_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shift_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shift_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDeleteSchedule = new System.Windows.Forms.Button();
-            this.btnEditSchedule = new System.Windows.Forms.Button();
-            this.btnCreateSchedule = new System.Windows.Forms.Button();
-            this.btnRefreshSchedule = new System.Windows.Forms.Button();
-            this.Stock = new System.Windows.Forms.Label();
             this.pnlEmployees.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -85,13 +84,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEmployees.Controls.Add(this.label1);
-            this.pnlEmployees.Controls.Add(this.dateTimePicker1);
+            this.pnlEmployees.Controls.Add(this.jumpTo);
             this.pnlEmployees.Controls.Add(this.panel1);
             this.pnlEmployees.Controls.Add(this.dvgShift);
             this.pnlEmployees.Controls.Add(this.btnDeleteSchedule);
             this.pnlEmployees.Controls.Add(this.btnEditSchedule);
             this.pnlEmployees.Controls.Add(this.btnCreateSchedule);
-            this.pnlEmployees.Controls.Add(this.btnRefreshSchedule);
             this.pnlEmployees.Controls.Add(this.Stock);
             this.pnlEmployees.Location = new System.Drawing.Point(8, -2);
             this.pnlEmployees.Name = "pnlEmployees";
@@ -107,13 +105,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label1.TabIndex = 11;
             this.label1.Text = "Jump To:";
             // 
-            // dateTimePicker1
+            // jumpTo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(661, 226);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 23);
-            this.dateTimePicker1.TabIndex = 10;
+            this.jumpTo.Location = new System.Drawing.Point(661, 226);
+            this.jumpTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.jumpTo.Name = "jumpTo";
+            this.jumpTo.Size = new System.Drawing.Size(219, 23);
+            this.jumpTo.TabIndex = 10;
+            this.jumpTo.ValueChanged += new System.EventHandler(this.jumpTo_ValueChanged);
             // 
             // panel1
             // 
@@ -290,41 +289,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Shift_Type,
             this.Shift_Date,
             this.dataGridViewTextBoxColumn1});
-            this.dvgShift.Location = new System.Drawing.Point(25, 295);
+            this.dvgShift.Location = new System.Drawing.Point(66, 294);
             this.dvgShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dvgShift.Name = "dvgShift";
             this.dvgShift.RowHeadersWidth = 51;
             this.dvgShift.RowTemplate.Height = 29;
+            this.dvgShift.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dvgShift.Size = new System.Drawing.Size(836, 320);
             this.dvgShift.TabIndex = 6;
-            // 
-            // User_ID
-            // 
-            this.User_ID.HeaderText = "User_ID";
-            this.User_ID.MinimumWidth = 6;
-            this.User_ID.Name = "User_ID";
-            this.User_ID.Width = 125;
-            // 
-            // Shift_Type
-            // 
-            this.Shift_Type.HeaderText = "Shift_Type";
-            this.Shift_Type.MinimumWidth = 6;
-            this.Shift_Type.Name = "Shift_Type";
-            this.Shift_Type.Width = 125;
-            // 
-            // Shift_Date
-            // 
-            this.Shift_Date.HeaderText = "Shift_Date";
-            this.Shift_Date.MinimumWidth = 6;
-            this.Shift_Date.Name = "Shift_Date";
-            this.Shift_Date.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Shift-ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dvgShift.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgShift_CellClick);
             // 
             // btnDeleteSchedule
             // 
@@ -333,12 +306,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDeleteSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeleteSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDeleteSchedule.Location = new System.Drawing.Point(685, 258);
+            this.btnDeleteSchedule.Location = new System.Drawing.Point(667, 257);
             this.btnDeleteSchedule.Name = "btnDeleteSchedule";
             this.btnDeleteSchedule.Size = new System.Drawing.Size(194, 32);
             this.btnDeleteSchedule.TabIndex = 5;
             this.btnDeleteSchedule.Text = "Delete Schdeule";
             this.btnDeleteSchedule.UseVisualStyleBackColor = false;
+            this.btnDeleteSchedule.Click += new System.EventHandler(this.btnDeleteSchedule_Click);
             // 
             // btnEditSchedule
             // 
@@ -347,7 +321,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditSchedule.Location = new System.Drawing.Point(470, 258);
+            this.btnEditSchedule.Location = new System.Drawing.Point(339, 258);
             this.btnEditSchedule.Name = "btnEditSchedule";
             this.btnEditSchedule.Size = new System.Drawing.Size(194, 32);
             this.btnEditSchedule.TabIndex = 4;
@@ -362,28 +336,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnCreateSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCreateSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCreateSchedule.Location = new System.Drawing.Point(262, 258);
+            this.btnCreateSchedule.Location = new System.Drawing.Point(25, 257);
             this.btnCreateSchedule.Name = "btnCreateSchedule";
             this.btnCreateSchedule.Size = new System.Drawing.Size(194, 32);
             this.btnCreateSchedule.TabIndex = 3;
             this.btnCreateSchedule.Text = "Create Schedule";
             this.btnCreateSchedule.UseVisualStyleBackColor = false;
             this.btnCreateSchedule.Click += new System.EventHandler(this.btnCreateSchedule_Click);
-            // 
-            // btnRefreshSchedule
-            // 
-            this.btnRefreshSchedule.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnRefreshSchedule.FlatAppearance.BorderSize = 0;
-            this.btnRefreshSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefreshSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefreshSchedule.Location = new System.Drawing.Point(25, 258);
-            this.btnRefreshSchedule.Name = "btnRefreshSchedule";
-            this.btnRefreshSchedule.Size = new System.Drawing.Size(194, 32);
-            this.btnRefreshSchedule.TabIndex = 2;
-            this.btnRefreshSchedule.Text = "Refresh";
-            this.btnRefreshSchedule.UseVisualStyleBackColor = false;
-            this.btnRefreshSchedule.Click += new System.EventHandler(this.btnRefreshSchedule_Click);
             // 
             // Stock
             // 
@@ -394,6 +353,34 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Stock.Size = new System.Drawing.Size(127, 31);
             this.Stock.TabIndex = 0;
             this.Stock.Text = "Schedule";
+            // 
+            // User_ID
+            // 
+            this.User_ID.HeaderText = "Id of user";
+            this.User_ID.MinimumWidth = 6;
+            this.User_ID.Name = "User_ID";
+            this.User_ID.Width = 125;
+            // 
+            // Shift_Type
+            // 
+            this.Shift_Type.HeaderText = "id of shift";
+            this.Shift_Type.MinimumWidth = 6;
+            this.Shift_Type.Name = "Shift_Type";
+            this.Shift_Type.Width = 125;
+            // 
+            // Shift_Date
+            // 
+            this.Shift_Date.HeaderText = "shift type";
+            this.Shift_Date.MinimumWidth = 6;
+            this.Shift_Date.Name = "Shift_Date";
+            this.Shift_Date.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "shift day";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // FormSchedule
             // 
@@ -429,9 +416,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Button btnDeleteSchedule;
         private System.Windows.Forms.Button btnEditSchedule;
         private System.Windows.Forms.Button btnCreateSchedule;
-        private System.Windows.Forms.Button btnRefreshSchedule;
         private System.Windows.Forms.Label Stock;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker jumpTo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Right;
         private System.Windows.Forms.Button Left;

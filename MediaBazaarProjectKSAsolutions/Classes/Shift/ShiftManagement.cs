@@ -37,6 +37,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         {
             return shiftCon.GetAllShifts();
         }
+        public void DeleteShift(Shift shift) //This Deletes Shift
+        
+        {
+            this.shiftCon.DeleteShift(shift);
+        }
+      
         //public List<Shift> GetShiftByEmplooyeeId(int id)
         //{
         //    return shiftCon.GetShiftByEmployeeId(int id);

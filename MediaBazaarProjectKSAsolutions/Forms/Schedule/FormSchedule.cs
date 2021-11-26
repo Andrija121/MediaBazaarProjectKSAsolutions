@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -152,9 +153,72 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             ShowShifts(DateTime.UtcNow.Date.AddDays(addDays));
         }
 
-        private void btnRefreshSchedule_Click(object sender, EventArgs e)
-        {
 
+        private void jumpTo_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime now = jumpTo.Value;
+
+            DateTime yesterday = now.AddDays(-1);
+            this.dayLeft.Text = now.ToString("dd");
+            this.mothLeft.Text = now.ToString("MMM");
+            this.yearLeft.Text = now.ToString("yyyy");
+
+            this.middleDay.Text = now.ToString("dd");
+            this.middleMonth.Text = now.ToString("MMM");
+            this.middleYear.Text = now.ToString("yyyy");
+
+            DateTime tommorrow = now.AddDays(+1);
+            this.rightDay.Text = now.ToString("dd");
+            this.RightMonth.Text = now.ToString("MMM");
+            this.RightYear.Text = now.ToString("yyyy");
+            ShowShifts(now);
+        }
+
+
+        private void btnDeleteSchedule_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            DataGridViewColumn column = new DataGridViewColumn();
+            int cIndex = Convert.ToInt32(column.Index);
+            int rIndex = Convert.ToInt32(row.Index);
+
+            DataGridViewCellEventArgs dataGridViewCellEventArgs = new DataGridViewCellEventArgs(cIndex,rIndex);
+            dvgShift_CellClick(sender, dataGridViewCellEventArgs);
+        }
+
+        private void dvgShift_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+            if (dvgShift.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
+            {
+                return;
+            }
+            else
+            DeleteSelectedShift(e);
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ups please selct proper value");
+            }
+        }
+
+        private void DeleteSelectedShift(DataGridViewCellEventArgs e)
+        {
+            dvgShift.CurrentCell.Selected = true;
+
+            string id = dvgShift.Rows[e.RowIndex].Cells["User_ID"].FormattedValue.ToString();
+            var st = (from s in shiftM.GetAllShifts()
+                      where s.Shift_Id == int.Parse(id)
+                      select s).First();
+            shiftM.DeleteShift(st);
+            RefreshDVG();
+            MessageBox.Show("It works");
+            //int id = Convert.ToInt32(tbxShiftId.Text);
+            //int uid = dvgEmployees.CurrentCell.RowIndex;
+            //int id = Convert.ToInt32(dvgEmployees.Rows[uid].Cells[0].Value);
         }
     }
 }
