@@ -235,7 +235,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
                 conn.Close();
             }
         }
-        public void DeleteShift(int Shift_Id) //This Deletes Shift
+        public void DeleteShift(Shift shift) //This Deletes Shift
         {
             try
             {
@@ -243,7 +243,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
                 {
                     string sql = "DELETE FROM shifts WHERE id =@id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@id", Shift_Id);
+                    cmd.Parameters.AddWithValue("@id", shift.Shift_Id);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();

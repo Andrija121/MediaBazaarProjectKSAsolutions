@@ -57,9 +57,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.btnCreateStocks);
             this.pnlEmployees.Controls.Add(this.btnRefreshStocks);
             this.pnlEmployees.Controls.Add(this.Stock);
-            this.pnlEmployees.Location = new System.Drawing.Point(9, 8);
+            this.pnlEmployees.Location = new System.Drawing.Point(10, 11);
+            this.pnlEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(914, 481);
+            this.pnlEmployees.Size = new System.Drawing.Size(1044, 641);
             this.pnlEmployees.TabIndex = 12;
             // 
             // DVGStock
@@ -71,10 +72,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.StockSerialNumber,
             this.StockAmount,
             this.StockCategory});
-            this.DVGStock.Location = new System.Drawing.Point(10, 166);
+            this.DVGStock.Location = new System.Drawing.Point(11, 221);
+            this.DVGStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DVGStock.Name = "DVGStock";
+            this.DVGStock.RowHeadersWidth = 51;
             this.DVGStock.RowTemplate.Height = 25;
-            this.DVGStock.Size = new System.Drawing.Size(888, 298);
+            this.DVGStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.DVGStock.Size = new System.Drawing.Size(1015, 397);
             this.DVGStock.TabIndex = 7;
             // 
             // StockName
@@ -115,10 +119,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // lbStocks
             // 
             this.lbStocks.FormattingEnabled = true;
-            this.lbStocks.ItemHeight = 15;
-            this.lbStocks.Location = new System.Drawing.Point(10, 130);
+            this.lbStocks.ItemHeight = 20;
+            this.lbStocks.Location = new System.Drawing.Point(11, 173);
+            this.lbStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbStocks.Name = "lbStocks";
-            this.lbStocks.Size = new System.Drawing.Size(888, 334);
+            this.lbStocks.Size = new System.Drawing.Size(1014, 444);
             this.lbStocks.TabIndex = 6;
             // 
             // btnDelStock
@@ -128,9 +133,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDelStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDelStock.Location = new System.Drawing.Point(704, 81);
+            this.btnDelStock.Location = new System.Drawing.Point(805, 108);
+            this.btnDelStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelStock.Name = "btnDelStock";
-            this.btnDelStock.Size = new System.Drawing.Size(194, 31);
+            this.btnDelStock.Size = new System.Drawing.Size(222, 41);
             this.btnDelStock.TabIndex = 5;
             this.btnDelStock.Text = "Delete Stock";
             this.btnDelStock.UseVisualStyleBackColor = false;
@@ -143,9 +149,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditStocks.Location = new System.Drawing.Point(475, 81);
+            this.btnEditStocks.Location = new System.Drawing.Point(543, 108);
+            this.btnEditStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditStocks.Name = "btnEditStocks";
-            this.btnEditStocks.Size = new System.Drawing.Size(194, 31);
+            this.btnEditStocks.Size = new System.Drawing.Size(222, 41);
             this.btnEditStocks.TabIndex = 4;
             this.btnEditStocks.Text = "Edit Stock";
             this.btnEditStocks.UseVisualStyleBackColor = false;
@@ -158,9 +165,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnCreateStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCreateStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCreateStocks.Location = new System.Drawing.Point(241, 81);
+            this.btnCreateStocks.Location = new System.Drawing.Point(275, 108);
+            this.btnCreateStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateStocks.Name = "btnCreateStocks";
-            this.btnCreateStocks.Size = new System.Drawing.Size(194, 31);
+            this.btnCreateStocks.Size = new System.Drawing.Size(222, 41);
             this.btnCreateStocks.TabIndex = 3;
             this.btnCreateStocks.Text = "Create Stock";
             this.btnCreateStocks.UseVisualStyleBackColor = false;
@@ -173,9 +181,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnRefreshStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefreshStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnRefreshStocks.Location = new System.Drawing.Point(10, 81);
+            this.btnRefreshStocks.Location = new System.Drawing.Point(11, 108);
+            this.btnRefreshStocks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefreshStocks.Name = "btnRefreshStocks";
-            this.btnRefreshStocks.Size = new System.Drawing.Size(194, 31);
+            this.btnRefreshStocks.Size = new System.Drawing.Size(222, 41);
             this.btnRefreshStocks.TabIndex = 2;
             this.btnRefreshStocks.Text = "Refresh";
             this.btnRefreshStocks.UseVisualStyleBackColor = false;
@@ -185,9 +194,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.Stock.AutoSize = true;
             this.Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Stock.Location = new System.Drawing.Point(393, 8);
+            this.Stock.Location = new System.Drawing.Point(449, 11);
             this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(97, 31);
+            this.Stock.Size = new System.Drawing.Size(119, 39);
             this.Stock.TabIndex = 0;
             this.Stock.Text = "Stocks";
             // 
@@ -197,10 +206,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(818, 493);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(935, 657);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 28);
+            this.btnBack.Size = new System.Drawing.Size(103, 37);
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -208,13 +217,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // FormStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(928, 529);
+            this.ClientSize = new System.Drawing.Size(1061, 705);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlEmployees);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormStock";
