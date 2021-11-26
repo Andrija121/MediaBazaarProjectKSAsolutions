@@ -1,0 +1,78 @@
+﻿@page
+@model MediaBazaarWebKSAsolutions.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<div id="Base">
+    <div id="BaseField">
+
+        <h1>Profile</h1>
+        <br />
+        <h2>Welcome <i>@Model.UsernameFromSession</i></h2>
+        <br />
+        <!-- View user data -->
+        <br />
+        <form method="post">
+            <label asp-for="profileId">Id: *</label> <br />
+            <span asp-validation-for="profileId"></span><br />
+            <input disabled class="loginwidth" asp-for="profileId" /> <br /> <br />
+            
+            <label asp-for="profileUsername">Username: *</label> <br />
+            <span asp-validation-for="profileUsername"></span><br />
+            <input disabled class="loginwidth" asp-for="profileUsername" /> <br /> <br />
+
+            <label asp-for="profileFirstName"> First name: * </label> <br />
+            <span asp-validation-for="profileFirstName"></span><br />
+            <input class="loginwidth" asp-for="profileFirstName" /> <br /> <br />
+
+            <label asp-for="profileLastName"> Last name: * </label> <br />
+            <span asp-validation-for="profileLastName"></span><br />
+            <input class="loginwidth" asp-for="profileLastName" /> <br /> <br />
+
+            <label asp-for="profileEmail"> Email: * </label> <br />
+            <span asp-validation-for="profileEmail"></span><br />
+            <input class="loginwidth" asp-for="profileEmail" /> <br /> <br />
+
+            <label asp-for="profilePassword"> Password: * </label> <br />
+            <span asp-validation-for="profilePassword"></span><br />
+            <input class="loginwidth" asp-for="profilePassword" /> <br /> <br />
+
+            <label asp-for="profileBirthday"> Birthday: * </label> <br />
+            <span asp-validation-for="profileBirthday"></span><br />
+            <input class="loginwidth" asp-for="profileBirthday" /> <br /> <br />
+
+            <label asp-for="profileBSN"> BSN: * </label> <br />
+            <span asp-validation-for="profileBSN"></span><br />
+            <input class="loginwidth" asp-for="profileBSN" /> <br /> <br />
+
+            <label asp-for="profileZipCode"> Zip Code: * </label> <br />
+            <span asp-validation-for="profileZipCode"></span><br />
+            <input class="loginwidth" asp-for="profileZipCode" /> <br /> <br />
+
+            <label asp-for="profileAdress"> Adress: * </label> <br />
+            <span asp-validation-for="profileAdress"></span><br />
+            <input class="loginwidth" asp-for="profileAdress" /> <br /> <br />
+
+            <label asp-for="profileGender"> Gender: * </label> <br />
+            <span asp-validation-for="profileGender"></span><br />
+            <input class="loginwidth" asp-for="profileGender" /> <br /> <br />
+
+            <label asp-for="profileRole"> Role: * </label> <br />
+            <span asp-validation-for="profileRole"></span><br />
+            <input disabled class="loginwidth" asp-for="profileRole" /> <br /> <br />
+
+            <label asp-for="profileStatus"> Status: * </label> <br />
+            <span asp-validation-for="profileStatus"></span><br />
+            <input disabled class="loginwidth" asp-for="profileStatus" /> <br /> <br />
+
+            <input class="button loginwidth" name="submit" type="submit" value="Update" /> <br /> <br />
+        </form>
+
+        <!-- End user data -->
+
+        <form method="post">
+            <input class="button loginwidth" name="submit" type="submit" value="Logout" /> <br /> <br />
+        </form>
+    </div>
+</div>

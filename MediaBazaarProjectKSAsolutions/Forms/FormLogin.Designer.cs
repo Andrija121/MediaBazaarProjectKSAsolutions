@@ -60,9 +60,9 @@
             this.lblUserName.Location = new System.Drawing.Point(51, 286);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(203, 26);
+            this.lblUserName.Size = new System.Drawing.Size(191, 26);
             this.lblUserName.TabIndex = 1;
-            this.lblUserName.Text = "User Name or Email";
+            this.lblUserName.Text = "User Name / Email";
             // 
             // tbUserName
             // 

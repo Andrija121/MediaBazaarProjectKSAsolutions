@@ -16,7 +16,18 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
             RefreshListBox();
+            RefreshDVG();
         }
+
+        public void RefreshDVG()
+        {
+            DVGStock.Rows.Clear();
+            foreach (var s in sm.GetAllStock())
+            { 
+                DVGStock.Rows.Add(s.ProductName, s.Price, s.SerialNumber, s.Amount, s.Category);
+            }
+        }
+
         public void RefreshListBox()
         {
             lbStocks.Items.Clear();
@@ -35,6 +46,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private void btnRefreshStocks_Click(object sender, EventArgs e)
         {
             RefreshListBox();
+            RefreshDVG();
         }
        
 

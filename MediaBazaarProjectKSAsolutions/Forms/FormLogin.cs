@@ -43,10 +43,23 @@ namespace MediaBazaarProjectKSAsolutions
                     {
                         if (u.UserName == userNameOrEmail || u.Email == userNameOrEmail && u.Password == password)
                         {
-                            user = u;
-                            Main main = new Main(user);
-                            main.Show();
-                            this.Hide();
+                            if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER || u.Role == Role.DEPARTMENTMANAGER)
+                            {
+                                user = u;
+                                Main main = new Main(user);
+                                main.Show();
+                                this.Hide();
+                                break;
+                            }
+                            else if(u.Role==Role.STOREEMPLOYEE || u.Role==Role.WAREHOUSEEMPLOYEE)
+
+                            {
+                                user = u;
+                                FormEmployee formEmployee = new FormEmployee(user);
+                                formEmployee.Show();
+                                this.Hide();
+                                break;
+                            }
                         }
                     }
                     if (user == null)

@@ -16,20 +16,40 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public Main(User user)
         {
             InitializeComponent();
-            u = user;
-            lblHi.Text = "Welcome back, "+u.FirstName;
+            this.u = user;
+            if (u.Role == Role.GENERALMANAGER)
+            {
+            }
+            else if (u.Role == Role.DEPARTMENTMANAGER)
+            {
+                btnStatistics.Hide();
+                btnStocks.Hide();
+
+            }
+            else
+                btnStatistics.Hide();
+
+            lblHi.Text = "Welcome back, " + u.FirstName;
         }
         private void btnEmployees_Click_1(object sender, EventArgs e)
         {
-            FormEmployee FormEmployee = new FormEmployee(u);
+            FormCRUDEmployee FormEmployee = new FormCRUDEmployee(u);
             FormEmployee.ShowDialog();
           
         }
 
         private void btnDepartments_Click_1(object sender, EventArgs e)
         {
-            FormDepartment FormDepartment = new FormDepartment();
+            if (u.Role==Role.DEPARTMENTMANAGER || u.Role==Role.GENERALMANAGER)
+            {
+
+            FormDepartment FormDepartment = new FormDepartment(u);
             FormDepartment.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You are not deparmtnet manager");
+            }
           
         }
 
@@ -43,8 +63,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnSchedule_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Currently not available. ");
+
+            FormSchedule formSchedule = new FormSchedule(u);
+            formSchedule.ShowDialog();
         }
+
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {
