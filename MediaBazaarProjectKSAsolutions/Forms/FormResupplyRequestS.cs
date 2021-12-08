@@ -22,9 +22,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         public void RefreshListBox()
         {
-            ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
+            
             lbResupplyRequests.Items.Clear();
-            foreach (var prr in rrm.GetPendingResupplyRequests(rr))
+            foreach (var prr in rrm.GetPendingResupplyRequests())
             {
                 lbResupplyRequests.Items.Add(prr);
             }
@@ -52,6 +52,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 }
                 else
                 {
+                    ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
                     resupplyRequest = rrm.GetResupplyRequest(u.Id);
                     FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
                     formApproveOrDeclineRequest.Show();

@@ -109,7 +109,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public List<ResupplyRequest> GetPendingResupplyRequests(ResupplyRequest rr)
+        public List<ResupplyRequest> GetPendingResupplyRequests()
         {
             try
             {
@@ -128,13 +128,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     while (dr.Read())
                     {
-                        rr.Whe.Id = Convert.ToInt32(dr["wheid"]);
-                        rr.Dm.Id = Convert.ToInt32(dr["dmid"]);
-                        rr.Stock.Id = Convert.ToInt32(dr["sid"]);
-                        rr.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
-                        rr.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
-                        rr.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
-                        rrs.Add(rr);
+                        ResupplyRequest resupplyRequest = new ResupplyRequest();
+                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]);
+                        resupplyRequest.Dm.Id = Convert.ToInt32(dr["dmid"]);
+                        resupplyRequest.Stock.Id = Convert.ToInt32(dr["sid"]);
+                        resupplyRequest.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
+                        resupplyRequest.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
+                        resupplyRequest.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
+                        rrs.Add(resupplyRequest);
 
                     }
                     return rrs;
