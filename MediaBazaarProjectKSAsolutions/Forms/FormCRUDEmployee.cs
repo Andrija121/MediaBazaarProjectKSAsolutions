@@ -35,7 +35,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             dgvUsers.Rows.Clear();
             foreach (var u in userManagement.GetUsers())
             {
-                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email);
+                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email, u.Birtyhday, u.BSN, u.ZipCode, u.Address, u.Gender, u.Role);
             }
         }
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
             inactiveUsersForm.ShowDialog();
-            RefreshListBox();
+            RefreshDGV();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -90,43 +90,38 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void FormCRUDEmployee_Load(object sender, EventArgs e)
         {
-            ChekcIfUserDMorGM();
-            CheckIfUserHRorGM();
+           // ChekcIfUserDMorGM();
+           // CheckIfUserHRorGM();
         }
 
-        private User ChekcIfUserDMorGM()
-        {
+        //private User ChekcIfUserDMorGM()
+        //{
 
-                if (u.Role == Role.GENERALMANAGER || u.Role == Role.DEPARTMENTMANAGER)
-                {
-                    panelDMandGM.Enabled = true;
-                }
-                else
-                {
-                    panelDMandGM.Enabled = false;
-                }
-            return u;
-        }
-        private User CheckIfUserHRorGM()
-        {
-                if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER)
-                {
-                    panelHRorGM.Enabled = true;
-                }
-            else
-            {
-                panelHRorGM.Enabled = false;
-            }
-            return u;
-        }
-        
+        //    //foreach (var u in userManagement.GetUsers())
+        //    //{
+        //    //    if (u.Role == Role. || u.Role == Role.DEPARTMENTMANAGER)
+        //    //    {
+        //    //        panelDMandGM.Enabled = true;
+        //    //    }
+        //    //} 
+        //    //return u;
+        //}
+        //private User CheckIfUserHRorGM()
+        //{
+        //    foreach (var u in userManagement.GetUsers())
+        //    {
+        //        if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER)
+        //        {
+        //            panelHRorGM.Enabled = true;
+        //        }
+        //    }
+        //    return u;
+        //}
 
-        private void BtnSeeResupplyRequests_Click(object sender, EventArgs e)
+        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
         {
-            //FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
-            //formResupplyRequestS.ShowDialog();
-            RequestResupplyForm rrf = new RequestResupplyForm(u);
-            rrf.ShowDialog();
+            FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
+            formResupplyRequestS.ShowDialog();
         }
 
         private void btnDaysOffRequests_Click(object sender, EventArgs e)
