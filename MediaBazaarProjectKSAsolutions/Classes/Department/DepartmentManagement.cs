@@ -19,7 +19,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             {
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO department(name) values(@name)";
+                    string sql = "INSERT INTO department(name,status) values(@name,@status)";
 
 
 
@@ -27,6 +27,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     conn.Open();
                     cmd.Parameters.AddWithValue("@name", department.Name);
+                    cmd.Parameters.AddWithValue("@status", department.Status.ToString());
                     cmd.ExecuteNonQuery();
 
                 }
@@ -50,7 +51,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     string sql = "select * from department where status=@status";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());
+                    cmd.Parameters.AddWithValue("@status", Status.ACTIVE.ToString());   
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
 
@@ -97,7 +98,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         Department department = new Department();
-                        department.Id = Convert.ToInt32(dr["id"]);
+                        department.Id = Convert.ToInt32(dr["department_id"]);
                         department.Name = dr["name"].ToString();
                         department.Status = Enum.Parse<Status>(dr["status"].ToString());
                         inactiveDepartments.Add(department);
@@ -124,10 +125,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "Update Department set name=@name, status=@status where id=@id";
+                    string sql = "Update Department set name=@name, status=@status where department_id=@department_id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    cmd.Parameters.AddWithValue("@id", department.Id);
+                    cmd.Parameters.AddWithValue("@department_id", department.Id);
                     cmd.Parameters.AddWithValue("@name", department.Name);
                     cmd.Parameters.AddWithValue("@status", department.Status.ToString());
 
@@ -154,11 +155,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     using (MySqlConnection conn=new MySqlConnection(Params.connectionString))
                     {
-                        string sql = "delete from Department where id=@id";
+                        string sql = "delete from Departmentdepartment_id=@department_id";
 
                         MySqlCommand cmd = new MySqlCommand(sql,conn);
 
-                        cmd.Parameters.AddWithValue("id", id);
+                        cmd.Parameters.AddWithValue("@department_id", id);
 
                         conn.Open();
                         cmd.ExecuteNonQuery();

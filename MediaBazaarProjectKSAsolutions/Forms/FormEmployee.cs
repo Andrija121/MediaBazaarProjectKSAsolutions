@@ -220,7 +220,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 if (u.Role == Role.WAREHOUSEEMPLOYEE)
                 {
-                    RequestResupplyForm requestResupplyForm = new RequestResupplyForm(u,stock);
+                    FormResupplyRequestS requestResupplyForm = new FormResupplyRequestS(u);
                     requestResupplyForm.ShowDialog();
                 }
                 else
@@ -252,6 +252,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             tcNavigation.SelectedTab = tabPageAnnouncements;
             PanelMovment(btnAnnouncement);
+        }
+
+        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
+        {
+            if (u.Role == Role.WAREHOUSEEMPLOYEE)
+            {
+                FormResupplyRequestS requestResupplyForm = new FormResupplyRequestS(u);
+                requestResupplyForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You are not Warehouse employee, you can not ask for resupply");
+            }
+
         }
     }
 }

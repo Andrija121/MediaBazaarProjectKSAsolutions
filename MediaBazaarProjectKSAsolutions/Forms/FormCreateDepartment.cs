@@ -12,9 +12,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
     public partial class FormCreateDepartment : Form
     {
         DepartmentManagement dep = new DepartmentManagement();
-        public FormCreateDepartment()
+        UserManagement userManagement = new UserManagement();
+        User u;
+        public FormCreateDepartment(User user)
         {
             InitializeComponent();
+            this.u = user;
             cbStatus.DataSource = Enum.GetValues(typeof(Status));
         }
 
@@ -26,8 +29,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 string name = tbxNewDepartmentName.Text;
                 Status status = (Status)cbStatus.SelectedItem;
                 
+                
                
-                Department department = new Department();
+                Department department = new Department(1,name,u,status);
                 if (department.Name == "")
                 {
                     MessageBox.Show("Please input proper values");
