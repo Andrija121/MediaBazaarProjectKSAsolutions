@@ -18,24 +18,24 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 
         public ShiftManagement() //The shift shiftManagment stores all GetAlls
         {
-            this.shifts = shiftCon.GetAllShifts();
+            this.shifts = shiftCon.GetTheLastShifts();
         }
 
         public void UpdateSHift(Shift shift)
         {
             this.shiftCon.UpdateShifts(shift);
         }
-        //public List<Shift> GetShiftByDate(DateTime date)
-        //{
-        //    return shiftCon.GetShiftByDate(date);
-        //}
+        public List<Shift> GetShiftByDate(DateTime date)
+        {
+            return shiftCon.GetShiftByDate(date);
+        }
         public Shift GetShiftById(int id)
         {
             return shiftCon.GetShiftById(id);
         }
-        public List<Shift> GetAllShifts()
+        public List<Shift> GetTheLastShifts()
         {
-            return shiftCon.GetAllShifts();
+            return shiftCon.GetTheLastShifts();
         }
         public void DeleteShift(int id) //This Deletes Shift
         

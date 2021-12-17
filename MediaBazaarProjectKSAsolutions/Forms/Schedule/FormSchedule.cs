@@ -32,43 +32,45 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             InitializeComponent();
             this.u = user;
             shiftM = new ShiftManagement();
+            DateTime D = new DateTime();
+            displayShifts(D.Date);
 
         }
 
-        public void UpdateTable (DateTime dateTime) //This Automatically refreshing the Datagrid view
+        public void UpdateTable(DateTime dateTime) //This Automatically refreshing the Datagrid view
         {
             
             this.dvgShift.Rows.Clear();
-            //shiftM.GetAllShifts();
-            //Shift[] shifts = shiftM.GetShiftByDate(dateTime.Date).ToArray();
+            shiftM.GetShiftByDate(dateTime);
+            Shift[] shifts = shiftM.GetShiftByDate(dateTime).ToArray();
 
-            //foreach (Shift shift in shifts)
+            //foreach (shift shift in shifts)
             //{
-            //    var add = shift.GetInfo();
-            //    dvgShift.Rows.Add(add);
+            //    var add = shift.();
+            //    dvgshift.rows.add(add);
 
             //}
-            foreach(var s in shiftM.GetAllShifts() )
+            foreach (var s in shiftM.GetTheLastShifts())
             {
-                dvgShift.Rows.Add(s.GetInfo());
+                dvgShift.Rows.Add(s.ToString());
             }
 
         }
         public void displayShifts (DateTime dateTime) //This is suppose to show the already made shifts when the system is loaded
         {
             this.dvgShift.Rows.Clear();
-            Shift[] shifts = shiftM.GetAllShifts().ToArray();
+            Shift[] shifts = shiftM.GetTheLastShifts().ToArray();
 
             foreach (Shift shift in shifts)
             {
                 if (this.u.Role == Classes.Role.GENERALMANAGER) //General Manager can create shift
                 {
-                    var add = shift.GetInfo();
+                    var add = shift.ToString();
                     dvgShift.Rows.Add(add);
                 }
                 else if (this.u.Role == Classes.Role.HRMANAGER) //HR Manager can create shift
                 {
-                    var add = shift.GetInfo();
+                    var add = shift.ToString();
                     dvgShift.Rows.Add(add);
                 }
             }

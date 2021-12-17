@@ -37,10 +37,14 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         {
 
         }
-        public virtual string[] GetInfo()
+        public override string ToString()
         {
-            string[] s = { this.Shift_Id.ToString() ,  userCon.GetUser(this.User_Id).FirstName + " - " + userCon.GetUser(this.User_Id).LastName ,this.Shift_Type.ToString() };
-            return s;
+            return Shift_Id + " - " + User_Id + " " + Shift_Date + ", " + Shift_Type;
         }
+        //public virtual string[] GetInfo()
+        //{
+        //    string[] s = { this.Shift_Id.ToString(), userCon.GetUser(this.User_Id).FirstName + " - " + userCon.GetUser(this.User_Id).LastName, this.Shift_Type.ToString() };
+        //    return s;
+        //}
     }
 }

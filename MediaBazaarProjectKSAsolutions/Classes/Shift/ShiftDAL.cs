@@ -18,7 +18,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
             {
                 using(MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
-                    string sql = "INSERT INTO shifts(user_Id,shift_Date,shift_Type) VALUES(@user_Id,@Shift_Date,@shift_Type)";
+                    string sql = "INSERT INTO usershifts(user_Id,shift_Date,shift_Type) VALUES(@user_Id,@Shift_Date,@shift_Type)";
                    
                    MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -81,43 +81,45 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         //    {
         //        conn.Close();
         //    }
-           
+
         //}
- //       public List<Shift> GetShiftByDate (DateTime date)
- //       {
- //           using(var con = new MySqlConnection(Params.connectionString))
- //           {
- //               con.Open();
- //               using(var command = con.CreateCommand())
- //               {
- //                   //Select statment
- //                   command.CommandText = @"SELECT u.firstName, s.shift_type, s.shift_Date FROM `shifts`as s INNER JOIN 
- //`user` as u ON  s.user_Id = u.id WHERE s.shift_Date = shift_Date  AND u.status  is TRUE ";
- //                   //command.Parameters.AddWithValue("status", );
+        public List<Shift> GetShiftByDate(DateTime date)
+        {
+            using (var con = new MySqlConnection(Params.connectionString))
+            {
+                con.Open();
+                using (var command = con.CreateCommand())
+                {
+                    //Select statment
+                    command.CommandText = @"SELECT u.firstName, s.shift_type, s.shift_Date FROM `shifts`as s INNER JOIN 
+                                          `user` as u ON  s.user_Id = u.id WHERE s.shift_Date = shift_Date  AND u.status  is TRUE ";
+                    //command.Parameters.AddWithValue("status", );
 
- //                   //Executing it
- //                  using (var reader = command.ExecuteReader())
- //                   {
- //                       List<Shift> shifts = new List<Shift>();
- //                       while(reader.Read())
- //                       {
- //                           Shift shift = new Shift();
+                    //Executing it
+                    using (var reader = command.ExecuteReader())
+                    {
+                        List<Shift> shifts = new List<Shift>();
+                        List<User> users = new List<User>();
+                        while (reader.Read())
+                        {
+                            Shift shift = new Shift();
 
- //                           shift.Shift_Id = reader.GetInt32("id");
- //                           shift.User_Id = reader.GetInt32("user_Id");
- //                           shift.Shift_Date = reader.GetDateTime("shift_Date");
- //                           shift.Shift_Type = (Shift_Type)reader.GetInt32("shift_Type");
- //                           shifts.Add(shift);
- //                       }
- //                       return shifts;
- //                   }
- //               }
- //           }
+                            //shift.Shift_Id = reader.GetInt32("id");
+                            
+                            shift.User_Id = reader.GetInt32("user_Id");
+                            shift.Shift_Date = reader.GetDateTime("shift_Date");
+                            shift.Shift_Type = (Shift_Type)reader.GetInt32("shift_Type");
+                            shifts.Add(shift);
+                        }
+                        return shifts;
+                    }
+                }
+            }
 
 
 
- //       }
-       
+        }
+
         public Shift GetShiftById(int Shift_id ) //This Gets Shifts by ID
         {
             try
@@ -157,7 +159,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
                 conn.Close();
             }
         }
-        public List<Shift> GetAllShifts()
+        public List<Shift> GetTheLastShifts()
         {
             try
             {
@@ -165,7 +167,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
                 using (MySqlConnection conn = new MySqlConnection(Params.connectionString))
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM shifts";
+                    string sql = "SELECT * FROM shifts WHERE shift_Id = (SELECT MAX(shift_Id)";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
