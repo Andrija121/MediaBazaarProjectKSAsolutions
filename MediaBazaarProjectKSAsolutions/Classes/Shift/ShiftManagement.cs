@@ -11,8 +11,8 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 
         public Shift AddSchedule(Shift s)
         {
-       //     shifts.Add(s);
-          s=  shiftCon.AddShift(s);
+      
+             s=  shiftCon.AddShift(s);
             return s;
         }
 
@@ -25,10 +25,10 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         {
             this.shiftCon.UpdateShifts(shift);
         }
-        public List<Shift> GetShiftByDate(DateTime date)
-        {
-            return shiftCon.GetShiftByDate(date);
-        }
+        //public List<Shift> GetShiftByDate(DateTime date)
+        //{
+        //    return shiftCon.GetShiftByDate(date);
+        //}
         public Shift GetShiftById(int id)
         {
             return shiftCon.GetShiftById(id);
@@ -37,10 +37,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         {
             return shiftCon.GetAllShifts();
         }
-        public void DeleteShift(Shift shift) //This Deletes Shift
+        public void DeleteShift(int id) //This Deletes Shift
         
         {
-            this.shiftCon.DeleteShift(shift);
+            this.shiftCon.DeleteShift(id);
+            shifts.RemoveAll(item => item.Shift_Id == id);
         }
       
         //public List<Shift> GetShiftByEmplooyeeId(int id)

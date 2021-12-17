@@ -10,45 +10,41 @@ using MediaBazaarProjectKSAsolutions.Classes.Shift;
 
 namespace MediaBazaarProjectKSAsolutions.Forms
 {
-    public partial class CreateSchedule : Form
+    public partial class AddSchedule : Form
     {
 
         ShiftDAL shm;
         private UserManagement user_controller; //Getting the Employee Id from the UserDAL
         private ShiftManagement shift_controllers;
         private FormSchedule schedForm;
-        User u;
+        //User u;
 
 
-        public CreateSchedule(User user)
+        public AddSchedule(FormSchedule schedule)
         {
             InitializeComponent();
-            this.u = user;
+            this.schedForm=  schedule;
             shm = new ShiftDAL();
 
-            cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
-            user_controller = new UserManagement();
-            shift_controllers = new ShiftManagement();
-            cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
+            
         }
 
         private void btnAddSchedule_Click(object sender, EventArgs e)
         {
 
-            
             try
             {
+
                 DateTime now = DateTime.UtcNow.Date;
+                int idx = dvgEmployees.CurrentCell.RowIndex;
+                int id = Convert.ToInt32(dvgEmployees.Rows[idx].Cells[0].Value);
+                User u = user_controller.GetUser(id);
 
-                u.Id = Convert.ToInt32(tbxUser_Id.Text);
+                Enum.TryParse(cbxSchedule_Type.Text, out Shift_Type type);
 
-                Shift_Type shift_Type = (Shift_Type)cbxSchedule_Type.SelectedItem;
-                DateTime date = dtpSchedule.Value;
-               
-               
-                
-                Shift shift = new Shift(u.Id,0,date, shift_Type);
+                Shift shift = new Shift(u.Id, 0 ,dtpSchedule.Value, type);
                 shift =  shift_controllers.AddSchedule(shift);
+                schedForm.displayShifts(now);
                 this.Close();
 
             }
@@ -57,7 +53,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 MessageBox.Show("Input value is not correct" + ex);
             }
 
-           
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -65,40 +60,28 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Close();
         }
 
+
+        private void CreateSchedule_Load(object sender, EventArgs e)
+        {
+            user_controller = new UserManagement();
+            shift_controllers = new ShiftManagement();
+            cbxSchedule_Type.DataSource = Enum.GetValues(typeof(Shift_Type));
+
+            //UpdateTable();
+
+        }
         public void UpdateTable()
         {
             this.dvgEmployees.Rows.Clear();
-            
+            User[] users = user_controller.GetUsers().ToArray();
 
-            foreach(User user in user_controller.GetUsers())
+            foreach (User user in user_controller.GetUsers())
             {
                 var add = user.ToString();
                 dvgEmployees.Rows.Add(user.Id, user.UserName, user.Role);
                 //user.Id = Convert.ToInt32(tbxUser_Id.Text());
             }
         }
-        private void CreateSchedule_Load(object sender, EventArgs e)
-        {
-            user_controller = new UserManagement();
-            shift_controllers = new ShiftManagement();
 
-            //Shift[] shifts = shift_controllers.
-            UpdateTable();
- 
-        }
-
-        private void dvgEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dvgEmployees.Rows[e.RowIndex].Cells[e.ColumnIndex].Value !=null)
-            {
-                dvgEmployees.CurrentCell.Selected = true;
-
-                tbxUser_Id.Text = dvgEmployees.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                //int id = Convert.ToInt32(tbxShiftId.Text);
-            //    int uid = dvgEmployees.CurrentCell.RowIndex;
-            //    int id = Convert.ToInt32(dvgEmployees.Rows[uid].Cells[0].Value);
-            }
-         
-        }
     }
 }

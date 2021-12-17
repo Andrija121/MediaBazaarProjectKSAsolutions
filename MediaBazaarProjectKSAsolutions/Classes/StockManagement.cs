@@ -25,8 +25,6 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 {
                     string sql = "INSERT INTO stock(productName,price,serialNumber,amount,categoryId) values(@productName,@price,@serialNumber,@amount,@categoryId)";
 
-
-
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     conn.Open();

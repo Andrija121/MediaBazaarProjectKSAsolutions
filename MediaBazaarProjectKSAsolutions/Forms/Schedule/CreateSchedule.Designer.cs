@@ -1,7 +1,7 @@
 ﻿
 namespace MediaBazaarProjectKSAsolutions.Forms
 {
-    partial class CreateSchedule
+    partial class AddSchedule
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Shift_Type";
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -80,6 +81,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Shift_Date";
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblDepartmentName
             // 
@@ -91,6 +93,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblDepartmentName.Size = new System.Drawing.Size(67, 20);
             this.lblDepartmentName.TabIndex = 19;
             this.lblDepartmentName.Text = "User_Id";
+            //this.lblDepartmentName.Click += new System.EventHandler(this.lblDepartmentName_Click);
             // 
             // label3
             // 
@@ -101,13 +104,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.label3.Size = new System.Drawing.Size(227, 46);
             this.label3.TabIndex = 18;
             this.label3.Text = "Add Schedule";
-            // 
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
+            //
             // tbxUser_Id
             // 
             this.tbxUser_Id.Location = new System.Drawing.Point(163, 75);
             this.tbxUser_Id.Name = "tbxUser_Id";
             this.tbxUser_Id.Size = new System.Drawing.Size(219, 27);
             this.tbxUser_Id.TabIndex = 17;
+            //this.tbxUser_Id.TextChanged += new System.EventHandler(this.tbxUser_Id_TextChanged);
             // 
             // btnAddSchedule
             // 
@@ -130,6 +135,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.cbxSchedule_Type.Name = "cbxSchedule_Type";
             this.cbxSchedule_Type.Size = new System.Drawing.Size(219, 28);
             this.cbxSchedule_Type.TabIndex = 27;
+            //this.cbxSchedule_Type.SelectedIndexChanged += new System.EventHandler(this.cbxSchedule_Type_SelectedIndexChanged);
             // 
             // dtpSchedule
             // 
@@ -139,6 +145,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dtpSchedule.Name = "dtpSchedule";
             this.dtpSchedule.Size = new System.Drawing.Size(268, 26);
             this.dtpSchedule.TabIndex = 28;
+            //this.dtpSchedule.ValueChanged += new System.EventHandler(this.dtpSchedule_ValueChanged);
             // 
             // mySqlCommand1
             // 
@@ -160,7 +167,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.dvgEmployees.RowTemplate.Height = 29;
             this.dvgEmployees.Size = new System.Drawing.Size(955, 426);
             this.dvgEmployees.TabIndex = 31;
-            this.dvgEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmployees_CellClick);
+            //this.dvgEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmployees_CellClick);
             // 
             // ID
             // 
@@ -183,7 +190,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Role.Name = "Role";
             this.Role.Width = 300;
             // 
-            // CreateSchedule
+            // AddSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +207,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.tbxUser_Id);
             this.Controls.Add(this.btnAddSchedule);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-         //   this.Name = "CreateSchedule";
+            //this.Name = "CreateSchedule";
             this.Text = "CreateSchedule";
             this.Load += new System.EventHandler(this.CreateSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmployees)).EndInit();

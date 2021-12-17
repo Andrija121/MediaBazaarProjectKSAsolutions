@@ -31,126 +31,117 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InitializeComponent();
             this.u = user;
+            shiftM = new ShiftManagement();
 
         }
 
-        public void RefreshDVG() //This Automatically refreshing the Datagrid view
+        public void UpdateTable (DateTime dateTime) //This Automatically refreshing the Datagrid view
         {
-            this.dvgShift.Rows.Clear();
             
-            foreach (var s in shiftM.GetAllShifts())
+            this.dvgShift.Rows.Clear();
+            //shiftM.GetAllShifts();
+            //Shift[] shifts = shiftM.GetShiftByDate(dateTime.Date).ToArray();
+
+            //foreach (Shift shift in shifts)
+            //{
+            //    var add = shift.GetInfo();
+            //    dvgShift.Rows.Add(add);
+
+            //}
+            foreach(var s in shiftM.GetAllShifts() )
             {
-                if(this.u.Role == Classes.Role.GENERALMANAGER)
-                {
-                    
-                    dvgShift.Rows.Add(s.Shift_Id, s.User_Id,s.Shift_Type, s.Shift_Date);
-                }
+                dvgShift.Rows.Add(s.GetInfo());
             }
+
         }
-        public void ShowShifts (DateTime dateTime) //This is suppose to show the already made shifts when the system is loaded
+        public void displayShifts (DateTime dateTime) //This is suppose to show the already made shifts when the system is loaded
         {
             this.dvgShift.Rows.Clear();
-             shiftM.GetAllShifts();
-            //Shift[] shift = shiftM.GetShiftByDate( dateTime.Date).ToArray();
+            Shift[] shifts = shiftM.GetAllShifts().ToArray();
 
-            foreach (var s in shiftM.GetAllShifts())
+            foreach (Shift shift in shifts)
             {
-                if(this.u.Role == Classes.Role.GENERALMANAGER)
+                if (this.u.Role == Classes.Role.GENERALMANAGER) //General Manager can create shift
                 {
-                    var add = ToString();
-                    dvgShift.Rows.Add(s.Shift_Id, s.User_Id, s.Shift_Type, s.Shift_Date);
+                    var add = shift.GetInfo();
+                    dvgShift.Rows.Add(add);
+                }
+                else if (this.u.Role == Classes.Role.HRMANAGER) //HR Manager can create shift
+                {
+                    var add = shift.GetInfo();
+                    dvgShift.Rows.Add(add);
                 }
             }
         }
         public void ShowDate (DateTime now) //This is for moving the tables
         {
-            DateTime yesterday = now.AddDays(-1);
-            this.dayLeft.Text = now.ToString("dd");
-            this.mothLeft.Text = now.ToString("MMM");
-            this.yearLeft.Text = now.ToString("yyyy");
+            //DateTime yesterday = now.AddDays(-1);
+            //this.dayLeft.Text = now.ToString("dd");
+            //this.mothLeft.Text = now.ToString("MMM");
+            //this.yearLeft.Text = now.ToString("yyyy");
 
             this.middleDay.Text = now.ToString("dd");
             this.middleMonth.Text = now.ToString("MMM");
             this.middleYear.Text = now.ToString("yyyy");
 
-            DateTime tommorrow = now.AddDays(+1);
-            this.rightDay.Text = now.ToString("dd");
-            this.RightMonth.Text = now.ToString("MMM");
-            this.RightYear.Text = now.ToString("yyyy");
+            //DateTime tommorrow = now.AddDays(+1);
+            //this.rightDay.Text = now.ToString("dd");
+            //this.RightMonth.Text = now.ToString("MMM");
+            //this.RightYear.Text = now.ToString("yyyy");
         }
      
         private void btnCreateSchedule_Click(object sender, EventArgs e)
         {
-            CreateSchedule createSchedule = new CreateSchedule(u);
-            createSchedule.ShowDialog();
-            RefreshDVG();
+            AddSchedule up = new AddSchedule(this);
+            up.Show();
             
         }
-        public void Accesscibility() //This checks for the accessibilty role of the user. If you're general manager then you should be able 
-            //to create shits.
-        {
-            if(this.u.Role == Classes.Role.GENERALMANAGER)
-            {
-                users = WorkerList();
-                
-            }
-        }
-
-        private void btnEditSchedule_Click(object sender, EventArgs e) //Yet to be done.
-        {
-
-            //Shift shift = (shift)DVG_Shift.SelectedCells.
-            //if (shift != null)
-            //{
-            //    EditSchedule editSchedule = new EditSchedule(shift);
-            //    editSchedule.ShowDialog();
-            //    RefreshDVG();
-
-
-            //}
-            //else
-            //    MessageBox.Show("Please slecet the shift you want to edit");
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        public List<User> WorkerList() //This holds a list of user
-        {
-            List<User> employeeList = new List<User>();
-            foreach(User u in  this.users)
-            {
-                if (u.Role == Classes.Role.STOREEMPLOYEE && u.Role == Classes.Role.STOREEMPLOYEE ) //Allow the General Manager to only create shifts for store employee and warhouse
-                    employeeList.Add(u);
 
-            }
-            return employeeList;
+
+        private void btnEditSchedule_Click(object sender, EventArgs e) //Yet to be done.
+        {
+            int idx = dvgShift.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dvgShift.Rows[idx].Cells[0].Value);
+
+            Shift shift = shiftM.GetShiftById(id);
+            UpdateShift up = new UpdateShift(shift,this);
+            up.Show();
+            //displayShifts(now);
+
+
         }
+
+       
 
         private void FormSchedule_Load(object sender, EventArgs e) //Initializing the Methods wheneber the FormSchedule is loaded
         {
             userM = new UserManagement();
             shiftD = new ShiftDAL();
             shiftM = new ShiftManagement();
-            WorkerList();
+            
             ShowDate(now);
-            ShowShifts(now);
+
+            displayShifts(now);
 
         }
+        
 
         private void Left_Click(object sender, EventArgs e)
         {
             addDays--;
             ShowDate(DateTime.UtcNow.Date.AddDays(addDays));
-            ShowShifts(DateTime.UtcNow.Date.AddDays(addDays));
+            displayShifts (DateTime.UtcNow.Date.AddDays(addDays));
         }
 
         private void Right_Click(object sender, EventArgs e)
         {
             addDays++;
             ShowDate(DateTime.UtcNow.Date.AddDays(addDays));
-            ShowShifts(DateTime.UtcNow.Date.AddDays(addDays));
+            displayShifts(DateTime.UtcNow.Date.AddDays(addDays));
         }
 
 
@@ -158,20 +149,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             DateTime now = jumpTo.Value;
 
-            DateTime yesterday = now.AddDays(-1);
-            this.dayLeft.Text = now.ToString("dd");
-            this.mothLeft.Text = now.ToString("MMM");
-            this.yearLeft.Text = now.ToString("yyyy");
+            //DateTime yesterday = now.AddDays(-1);
+            //this.dayLeft.Text = now.ToString("dd");
+            //this.mothLeft.Text = now.ToString("MMM");
+            //this.yearLeft.Text = now.ToString("yyyy");
 
             this.middleDay.Text = now.ToString("dd");
             this.middleMonth.Text = now.ToString("MMM");
             this.middleYear.Text = now.ToString("yyyy");
 
-            DateTime tommorrow = now.AddDays(+1);
-            this.rightDay.Text = now.ToString("dd");
-            this.RightMonth.Text = now.ToString("MMM");
-            this.RightYear.Text = now.ToString("yyyy");
-            ShowShifts(now);
+            //DateTime tommorrow = now.AddDays(+1);
+            //this.rightDay.Text = now.ToString("dd");
+            //this.RightMonth.Text = now.ToString("MMM");
+            //this.RightYear.Text = now.ToString("yyyy");
+            displayShifts(now);
         }
 
 
@@ -207,18 +198,26 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void DeleteSelectedShift(DataGridViewCellEventArgs e)
         {
-            dvgShift.CurrentCell.Selected = true;
+            
+            int idx = dvgShift.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dvgShift.Rows[idx].Cells[0].Value);
 
-            string id = dvgShift.Rows[e.RowIndex].Cells["User_ID"].FormattedValue.ToString();
-            var st = (from s in shiftM.GetAllShifts()
-                      where s.Shift_Id == int.Parse(id)
-                      select s).First();
-            shiftM.DeleteShift(st);
-            RefreshDVG();
-            MessageBox.Show("It works");
-            //int id = Convert.ToInt32(tbxShiftId.Text);
-            //int uid = dvgEmployees.CurrentCell.RowIndex;
-            //int id = Convert.ToInt32(dvgEmployees.Rows[uid].Cells[0].Value);
+            var confirmResult = MessageBox.Show("Are you sure you want to delete this shift? ");
+            if(confirmResult == DialogResult.Yes)
+            {
+                shiftM.DeleteShift(id);
+                DateTime now = DateTime.UtcNow.Date;
+                ShowDate(now);
+                
+            }
         }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        
     }
 }

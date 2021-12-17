@@ -15,7 +15,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
         //Will use later
 
         private UserManagement userCon = new UserManagement();
-      
+
         public int Shift_Id { get; set; }
 
         public int User_Id { get; set; }
@@ -24,22 +24,23 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
 
         public Shift_Type Shift_Type { get; set; }
 
-        public Shift( int user_Id,int shift_id, DateTime shift_date, Shift_Type shift_type)
+        public Shift(int user_Id, int shift_id, DateTime shift_date, Shift_Type shift_type)
         {
-            this.Shift_Id = shift_id ;
+            this.Shift_Id = shift_id;
             this.User_Id = user_Id; //User-ID
             this.Shift_Date = shift_date;
             this.Shift_Type = shift_type;
             //this.department = department; //I initialised the enumratuions
         }
 
-        public  Shift() //Shift Object
+        public Shift() //Shift Object
         {
 
         }
-        public override  string ToString()
+        public virtual string[] GetInfo()
         {
-            return this.Shift_Id + " - " + userCon.GetUser(this.User_Id).FirstName + " - " + userCon.GetUser(this.User_Id).LastName + "-" + Shift_Date + " " + Shift_Type; /*+ " " + depCon.GetActiveDepartments(this.Department.Id)*/
+            string[] s = { this.Shift_Id.ToString() ,  userCon.GetUser(this.User_Id).FirstName + " - " + userCon.GetUser(this.User_Id).LastName ,this.Shift_Type.ToString() };
+            return s;
         }
     }
 }

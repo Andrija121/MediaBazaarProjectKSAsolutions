@@ -36,32 +36,22 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.Right = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.RightYear = new System.Windows.Forms.TextBox();
-            this.RightMonth = new System.Windows.Forms.TextBox();
-            this.rightDay = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.middleMonth = new System.Windows.Forms.TextBox();
             this.middleYear = new System.Windows.Forms.TextBox();
             this.middleDay = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.yearLeft = new System.Windows.Forms.TextBox();
-            this.mothLeft = new System.Windows.Forms.TextBox();
-            this.dayLeft = new System.Windows.Forms.TextBox();
             this.dvgShift = new System.Windows.Forms.DataGridView();
+            this.EmployeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shift_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteSchedule = new System.Windows.Forms.Button();
             this.btnEditSchedule = new System.Windows.Forms.Button();
             this.btnCreateSchedule = new System.Windows.Forms.Button();
             this.Stock = new System.Windows.Forms.Label();
-            this.User_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shift_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shift_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlEmployees.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgShift)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,14 +61,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(852, 626);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(974, 835);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 28);
+            this.btnBack.Size = new System.Drawing.Size(103, 37);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // pnlEmployees
             // 
@@ -91,26 +81,26 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.Controls.Add(this.btnEditSchedule);
             this.pnlEmployees.Controls.Add(this.btnCreateSchedule);
             this.pnlEmployees.Controls.Add(this.Stock);
-            this.pnlEmployees.Location = new System.Drawing.Point(8, -2);
+            this.pnlEmployees.Location = new System.Drawing.Point(9, -3);
+            this.pnlEmployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(924, 616);
+            this.pnlEmployees.Size = new System.Drawing.Size(1056, 821);
             this.pnlEmployees.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(586, 231);
+            this.label1.Location = new System.Drawing.Point(670, 308);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Jump To:";
             // 
             // jumpTo
             // 
-            this.jumpTo.Location = new System.Drawing.Point(661, 226);
-            this.jumpTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.jumpTo.Location = new System.Drawing.Point(755, 301);
             this.jumpTo.Name = "jumpTo";
-            this.jumpTo.Size = new System.Drawing.Size(219, 23);
+            this.jumpTo.Size = new System.Drawing.Size(250, 27);
             this.jumpTo.TabIndex = 10;
             this.jumpTo.ValueChanged += new System.EventHandler(this.jumpTo_ValueChanged);
             // 
@@ -118,13 +108,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.panel1.Controls.Add(this.Right);
             this.panel1.Controls.Add(this.Left);
-            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(44, 46);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(181, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 163);
+            this.panel1.Size = new System.Drawing.Size(666, 234);
             this.panel1.TabIndex = 7;
             // 
             // Right
@@ -134,9 +121,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Right.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Right.Location = new System.Drawing.Point(769, 52);
+            this.Right.Location = new System.Drawing.Point(557, 90);
+            this.Right.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Right.Name = "Right";
-            this.Right.Size = new System.Drawing.Size(42, 40);
+            this.Right.Size = new System.Drawing.Size(48, 53);
             this.Right.TabIndex = 12;
             this.Right.Text = ">";
             this.Right.UseVisualStyleBackColor = false;
@@ -149,55 +137,14 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Left.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Left.Location = new System.Drawing.Point(37, 52);
+            this.Left.Location = new System.Drawing.Point(116, 77);
+            this.Left.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Left.Name = "Left";
-            this.Left.Size = new System.Drawing.Size(42, 40);
+            this.Left.Size = new System.Drawing.Size(48, 53);
             this.Left.TabIndex = 11;
             this.Left.Text = "<";
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel12.Controls.Add(this.RightYear);
-            this.panel12.Controls.Add(this.RightMonth);
-            this.panel12.Controls.Add(this.rightDay);
-            this.panel12.Location = new System.Drawing.Point(582, 2);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(125, 140);
-            this.panel12.TabIndex = 10;
-            // 
-            // RightYear
-            // 
-            this.RightYear.Location = new System.Drawing.Point(30, 97);
-            this.RightYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RightYear.Name = "RightYear";
-            this.RightYear.Size = new System.Drawing.Size(45, 23);
-            this.RightYear.TabIndex = 14;
-            this.RightYear.Text = "2021";
-            this.RightYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // RightMonth
-            // 
-            this.RightMonth.Location = new System.Drawing.Point(30, 63);
-            this.RightMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RightMonth.Name = "RightMonth";
-            this.RightMonth.Size = new System.Drawing.Size(45, 23);
-            this.RightMonth.TabIndex = 13;
-            this.RightMonth.Text = "NOV";
-            this.RightMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // rightDay
-            // 
-            this.rightDay.Location = new System.Drawing.Point(30, 32);
-            this.rightDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rightDay.Name = "rightDay";
-            this.rightDay.Size = new System.Drawing.Size(45, 23);
-            this.rightDay.TabIndex = 12;
-            this.rightDay.Text = "04";
-            this.rightDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
@@ -205,99 +152,78 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panel3.Controls.Add(this.middleMonth);
             this.panel3.Controls.Add(this.middleYear);
             this.panel3.Controls.Add(this.middleDay);
-            this.panel3.Location = new System.Drawing.Point(366, 25);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(276, 20);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(123, 138);
+            this.panel3.Size = new System.Drawing.Size(141, 184);
             this.panel3.TabIndex = 9;
             // 
             // middleMonth
             // 
-            this.middleMonth.Location = new System.Drawing.Point(39, 62);
-            this.middleMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.middleMonth.Location = new System.Drawing.Point(45, 83);
             this.middleMonth.Name = "middleMonth";
-            this.middleMonth.Size = new System.Drawing.Size(45, 23);
+            this.middleMonth.Size = new System.Drawing.Size(51, 27);
             this.middleMonth.TabIndex = 17;
             this.middleMonth.Text = "NOV";
             // 
             // middleYear
             // 
-            this.middleYear.Location = new System.Drawing.Point(39, 94);
-            this.middleYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.middleYear.Location = new System.Drawing.Point(45, 125);
             this.middleYear.Name = "middleYear";
-            this.middleYear.Size = new System.Drawing.Size(45, 23);
+            this.middleYear.Size = new System.Drawing.Size(51, 27);
             this.middleYear.TabIndex = 16;
             this.middleYear.Text = "2021";
             // 
             // middleDay
             // 
-            this.middleDay.Location = new System.Drawing.Point(39, 30);
-            this.middleDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.middleDay.Location = new System.Drawing.Point(45, 40);
             this.middleDay.Name = "middleDay";
-            this.middleDay.Size = new System.Drawing.Size(45, 23);
+            this.middleDay.Size = new System.Drawing.Size(51, 27);
             this.middleDay.TabIndex = 15;
             this.middleDay.Text = "03";
             this.middleDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.Controls.Add(this.yearLeft);
-            this.panel2.Controls.Add(this.mothLeft);
-            this.panel2.Controls.Add(this.dayLeft);
-            this.panel2.Location = new System.Drawing.Point(129, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 140);
-            this.panel2.TabIndex = 8;
-            // 
-            // yearLeft
-            // 
-            this.yearLeft.Location = new System.Drawing.Point(44, 97);
-            this.yearLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.yearLeft.Name = "yearLeft";
-            this.yearLeft.Size = new System.Drawing.Size(45, 23);
-            this.yearLeft.TabIndex = 11;
-            this.yearLeft.Text = "2021";
-            this.yearLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // mothLeft
-            // 
-            this.mothLeft.Location = new System.Drawing.Point(44, 64);
-            this.mothLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mothLeft.Name = "mothLeft";
-            this.mothLeft.Size = new System.Drawing.Size(45, 23);
-            this.mothLeft.TabIndex = 10;
-            this.mothLeft.Text = "NOV";
-            this.mothLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dayLeft
-            // 
-            this.dayLeft.Location = new System.Drawing.Point(44, 32);
-            this.dayLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dayLeft.Name = "dayLeft";
-            this.dayLeft.Size = new System.Drawing.Size(45, 23);
-            this.dayLeft.TabIndex = 9;
-            this.dayLeft.Text = "02";
-            this.dayLeft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dvgShift
             // 
+            this.dvgShift.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgShift.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.User_ID,
+            this.EmployeeId,
+            this.EmployeeName,
             this.Shift_Type,
-            this.Shift_Date,
-            this.dataGridViewTextBoxColumn1});
-            this.dvgShift.Location = new System.Drawing.Point(66, 294);
-            this.dvgShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ShiftDate});
+            this.dvgShift.Location = new System.Drawing.Point(75, 392);
             this.dvgShift.Name = "dvgShift";
             this.dvgShift.RowHeadersWidth = 51;
             this.dvgShift.RowTemplate.Height = 29;
             this.dvgShift.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dvgShift.Size = new System.Drawing.Size(836, 320);
+            this.dvgShift.Size = new System.Drawing.Size(955, 427);
             this.dvgShift.TabIndex = 6;
             this.dvgShift.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgShift_CellClick);
+            // 
+            // EmployeeId
+            // 
+            this.EmployeeId.HeaderText = "EmployeeId";
+            this.EmployeeId.MinimumWidth = 6;
+            this.EmployeeId.Name = "EmployeeId";
+            this.EmployeeId.Visible = false;
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.HeaderText = "EmployeeName";
+            this.EmployeeName.MinimumWidth = 6;
+            this.EmployeeName.Name = "EmployeeName";
+            // 
+            // Shift_Type
+            // 
+            this.Shift_Type.HeaderText = "ShiftType";
+            this.Shift_Type.MinimumWidth = 6;
+            this.Shift_Type.Name = "Shift_Type";
+            // 
+            // ShiftDate
+            // 
+            this.ShiftDate.HeaderText = "ShiftDate";
+            this.ShiftDate.MinimumWidth = 6;
+            this.ShiftDate.Name = "ShiftDate";
             // 
             // btnDeleteSchedule
             // 
@@ -306,9 +232,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDeleteSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeleteSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDeleteSchedule.Location = new System.Drawing.Point(667, 257);
+            this.btnDeleteSchedule.Location = new System.Drawing.Point(762, 343);
+            this.btnDeleteSchedule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteSchedule.Name = "btnDeleteSchedule";
-            this.btnDeleteSchedule.Size = new System.Drawing.Size(194, 32);
+            this.btnDeleteSchedule.Size = new System.Drawing.Size(222, 43);
             this.btnDeleteSchedule.TabIndex = 5;
             this.btnDeleteSchedule.Text = "Delete Schdeule";
             this.btnDeleteSchedule.UseVisualStyleBackColor = false;
@@ -321,9 +248,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEditSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditSchedule.Location = new System.Drawing.Point(339, 258);
+            this.btnEditSchedule.Location = new System.Drawing.Point(387, 344);
+            this.btnEditSchedule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditSchedule.Name = "btnEditSchedule";
-            this.btnEditSchedule.Size = new System.Drawing.Size(194, 32);
+            this.btnEditSchedule.Size = new System.Drawing.Size(222, 43);
             this.btnEditSchedule.TabIndex = 4;
             this.btnEditSchedule.Text = "Edit Schedule";
             this.btnEditSchedule.UseVisualStyleBackColor = false;
@@ -336,9 +264,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnCreateSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCreateSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCreateSchedule.Location = new System.Drawing.Point(25, 257);
+            this.btnCreateSchedule.Location = new System.Drawing.Point(29, 343);
+            this.btnCreateSchedule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateSchedule.Name = "btnCreateSchedule";
-            this.btnCreateSchedule.Size = new System.Drawing.Size(194, 32);
+            this.btnCreateSchedule.Size = new System.Drawing.Size(222, 43);
             this.btnCreateSchedule.TabIndex = 3;
             this.btnCreateSchedule.Text = "Create Schedule";
             this.btnCreateSchedule.UseVisualStyleBackColor = false;
@@ -348,49 +277,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.Stock.AutoSize = true;
             this.Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Stock.Location = new System.Drawing.Point(393, 8);
+            this.Stock.Location = new System.Drawing.Point(449, 11);
             this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(127, 31);
+            this.Stock.Size = new System.Drawing.Size(160, 39);
             this.Stock.TabIndex = 0;
             this.Stock.Text = "Schedule";
             // 
-            // User_ID
-            // 
-            this.User_ID.HeaderText = "Id of user";
-            this.User_ID.MinimumWidth = 6;
-            this.User_ID.Name = "User_ID";
-            this.User_ID.Width = 125;
-            // 
-            // Shift_Type
-            // 
-            this.Shift_Type.HeaderText = "id of shift";
-            this.Shift_Type.MinimumWidth = 6;
-            this.Shift_Type.Name = "Shift_Type";
-            this.Shift_Type.Width = 125;
-            // 
-            // Shift_Date
-            // 
-            this.Shift_Date.HeaderText = "shift type";
-            this.Shift_Date.MinimumWidth = 6;
-            this.Shift_Date.Name = "Shift_Date";
-            this.Shift_Date.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "shift day";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
             // FormSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 655);
+            this.ClientSize = new System.Drawing.Size(1112, 873);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlEmployees);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSchedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSchedule";
@@ -398,12 +298,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEmployees.ResumeLayout(false);
             this.pnlEmployees.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgShift)).EndInit();
             this.ResumeLayout(false);
 
@@ -421,23 +317,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Right;
         private System.Windows.Forms.Button Left;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox RightYear;
-        private System.Windows.Forms.TextBox RightMonth;
-        private System.Windows.Forms.TextBox rightDay;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox yearLeft;
-        private System.Windows.Forms.TextBox mothLeft;
-        private System.Windows.Forms.TextBox dayLeft;
         private System.Windows.Forms.DataGridView dvgShift;
         private System.Windows.Forms.TextBox middleMonth;
         private System.Windows.Forms.TextBox middleYear;
         private System.Windows.Forms.TextBox middleDay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn User_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shift_Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shift_Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShiftDate;
     }
 }
