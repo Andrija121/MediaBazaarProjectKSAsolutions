@@ -1,4 +1,5 @@
 ﻿using MediaBazaarProjectKSAsolutions.Classes;
+using MediaBazaarProjectKSAsolutions.Forms.Statistics;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         public Main(User user)
         {
             InitializeComponent();
+            UpdateAmoutChart();
+            UpdatePriceChart();
             this.u = user;
             if (u.Role == Role.GENERALMANAGER)
             {
@@ -71,9 +74,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Currently not available. ");
-        }
+            if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER)
+            {
 
+                FormStatistics statistics =  new FormStatistics(user);
+                statistics.ShowDialog();
+                
+            }
+            else
+            {
+                MessageBox.Show("You are not General/HR manager");
+            }
+            
+        }
+     
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
