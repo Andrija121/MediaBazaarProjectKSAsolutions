@@ -267,5 +267,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             }
 
         }
+
+        private void pnlStocks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

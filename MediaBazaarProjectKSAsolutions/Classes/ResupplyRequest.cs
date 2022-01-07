@@ -7,7 +7,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
     public class ResupplyRequest
     {
         public int RequestID { get; set; }
-        public User Whe { get; set; } // da li mi treba vrednost int ili tipa User
+        public User Whe { get; set; } 
         public User Dm { get; set; }
         public Stock Stock { get; set; }
         public int AmountRequested { get; set; }
@@ -26,7 +26,9 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public ResupplyRequest()
         {
-
+            this.Whe = new User();
+            this.Dm = new User();
+            this.Stock = new Stock();
         }
         public override string ToString()
         {

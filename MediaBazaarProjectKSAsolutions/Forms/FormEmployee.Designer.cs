@@ -41,6 +41,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.tcNavigation = new System.Windows.Forms.TabControl();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.pnlStocks = new System.Windows.Forms.Panel();
             this.lblResupplyStock = new System.Windows.Forms.Label();
             this.lbStocks = new System.Windows.Forms.ListBox();
@@ -98,7 +99,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblEvenLogger = new System.Windows.Forms.Label();
             this.lbEventLogger = new System.Windows.Forms.ListBox();
             this.lblAnnouncement = new System.Windows.Forms.Label();
-            this.btnSeeResupplyRequests = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -291,6 +291,21 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.tabPageDashboard.TabIndex = 0;
             this.tabPageDashboard.Text = "Dashboard";
             // 
+            // btnSeeResupplyRequests
+            // 
+            this.btnSeeResupplyRequests.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSeeResupplyRequests.FlatAppearance.BorderSize = 0;
+            this.btnSeeResupplyRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeeResupplyRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSeeResupplyRequests.ForeColor = System.Drawing.Color.Red;
+            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(281, 139);
+            this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
+            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(208, 133);
+            this.btnSeeResupplyRequests.TabIndex = 7;
+            this.btnSeeResupplyRequests.Text = "See Resupply Requests";
+            this.btnSeeResupplyRequests.UseVisualStyleBackColor = true;
+            this.btnSeeResupplyRequests.Click += new System.EventHandler(this.btnSeeResupplyRequests_Click);
+            // 
             // pnlStocks
             // 
             this.pnlStocks.Controls.Add(this.lblResupplyStock);
@@ -300,6 +315,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlStocks.Name = "pnlStocks";
             this.pnlStocks.Size = new System.Drawing.Size(373, 258);
             this.pnlStocks.TabIndex = 6;
+            this.pnlStocks.Visible = false;
+            this.pnlStocks.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStocks_Paint);
             // 
             // lblResupplyStock
             // 
@@ -345,6 +362,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pnlEarnings.Name = "pnlEarnings";
             this.pnlEarnings.Size = new System.Drawing.Size(373, 262);
             this.pnlEarnings.TabIndex = 4;
+            this.pnlEarnings.Visible = false;
             // 
             // lblMonthlyEarning
             // 
@@ -935,16 +953,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblAnnouncement.Size = new System.Drawing.Size(322, 46);
             this.lblAnnouncement.TabIndex = 2;
             this.lblAnnouncement.Text = "Announcements";
-            // 
-            // btnSeeResupplyRequests
-            // 
-            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(495, 289);
-            this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
-            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(208, 133);
-            this.btnSeeResupplyRequests.TabIndex = 7;
-            this.btnSeeResupplyRequests.Text = "See Resupply Requests";
-            this.btnSeeResupplyRequests.UseVisualStyleBackColor = true;
-            this.btnSeeResupplyRequests.Click += new System.EventHandler(this.btnSeeResupplyRequests_Click);
             // 
             // FormEmployee
             // 

@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "Insert INTO ResupplyRequest values(whe,dm,stock,amount_requested,amount_fulfilled,requestStatus) where(@wheId,@dmid,@stockid,@amount_requested,@amount_fulfilled,@requestStatus) ";
+                    string sql = "Insert INTO ResupplyRequest (wheId,dmid,stockid,amount_requested,amount_fulfilled,requestStatus) values(@wheId,@dmid,@stockid,@amount_requested,@amount_fulfilled,@requestStatus) ";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("WheId", rr.Whe);
@@ -129,7 +129,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         ResupplyRequest resupplyRequest = new ResupplyRequest();
-                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]);
+                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]); // error
                         resupplyRequest.Dm.Id = Convert.ToInt32(dr["dmid"]);
                         resupplyRequest.Stock.Id = Convert.ToInt32(dr["sid"]);
                         resupplyRequest.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
@@ -151,7 +151,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public ResupplyRequest GetResupplyRequest(int wheid) // whe
+        public ResupplyRequest GetResupplyRequest(int wheid)
         {
             try
             {
@@ -201,7 +201,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@wheId",wheId);
                     cmd.Parameters.AddWithValue("@dmid", rr.Dm.Id);
                     cmd.Parameters.AddWithValue("@sid", rr.Stock.Id);
-                    cmd.Parameters.AddWithValue("@amount", rr.AmountFulfilled);
+                    cmd.Parameters.AddWithValue("@amount_requested", rr.AmountRequested);
                     cmd.Parameters.AddWithValue("@amount_fulfilled", rr.AmountFulfilled);
                     cmd.Parameters.AddWithValue("@requestStatus", rr.RequestStatus.ToString());
                     cmd.ExecuteNonQuery();

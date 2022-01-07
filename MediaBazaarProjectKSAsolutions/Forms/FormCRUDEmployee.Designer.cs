@@ -70,9 +70,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Location = new System.Drawing.Point(1218, 725);
+            this.btnBack.Location = new System.Drawing.Point(974, 580);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(111, 45);
+            this.btnBack.Size = new System.Drawing.Size(89, 36);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -82,9 +83,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.panelPage.BackColor = System.Drawing.Color.DarkOrchid;
             this.panelPage.Controls.Add(this.lblPage);
-            this.panelPage.Location = new System.Drawing.Point(0, 12);
+            this.panelPage.Location = new System.Drawing.Point(0, 10);
+            this.panelPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelPage.Name = "panelPage";
-            this.panelPage.Size = new System.Drawing.Size(337, 107);
+            this.panelPage.Size = new System.Drawing.Size(270, 86);
             this.panelPage.TabIndex = 17;
             // 
             // lblPage
@@ -92,20 +94,20 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblPage.AutoSize = true;
             this.lblPage.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblPage.Location = new System.Drawing.Point(26, 23);
-            this.lblPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPage.Location = new System.Drawing.Point(21, 18);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(309, 54);
+            this.lblPage.Size = new System.Drawing.Size(262, 46);
             this.lblPage.TabIndex = 18;
             this.lblPage.Text = "Employees Page";
             // 
             // lbUsers
             // 
             this.lbUsers.FormattingEnabled = true;
-            this.lbUsers.ItemHeight = 25;
-            this.lbUsers.Location = new System.Drawing.Point(62, 222);
+            this.lbUsers.ItemHeight = 20;
+            this.lbUsers.Location = new System.Drawing.Point(50, 178);
+            this.lbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(1225, 479);
+            this.lbUsers.Size = new System.Drawing.Size(981, 384);
             this.lbUsers.TabIndex = 2;
             // 
             // btnAddUser
@@ -115,9 +117,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAddUser.Location = new System.Drawing.Point(63, 150);
+            this.btnAddUser.Location = new System.Drawing.Point(50, 120);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(211, 67);
+            this.btnAddUser.Size = new System.Drawing.Size(169, 54);
             this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
@@ -130,9 +133,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(379, 150);
+            this.btnEdit.Location = new System.Drawing.Point(303, 120);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(211, 67);
+            this.btnEdit.Size = new System.Drawing.Size(169, 54);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit User";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -145,9 +149,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnMakeUserInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMakeUserInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMakeUserInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnMakeUserInactive.Location = new System.Drawing.Point(738, 150);
+            this.btnMakeUserInactive.Location = new System.Drawing.Point(590, 120);
+            this.btnMakeUserInactive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMakeUserInactive.Name = "btnMakeUserInactive";
-            this.btnMakeUserInactive.Size = new System.Drawing.Size(211, 67);
+            this.btnMakeUserInactive.Size = new System.Drawing.Size(169, 54);
             this.btnMakeUserInactive.TabIndex = 5;
             this.btnMakeUserInactive.Text = "Make User Inactive";
             this.btnMakeUserInactive.UseVisualStyleBackColor = false;
@@ -160,9 +165,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeInactiveUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeInactiveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeeInactiveUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(1076, 149);
+            this.btnSeeInactiveUsers.Location = new System.Drawing.Point(861, 119);
+            this.btnSeeInactiveUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSeeInactiveUsers.Name = "btnSeeInactiveUsers";
-            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(211, 67);
+            this.btnSeeInactiveUsers.Size = new System.Drawing.Size(169, 54);
             this.btnSeeInactiveUsers.TabIndex = 6;
             this.btnSeeInactiveUsers.Text = "Inactive and Away Users";
             this.btnSeeInactiveUsers.UseVisualStyleBackColor = false;
@@ -172,10 +178,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.panelDMandGM.Controls.Add(this.btnSeeResupplyRequests);
             this.panelDMandGM.Enabled = false;
-            this.panelDMandGM.Location = new System.Drawing.Point(422, 13);
+            this.panelDMandGM.Location = new System.Drawing.Point(338, 10);
+            this.panelDMandGM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDMandGM.Name = "panelDMandGM";
-            this.panelDMandGM.Size = new System.Drawing.Size(280, 93);
+            this.panelDMandGM.Size = new System.Drawing.Size(224, 74);
             this.panelDMandGM.TabIndex = 18;
+            this.panelDMandGM.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDMandGM_Paint);
             // 
             // btnSeeResupplyRequests
             // 
@@ -184,9 +192,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSeeResupplyRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeResupplyRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeeResupplyRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(21, 12);
+            this.btnSeeResupplyRequests.Location = new System.Drawing.Point(17, 10);
+            this.btnSeeResupplyRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSeeResupplyRequests.Name = "btnSeeResupplyRequests";
-            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(211, 67);
+            this.btnSeeResupplyRequests.Size = new System.Drawing.Size(169, 54);
             this.btnSeeResupplyRequests.TabIndex = 4;
             this.btnSeeResupplyRequests.Text = "See Resupply Requests";
             this.btnSeeResupplyRequests.UseVisualStyleBackColor = false;
@@ -207,9 +216,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDaysOffRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDaysOffRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDaysOffRequests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDaysOffRequests.Location = new System.Drawing.Point(26, 10);
+            this.btnDaysOffRequests.Location = new System.Drawing.Point(21, 8);
+            this.btnDaysOffRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDaysOffRequests.Name = "btnDaysOffRequests";
-            this.btnDaysOffRequests.Size = new System.Drawing.Size(211, 67);
+            this.btnDaysOffRequests.Size = new System.Drawing.Size(169, 54);
             this.btnDaysOffRequests.TabIndex = 5;
             this.btnDaysOffRequests.Text = "See Days off Requests";
             this.btnDaysOffRequests.UseVisualStyleBackColor = false;
@@ -219,9 +229,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.panelHRorGM.Controls.Add(this.btnDaysOffRequests);
             this.panelHRorGM.Enabled = false;
-            this.panelHRorGM.Location = new System.Drawing.Point(738, 15);
+            this.panelHRorGM.Location = new System.Drawing.Point(590, 12);
+            this.panelHRorGM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHRorGM.Name = "panelHRorGM";
-            this.panelHRorGM.Size = new System.Drawing.Size(280, 93);
+            this.panelHRorGM.Size = new System.Drawing.Size(224, 74);
             this.panelHRorGM.TabIndex = 19;
             // 
             // dgvUsers
@@ -240,11 +251,12 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.ZipCode,
             this.Gender,
             this.Role});
-            this.dgvUsers.Location = new System.Drawing.Point(36, 223);
+            this.dgvUsers.Location = new System.Drawing.Point(29, 178);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 62;
             this.dgvUsers.RowTemplate.Height = 33;
-            this.dgvUsers.Size = new System.Drawing.Size(1279, 492);
+            this.dgvUsers.Size = new System.Drawing.Size(1023, 394);
             this.dgvUsers.TabIndex = 20;
             // 
             // Id
@@ -333,10 +345,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // FormCRUDEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1341, 782);
+            this.ClientSize = new System.Drawing.Size(1073, 626);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.panelHRorGM);
             this.Controls.Add(this.panelDMandGM);
@@ -348,7 +360,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.lbUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCRUDEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployee";
