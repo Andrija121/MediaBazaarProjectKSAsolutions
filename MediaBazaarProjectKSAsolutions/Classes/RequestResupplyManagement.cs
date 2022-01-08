@@ -129,12 +129,12 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         ResupplyRequest resupplyRequest = new ResupplyRequest();
-                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]); // error
-                        resupplyRequest.Dm.Id = Convert.ToInt32(dr["dmid"]);
-                        resupplyRequest.Stock.Id = Convert.ToInt32(dr["sid"]);
                         resupplyRequest.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
                         resupplyRequest.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
                         resupplyRequest.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
+                        resupplyRequest.Stock.Id = Convert.ToInt32(dr["sid"]);
+                        resupplyRequest.Dm.Id = Convert.ToInt32(dr["dmid"]);
+                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]); // error
                         rrs.Add(resupplyRequest);
 
                     }

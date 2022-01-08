@@ -32,7 +32,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         }
         public override string ToString()
         {
-            return Whe + " - " + Dm + " - " + Stock + " - " + AmountRequested + " - " + RequestStatus;
+            return   Stock.Id + " - " + AmountRequested + " - " + RequestStatus;
         }
 
 

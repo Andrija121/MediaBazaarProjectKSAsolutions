@@ -47,15 +47,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnApprovePartially_Click(object sender, EventArgs e)
         {
-            if (tbApprovePartially==null)
+            if (string.IsNullOrEmpty(tbApprovePartially.Text))
             {
                 MessageBox.Show("The quantity that you want to resupply is incorrect, please ipunt propper one or check with manager");
                 return;
             }
-            label1.Text = " / " + rr.AmountRequested;
+            label1.Text = " / " + rr.AmountRequested + "Amount requested";
             int amount = rr.AmountFulfilled;
             amount= Convert.ToInt32(tbApprovePartially.Text);
             rrm.PartiallyApproveRquest(rr, user.Id,amount);
+            MessageBox.Show("Successfully approved partially");
+            this.Close();
         }
     }
 }

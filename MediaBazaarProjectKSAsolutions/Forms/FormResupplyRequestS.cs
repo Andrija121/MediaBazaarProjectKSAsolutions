@@ -48,12 +48,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 if(u.Role==Role.GENERALMANAGER)
                 {
-                    MessageBox.Show("Sorry, Only Department Manager can do that (:");
+                    MessageBox.Show("Sorry, Only WareHouse Employee can do that (:");
                 }
                 else
                 {
                     ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
-                    resupplyRequest = rrm.GetResupplyRequest(u.Id);
+                    
+                    resupplyRequest = rr;
                     FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
                     formApproveOrDeclineRequest.Show();
                     
