@@ -40,7 +40,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.ShowDialog();
             RefreshListBox();

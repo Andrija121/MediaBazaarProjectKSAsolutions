@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class RequestResupplyManagement
+    public class RequestResupplyManagement
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 

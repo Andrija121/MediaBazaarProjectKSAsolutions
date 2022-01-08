@@ -60,7 +60,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         Department department = new Department();
-                        department.Id = dr.GetInt32("id");
+                        department.Id = dr.GetInt32("department_id");
                         department.Name = dr["name"].ToString();
                         department.Status = Enum.Parse<Status>(dr["status"].ToString());
                         activeDepartments.Add(department);

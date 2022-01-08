@@ -22,11 +22,17 @@
         <div id="Header">
             <h1 class="Title">Media<i class="Bazaar">Bazaar</i></h1>
         </div>
-
+        <div id="subNav" class="SideBar">
+            <input class="button" value="submit" asp-area="ResupplyRequest.html" asp-page="/ResupplyRequest" name="Resupply"/>
+        </div>
+        <div id="SubNav" class="SideBar">
+            <a class="button nav-link text-dark" id="SubNavText" asp-area="ResupplyRequest.html" asp-page="/ResupplyRequest">Resupply Request</a>
+        </div>
         <!-- Lower/Sub Navigation Bar -->
         <div id="SubNav" class="SideBar">
-            <a class="button nav-link text-dark" id="SubNavText" asp-area="" asp-page="/Profile">Profile</a>
+            <a class="button nav-link text-dark" id="SubNavText" asp-area="Profile.html" asp-page="/Profile">Profile</a>
         </div>
+
 
         <!-- Main -->
         <div id="Main">

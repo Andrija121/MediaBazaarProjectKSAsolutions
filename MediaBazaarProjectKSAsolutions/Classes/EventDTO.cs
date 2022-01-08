@@ -16,7 +16,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "SELECT u.userName,udm.userName,s.productName,requestStatus FROM `requestresupply` INNER JOIN user as u ON requestresupply.wheId = u.id INNER JOIN user AS udm ON requestresupply.dmid = udm.id INNER JOIN stock as s ON requestresupply.sid = s.id";
+                    string sql = "SELECT u.userName,udm.userName as b,s.productName,requestStatus FROM `requestresupply` INNER JOIN user as u ON requestresupply.wheId = u.id INNER JOIN user AS udm ON requestresupply.dmid = udm.id INNER JOIN stock as s ON requestresupply.sid = s.id";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     
                     MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
@@ -27,7 +27,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     {
                         ResupplyRequest rr = new ResupplyRequest();
                         string userName = dr.GetString("userName");
-                        string dmUserName = dr.GetString("userName");
+                        string dmUserName = dr.GetString("b");
                         string productName = dr.GetString("productName");
                         string requestStatus = dr.GetString("requestStatus");
                         string answer = userName + " - " + dmUserName + " - " + productName + " - " + requestStatus;
