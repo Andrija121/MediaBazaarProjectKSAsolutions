@@ -52,9 +52,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                 }
                 else
                 {
-                    ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
+                 //   ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
                     
-                    resupplyRequest = rr;
+                    
                     FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
                     formApproveOrDeclineRequest.Show();
                     

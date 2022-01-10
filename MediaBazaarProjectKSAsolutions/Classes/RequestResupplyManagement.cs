@@ -129,6 +129,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     while (dr.Read())
                     {
                         ResupplyRequest resupplyRequest = new ResupplyRequest();
+                        resupplyRequest.RequestID = Convert.ToInt32(dr["requestId"]);
                         resupplyRequest.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
                         resupplyRequest.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
                         resupplyRequest.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
@@ -219,7 +220,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
         }
 
-        public void ApproveRequest(ResupplyRequest rr, int  wheId) // whe
+        public void ApproveRequest(ResupplyRequest rr, int  wheId) 
         {
             rr.RequestStatus = RequestStatus.APPROVED;
             EditResupplyRequest(rr, wheId);
