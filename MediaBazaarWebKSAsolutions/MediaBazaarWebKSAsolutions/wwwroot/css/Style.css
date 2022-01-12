@@ -22,19 +22,19 @@ html, body {
     height: 100%;
 }
 
-#Header{
+#Header {
     grid-column: 2;
     grid-row: 1;
     background-color: rgb(168, 168, 168);
     font-size: 46px;
 }
 
-#SubNav{
+#SubNav {
     grid-column: 1;
     grid-row: 3;
 }
 
-#Main{
+#Main {
     grid-column: 2;
     grid-row: 2 / span 2;
     overflow-y: auto;
@@ -56,7 +56,7 @@ html, body {
     height: 100%;
 }
 
-#Base{
+#Base {
     padding: 20px;
     height: calc(100% - 80px);
 }
@@ -65,65 +65,66 @@ html, body {
     padding: 20px;
     text-align: center;
     background-color: lightgray;
-    height: 100%;
+    min-height: 100%;
 }
 /* End content page properties*/
 /* Start flexbox Css properties */
-.flex-container{
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.flex-container > div {
-    background-color: rgb(230, 230, 230);
-    width: 410.95px;
-    height: 300px;
-    margin: 5px 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
+    .flex-container > div {
+        background-color: rgb(230, 230, 230);
+        width: 410.95px;
+        height: 300px;
+        margin: 5px 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
 /* End flexbox Css properties */
 
 /* Start other Css properties */
-.SideBar{
-    background-color: rgb(90, 214, 90);
+.SideBar {
+    background-color: rgb(255, 255, 102);
     padding-left: 5px;
     padding-right: 5px;
 }
 
-.ImageCard{
+.ImageCard {
     height: 200px;
     background-size: cover;
 }
 
-.TextCard{
+.TextCard {
     height: 100px;
     font-size: 25px;
 }
 
-.FoodImage{
+.FoodImage {
     max-width: 100%;
     max-height: 100%;
 }
 
-.Title{
+.Title {
+    color: rebeccapurple;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
     font-size: 60px;
 }
 
-.Bazaar{
-    color: forestgreen;
+.Bazaar {
+    color: rgb(255, 255, 102);
 }
 
-.Nav{
+.Nav {
     width: 150px;
 }
 
-.NavSearch{
+.NavSearch {
     width: 142px;
 }
 
@@ -141,23 +142,25 @@ html, body {
     text-align: center;
     border: none;
 }
-.button:hover{
-    background-color: lightgray;
-    color: black;
-}
-.loginwidth{
+
+    .button:hover {
+        background-color: lightgray;
+        color: black;
+    }
+
+.loginwidth {
     margin-left: 5%;
     margin-right: 5%;
     width: 40%;
     height: 30px;
 }
 
-#SubNavText{
+#SubNavText {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.Test{
+.Test {
     Margin: 0px;
     font-size: 12px;
 }
