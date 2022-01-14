@@ -71,7 +71,8 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Currently not available. ");
+            FormStatistic formStatistic = new FormStatistic();
+            formStatistic.ShowDialog();
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)

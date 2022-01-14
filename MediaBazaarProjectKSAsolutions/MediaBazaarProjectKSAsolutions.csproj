@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 21.2\Components\Offline Packages\devexpress.win.design\21.2.4\lib\net5.0-windows\DevExpress.XtraCharts.v21.2.UI.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.26\Assemblies\netstandard2.1\MySql.Data.dll</HintPath>
     </Reference>

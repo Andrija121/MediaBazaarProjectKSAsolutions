@@ -86,7 +86,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelPage.Location = new System.Drawing.Point(0, 10);
             this.panelPage.Margin = new System.Windows.Forms.Padding(2);
             this.panelPage.Name = "panelPage";
-            this.panelPage.Size = new System.Drawing.Size(270, 86);
+            this.panelPage.Size = new System.Drawing.Size(281, 86);
             this.panelPage.TabIndex = 17;
             // 
             // lblPage
