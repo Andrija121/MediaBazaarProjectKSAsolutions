@@ -52,7 +52,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblPage.Location = new System.Drawing.Point(3, 17);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(218, 46);
+            this.lblPage.Size = new System.Drawing.Size(173, 37);
             this.lblPage.TabIndex = 18;
             this.lblPage.Text = "Statistic Page";
             // 
@@ -74,7 +74,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // FormStatistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;

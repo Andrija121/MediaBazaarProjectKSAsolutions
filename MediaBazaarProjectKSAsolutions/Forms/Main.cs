@@ -71,8 +71,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnStatistics_Click_1(object sender, EventArgs e)
         {
-            FormStatistic formStatistic = new FormStatistic();
-            formStatistic.ShowDialog();
+            //FormStatistic formStatistic = new FormStatistic();
+            //formStatistic.ShowDialog();
+            RadFormStatistics radFormStatistics = new RadFormStatistics();
+            radFormStatistics.ShowDialog();
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)

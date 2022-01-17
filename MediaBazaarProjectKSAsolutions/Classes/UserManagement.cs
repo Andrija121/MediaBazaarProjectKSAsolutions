@@ -15,7 +15,11 @@ namespace MediaBazaarProjectKSAsolutions.Classes
         public UserManagement()
         {
         }
-
+        public int GetNumberOfUsers()
+        {
+            int NumberOfUsers = userDAL.GetNumberOfUsers();
+            return NumberOfUsers;
+        }
 
         public int AddUser(User user)
         {

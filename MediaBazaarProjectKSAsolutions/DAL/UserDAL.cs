@@ -11,6 +11,41 @@ namespace MediaBazaarProjectKSAsolutions.DAL
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
 
+        public int GetNumberOfUsers()
+        {
+            try
+            {
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "SELECT COUNT(id) FROM `user` where ";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    int UserCouneter = 0;
+                   
+                    MySqlDataReader dr = (MySqlDataReader)cmd.ExecuteReader();
+
+                    List<User> AllUsers = new List<User>();
+
+                    while (dr.Read())
+                    {
+                        User user = new User();
+                        AllUsers.Add(user);
+                    }
+                    foreach (var u in AllUsers)
+                    {
+                        UserCouneter++;
+                    }
+                    return UserCouneter;
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public int AddUser(User user)
         {
             int id = -1;
