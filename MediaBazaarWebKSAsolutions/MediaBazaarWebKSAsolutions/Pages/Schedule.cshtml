@@ -1,0 +1,54 @@
+﻿@page
+@model MediaBazaarWebKSAsolutions.Pages.ScheduleModel
+@{
+    ViewData["Title"] = "Schedule Page";
+}
+
+<head>
+    <!-- Fullcalendar below -->
+    <meta charset='utf-8' />
+    <link href='~/lib/fullcalendar/main.css' rel='stylesheet' />
+    <script src='~/lib/fullcalendar/main.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            height: '110%',
+            eventSources: [
+
+                // your event source
+                {
+                    url: '/Logic/Classes/myfeed.php',
+                    method: 'POST',
+                    //extraParams: {},
+                    failure: function () {
+                        alert('there was an error while fetching events!');
+                    },
+                    color: 'yellow',   // a non-ajax option
+                    textColor: 'black' // a non-ajax option
+                }
+
+                // any other sources...
+
+            ]
+        });
+        calendar.render();
+      });
+
+    </script>
+    <!-- Fullcalendar above -->
+</head>
+
+
+<div id="Base">
+    @try
+    {
+        <div id='calendar'></div>
+    }
+    catch
+    {
+        <p>We're sorry, something went wrong</p>
+    }
+</div>
