@@ -89,6 +89,10 @@ namespace MediaBazaarWebKSAsolutions.Pages
             profileUsername = loadUser.UserName;
             profileEmail = loadUser.Email;
             profilePassword = loadUser.Password;
+            profileFirstName = loadUser.FirstName;
+            profileLastName = loadUser.LastName;
+            //profileRole = loadUser.Role;
+            profileZipCode = loadUser.ZipCode;
             //loadUser.Username = profileUsername;
         }
     }

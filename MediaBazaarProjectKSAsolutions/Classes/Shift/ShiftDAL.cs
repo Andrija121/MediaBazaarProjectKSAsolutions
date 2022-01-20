@@ -190,7 +190,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes.Shift
                         shift.Shift_Id = Convert.ToInt32(dr["id"]);
                         shift.Shift_Type = Enum.Parse<Shift_Type>(dr["shift_Type"].ToString());
                         shift.Shift_Date = Convert.ToDateTime(dr["shift_Date"]);
-                        shift.User_Id = Convert.ToInt32(dr["user_id"]);
+                        shift.User_Id = Convert.ToInt32(dr["u_Id"]);
 
                         shifts.Add(shift);
                     }

@@ -35,12 +35,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             dgvUsers.Rows.Clear();
             foreach (var u in userManagement.GetUsers())
             {
-                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email);
+                dgvUsers.Rows.Add(u.Id, u.UserName, u.FirstName, u.LastName, u.Password, u.Email, u.Birtyhday, u.BSN, u.ZipCode, u.Address, u.Gender, u.Role);
             }
         }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.ShowDialog();
             RefreshListBox();
@@ -79,7 +78,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             InactiveUsersForm inactiveUsersForm = new InactiveUsersForm();
             inactiveUsersForm.ShowDialog();
-            RefreshListBox();
+            RefreshDGV();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -90,38 +89,35 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void FormCRUDEmployee_Load(object sender, EventArgs e)
         {
-            ChekcIfUserDMorGM();
-            CheckIfUserHRorGM();
+           ChekcIfUserDMorGM();
+           CheckIfUserHRorGM();
         }
 
         private User ChekcIfUserDMorGM()
         {
 
-                if (u.Role == Role.GENERALMANAGER || u.Role == Role.DEPARTMENTMANAGER)
+            foreach (var u in userManagement.GetUsers())
+            {
+                if (u.Role == Classes.Role.GENERALMANAGER|| u.Role == Classes.Role.DEPARTMENTMANAGER)
                 {
                     panelDMandGM.Enabled = true;
                 }
-                else
-                {
-                    panelDMandGM.Enabled = false;
-                }
+            }
             return u;
         }
         private User CheckIfUserHRorGM()
         {
-                if (u.Role == Role.GENERALMANAGER || u.Role == Role.HRMANAGER)
+            foreach (var u in userManagement.GetUsers())
+            {
+                if (u.Role == Classes.Role.GENERALMANAGER || u.Role==Classes.Role.HRMANAGER)
                 {
                     panelHRorGM.Enabled = true;
                 }
-            else
-            {
-                panelHRorGM.Enabled = false;
             }
             return u;
         }
-        
 
-        private void BtnSeeResupplyRequests_Click(object sender, EventArgs e)
+        private void btnSeeResupplyRequests_Click(object sender, EventArgs e)
         {
             //FormResupplyRequestS formResupplyRequestS = new FormResupplyRequestS(u);
             //formResupplyRequestS.ShowDialog();
@@ -133,6 +129,11 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             FormDaysOffRequests formDaysOffRequests = new FormDaysOffRequests(u);
             formDaysOffRequests.ShowDialog();
+        }
+
+        private void panelDMandGM_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

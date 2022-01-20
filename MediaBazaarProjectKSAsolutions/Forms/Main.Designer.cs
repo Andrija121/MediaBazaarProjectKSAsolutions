@@ -57,10 +57,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStatistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnStatistics.Location = new System.Drawing.Point(11, 217);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStatistics.Location = new System.Drawing.Point(8, 130);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(330, 45);
+            this.btnStatistics.Size = new System.Drawing.Size(232, 27);
             this.btnStatistics.TabIndex = 5;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = false;
@@ -74,10 +73,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.panelButtons.Controls.Add(this.btnDepartments);
             this.panelButtons.Controls.Add(this.btnStocks);
             this.panelButtons.Controls.Add(this.btnEmployees);
-            this.panelButtons.Location = new System.Drawing.Point(17, 360);
-            this.panelButtons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelButtons.Location = new System.Drawing.Point(12, 216);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(352, 274);
+            this.panelButtons.Size = new System.Drawing.Size(247, 165);
             this.panelButtons.TabIndex = 14;
             // 
             // btnSchedule
@@ -87,10 +85,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSchedule.Location = new System.Drawing.Point(10, 64);
-            this.btnSchedule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSchedule.Location = new System.Drawing.Point(8, 38);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(330, 45);
+            this.btnSchedule.Size = new System.Drawing.Size(231, 27);
             this.btnSchedule.TabIndex = 4;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
@@ -103,10 +100,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDepartments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDepartments.Location = new System.Drawing.Point(11, 115);
-            this.btnDepartments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDepartments.Location = new System.Drawing.Point(8, 69);
             this.btnDepartments.Name = "btnDepartments";
-            this.btnDepartments.Size = new System.Drawing.Size(330, 45);
+            this.btnDepartments.Size = new System.Drawing.Size(231, 27);
             this.btnDepartments.TabIndex = 3;
             this.btnDepartments.Text = "Departments";
             this.btnDepartments.UseVisualStyleBackColor = false;
@@ -119,10 +115,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnStocks.Location = new System.Drawing.Point(11, 166);
-            this.btnStocks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStocks.Location = new System.Drawing.Point(8, 100);
             this.btnStocks.Name = "btnStocks";
-            this.btnStocks.Size = new System.Drawing.Size(330, 45);
+            this.btnStocks.Size = new System.Drawing.Size(231, 27);
             this.btnStocks.TabIndex = 2;
             this.btnStocks.Text = "Stocks";
             this.btnStocks.UseVisualStyleBackColor = false;
@@ -135,10 +130,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEmployees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEmployees.Location = new System.Drawing.Point(11, 14);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEmployees.Location = new System.Drawing.Point(8, 8);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(330, 45);
+            this.btnEmployees.Size = new System.Drawing.Size(231, 27);
             this.btnEmployees.TabIndex = 1;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
@@ -151,10 +145,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.btnLogout.Location = new System.Drawing.Point(31, 653);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Location = new System.Drawing.Point(24, 389);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(314, 37);
+            this.btnLogout.Size = new System.Drawing.Size(220, 30);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -165,10 +158,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = global::MediaBazaarProjectKSAsolutions.Properties.Resources.Logo;
             this.pictureBoxLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.InitialImage")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 50);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 30);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(351, 300);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(246, 180);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 13;
             this.pictureBoxLogo.TabStop = false;
@@ -179,23 +171,23 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.lblHi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHi.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblHi.Location = new System.Drawing.Point(21, 8);
+            this.lblHi.Location = new System.Drawing.Point(15, 5);
+            this.lblHi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHi.Name = "lblHi";
-            this.lblHi.Size = new System.Drawing.Size(0, 25);
+            this.lblHi.Size = new System.Drawing.Size(0, 17);
             this.lblHi.TabIndex = 15;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(387, 705);
+            this.ClientSize = new System.Drawing.Size(271, 423);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHi);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.pictureBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";

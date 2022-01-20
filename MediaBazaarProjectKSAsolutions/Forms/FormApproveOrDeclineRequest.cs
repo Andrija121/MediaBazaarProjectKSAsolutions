@@ -36,9 +36,6 @@ namespace MediaBazaarProjectKSAsolutions.Forms
                     this.Close();
                 }
             }
-            
-            
-
         }
 
         private void btnDecline_Click(object sender, EventArgs e)
@@ -50,10 +47,17 @@ namespace MediaBazaarProjectKSAsolutions.Forms
 
         private void btnApprovePartially_Click(object sender, EventArgs e)
         {
-            label1.Text = " / " + rr.AmountRequested;
+            label1.Text = " / " + rr.AmountRequested + " Amount requested";
+            if (string.IsNullOrEmpty(tbApprovePartially.Text))
+            {
+                MessageBox.Show("The quantity that you want to resupply is incorrect, please ipunt propper one or check with manager");
+                return;
+            }
             int amount = rr.AmountFulfilled;
             amount= Convert.ToInt32(tbApprovePartially.Text);
             rrm.PartiallyApproveRquest(rr, user.Id,amount);
+            MessageBox.Show("Successfully approved partially");
+            this.Close();
         }
     }
 }

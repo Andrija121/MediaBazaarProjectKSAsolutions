@@ -22,9 +22,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         }
         public void RefreshListBox()
         {
-            ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
+            
             lbResupplyRequests.Items.Clear();
-            foreach (var prr in rrm.GetPendingResupplyRequests(rr))
+            foreach (ResupplyRequest prr in rrm.GetPendingResupplyRequests())
             {
                 lbResupplyRequests.Items.Add(prr);
             }
@@ -48,11 +48,13 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             {
                 if(u.Role==Role.GENERALMANAGER)
                 {
-                    MessageBox.Show("Sorry, Only Department Manager can do that (:");
+                    MessageBox.Show("Sorry, Only WareHouse Employee can do that (:");
                 }
                 else
                 {
-                    resupplyRequest = rrm.GetResupplyRequest(u.Id);
+                 //   ResupplyRequest rr = rrm.GetResupplyRequest(u.Id);
+                    
+                    
                     FormApproveOrDeclineRequest formApproveOrDeclineRequest = new FormApproveOrDeclineRequest(resupplyRequest, u);
                     formApproveOrDeclineRequest.Show();
                     

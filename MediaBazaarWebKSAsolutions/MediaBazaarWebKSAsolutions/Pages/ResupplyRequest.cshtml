@@ -1,0 +1,48 @@
+﻿@page
+@model MediaBazaarWebKSAsolutions.Pages.ResupplyRequestModel
+@{
+    ViewData["Title"] = "Resupply Request";
+}
+<public !DOCTYPE hmtl>
+    <html lang="en">
+    <body>
+        <div class="filter-dates">
+            <div class="ui cards">
+               @foreach (var rr in Model.MyRRs)
+                {
+                    
+                    {
+                        <div class="card">
+                            <div class="content">
+
+                                <div class="header">
+                                    <p>@rr.RequestID</p>
+                                </div>
+                                <div class="meta">
+                                    @rr.AmountRequested
+                                </div>
+                                <div class="description">
+                                    @rr.RequestID
+                                </div>
+                                <div class=" description">
+                                    @rr.RequestStatus
+                                </div>
+                            </div>
+                            @*<div class="extra content">
+                                <div class="ui two buttons">
+                                    <form method="post">*@
+                                        @*<div class="submit-btn"><button asp-page-handler="Button4" value="@u.Id" name="id2">Like</button></div>
+
+                                        <div class="submit-btn"><button asp-page-handler="Button5" value="@u.Id" name="id2">Next</button></div>*@
+                                    <!--</form>
+                                </div>
+
+                            </div>-->
+                        </div>
+                   }
+               }
+
+            </div>
+        </div>
+    </body>
+</html>

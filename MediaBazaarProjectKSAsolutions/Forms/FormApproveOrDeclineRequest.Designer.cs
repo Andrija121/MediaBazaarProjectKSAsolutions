@@ -43,7 +43,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnApprove.Location = new System.Drawing.Point(12, 30);
+            this.btnApprove.Location = new System.Drawing.Point(21, 30);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(192, 63);
             this.btnApprove.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnDecline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDecline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDecline.Location = new System.Drawing.Point(256, 51);
+            this.btnDecline.Location = new System.Drawing.Point(234, 30);
             this.btnDecline.Name = "btnDecline";
             this.btnDecline.Size = new System.Drawing.Size(196, 63);
             this.btnDecline.TabIndex = 1;
@@ -73,9 +73,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             this.btnApprovePartially.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApprovePartially.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnApprovePartially.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnApprovePartially.Location = new System.Drawing.Point(21, 139);
+            this.btnApprovePartially.Location = new System.Drawing.Point(113, 99);
             this.btnApprovePartially.Name = "btnApprovePartially";
-            this.btnApprovePartially.Size = new System.Drawing.Size(192, 63);
+            this.btnApprovePartially.Size = new System.Drawing.Size(192, 100);
             this.btnApprovePartially.TabIndex = 2;
             this.btnApprovePartially.Text = "Approve partially";
             this.btnApprovePartially.UseVisualStyleBackColor = true;
@@ -83,26 +83,25 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             // tbApprovePartially
             // 
-            this.tbApprovePartially.Location = new System.Drawing.Point(231, 158);
+            this.tbApprovePartially.Location = new System.Drawing.Point(124, 202);
             this.tbApprovePartially.Name = "tbApprovePartially";
-            this.tbApprovePartially.Size = new System.Drawing.Size(170, 23);
+            this.tbApprovePartially.Size = new System.Drawing.Size(170, 26);
             this.tbApprovePartially.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(422, 161);
+            this.label1.Location = new System.Drawing.Point(179, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
             // 
             // FormApproveOrDeclineRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
-            this.ClientSize = new System.Drawing.Size(494, 232);
+            this.ClientSize = new System.Drawing.Size(419, 275);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbApprovePartially);
             this.Controls.Add(this.btnApprovePartially);

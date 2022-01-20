@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MediaBazaarProjectKSAsolutions.Classes
 {
-    class RequestResupplyManagement
+    public class RequestResupplyManagement
     {
         MySqlConnection conn = new MySqlConnection(Params.connectionString);
 
@@ -45,7 +45,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "Insert INTO ResupplyRequest values(whe,dm,stock,amount_requested,amount_fulfilled,requestStatus) where(@wheId,@dmid,@stockid,@amount_requested,@amount_fulfilled,@requestStatus) ";
+                    string sql = "Insert INTO ResupplyRequest (wheId,dmid,stockid,amount_requested,amount_fulfilled,requestStatus) values(@wheId,@dmid,@stockid,@amount_requested,@amount_fulfilled,@requestStatus) ";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                     cmd.Parameters.AddWithValue("WheId", rr.Whe);
@@ -109,7 +109,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public List<ResupplyRequest> GetPendingResupplyRequests(ResupplyRequest rr)
+        public List<ResupplyRequest> GetPendingResupplyRequests()
         {
             try
             {
@@ -128,13 +128,15 @@ namespace MediaBazaarProjectKSAsolutions.Classes
 
                     while (dr.Read())
                     {
-                        rr.Whe.Id = Convert.ToInt32(dr["wheid"]);
-                        rr.Dm.Id = Convert.ToInt32(dr["dmid"]);
-                        rr.Stock.Id = Convert.ToInt32(dr["sid"]);
-                        rr.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
-                        rr.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
-                        rr.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
-                        rrs.Add(rr);
+                        ResupplyRequest resupplyRequest = new ResupplyRequest();
+                        resupplyRequest.RequestID = Convert.ToInt32(dr["requestId"]);
+                        resupplyRequest.AmountRequested = Convert.ToInt32(dr["amount_requested"]);
+                        resupplyRequest.AmountFulfilled = Convert.ToInt32(dr["amount_fulfilled"]);
+                        resupplyRequest.RequestStatus = Enum.Parse<RequestStatus>(dr["RequestStatus"].ToString());
+                        resupplyRequest.Stock.Id = Convert.ToInt32(dr["sid"]);
+                        resupplyRequest.Dm.Id = Convert.ToInt32(dr["dmid"]);
+                        resupplyRequest.Whe.Id = Convert.ToInt32(dr["wheId"]); // error
+                        rrs.Add(resupplyRequest);
 
                     }
                     return rrs;
@@ -150,7 +152,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                 conn.Close();
             }
         }
-        public ResupplyRequest GetResupplyRequest(int wheid) // whe
+        public ResupplyRequest GetResupplyRequest(int wheid)
         {
             try
             {
@@ -200,7 +202,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
                     cmd.Parameters.AddWithValue("@wheId",wheId);
                     cmd.Parameters.AddWithValue("@dmid", rr.Dm.Id);
                     cmd.Parameters.AddWithValue("@sid", rr.Stock.Id);
-                    cmd.Parameters.AddWithValue("@amount", rr.AmountFulfilled);
+                    cmd.Parameters.AddWithValue("@amount_requested", rr.AmountRequested);
                     cmd.Parameters.AddWithValue("@amount_fulfilled", rr.AmountFulfilled);
                     cmd.Parameters.AddWithValue("@requestStatus", rr.RequestStatus.ToString());
                     cmd.ExecuteNonQuery();
@@ -218,7 +220,7 @@ namespace MediaBazaarProjectKSAsolutions.Classes
             }
         }
 
-        public void ApproveRequest(ResupplyRequest rr, int  wheId) // whe
+        public void ApproveRequest(ResupplyRequest rr, int  wheId) 
         {
             rr.RequestStatus = RequestStatus.APPROVED;
             EditResupplyRequest(rr, wheId);

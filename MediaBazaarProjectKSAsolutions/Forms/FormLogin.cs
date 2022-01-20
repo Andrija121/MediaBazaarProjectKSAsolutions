@@ -52,7 +52,6 @@ namespace MediaBazaarProjectKSAsolutions
                                 break;
                             }
                             else if(u.Role==Role.STOREEMPLOYEE || u.Role==Role.WAREHOUSEEMPLOYEE)
-
                             {
                                 user = u;
                                 FormEmployee formEmployee = new FormEmployee(user);
@@ -74,7 +73,7 @@ namespace MediaBazaarProjectKSAsolutions
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Please Connect To database for further access");
             }
             
             
