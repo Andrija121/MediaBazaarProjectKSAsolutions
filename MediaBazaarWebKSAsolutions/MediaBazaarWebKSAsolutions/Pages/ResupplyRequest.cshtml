@@ -14,8 +14,9 @@
                     {
                         <div class="card">
                             <div class="content">
+
                                 <div class="header">
-                                    <p>@rr.Dm</p>
+                                    <p>@rr.RequestID</p>
                                 </div>
                                 <div class="meta">
                                     @rr.AmountRequested
@@ -23,20 +24,23 @@
                                 <div class="description">
                                     @rr.RequestID
                                 </div>
+                                <div class=" description">
+                                    @rr.RequestStatus
+                                </div>
                             </div>
-                            <div class="extra content">
+                            @*<div class="extra content">
                                 <div class="ui two buttons">
-                                    <form method="post">
+                                    <form method="post">*@
                                         @*<div class="submit-btn"><button asp-page-handler="Button4" value="@u.Id" name="id2">Like</button></div>
 
                                         <div class="submit-btn"><button asp-page-handler="Button5" value="@u.Id" name="id2">Next</button></div>*@
-                                    </form>
+                                    <!--</form>
                                 </div>
 
-                            </div>
+                            </div>-->
                         </div>
-                    }
-                }
+                   }
+               }
 
             </div>
         </div>

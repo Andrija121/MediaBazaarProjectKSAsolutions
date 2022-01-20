@@ -38,10 +38,10 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // lbResupplyRequests
             // 
             this.lbResupplyRequests.FormattingEnabled = true;
-            this.lbResupplyRequests.ItemHeight = 25;
+            this.lbResupplyRequests.ItemHeight = 20;
             this.lbResupplyRequests.Location = new System.Drawing.Point(12, 37);
             this.lbResupplyRequests.Name = "lbResupplyRequests";
-            this.lbResupplyRequests.Size = new System.Drawing.Size(601, 229);
+            this.lbResupplyRequests.Size = new System.Drawing.Size(601, 264);
             this.lbResupplyRequests.TabIndex = 0;
             this.lbResupplyRequests.DoubleClick += new System.EventHandler(this.lbResupplyRequests_DoubleClick);
             // 
@@ -65,9 +65,9 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.lblSelect.AutoSize = true;
             this.lblSelect.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSelect.Location = new System.Drawing.Point(64, 292);
+            this.lblSelect.Location = new System.Drawing.Point(116, 316);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(482, 25);
+            this.lblSelect.Size = new System.Drawing.Size(380, 20);
             this.lblSelect.TabIndex = 18;
             this.lblSelect.Text = "Double click the requset you want to approve or decline";
             // 
@@ -75,15 +75,15 @@ namespace MediaBazaarProjectKSAsolutions.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(64, 9);
+            this.label1.Location = new System.Drawing.Point(115, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(493, 25);
+            this.label1.Size = new System.Drawing.Size(394, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "RequestId - Stock Id - Amount Requested - Request Status";
             // 
             // FormResupplyRequestS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(625, 413);

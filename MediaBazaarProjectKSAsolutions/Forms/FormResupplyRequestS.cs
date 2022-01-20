@@ -24,7 +24,7 @@ namespace MediaBazaarProjectKSAsolutions.Forms
         {
             
             lbResupplyRequests.Items.Clear();
-            foreach (var prr in rrm.GetPendingResupplyRequests())
+            foreach (ResupplyRequest prr in rrm.GetPendingResupplyRequests())
             {
                 lbResupplyRequests.Items.Add(prr);
             }
